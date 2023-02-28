@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-28T09:26:54.420Z</updated>
+  <updated>2023-02-28T09:36:46.910Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MinIO介绍与FastDFS对比</title>
+    <link href="http://example.com/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/"/>
+    <id>http://example.com/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/</id>
+    <published>2023-02-28T09:35:12.000Z</published>
+    <updated>2023-02-28T09:36:46.910Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;分布式文件系统概念&quot;&gt;&lt;a href=&quot;#分布式文件系统概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Support service component" scheme="http://example.com/categories/Support-service-component/"/>
+    
+    <category term="Distributed file storage" scheme="http://example.com/categories/Support-service-component/Distributed-file-storage/"/>
+    
+    
+    <category term="分布式" scheme="http://example.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+    <category term="minio" scheme="http://example.com/tags/minio/"/>
+    
+    <category term="fastdfs" scheme="http://example.com/tags/fastdfs/"/>
+    
+  </entry>
   
   <entry>
     <title>cargo国内被墙导致失败解决办法</title>

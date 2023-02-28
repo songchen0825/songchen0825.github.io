@@ -157,7 +157,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>Privacy Field - 🚧A2 2B 9S 🚧</title>
+    <title>MinIO介绍与FastDFS对比 | Privacy Field - 🚧A2 2B 9S 🚧</title>
   <meta name="generator" content="Hexo 6.3.0"></head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -174,7 +174,7 @@
       <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
       <ul id="menu" role="menubar" aria-hidden="false">
         
-        <li role="menuitem"><a href="/" class="current"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
         
         <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
         
@@ -193,25 +193,22 @@
         <div class="main-container">
           <div class="content">
             
-
-<div id="index" class="index page">
+<div id="post" class="page">
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="songchen">
-        <meta itemprop="description" content="这世上没有不可思议的事，只存在可能存在之物，只发生可能发生之事">
-        <meta itemprop="image" content="/images/avatar.jpg">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="这世上没有不可思议的事，只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Privacy Field">
+       <meta itemprop="name" content="Privacy Field">
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/" itemprop="url">MinIO介绍与FastDFS对比</a>
-      </h1>
+      <h1 class="post-title" itemprop="name headline">MinIO介绍与FastDFS对比</h1>
       <div class="post-meta">
         
         <span class="post-date">
@@ -231,10 +228,82 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      
-      
-      分布式文件系统概念分布式文件系统具有冗余性，大量数据分散到不同的节点上存储。部分节点的故障并不影响整体的正常运行，而且即使出现故障的计算机存储的数据已经损坏，也可以由其它节点将损坏的数据恢复出来，大大减小了数据丢失的风险。 衡量分布式文件系统的劣势 数据的存储方式：无论采取何种存储方式，目的都是为了保证数据的存储安全和方便获取。 数据的读取速率：包括响应用户读取数据文件的请求、定位数据文件所在的节
-      
+      <h3 id="分布式文件系统概念"><a href="#分布式文件系统概念" class="headerlink" title="分布式文件系统概念"></a>分布式文件系统概念</h3><p>分布式文件系统具有冗余性，大量数据分散到不同的节点上存储。部分节点的故障并不影响整体的正常运行，而且即使出现故障的计算机存储的数据已经损坏，也可以由其它节点将损坏的数据恢复出来，大大减小了数据丢失的风险。</p>
+<p>衡量分布式文件系统的劣势</p>
+<ul>
+<li>数据的存储方式：无论采取何种存储方式，目的都是为了保证数据的存储安全和方便获取。</li>
+<li>数据的读取速率：包括响应用户读取数据文件的请求、定位数据文件所在的节点、读取实际硬盘中数据文件的时间、不同节点间的数据传输时间以及一部分处理器的处理时间等。</li>
+</ul>
+<h3 id="MinIO-特点"><a href="#MinIO-特点" class="headerlink" title="MinIO 特点"></a>MinIO 特点</h3><ol>
+<li>高性能：作为高性能对象存储，在标准硬件条件下它能达到55GB&#x2F;s的读、35GG&#x2F;s的写速率</li>
+<li>可扩容：不同MinIO集群可以组成联邦，并形成一个全局的命名空间，并跨越多个数据中心</li>
+<li>SDK支持: 基于Minio轻量的特点，它得到类似Java、Python或Go等语言的sdk支持</li>
+<li>支持纠删码：MinIO使用纠删码、Checksum来防止硬件错误和静默数据污染。在最高冗余度配置下，即使丢失1&#x2F;2的磁盘也能恢复数据</li>
+</ol>
+<h4 id="安装部署（运维简单）"><a href="#安装部署（运维简单）" class="headerlink" title="安装部署（运维简单）"></a>安装部署（运维简单）</h4><ul>
+<li>MinIO在安装过程是黑盒的，不用深入关注它的架构，也不需要进行零件组装，基本上可以做到开箱即用。普通的技术人员就能够参与后期的运维。</li>
+<li>MinIO提供了两种部署方式：单机部署和分布式，两种部署方式都非常简单，其中分布式部署还提供了纠删码功能来降低数据丢失的风险。</li>
+</ul>
+<h4 id="开放全部源代码-企业级支持"><a href="#开放全部源代码-企业级支持" class="headerlink" title="开放全部源代码 + 企业级支持"></a>开放全部源代码 + 企业级支持</h4><p>MinIO 基于Apache V2 license 100%开放源代码。这就意味着 MinIO的客户能够自动的、无限制、自由免费使用和集成MinIO、自由的创新和创造、自由的去修改、自由的再次发行新的版本和软件。确实, MinIO 强有力的支持和驱动了很多世界500强的企业。此外，其部署的多样性和专业性提供了其他软件无法比拟的优势。</p>
+<h4 id="UI界面"><a href="#UI界面" class="headerlink" title="UI界面"></a>UI界面</h4><p>MinIO自带UI界面，且页面不需要你单独的部署，和服务端一并安装，开箱即用。</p>
+<h4 id="容器化支持"><a href="#容器化支持" class="headerlink" title="容器化支持"></a>容器化支持</h4><p>MinIO 符合一切原生云计算的架构和构建过程，并且包含最新的云计算的全新的技术和概念。其中包括支持Kubernetes 、Docker、微服和多租户的的容器技术。</p>
+<p><img src="https://img-blog.csdnimg.cn/c1f3eecfbac84d4684ec26d3db320262.png#pic_center" alt="在这里插入图片描述"></p>
+<h4 id="丰富的SDK支持"><a href="#丰富的SDK支持" class="headerlink" title="丰富的SDK支持"></a>丰富的SDK支持</h4><p>MinIO几乎提供了所有主流开发语言的SDK以及文档。</p>
+<p><img src="https://img-blog.csdnimg.cn/da7b81b0e36343d9b38427bf048d5284.png#pic_center" alt="在这里插入图片描述"></p>
+<h4 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h4><p>MinIO 是全球领先的<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8&spm=1001.2101.3001.7020">对象存储</a>先锋，目前在全世界有数百万的用户。在标准硬件上，读&#x2F;写速度上高达183 GB &#x2F; 秒 和 171 GB &#x2F; 秒。<br>对象存储可以充当主存储层，以处理Spark、Presto、TensorFlow、H2O.ai等各种复杂工作负载以及成为Hadoop HDFS的替代品。<br>MinIO用作云原生应用程序的主要存储，与传统对象存储相比，云原生应用程序需要更高的吞吐量和更低的延迟。而这些都是MinIO能够达成的性能指标。</p>
+<p><img src="https://img-blog.csdnimg.cn/e0ddb219924a4f4980398a29639de507.png#pic_center" alt="在这里插入图片描述"></p>
+<h4 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h4><p>MinIO利用了Web缩放器的来之不易的知识，为对象存储带来了简单的缩放模型。这是我们坚定的理念 “简单可扩展” 在 MinIO，扩展从单个群集开始，该群集可以与其他MinIO群集联合以创建全局名称空间, 并在需要时可以跨越多个不同的数据中心。通过添加更多集群可以扩展名称空间，更多机架，直到实现目标。</p>
+<h4 id="纠删码-erasure-code-模式"><a href="#纠删码-erasure-code-模式" class="headerlink" title="纠删码(erasure code)模式"></a>纠删码(erasure code)模式</h4><p>MinIO 使用纠删码和校验和等特性保护数据免受硬件故障和静默数据损坏。使用最高级别的冗余，使用者可最多丢失多达一半（N&#x2F;2）的驱动器，仍可以自动恢复数据。</p>
+<h3 id="MinIO-与-FastDFS-对比"><a href="#MinIO-与-FastDFS-对比" class="headerlink" title="MinIO 与[[FastDFS]] 对比"></a>MinIO 与[[FastDFS]] 对比</h3><ol>
+<li>安装部署(运维)</li>
+</ol>
+<ul>
+<li>FastDFS安装部署(运维)复杂。</li>
+<li>MinIO在安装的过程是黑盒的，你不用去深入关注它的架构，也不需要你进行零件组装，基本上可以做到开箱即用。普通的技术人员就能够参与后期运维。</li>
+</ul>
+<ol start="2">
+<li>文档</li>
+</ol>
+<ul>
+<li>FastDFS没有官方文档</li>
+<li>MinIO有官方网站，并且有详细的文档</li>
+</ul>
+<ol start="3">
+<li>开源项目运营组织</li>
+</ol>
+<ul>
+<li>FastDFS是阿里余庆做的一个个人项目，在一些互联网创业公司中有应用，没有官网，不活跃。目前已经很少做更新。</li>
+<li>MinIO目前是由2014年在硅谷创立的公司MinIO.Inc运营的开源项目，社区论坛的活跃度目前也非常的不错。</li>
+</ul>
+<ol start="4">
+<li>UI界面</li>
+</ol>
+<ul>
+<li>FastDFS默认是不带UI界面的。</li>
+<li>MinIO的界面不需要你单独的部署，和服务端一并安装，开箱即用。</li>
+</ul>
+<ol start="5">
+<li>性能</li>
+</ol>
+<ul>
+<li>MinIO号称是世界上速度最快的对象存储服务器。在标准硬件上，对象存储的读&#x2F;写速度最高可以达到183 GB&#x2F;s和171 GB&#x2F;s。</li>
+<li>FastDFS很难达到MinIO“号称的”以G为单位的每秒读写速度。</li>
+</ul>
+<ol start="6">
+<li>容器化支持</li>
+</ol>
+<ul>
+<li>MinIO提供了与k8s、etcd、docker等容器化技术深度集成方案，可以说就是为了云环境而生的。</li>
+<li>FastDFS不具备。</li>
+</ul>
+<ol start="7">
+<li>丰富的SDK支持</li>
+</ol>
+<ul>
+<li>FastDFS目前提供了 C 和 Java SDK，以及 PHP 扩展 SDK。</li>
+<li>MinIO几乎提供了所有主流开发语言的SDK以及文档。</li>
+</ul>
+
     </main>
     <footer class="post-footer">
       
@@ -251,167 +320,17 @@
     </footer>
   </article>
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="songchen">
-        <meta itemprop="description" content="这世上没有不可思议的事，只存在可能存在之物，只发生可能发生之事">
-        <meta itemprop="image" content="/images/avatar.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Privacy Field">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" itemprop="url">cargo国内被墙导致失败解决办法</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-28T17:24:26+08:00">2023-02-28 17:24:26</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/" itemprop="url" rel="index"><span itemprop="name">Programming Language</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Rust-language/" itemprop="url" rel="index"><span itemprop="name">Rust language</span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      打开cargo 配置文件1vi ~/.cargo/config 替换文中内容123456789101112131415161718192021222324252627# 放到 `$HOME/.cargo/config` 文件中[source.crates-io]registry = &quot;https://github.com/rust-lang/crates.io-index&quot;# 
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/rust/" rel="tag"><i class="fas fa-tags"></i>rust</a>
-        
-        <a class="post-tag button" href="/tags/%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/" rel="tag"><i class="fas fa-tags"></i>编程环境</a>
-        
-      </div>
-      
-    </footer>
-  </article>
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/25/7%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="songchen">
-        <meta itemprop="description" content="这世上没有不可思议的事，只存在可能存在之物，只发生可能发生之事">
-        <meta itemprop="image" content="/images/avatar.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Privacy Field">
-      </span>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" rel="next" title="cargo国内被墙导致失败解决办法"><i class="fas fa-angle-left"></i><span class="nav-title">cargo国内被墙导致失败解决办法</span></a>
+      
     </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2023/02/25/7%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" itemprop="url">7大程序设计原则</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-25T07:02:12+08:00">2023-02-25 07:02:12</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">软件设计思想（Program Design）</span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
+    <div class="page-nav-prev page-nav-item">
       
-      
-      编程的工作既是技术活，也是体力活，而编写优秀的软件，更是一件比较难的事情。 初级程序员只希望代码不出错，顶级程序员却把写代码当成艺术，当年雷军以过人的能力成为求伯君的左膀右臂，其早年的代码被说成“像诗一样优美”。 很多大牛，在着手写代码时并不是直接上手编写，而是根据需求进行设计，不但将代码中 Bug 出现的机率降到最低，还让代码具有高可读性，高安全性等等。 那大牛们都遵循怎样的原则呢，我们能不能学
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/design/" rel="tag"><i class="fas fa-tags"></i>design</a>
-        
-        <a class="post-tag button" href="/tags/software/" rel="tag"><i class="fas fa-tags"></i>software</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="songchen">
-        <meta itemprop="description" content="这世上没有不可思议的事，只存在可能存在之物，只发生可能发生之事">
-        <meta itemprop="image" content="/images/avatar.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Privacy Field">
-      </span>
     </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/" itemprop="url">系统设计与架构关注问题</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-25T06:24:34+08:00">2023-02-25 06:24:34</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">软件设计思想（Program Design）</span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      从产品到研发 常规业务系统设计关键-领域模型业务系统设计的关键是在于如何定义系统的模型以及模型之间的关系，其中主要是领域模型的定义，当我们在模型确定之后，模型之间的关系也会随之明确。模型设计可以参考领域模型的经典书籍《Domain-Driven Design》一书，通过这个基本可以对领域定义、防腐层、贫血模型等概念有一个较为清晰的认识了。单个应用内的领域模型系统也需要注意领域分层，作为开发大家是不
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/design/" rel="tag"><i class="fas fa-tags"></i>design</a>
-        
-        <a class="post-tag button" href="/tags/architecture/" rel="tag"><i class="fas fa-tags"></i>architecture</a>
-        
-        <a class="post-tag button" href="/tags/product/" rel="tag"><i class="fas fa-tags"></i>product</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
+  </nav>
   
   
 </div>
@@ -471,6 +390,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5"><span class="toc-text">分布式文件系统概念</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#MinIO-%E7%89%B9%E7%82%B9"><span class="toc-text">MinIO 特点</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%EF%BC%88%E8%BF%90%E7%BB%B4%E7%AE%80%E5%8D%95%EF%BC%89"><span class="toc-text">安装部署（运维简单）</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E5%BC%80%E6%94%BE%E5%85%A8%E9%83%A8%E6%BA%90%E4%BB%A3%E7%A0%81-%E4%BC%81%E4%B8%9A%E7%BA%A7%E6%94%AF%E6%8C%81"><span class="toc-text">开放全部源代码 + 企业级支持</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#UI%E7%95%8C%E9%9D%A2"><span class="toc-text">UI界面</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E5%AE%B9%E5%99%A8%E5%8C%96%E6%94%AF%E6%8C%81"><span class="toc-text">容器化支持</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E4%B8%B0%E5%AF%8C%E7%9A%84SDK%E6%94%AF%E6%8C%81"><span class="toc-text">丰富的SDK支持</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E9%AB%98%E6%80%A7%E8%83%BD"><span class="toc-text">高性能</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E5%8F%AF%E6%89%A9%E5%B1%95%E6%80%A7"><span class="toc-text">可扩展性</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E7%BA%A0%E5%88%A0%E7%A0%81-erasure-code-%E6%A8%A1%E5%BC%8F"><span class="toc-text">纠删码(erasure code)模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#MinIO-%E4%B8%8E-FastDFS-%E5%AF%B9%E6%AF%94"><span class="toc-text">MinIO 与[[FastDFS]] 对比</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>

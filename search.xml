@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>MinIO介绍与FastDFS对比</title>
+      <link href="/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/"/>
+      <url>/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/</url>
+      
+        <content type="html"><![CDATA[<h3 id="分布式文件系统概念"><a href="#分布式文件系统概念" class="headerlink" title="分布式文件系统概念"></a>分布式文件系统概念</h3><p>分布式文件系统具有冗余性，大量数据分散到不同的节点上存储。部分节点的故障并不影响整体的正常运行，而且即使出现故障的计算机存储的数据已经损坏，也可以由其它节点将损坏的数据恢复出来，大大减小了数据丢失的风险。</p><p>衡量分布式文件系统的劣势</p><ul><li>数据的存储方式：无论采取何种存储方式，目的都是为了保证数据的存储安全和方便获取。</li><li>数据的读取速率：包括响应用户读取数据文件的请求、定位数据文件所在的节点、读取实际硬盘中数据文件的时间、不同节点间的数据传输时间以及一部分处理器的处理时间等。</li></ul><h3 id="MinIO-特点"><a href="#MinIO-特点" class="headerlink" title="MinIO 特点"></a>MinIO 特点</h3><ol><li>高性能：作为高性能对象存储，在标准硬件条件下它能达到55GB&#x2F;s的读、35GG&#x2F;s的写速率</li><li>可扩容：不同MinIO集群可以组成联邦，并形成一个全局的命名空间，并跨越多个数据中心</li><li>SDK支持: 基于Minio轻量的特点，它得到类似Java、Python或Go等语言的sdk支持</li><li>支持纠删码：MinIO使用纠删码、Checksum来防止硬件错误和静默数据污染。在最高冗余度配置下，即使丢失1&#x2F;2的磁盘也能恢复数据</li></ol><h4 id="安装部署（运维简单）"><a href="#安装部署（运维简单）" class="headerlink" title="安装部署（运维简单）"></a>安装部署（运维简单）</h4><ul><li>MinIO在安装过程是黑盒的，不用深入关注它的架构，也不需要进行零件组装，基本上可以做到开箱即用。普通的技术人员就能够参与后期的运维。</li><li>MinIO提供了两种部署方式：单机部署和分布式，两种部署方式都非常简单，其中分布式部署还提供了纠删码功能来降低数据丢失的风险。</li></ul><h4 id="开放全部源代码-企业级支持"><a href="#开放全部源代码-企业级支持" class="headerlink" title="开放全部源代码 + 企业级支持"></a>开放全部源代码 + 企业级支持</h4><p>MinIO 基于Apache V2 license 100%开放源代码。这就意味着 MinIO的客户能够自动的、无限制、自由免费使用和集成MinIO、自由的创新和创造、自由的去修改、自由的再次发行新的版本和软件。确实, MinIO 强有力的支持和驱动了很多世界500强的企业。此外，其部署的多样性和专业性提供了其他软件无法比拟的优势。</p><h4 id="UI界面"><a href="#UI界面" class="headerlink" title="UI界面"></a>UI界面</h4><p>MinIO自带UI界面，且页面不需要你单独的部署，和服务端一并安装，开箱即用。</p><h4 id="容器化支持"><a href="#容器化支持" class="headerlink" title="容器化支持"></a>容器化支持</h4><p>MinIO 符合一切原生云计算的架构和构建过程，并且包含最新的云计算的全新的技术和概念。其中包括支持Kubernetes 、Docker、微服和多租户的的容器技术。</p><p><img src="https://img-blog.csdnimg.cn/c1f3eecfbac84d4684ec26d3db320262.png#pic_center" alt="在这里插入图片描述"></p><h4 id="丰富的SDK支持"><a href="#丰富的SDK支持" class="headerlink" title="丰富的SDK支持"></a>丰富的SDK支持</h4><p>MinIO几乎提供了所有主流开发语言的SDK以及文档。</p><p><img src="https://img-blog.csdnimg.cn/da7b81b0e36343d9b38427bf048d5284.png#pic_center" alt="在这里插入图片描述"></p><h4 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h4><p>MinIO 是全球领先的<a href="https://so.csdn.net/so/search?q=%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8&spm=1001.2101.3001.7020">对象存储</a>先锋，目前在全世界有数百万的用户。在标准硬件上，读&#x2F;写速度上高达183 GB &#x2F; 秒 和 171 GB &#x2F; 秒。<br>对象存储可以充当主存储层，以处理Spark、Presto、TensorFlow、H2O.ai等各种复杂工作负载以及成为Hadoop HDFS的替代品。<br>MinIO用作云原生应用程序的主要存储，与传统对象存储相比，云原生应用程序需要更高的吞吐量和更低的延迟。而这些都是MinIO能够达成的性能指标。</p><p><img src="https://img-blog.csdnimg.cn/e0ddb219924a4f4980398a29639de507.png#pic_center" alt="在这里插入图片描述"></p><h4 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h4><p>MinIO利用了Web缩放器的来之不易的知识，为对象存储带来了简单的缩放模型。这是我们坚定的理念 “简单可扩展” 在 MinIO，扩展从单个群集开始，该群集可以与其他MinIO群集联合以创建全局名称空间, 并在需要时可以跨越多个不同的数据中心。通过添加更多集群可以扩展名称空间，更多机架，直到实现目标。</p><h4 id="纠删码-erasure-code-模式"><a href="#纠删码-erasure-code-模式" class="headerlink" title="纠删码(erasure code)模式"></a>纠删码(erasure code)模式</h4><p>MinIO 使用纠删码和校验和等特性保护数据免受硬件故障和静默数据损坏。使用最高级别的冗余，使用者可最多丢失多达一半（N&#x2F;2）的驱动器，仍可以自动恢复数据。</p><h3 id="MinIO-与-FastDFS-对比"><a href="#MinIO-与-FastDFS-对比" class="headerlink" title="MinIO 与[[FastDFS]] 对比"></a>MinIO 与[[FastDFS]] 对比</h3><ol><li>安装部署(运维)</li></ol><ul><li>FastDFS安装部署(运维)复杂。</li><li>MinIO在安装的过程是黑盒的，你不用去深入关注它的架构，也不需要你进行零件组装，基本上可以做到开箱即用。普通的技术人员就能够参与后期运维。</li></ul><ol start="2"><li>文档</li></ol><ul><li>FastDFS没有官方文档</li><li>MinIO有官方网站，并且有详细的文档</li></ul><ol start="3"><li>开源项目运营组织</li></ol><ul><li>FastDFS是阿里余庆做的一个个人项目，在一些互联网创业公司中有应用，没有官网，不活跃。目前已经很少做更新。</li><li>MinIO目前是由2014年在硅谷创立的公司MinIO.Inc运营的开源项目，社区论坛的活跃度目前也非常的不错。</li></ul><ol start="4"><li>UI界面</li></ol><ul><li>FastDFS默认是不带UI界面的。</li><li>MinIO的界面不需要你单独的部署，和服务端一并安装，开箱即用。</li></ul><ol start="5"><li>性能</li></ol><ul><li>MinIO号称是世界上速度最快的对象存储服务器。在标准硬件上，对象存储的读&#x2F;写速度最高可以达到183 GB&#x2F;s和171 GB&#x2F;s。</li><li>FastDFS很难达到MinIO“号称的”以G为单位的每秒读写速度。</li></ul><ol start="6"><li>容器化支持</li></ol><ul><li>MinIO提供了与k8s、etcd、docker等容器化技术深度集成方案，可以说就是为了云环境而生的。</li><li>FastDFS不具备。</li></ul><ol start="7"><li>丰富的SDK支持</li></ol><ul><li>FastDFS目前提供了 C 和 Java SDK，以及 PHP 扩展 SDK。</li><li>MinIO几乎提供了所有主流开发语言的SDK以及文档。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Support service component </category>
+          
+          <category> Distributed file storage </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分布式 </tag>
+            
+            <tag> minio </tag>
+            
+            <tag> fastdfs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cargo国内被墙导致失败解决办法</title>
       <link href="/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
       <url>/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
