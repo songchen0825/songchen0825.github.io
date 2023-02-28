@@ -1,0 +1,34 @@
+{% block author %}
+<div class="info sidebar-item" id="info">
+  {% if theme.avatar %}
+  <img class="author-avatar" src="{{ url_for(theme.avatar) }}" alt="{{ config.author }}">
+  {% endif %}
+  <h1 class="author-name">{{ config.author }}</h1>
+  <h2 class="author-description">{{ config.description }}</h2>
+  <div class="site-count">
+    {% for e in theme.menu %}
+    {% if e.name === "archives" %}
+    <div class="archives-count count-block">
+      <div class="site-count-title">{{ __("archives") }}</div>
+      <div><a href="{{ url_for(e.link) }}">{{ site.posts.length }}</a></div>
+    </div>
+    {% elif e.name === "categories" %}
+    <div class="categories-count count-block">
+      <div class="site-count-title">{{ __("categories") }}</div>
+      <div><a href="{{ url_for(e.link) }}">{{ site.categories.length }}</a></div>
+    </div>
+    {% elif e.name === "tags" %}
+    <div class="tags-count count-block">
+      <div class="site-count-title">{{ __("tags") }}</div>
+      <div><a href="{{ url_for(e.link) }}">{{ site.tags.length }}</a></div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% if config.feed.path %}
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="{{ url_for(config.feed.path) }}"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
