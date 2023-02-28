@@ -13,6 +13,8 @@ summary:
 tags:
 - DevOps
 - 虚拟化
+- zookeeper
+- kafka
 categories: [Development & Operate,Kubernetes,Helm]
 ---
 
