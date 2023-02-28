@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-author: 
+author: songchen
 img: 
 coverImg: 
 top: false
