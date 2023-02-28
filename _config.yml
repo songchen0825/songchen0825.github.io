@@ -5,8 +5,11 @@
 # Site
 title: Privacy Field
 subtitle: '🚧A2 2B 9S 🚧'
-description: '这世上没有不可思议的事，只存在可能存在之物，只发生可能发生之事'
+description: '只存在可能存在之物，只发生可能发生之事'
 keywords:
+- Game
+- Programming
+- Life
 author: songchen
 language: zh_CN
 timezone: 'Asia/Shanghai'
@@ -31,7 +34,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year/:month/:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -118,5 +121,5 @@ theme: aria
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://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@github.com/songchen0825/songchen0825.github.io.git
+  repository: https://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@github.com/songchen0825/songchen0825.github.io.git
   branch: master
