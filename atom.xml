@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-24T22:28:54.104Z</updated>
+  <updated>2023-02-28T09:26:54.420Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,24 +17,87 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>cargo国内被墙导致失败解决办法</title>
+    <link href="http://example.com/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://example.com/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
+    <published>2023-02-28T09:24:26.000Z</published>
+    <updated>2023-02-28T09:26:54.420Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;打开cargo-配置文件&quot;&gt;&lt;a href=&quot;#打开cargo-配置文件&quot; class=&quot;headerlink&quot; title=&quot;打开cargo 配置文件&quot;&gt;&lt;/a&gt;打开cargo 配置文件&lt;/h1&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="Programming Language" scheme="http://example.com/categories/Programming-Language/"/>
+    
+    <category term="Rust language" scheme="http://example.com/categories/Programming-Language/Rust-language/"/>
+    
+    
+    <category term="rust" scheme="http://example.com/tags/rust/"/>
+    
+    <category term="编程环境" scheme="http://example.com/tags/%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7大程序设计原则</title>
+    <link href="http://example.com/2023/02/25/7%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    <id>http://example.com/2023/02/25/7%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</id>
+    <published>2023-02-24T23:02:12.000Z</published>
+    <updated>2023-02-24T23:03:31.004Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;编程的工作既是技术活，也是体力活，而编写优秀的软件，更是一件比较难的事情。&lt;/p&gt;
+&lt;p&gt;初级程序员只希望代码不出错，顶级程序员却把写代码当成艺术，当年雷军以过人的能力成为求伯君的左膀右臂，其早年的代码被说成“像诗一样优美”。&lt;/p&gt;
+&lt;p&gt;很多大牛，在着手写代码时并不是直</summary>
+        
+      
+    
+    
+    
+    <category term="Software Engineering" scheme="http://example.com/categories/Software-Engineering/"/>
+    
+    <category term="软件设计思想（Program Design）" scheme="http://example.com/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/"/>
+    
+    
+    <category term="design" scheme="http://example.com/tags/design/"/>
+    
+    <category term="software" scheme="http://example.com/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
     <title>系统设计与架构关注问题</title>
     <link href="http://example.com/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/"/>
     <id>http://example.com/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/</id>
     <published>2023-02-24T22:24:34.000Z</published>
-    <updated>2023-02-24T22:28:54.104Z</updated>
+    <updated>2023-02-24T23:32:37.764Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;从产品到研发&quot;&gt;&lt;a href=&quot;#从产品到研发&quot; class=&quot;headerlink&quot; title=&quot;从产品到研发&quot;&gt;&lt;/a&gt;从产品到研发&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;h2 id=&quot;从产品到研发&quot;&gt;&lt;a href=&quot;#从产品到研发&quot; class=&quot;headerlink&quot; title=&quot;从产品到研发&quot;&gt;&lt;/a&gt;从产品到研发&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/2023/02/25/系统设计与架构关注问题/aaa.png&quot;&gt;&lt;/p&gt;
+&lt;h2</summary>
         
       
     
     
     
-    <category term="programing" scheme="http://example.com/categories/programing/"/>
+    <category term="Software Engineering" scheme="http://example.com/categories/Software-Engineering/"/>
+    
+    <category term="软件设计思想（Program Design）" scheme="http://example.com/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/"/>
     
     
     <category term="design" scheme="http://example.com/tags/design/"/>
@@ -42,27 +105,6 @@
     <category term="architecture" scheme="http://example.com/tags/architecture/"/>
     
     <category term="product" scheme="http://example.com/tags/product/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2023/02/25/hello-world/"/>
-    <id>http://example.com/2023/02/25/hello-world/</id>
-    <published>2023-02-24T19:14:29.154Z</published>
-    <updated>2023-02-24T19:14:29.154Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
