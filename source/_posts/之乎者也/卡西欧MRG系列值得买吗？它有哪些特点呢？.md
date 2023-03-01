@@ -1,3 +1,20 @@
+---
+title: 卡西欧MRG系列值得买吗？它有哪些特点呢？
+author: songchen
+top: false
+cover: false
+toc: true
+mathjax: false
+date: 2021-03-01 17:22:43
+img:
+coverImg:
+password:
+summary:
+tags:
+- 腕表
+categories: [Life,之乎者也]
+---
+
 不值得
 
 首先，机芯很普通，并非独占。管你什么日本工厂独占，机芯都不能独有有什么好吹的

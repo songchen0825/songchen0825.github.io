@@ -1,3 +1,19 @@
+---
+title: 抵制 H&M、Nike、Adidas 的行动现在怎样了？只过去不到一个月时间，是否已经悄无声息了？
+author: songchen
+top: false
+cover: false
+toc: true
+mathjax: false
+date: 2021-03-01 17:22:43
+img:
+coverImg:
+password:
+summary:
+tags:
+- 社会
+categories: [Life,之乎者也]
+---
 小孩子总是喜欢走极端，你们所谓的抵制，就是哪怕有一个中国人，买一件上述各个品牌的衣服，就算是大家不再抵制了。
 
 原先很多人非这些[洋品牌](https://www.zhihu.com/search?q=%E6%B4%8B%E5%93%81%E7%89%8C&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1851446985%7D)不穿的，现在也关注国货了算不算进行了抵制？

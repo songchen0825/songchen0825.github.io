@@ -1,3 +1,19 @@
+---
+title: 如何看待《罗辑思维》视频节目停播，改为日播音频节目，只在《得到》App里发放？
+author: songchen
+top: false
+cover: false
+toc: true
+mathjax: false
+date: 2021-03-01 17:22:43
+img:
+coverImg:
+password:
+summary:
+tags:
+- 社会
+categories: [Life,之乎者也]
+---
 一个原先想打造魅力人格 [粉丝经济](https://www.zhihu.com/search?q=%E7%B2%89%E4%B8%9D%E7%BB%8F%E6%B5%8E&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A150753690%7D) 号称做u盘 让大家交会费的人 不要加入组织 后来开公司卖各种商品的人
 
 一个说自己发愿做十年节目学习分享 四年就停播的人

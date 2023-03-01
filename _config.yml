@@ -121,5 +121,5 @@ theme: aria
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://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@github.com/songchen0825/songchen0825.github.io.git
+  repository: https://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@github.com/songchen0825/songchen0825.github.io.git
   branch: master
