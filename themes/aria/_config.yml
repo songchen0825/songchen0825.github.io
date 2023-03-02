@@ -130,14 +130,14 @@ social:
       link: mailto:songchen0825@gmail.com
       icon: <i class="fas fa-envelope"></i>
     - name: GitHub
-      link: https://github.com/
+      link: https://github.com/songchen0825/songchen0825.github.io
       icon: <i class="fab fa-github"></i>
     - name: Weibo
       link: https://weibo.com/
       icon: <i class="fab fa-weibo"></i>
 
 blogroll:
-  enable: true
+  enable: false
   links:
     - name: GitHub
       link: https://github.com/
