@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Helm安装Redis1主2从3哨兵 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Helm%E5%AE%89%E8%A3%85Redis1%E4%B8%BB2%E4%BB%8E3%E5%93%A8%E5%85%B5/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Helm安装Redis1主2从3哨兵</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-28T19:14:37+08:00">2023-02-28 19:14:37</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/" itemprop="url" rel="index"><span itemprop="name">Development & Operate</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/Kubernetes/" itemprop="url" rel="index"><span itemprop="name">Kubernetes</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/Kubernetes/Helm/" itemprop="url" rel="index"><span itemprop="name">Helm</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/28/Helm%E5%AE%89%E8%A3%85Redis1%E4%B8%BB2%E4%BB%8E3%E5%93%A8%E5%85%B5/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/28/Helm安装Redis1主2从3哨兵/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="添加-Helm-的仓库"><a href="#添加-Helm-的仓库" class="headerlink" title="添加 Helm 的仓库"></a>添加 Helm 的仓库</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">helm repo add bitnami https://charts.bitnami.com/bitnami<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="查询-redis-资源"><a href="#查询-redis-资源" class="headerlink" title="查询 redis 资源"></a>查询 <code>redis</code> 资源</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo update</span> <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm search repo redis</span> <br>NAME CHART VERSION APP VERSION DESCRIPTION <br>bitnami/redis 16.11.2 6.2.7 Redis(R) is an open source, advanced key-value ... <br>bitnami/redis-cluster 7.6.1 6.2.7 Redis(TM) is an open source, scalable, distribu...<br></code></pre></td></tr></table></figure>
+
+<h1 id="拉取-redis-chart-到本地"><a href="#拉取-redis-chart-到本地" class="headerlink" title="拉取 redis chart 到本地"></a>拉取 <code>redis chart</code> 到本地</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">mkdir</span> -p /root/redis/ &amp;&amp; <span class="hljs-built_in">cd</span> /root/redis/</span> <br><span class="hljs-meta prompt_"># </span><span class="language-bash">拉取 chart 到本地 /root/redis/ 目录</span> <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm pull bitnami/redis --version 16.11.2</span> <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">tar -zxvf redis-16.11.2.tgz</span> <br><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cp</span> redis/values.yaml ./values-test.yaml</span> <br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看当前目录层级</span> <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">tree -L 2</span><br>redis<br>├── Chart.lock<br>├── charts<br>│   └── common<br>├── Chart.yaml<br>├── img<br>│   ├── redis-cluster-topology.png<br>│   └── redis-topology.png<br>├── README.md<br>├── templates<br>│   ├── configmap.yaml<br>│   ├── extra-list.yaml<br>│   ├── headless-svc.yaml<br>│   ├── health-configmap.yaml<br>│   ├── _helpers.tpl<br>│   ├── master<br>│   ├── metrics-svc.yaml<br>│   ├── networkpolicy.yaml<br>│   ├── NOTES.txt<br>│   ├── pdb.yaml<br>│   ├── prometheusrule.yaml<br>│   ├── replicas<br>│   ├── rolebinding.yaml<br>│   ├── role.yaml<br>│   ├── scripts-configmap.yaml<br>│   ├── secret.yaml<br>│   ├── sentinel<br>│   ├── serviceaccount.yaml<br>│   ├── servicemonitor.yaml<br>│   └── tls-secret.yaml<br>├── values.schema.json<br>└── values.yaml<br></code></pre></td></tr></table></figure>
+
+<h1 id="对本地-values-test-yaml-修改"><a href="#对本地-values-test-yaml-修改" class="headerlink" title="对本地 values-test.yaml 修改"></a>对本地 <code>values-test.yaml</code> 修改</h1><p>修改配置 <code>values-test.yaml</code></p>
+<figure class="hljs highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">global:</span><br>  <span class="hljs-comment"># 全局定义 storageClass 使用 openebs</span><br>  <span class="hljs-attr">storageClass:</span> <span class="hljs-string">&quot;openebs-jiva-default&quot;</span><br>  <span class="hljs-comment"># 定义 redis 集群认证密码</span><br>  <span class="hljs-attr">redis:</span><br>    <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;redis123&quot;</span><br><br><br><span class="hljs-attr">fullnameOverride:</span> <span class="hljs-string">&quot;redis&quot;</span><br><br><br><span class="hljs-comment"># 定义集群的模式  Allowed values: `standalone` or `replication`</span><br><span class="hljs-attr">architecture:</span> <span class="hljs-string">replication</span><br><br><br><span class="hljs-comment"># redis 服务配置定义</span><br><span class="hljs-attr">commonConfiguration:</span> <span class="hljs-string">|-</span><br><span class="hljs-string">  # Enable AOF https://redis.io/topics/persistence#append-only-file</span><br><span class="hljs-string">  appendonly yes</span><br><span class="hljs-string">  # Disable RDB persistence, AOF persistence already enabled.</span><br><span class="hljs-string">  save &quot;&quot;</span><br><span class="hljs-string"></span><br><br><span class="hljs-comment"># master 节点配置信息</span><br><span class="hljs-attr">master:</span><br>  <span class="hljs-attr">containerPorts:</span><br>    <span class="hljs-attr">redis:</span> <span class="hljs-number">6379</span><br><br>  <span class="hljs-attr">kind:</span> <span class="hljs-string">StatefulSet</span><br><br>  <span class="hljs-attr">persistence:</span><br>    <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">accessModes:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">ReadWriteOnce</span><br>    <span class="hljs-attr">size:</span> <span class="hljs-string">8Gi</span><br><br>  <span class="hljs-attr">service:</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">ClusterIP</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-attr">redis:</span> <span class="hljs-number">6379</span><br><br><br><span class="hljs-comment"># replica 节点配置信息</span><br><span class="hljs-attr">replica:</span><br>  <span class="hljs-attr">replicaCount:</span> <span class="hljs-number">3</span><br>  <span class="hljs-attr">containerPorts:</span><br>    <span class="hljs-attr">redis:</span> <span class="hljs-number">6379</span><br><br>  <span class="hljs-attr">persistence:</span><br>    <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">storageClass:</span> <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-attr">accessModes:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">ReadWriteOnce</span><br>    <span class="hljs-attr">size:</span> <span class="hljs-string">8Gi</span><br><br>  <span class="hljs-attr">service:</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">ClusterIP</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-attr">redis:</span> <span class="hljs-number">6379</span><br><br><br><span class="hljs-comment"># sentinel 节点配置信息</span><br><span class="hljs-attr">sentinel:</span><br>  <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">containerPorts:</span><br>    <span class="hljs-attr">sentinel:</span> <span class="hljs-number">26379</span><br><br>  <span class="hljs-attr">persistence:</span><br>    <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">storageClass:</span> <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-attr">accessModes:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">ReadWriteOnce</span><br>    <span class="hljs-attr">size:</span> <span class="hljs-string">100Mi</span><br><br>  <span class="hljs-attr">service:</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">ClusterIP</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-attr">redis:</span> <span class="hljs-number">6379</span><br>      <span class="hljs-attr">sentinel:</span> <span class="hljs-number">26379</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="安装-redis-集群"><a href="#安装-redis-集群" class="headerlink" title="安装 redis 集群"></a>安装 <code>redis</code> 集群</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">创建 test-middleware 名称空间</span> <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">kubectl create ns test-middleware</span> <br><span class="hljs-meta prompt_"># </span><span class="language-bash">安装 redis 集群</span> <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm -n test-middleware install redis redis -f values-test.yaml | <span class="hljs-built_in">tee</span> test.log</span> <br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># helm -n NAMESAPCE install SERVER_NAME FILE_NAME -f CONFIG_FILE</span></span> <br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># -n 指定 kubernetes 集群名称空间</span></span> <br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># -f 指定使用的配置文件，文件中定义的配置可以覆盖 redis/values.yaml 文件中配置</span></span><br></code></pre></td></tr></table></figure>
+
+<h1 id="查看部署的-redis-集群"><a href="#查看部署的-redis-集群" class="headerlink" title="查看部署的 redis 集群"></a>查看部署的 <code>redis</code> 集群</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm -n test-middleware list</span> <br>NAME NAMESPACE REVISION UPDATED STATUS CHART APP VERSION <br>redis test-middleware 1 2022-06-04 06:05:40.507941913 -0400 EDT deployed redis-16.11.2 6.2.7 <br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">kubectl get pods --namespace=test-middleware</span> <br>NAME READY STATUS RESTARTS AGE <br>redis-node-0 2/2 Running 0 3h45m <br>redis-node-1 2/2 Running 0 3h44m <br>redis-node-2 2/2 Running 0 3h42m<br></code></pre></td></tr></table></figure>
+
+<h1 id="验证-redis-集群"><a href="#验证-redis-集群" class="headerlink" title="验证 redis 集群"></a>验证 redis 集群</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">登陆 redis 集群</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">export</span> REDIS_PASSWORD=$(kubectl get secret --namespace test-middleware redis -o jsonpath=<span class="hljs-string">&quot;&#123;.data.redis-password&#125;&quot;</span> | <span class="hljs-built_in">base64</span> -d)</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">kubectl run --namespace test-middleware redis-client --restart=<span class="hljs-string">&#x27;Never&#x27;</span>  --<span class="hljs-built_in">env</span> REDIS_PASSWORD=<span class="hljs-variable">$REDIS_PASSWORD</span>  --image docker.io/bitnami/redis:6.2.7-debian-10-r23 --<span class="hljs-built_in">command</span> -- <span class="hljs-built_in">sleep</span> infinity</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">kubectl <span class="hljs-built_in">exec</span> --<span class="hljs-built_in">tty</span> -i redis-client --namespace test-middleware -- bash</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看 redis 主从集群</span><br>I have no name!@redis-client:/$ REDISCLI_AUTH=&quot;$REDIS_PASSWORD&quot; redis-cli -h redis -p 6379<br><br>redis:6379&gt; info Replication<br><span class="hljs-meta prompt_"># </span><span class="language-bash">Replication</span><br>role:master<br>connected_slaves:2<br>slave0:ip=redis-node-1.redis-headless.test-middleware.svc.cluster.local,port=6379,state=online,offset=4482538,lag=0<br>slave1:ip=redis-node-2.redis-headless.test-middleware.svc.cluster.local,port=6379,state=online,offset=4482538,lag=1<br>master_failover_state:no-failover<br>master_replid:8e48433d13ae59dbe2703a704504a98ecc61076a<br>master_replid2:0000000000000000000000000000000000000000<br>master_repl_offset:4482538<br>second_repl_offset:-1<br>repl_backlog_active:1<br>repl_backlog_size:1048576<br>repl_backlog_first_byte_offset:3433963<br>repl_backlog_histlen:1048576<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看 Sentinel 节点</span><br>I have no name!@redis-client:/$ REDISCLI_AUTH=&quot;$REDIS_PASSWORD&quot; redis-cli -h redis-headless -p 26379<br><br>redis-headless:26379&gt; info Sentinel<br><span class="hljs-meta prompt_"># </span><span class="language-bash">Sentinel</span><br>sentinel_masters:1<br>sentinel_tilt:0<br>sentinel_running_scripts:0<br>sentinel_scripts_queue_length:0<br>sentinel_simulate_failure_flags:0<br>master0:name=mymaster,status=ok,address=redis-node-0.redis-headless.test-middleware.svc.cluster.local:6379,slaves=2,sentinels=3<br></code></pre></td></tr></table></figure>
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/DevOps/" rel="tag"><i class="fas fa-tags"></i>DevOps</a>
+        
+        <a class="post-tag button" href="/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/" rel="tag"><i class="fas fa-tags"></i>虚拟化</a>
+        
+        <a class="post-tag button" href="/tags/redis/" rel="tag"><i class="fas fa-tags"></i>redis</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/02/28/Helm%E5%AE%89%E8%A3%85Zookeeper-Kafka/" rel="next" title="Helm安装Zookeeper+Kafka"><i class="fas fa-angle-left"></i><span class="nav-title">Helm安装Zookeeper+Kafka</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/02/28/Helm%E5%AE%89%E8%A3%85Mongodb%E9%9B%86%E7%BE%A4/" rel="prev" title="Helm安装Mongodb集群"><span class="nav-title">Helm安装Mongodb集群</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/02/28/Helm%E5%AE%89%E8%A3%85Redis1%E4%B8%BB2%E4%BB%8E3%E5%93%A8%E5%85%B5/";
+    this.page.identifier = "2023/02/28/Helm安装Redis1主2从3哨兵/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E6%B7%BB%E5%8A%A0-Helm-%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-text">添加 Helm 的仓库</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E6%9F%A5%E8%AF%A2-redis-%E8%B5%84%E6%BA%90"><span class="toc-text">查询 redis 资源</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E6%8B%89%E5%8F%96-redis-chart-%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-text">拉取 redis chart 到本地</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E5%AF%B9%E6%9C%AC%E5%9C%B0-values-test-yaml-%E4%BF%AE%E6%94%B9"><span class="toc-text">对本地 values-test.yaml 修改</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E5%AE%89%E8%A3%85-redis-%E9%9B%86%E7%BE%A4"><span class="toc-text">安装 redis 集群</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E6%9F%A5%E7%9C%8B%E9%83%A8%E7%BD%B2%E7%9A%84-redis-%E9%9B%86%E7%BE%A4"><span class="toc-text">查看部署的 redis 集群</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E9%AA%8C%E8%AF%81-redis-%E9%9B%86%E7%BE%A4"><span class="toc-text">验证 redis 集群</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

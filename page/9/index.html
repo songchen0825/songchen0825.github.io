@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+
+<div id="index" class="index page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%80%A7%E4%BA%A4%E6%98%93%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E5%90%88%E6%B3%95%E5%8C%96%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%80%A7%E4%BA%A4%E6%98%93%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E5%90%88%E6%B3%95%E5%8C%96%EF%BC%9F/" itemprop="url">性交易是否应该合法化？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%80%A7%E4%BA%A4%E6%98%93%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E5%90%88%E6%B3%95%E5%8C%96%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-性交易是否应该合法化？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      在一个长期认为卖淫羞耻的国度 卖淫的合法与非法都不能杜绝犯罪 因为卖淫的羞耻感将拒绝掉绝大多数的社会精英参与这个行业 仅有底层人士从事的社会行业必然是个容易滋生犯罪的行业 从杜绝犯罪的角度争论这个话题 各方都可以列举一堆例证 是没有结果的 改变现状 首先依旧要支持卖淫的合法化 因为只有先合法化 才能够逐渐提升性交易的社会地位 才能够改善这个行业的现实处境 才能够吸引更多阶层的人员进入这个行业 才可能驱赶附着在这个行业上的社会罪恶 最终达到保护从业者安全以及给予他们尊重的目的。 这里面最关键的 就是要提升卖淫者的社会地位 以及消除这个行业的羞耻感 构建这点社会共识未必有众人想象的那么难 毕竟我们
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%B3%95%E5%BE%8B/" rel="tag"><i class="fas fa-tags"></i>法律</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%88%B4%E7%9F%B3%E8%8B%B1%E8%A1%A8%E7%9A%84%E4%BA%BA%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88%E5%BF%83%E6%80%81%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%88%B4%E7%9F%B3%E8%8B%B1%E8%A1%A8%E7%9A%84%E4%BA%BA%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88%E5%BF%83%E6%80%81%EF%BC%9F/" itemprop="url">戴石英表的人都是什么心态？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%88%B4%E7%9F%B3%E8%8B%B1%E8%A1%A8%E7%9A%84%E4%BA%BA%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88%E5%BF%83%E6%80%81%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-戴石英表的人都是什么心态？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      很多人内心所谓的常识总是令人觉得他的智力不足以在当代生存 一个人戴实用品被戴装饰品的人问什么心态也是醉了 石英表出现 在精准度比拼里 就像一群人跑百米在努力冲进十秒，突然有人跑了个一秒 瞬间这游戏就别玩了 于是以瑞士代表的机械表阵营开始耍花样，在原先战场上开辟新的战场 降低实用性的比拼 注重起了装饰和奢侈的概念 这事也并不只发生了一次 当原子笔出现后，派克厂同样出现了这样的危机 而他们对危机的应对，就如手表行业一样 在此背景下，多数人还是选择相信手表厂家说的故事，比如军表，飞行员，潜水表之类的故事 认为手上沉淀着历史和岁月，是制表匠百年智慧的结晶 现在所有的工具表理论上都不会采用机械结构，无论
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%85%95%E8%A1%A8/" rel="tag"><i class="fas fa-tags"></i>腕表</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%98%AF%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E8%A7%89%E5%BE%97%E5%A6%82%E6%9E%9C%E6%9C%89%E4%B8%AA%E5%A5%B3%E5%84%BF%E4%BD%A0%E8%A6%81%E5%AF%B9%E5%A5%B9%E5%A5%BD%E4%B8%80%E8%BE%88%E5%AD%90%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%98%AF%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E8%A7%89%E5%BE%97%E5%A6%82%E6%9E%9C%E6%9C%89%E4%B8%AA%E5%A5%B3%E5%84%BF%E4%BD%A0%E8%A6%81%E5%AF%B9%E5%A5%B9%E5%A5%BD%E4%B8%80%E8%BE%88%E5%AD%90%EF%BC%9F/" itemprop="url">是什么让你觉得如果有个女儿你要对她好一辈子？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%98%AF%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E8%A7%89%E5%BE%97%E5%A6%82%E6%9E%9C%E6%9C%89%E4%B8%AA%E5%A5%B3%E5%84%BF%E4%BD%A0%E8%A6%81%E5%AF%B9%E5%A5%B9%E5%A5%BD%E4%B8%80%E8%BE%88%E5%AD%90%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-是什么让你觉得如果有个女儿你要对她好一辈子？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      从小生活在一个重女轻男的家庭里长大是种怎样的感受 ，如果有这个问题 我估计会写一篇血泪史吧 等到后来长大听说有重男轻女这回事，我都惊讶于还有这种操作 是这个世界智障还是我听错了 本人男 ，重女轻男的家庭，独子，嗯，那时候计划生育管的严，把我爹有个女儿的愿望彻底给灭了。导致我人生前几十年都在忍受这个怨念。直到，我有了自己的女儿 。我爹把全部的热情都放在了照顾我女儿身上，生命简直就焕发了全新的青春。 从怀上孩子之前，我就和我媳妇灌输，我们家非常喜欢女儿 你最好生个女儿，这样爷爷奶奶都会给你带孩子 ，如果是儿子，那你就自求多福 好好带孩子吧 。以至于在产室里面祈祷自己生个女儿直到护士告诉他是个女孩的
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%BA%B2%E5%AD%90/" rel="tag"><i class="fas fa-tags"></i>亲子</a>
+        
+        <a class="post-tag button" href="/tags/%E8%82%B2%E5%84%BF/" rel="tag"><i class="fas fa-tags"></i>育儿</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%8A%B5%E5%88%B6-H-M%E3%80%81Nike%E3%80%81Adidas-%E7%9A%84%E8%A1%8C%E5%8A%A8%E7%8E%B0%E5%9C%A8%E6%80%8E%E6%A0%B7%E4%BA%86%EF%BC%9F%E5%8F%AA%E8%BF%87%E5%8E%BB%E4%B8%8D%E5%88%B0%E4%B8%80%E4%B8%AA%E6%9C%88%E6%97%B6%E9%97%B4%EF%BC%8C%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%82%84%E6%97%A0%E5%A3%B0%E6%81%AF%E4%BA%86%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%8A%B5%E5%88%B6-H-M%E3%80%81Nike%E3%80%81Adidas-%E7%9A%84%E8%A1%8C%E5%8A%A8%E7%8E%B0%E5%9C%A8%E6%80%8E%E6%A0%B7%E4%BA%86%EF%BC%9F%E5%8F%AA%E8%BF%87%E5%8E%BB%E4%B8%8D%E5%88%B0%E4%B8%80%E4%B8%AA%E6%9C%88%E6%97%B6%E9%97%B4%EF%BC%8C%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%82%84%E6%97%A0%E5%A3%B0%E6%81%AF%E4%BA%86%EF%BC%9F/" itemprop="url">抵制 H&M、Nike、Adidas 的行动现在怎样了？只过去不到一个月时间，是否已经悄无声息了？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E6%8A%B5%E5%88%B6-H-M%E3%80%81Nike%E3%80%81Adidas-%E7%9A%84%E8%A1%8C%E5%8A%A8%E7%8E%B0%E5%9C%A8%E6%80%8E%E6%A0%B7%E4%BA%86%EF%BC%9F%E5%8F%AA%E8%BF%87%E5%8E%BB%E4%B8%8D%E5%88%B0%E4%B8%80%E4%B8%AA%E6%9C%88%E6%97%B6%E9%97%B4%EF%BC%8C%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%82%84%E6%97%A0%E5%A3%B0%E6%81%AF%E4%BA%86%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-抵制-H-M、Nike、Adidas-的行动现在怎样了？只过去不到一个月时间，是否已经悄无声息了？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      小孩子总是喜欢走极端，你们所谓的抵制，就是哪怕有一个中国人，买一件上述各个品牌的衣服，就算是大家不再抵制了。 原先很多人非这些洋品牌不穿的，现在也关注国货了算不算进行了抵制？ 原先一个月买10双鞋钩子的，现在买一双又算不算一种抵制？ 这本身就不是一个非黑即白的世界。就算国家层面全面禁止这些品牌，也有走私渠道进入这个市场 。而十几亿的中国人，要想钩子在中国卖不出一件衣服，想必谁也也是不会有这种不切实际的想法。 现在这个事情，根本就不是消费者的事情，消费者，赚钱给国家纳税，消费给国家纳税，整个消费行为没什么对不起国家的 。民族情感上可以优先国货，但也不该绑架大家只能消费国货。 如果认为抵制没声儿了
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E7%A4%BE%E4%BC%9A/" rel="tag"><i class="fas fa-tags"></i>社会</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%94%B5%E5%BD%B1%E5%AE%A1%E6%9F%A5%E5%88%B6%E5%BA%A6%E6%98%AF%E5%90%A6%E6%9C%89%E5%BD%B1%E5%93%8D%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%94%B5%E5%BD%B1%E5%B7%A5%E4%B8%9A%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%94%B5%E5%BD%B1%E5%AE%A1%E6%9F%A5%E5%88%B6%E5%BA%A6%E6%98%AF%E5%90%A6%E6%9C%89%E5%BD%B1%E5%93%8D%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%94%B5%E5%BD%B1%E5%B7%A5%E4%B8%9A%EF%BC%9F/" itemprop="url">电影审查制度是否有影响中国的电影工业？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%94%B5%E5%BD%B1%E5%AE%A1%E6%9F%A5%E5%88%B6%E5%BA%A6%E6%98%AF%E5%90%A6%E6%9C%89%E5%BD%B1%E5%93%8D%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%94%B5%E5%BD%B1%E5%B7%A5%E4%B8%9A%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-电影审查制度是否有影响中国的电影工业？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      当然不是 看一下每年电影产值增长就知道 这个产业正处在上升期 如果审核会毁坏一个产业 那这个繁荣从何而来 朝廷介入让创作受到困难 那还有国产影片保护月呢 这算什么 端起碗吃肉 放下碗骂娘 ？ 苏联最黑暗时期 经典依据不断 那些导演都冒着枪毙的风险在创作 我不知道我们的导演有什么难处怎么就见天哀嚎了 没有任何一个国家没有审查制度 美国你也不能拍歧视种族的片子 非要分民间限制还是官方限制 无非是方式方法不同 从来就没有绝对自由的创作环境 就算有 那些自以为有范儿的大导演导出来的本子又能有多少吸引力 国内导演本身剧本能力就很差 很多根本无关审核问题 而是拍出很多剧情都不完整的片子 而同样是国内导演 
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E7%94%B5%E5%BD%B1/" rel="tag"><i class="fas fa-tags"></i>电影</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%8E%B0%E4%BB%A3%E7%A4%BE%E4%BC%9A%E7%94%B7%E5%A5%B3%E9%80%90%E6%B8%90%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%8A%B3%E5%B7%A5%E4%BB%B7%E5%80%BC%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%B7%E6%80%A7%E8%BF%98%E6%98%AF%E8%83%8C%E8%B4%9F%E7%9D%80%E8%B4%9F%E8%B4%A3%E4%B9%B0%E6%88%BF%E4%B9%B0%E8%BD%A6%E7%9A%84%E8%B4%A3%E4%BB%BB%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%8E%B0%E4%BB%A3%E7%A4%BE%E4%BC%9A%E7%94%B7%E5%A5%B3%E9%80%90%E6%B8%90%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%8A%B3%E5%B7%A5%E4%BB%B7%E5%80%BC%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%B7%E6%80%A7%E8%BF%98%E6%98%AF%E8%83%8C%E8%B4%9F%E7%9D%80%E8%B4%9F%E8%B4%A3%E4%B9%B0%E6%88%BF%E4%B9%B0%E8%BD%A6%E7%9A%84%E8%B4%A3%E4%BB%BB%EF%BC%9F/" itemprop="url">现代社会男女逐渐有相同的劳工价值，为什么男性还是背负着负责买房买车的责任？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%8E%B0%E4%BB%A3%E7%A4%BE%E4%BC%9A%E7%94%B7%E5%A5%B3%E9%80%90%E6%B8%90%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%8A%B3%E5%B7%A5%E4%BB%B7%E5%80%BC%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%B7%E6%80%A7%E8%BF%98%E6%98%AF%E8%83%8C%E8%B4%9F%E7%9D%80%E8%B4%9F%E8%B4%A3%E4%B9%B0%E6%88%BF%E4%B9%B0%E8%BD%A6%E7%9A%84%E8%B4%A3%E4%BB%BB%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-现代社会男女逐渐有相同的劳工价值，为什么男性还是背负着负责买房买车的责任？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      什么破问题 这都不懂 因为女人有肚子能生孩子 女人如果能赚钱 那你想要人家肚子生孩子 只会比女人不会赚钱的时候更贵 女人和哪个男人生的孩子都一定是自己的孩子 而男人和任何女人生的孩子都可能不是自己的孩子 你以为主导了经济就主导了世界 别逗了 经济只是男人之间争斗去争取女人青睐的权利 和女人没有关系 女人能赚钱 那也是自己得 毕竟精子才值几个钱 一次都比女人一辈子的卵子都多 男女关系本质从来就没有变过 社会变化 不过是改变了两者关系的表现形式 只要肚子这个东西一直在女人那，那男人就没有机会翻不了身 古代如此 近代如此 现代也没变 现在乖乖奉上金钱 换取生育权利 这也许还算是个不错的选择 毕竟以后
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%B8%A4%E6%80%A7/" rel="tag"><i class="fas fa-tags"></i>两性</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%8E%B0%E5%9C%A8%E7%9A%84%E7%94%B7%E7%94%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%BF%BD%E6%B1%82%E5%A5%B3%E7%94%9F%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%8E%B0%E5%9C%A8%E7%9A%84%E7%94%B7%E7%94%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%BF%BD%E6%B1%82%E5%A5%B3%E7%94%9F%EF%BC%9F/" itemprop="url">现在的男生为什么不追求女生？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E7%8E%B0%E5%9C%A8%E7%9A%84%E7%94%B7%E7%94%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%BF%BD%E6%B1%82%E5%A5%B3%E7%94%9F%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-现在的男生为什么不追求女生？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      知乎回答这题男人大多都这么玻璃心 女生不过是和你们吃吃饭看个电影就想确认关系 拜托 基本的物质条件不缺的好吧 所以人家并没有觉得吃你个饭也能算作一种付出 毕竟都是爹妈疼出来的 谁还差顿饭呢 你们可以觉得女生越来越难追 但是你们真的优越不起来 毕竟追不到就是追不到 非说不想追不稀的追那就很假了吧 每次有这种问题 其实都很尴尬 追不到就往别人身上泼脏水 这和 看到漂亮女人不理自己就yy他们私生活不检点一般 都是下流行为 男女关系本来就没有绝对对等 以知乎的平均水平 更确实的说法你们不是找不到女朋友 而是找不到自己理想的女朋友 或者说没找到条件比自己好的女朋友 既然期望别人条件比自己好 ，那就别抱怨
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%B8%A4%E6%80%A7/" rel="tag"><i class="fas fa-tags"></i>两性</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/11/06/qzone-%E5%AF%B9%E4%B9%A0%E6%83%AF%E7%9A%84%E6%88%92%E5%BF%83/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/11/06/qzone-%E5%AF%B9%E4%B9%A0%E6%83%AF%E7%9A%84%E6%88%92%E5%BF%83/" itemprop="url">对习惯的戒心</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-11-06T22:31:42+08:00">2010-11-06 22:31:42</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/11/06/qzone-%E5%AF%B9%E4%B9%A0%E6%83%AF%E7%9A%84%E6%88%92%E5%BF%83/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/11/06/qzone-对习惯的戒心/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      这次互联网大战,其实是个很好的契机.能够让大家觉醒与依赖是一件多么可怕的事情,而这些依赖性不过是出于某种习惯,如果能脱离出某种工具本身来看待自身真是的需求,则会发现我们并非如此的依赖一个东西. 从无到有一直是如此容易,从有到无总是困难的.但其实身来就是无,为何我们的生活依旧过的很好.为何要被一种无聊经济绑架.最近常常反思自己在网页游戏上浪费的时间是多么的多.这种无聊经济创造的价值又被谁吸收的干干净净. 腾讯从过去的OICQ的瘦企鹅到现在肥头大耳的QQ.其实从来就没有摆脱抄袭的道路.只是学会了别人的技术还能做的比别人更好,这确实是本事.模仿不是罪孽,商人追逐利益最大化也没有错.可惜你的做法是错的
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/10/11/qzone-%E6%82%AC%E5%B4%96%E7%9A%84%E4%B8%89%E4%BA%94%E6%AD%A5%E6%98%AF%E5%AE%89%E5%85%A8%E7%9A%84/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/10/11/qzone-%E6%82%AC%E5%B4%96%E7%9A%84%E4%B8%89%E4%BA%94%E6%AD%A5%E6%98%AF%E5%AE%89%E5%85%A8%E7%9A%84/" itemprop="url">悬崖的三五步是安全的</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-10-11T22:41:59+08:00">2010-10-11 22:41:59</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/10/11/qzone-%E6%82%AC%E5%B4%96%E7%9A%84%E4%B8%89%E4%BA%94%E6%AD%A5%E6%98%AF%E5%AE%89%E5%85%A8%E7%9A%84/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/10/11/qzone-悬崖的三五步是安全的/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      标题借用李敖的原话，近来看它的节目，发现自己对于这位老人过去的感触错的离谱。如果不能持续的看大量的他的节目，进行贯穿的话，很容易对他产生误会。就如他在节目外的原话一般，做李敖有话说就像是早泄，只有二十分钟的时间中要说的话实在太多，还没有说完，节目就结束了。所以他的很多言论，思想其实都散布在一个个节目当中。只有细细品味，才能感受到这个老人其实并不张狂，而只是真的有些话想要说而已。 宪法中保障的每个人都有言论自由，我们的国家加入联合国的时候在世界人权宣言里面所签字的就是赞成人们有言论自由。对于这一点，似乎大家都认为是笑话了。因为在这个国家中，感受到的就是无时无刻的不自由。我们不能随意发表自己的政治
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/10/06/qzone-%E7%99%BE%E8%8A%B1%E7%BC%AD%E4%B9%B1/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/10/06/qzone-%E7%99%BE%E8%8A%B1%E7%BC%AD%E4%B9%B1/" itemprop="url">百花缭乱</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-10-06T22:42:55+08:00">2010-10-06 22:42:55</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/10/06/qzone-%E7%99%BE%E8%8A%B1%E7%BC%AD%E4%B9%B1/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/10/06/qzone-百花缭乱/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      从现在这一分钟起,可以学习如何耐的住寂寞. 记仇什么的最没意思了,我才不记仇.我只是会忘记对你的好,忘掉就好了,记仇是很难的,但仇恨的那一刻对自己植入一个想法就可以忘掉如何对你好,这样看来是不是很方便的方式.我看起来不错嘛~~那就这么做,从这一刻忘掉如何对你好.开始记起如何对自己好. 昨天才觉得生活好的连多愁善感的时间都没有,今天却有大把时间可以用来多愁善感.以此看来是否多愁善感不过是牵动的那一丝联系上.联系着你我的生活让我没有感觉到飘浮不定的情绪.而今天却全部回溯到身体的每一个细胞.这种飘忽啊飘忽的情绪.靠别人来怜悯是没有作用的.在每个街头的争执也不会换来下一次面对生活更加优越的快感.不如节
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/10/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

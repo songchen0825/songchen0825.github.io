@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+
+<div id="index" class="index page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/02/14/qzone-%E8%AF%97%E7%BB%8F%C2%B7%E9%82%B6%E9%A3%8E%C2%B7%E5%87%BB%E9%BC%93/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/02/14/qzone-%E8%AF%97%E7%BB%8F%C2%B7%E9%82%B6%E9%A3%8E%C2%B7%E5%87%BB%E9%BC%93/" itemprop="url">诗经·邶风·击鼓</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-02-14T17:29:35+08:00">2010-02-14 17:29:35</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/02/14/qzone-%E8%AF%97%E7%BB%8F%C2%B7%E9%82%B6%E9%A3%8E%C2%B7%E5%87%BB%E9%BC%93/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/02/14/qzone-诗经·邶风·击鼓/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      总是在特殊的日子就开始给予特殊的感伤，有时候我都理解这种情绪近乎于无聊，因为这个时候可是时间啊，不管你怎么想都是会来的。而赋予的特殊意义就像是自己给予自己加诸奇妙的味道，真切的感受它在喉管里流动着。 我经常在某个瞬间呆掉，这个瞬间我会陷入很深的迷茫和恐慌，仿佛觉得一切都很奇妙，感觉这个人怎么会是存在在我的身边，我怎么会有如此的陌生感，在这个时刻，在做着这件事情，这种感触夹杂着很多的幸福，虚幻，以及很多莫名其妙。我试着抽离自己去想想这样是否是幸福的感觉，又或者是不知不觉自己陷入的迷思。现在幸福的一切的一切都是自己主观的一厢情愿，而在下一个瞬间很多事情都会打破这份在一起的感受，我们互相埋怨，互相的
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/02/11/qzone-%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/02/11/qzone-%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/" itemprop="url">我回来了</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-02-11T17:30:52+08:00">2010-02-11 17:30:52</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/02/11/qzone-%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/02/11/qzone-我回来了/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      摇头尾巴晃，我跟随着长途车晃回福州。 外婆住院了，希望一切都安好，年前要顺利出院才行，身体才是最重要的，帅帅也病倒了，当然它基本是自作自受，没事去翻沙发垫子里面，导致眼角结膜炎，看它被抓去打针的样子我都不忍心看。打完针继续本着窝里横的角色在家里跑来跑去，越发富态了，还是那么的精神呀。 回到家发现要的书籍都已经到了，学习呀学习呀学习，每天的时间是这么的不够用，睡觉又是不可以少的，那偶尔偷懒就没有关系了，新年美好的愿望和欲望全部都扎起来，量贩也好，拿下也好，反正一个都不要给我放跑了。每天都希望自己能早点起来，但是为了这个要我早睡觉那更不乐意，所以这种矛盾就留着以后再说，现在先奋不顾身的玩吧。 如果
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/02/04/qzone-%E8%AF%B7%E5%88%AB%E8%AF%B4%E5%A4%AA%E6%87%92%E6%83%B0/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/02/04/qzone-%E8%AF%B7%E5%88%AB%E8%AF%B4%E5%A4%AA%E6%87%92%E6%83%B0/" itemprop="url">请别说太懒惰</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-02-04T17:32:22+08:00">2010-02-04 17:32:22</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/02/04/qzone-%E8%AF%B7%E5%88%AB%E8%AF%B4%E5%A4%AA%E6%87%92%E6%83%B0/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/02/04/qzone-请别说太懒惰/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      有时候，你也要很努力的去懒。我经常这么告诫自己，你就拼命睡吧，拼命玩吧，你总有一天会腻的，会烦的，等你烦了，腻了，那你就开始收拾心情，整理一下着装，推开窗户，让阳光洒进房间。叼上一口猪肉脯，坐在电脑面前屏息凝神，开工。在你们的眼里我时常眼神涣散，对着一幕幕无聊电视节目呵呵呵的傻乐，并且用各种不同的姿势在床上翻来覆去，唯一相同的就是脸所对着方向，那就是电脑。小时候总觉得天才就是那种在人前什么事情都不做，在人后还是什么都不做，只要想做就会无所不能的人。长大一点了就开始唾弃这样的骗局，人前风光人后心酸呀，原来都他妈的是在装蒜。不要在我面前伪装的和我一样懒，我是真的懒，你只是在装蒜。虽然有人提醒过我不
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/01/29/qzone-%E5%80%94%E5%BC%BA/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/01/29/qzone-%E5%80%94%E5%BC%BA/" itemprop="url">倔强</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-01-29T17:33:04+08:00">2010-01-29 17:33:04</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/01/29/qzone-%E5%80%94%E5%BC%BA/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/01/29/qzone-倔强/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      慢慢来，才是最快的方式。 对于摆在眼前的事情显得有点焦躁和不安。我经常给自己放纵的门槛。因为你很懒，你必须比别人聪明，因为你很懒，你必须比别人效率。我就是这样压缩着时间，浪费着时间，然后被时间追着一路狂奔。那个半夜的率真，笑对明早就要交付的项目。还有无数的文档和用例图要笔笔划划，搞的自己狼狈不堪，真的很滑稽。 一份慵懒的背后，看来我需要走几个地方去换个心境。倦怠倦怠无限的倦怠，老毛病又犯了，这个很简单，这个太容易，这个没必要，这个无意义。对着眼前的一切指指点点，然后它们也反过来对着我指指点点，乃至我们怒目相向直到破口大骂。该做的还得做，丢在地上的纸张，你不捡，它就永远在那里。 最近变得很想福州
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/01/05/qzone-%E6%9C%89%E4%BA%9B%E6%B2%A1%E6%9C%89%E5%8F%98%EF%BC%8C%E6%9C%89%E4%BA%9B%E5%8F%98%E4%BA%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2010/01/05/qzone-%E6%9C%89%E4%BA%9B%E6%B2%A1%E6%9C%89%E5%8F%98%EF%BC%8C%E6%9C%89%E4%BA%9B%E5%8F%98%E4%BA%86/" itemprop="url">有些没有变，有些变了</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-01-05T17:33:42+08:00">2010-01-05 17:33:42</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/01/05/qzone-%E6%9C%89%E4%BA%9B%E6%B2%A1%E6%9C%89%E5%8F%98%EF%BC%8C%E6%9C%89%E4%BA%9B%E5%8F%98%E4%BA%86/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/01/05/qzone-有些没有变，有些变了/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      一年前我笑称我对你的优越感就存在于我还在我的轨道上，你已经离的很远了。 一年后我看看自己似乎也不再轨道上了，但我还在拼命找借口说自己也许还在轨道上。曲线救国啊，我们谁都不愿意承认自己的改变，但是我们都变的不成“人样”。 虽然我还坚信自己截然一身走在街上看着世人的安逸是我的追求，但现在说起来就仿佛那个笑话，都说红颜是祸水，谁都想要，都说死后去天堂，谁都不去。 没有足够的阅历是无法写出渗透心扉的歌词，你们的哭和闹总是那么的假，但是有经历的人总能让人感受的真切。 だけど何とか进んでって ，だから何とかここに立って，仆达は今日を送ってる 我会写一个书评的，等我看透了那本书后，但是我不想看完后给我的生活
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2009/12/10/qzone-%E4%BB%85%E4%BB%A5%E6%88%91%E7%9A%84%E5%90%8D%E4%B9%89/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2009/12/10/qzone-%E4%BB%85%E4%BB%A5%E6%88%91%E7%9A%84%E5%90%8D%E4%B9%89/" itemprop="url">仅以我的名义</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2009-12-10T17:36:06+08:00">2009-12-10 17:36:06</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2009/12/10/qzone-%E4%BB%85%E4%BB%A5%E6%88%91%E7%9A%84%E5%90%8D%E4%B9%89/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2009/12/10/qzone-仅以我的名义/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      震破耳膜的歌声又开始回响起来了，换回原来的手机使用，发现很多我丢失的歌曲都存在其中。有人说的对啊，为什么听歌非要歌词，你们白目吗？音乐如此直接的表达的方式你们会听不懂，非要说出来才知道情感的声嘶力竭。 可曾记得爱，那划破长空的悲壮混杂着我们童年没有看懂的悲凉，在那样的年代，只有成熟的“大人”才明白，分别就是永别。即使只有我一个也不会感到寂寞 因为我有你们… 视频里面的话怎么那么熟悉，我已经年老体衰记忆力下降了吗？你也许觉得很生气，也许觉得很委屈，但在这一刻，正因为你所能感受到的，才使自己的生命更加精彩，不是吗？ 现在没做到的，我将来会补给你，这不是欠你们的，是因为爱你们。 离开科技园的时候我放
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2009/12/01/qzone-%E6%89%BE%E5%88%B0%E8%87%AA%E5%B7%B1/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2009/12/01/qzone-%E6%89%BE%E5%88%B0%E8%87%AA%E5%B7%B1/" itemprop="url">找到自己</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2009-12-01T17:36:57+08:00">2009-12-01 17:36:57</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2009/12/01/qzone-%E6%89%BE%E5%88%B0%E8%87%AA%E5%B7%B1/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2009/12/01/qzone-找到自己/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      挑剔的是我们的秉性，而不是我们的品位。 在成长的过程，真切的感觉到人和人之间有多少的挑剔和不满。要用平和的心情去写下这样的文字总是很困难的。但是我却突然想诉说这些事情。不用怀疑，我最近什么事都没有发生，因为这样的事情每天都在发生。 长期以来我都期望有人能够宽容的对待我（其实有时候我想的更是一种纵容），那样似乎会开始符合我想要的比较写意的人生。但往往很多时候我对别人都没有做到这些。我们都有很明显的心理预期，一瞬间的表情和一瞬间的语调都会被激起很多的波折。这样的例子在我从小到大不知道发生过无数次了。但我总会在察言观色下开始得意忘形，总能讨来一顿没趣。其实我觉得有些事情我没有错，但我总逼迫自己用最和
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2009/11/12/qzone-%E7%A2%8E%E7%A2%8E%E5%BF%B5/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2009/11/12/qzone-%E7%A2%8E%E7%A2%8E%E5%BF%B5/" itemprop="url">碎碎念</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2009-11-12T17:38:23+08:00">2009-11-12 17:38:23</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2009/11/12/qzone-%E7%A2%8E%E7%A2%8E%E5%BF%B5/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2009/11/12/qzone-碎碎念/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      猪通过勤劳致富有50元钱存在老鼠开的钱庄里。猪打算拿这50元钱建一个小窝，大概要花20元买地，花30元搭窝。王八是搞工程的，他想在猪身上挣更多的钱，于是找来当投资顾问的狐狸想办法，狐狸说：这好办。于是找来管地盘的狼，开钱庄的老鼠一起来商议，结果王八从老鼠那里借来200元，用100元买了狼的地，花了3元把猪窝盖好，花了50元给了狐狸咨询服务费，猪没有地，只好求王八把窝卖给它，王八要价500元，老猪说只有50元买不起，这时候狐狸说服猪去向老鼠借钱，老鼠答应借500给猪，前提是要他连本带利还600元，可以分10年还清，并且产权证拿来抵押。结果成交。猪到最后花了600元买来了猪窝，比他原来的计划高了1
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2009/11/01/qzone-%E6%A0%87%E5%87%86%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2009/11/01/qzone-%E6%A0%87%E5%87%86%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/" itemprop="url">标准的胡言乱语</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2009-11-01T17:37:33+08:00">2009-11-01 17:37:33</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2009/11/01/qzone-%E6%A0%87%E5%87%86%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2009/11/01/qzone-标准的胡言乱语/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      你好 ，23岁的自己 ，我已经30岁了 我并不能说我现在有多好，但我还是比你好一点 。看着你这个样子，我表示很心疼，而我并不想35岁的自己来心疼现在的我。你好，23岁的自己，还有那个30岁的自己。 我是不是犯了所有人的戒，我活着就让你们所有人都不满意，我知道你们都不满意，我活着就留下了长长不满意的名单，这个不能做，那个不能做，这个没做好，那个没有做好，你准备好了吗？你做的来吗？你可以吗？我不需要那么多话你可以吗？ 所有的事情该我承担的就是要去承担的，不该我承担的东西还没出生呢，想什么呢小子，生活才打开那么渺小的一页。你就越来越受不了了吗？我很自然的坦言可以死。但是你会死吗？这个世界还是很棒的不
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2009/05/23/qzone-%E4%B8%8D%E8%A6%81%E5%BD%93%E6%88%91%E7%9A%84%E5%81%87%E6%83%B3%E6%95%8C/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2009/05/23/qzone-%E4%B8%8D%E8%A6%81%E5%BD%93%E6%88%91%E7%9A%84%E5%81%87%E6%83%B3%E6%95%8C/" itemprop="url">不要当我的假想敌</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2009-05-23T17:39:04+08:00">2009-05-23 17:39:04</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2009/05/23/qzone-%E4%B8%8D%E8%A6%81%E5%BD%93%E6%88%91%E7%9A%84%E5%81%87%E6%83%B3%E6%95%8C/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2009/05/23/qzone-不要当我的假想敌/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      广州的雨也算是下的没完了，我果然不能白来一趟广州，如果和某人一起看到这么大雨的时候我很想踹他屁股说去淋雨啊，发什么呆，那些不都是你想要的吗？现在那里多的是。 想要和我讨论一些道德问题吗？很好，我们就来探讨一下道德问题，比如说我认为大义灭亲的都是畜生。不认可吗？可惜我一直没有觉得道德是凌驾在亲情之上的东西，对家人的宽容近乎于必然。对家人刻薄而选择自己道德上的满足感近乎于变态。很多人在启用道德的规范的时候其实就是为了获取自己内心的满足。这种人相当的多，而这样的人又往往又做不到孟子的舍身取义。难免在道德的拉扯中把自己拖垮，最后留下了一个伪君子的别号。应该没有人对这个词有爱，但是伪君子都未必是装的。只
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/13/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

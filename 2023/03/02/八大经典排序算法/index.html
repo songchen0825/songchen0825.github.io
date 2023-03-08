@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>八大经典排序算法 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/02/%E5%85%AB%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">八大经典排序算法</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-02T19:54:28+08:00">2023-03-02 19:54:28</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E7%AE%97%E6%B3%95%EF%BC%88Algorithm%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">算法（Algorithm）</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/02/%E5%85%AB%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/02/八大经典排序算法/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
+<li>基本思想：每步将一个待排序的纪录，按其关键码值的大小插入前面已经排序的文件中适当位置上，直到全部插入完为止。</li>
+<li>算法适用于少量数据的排序，时间复杂度为O(n^2)。是稳定的排序方法。</li>
+<li>代码：</li>
+</ul>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">insertionSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array)</span>&#123;<br>				<span class="hljs-type">int</span> tmp;<br>				<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;array.length;i++)&#123;<br>					tmp = array[i];  <span class="hljs-comment">//将当前位置的数给tmp</span><br>					<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> i;<br>					<span class="hljs-keyword">for</span>(;j&gt;<span class="hljs-number">0</span>&amp;&amp;array[j-<span class="hljs-number">1</span>]&gt;tmp;j--)&#123;<br>					<span class="hljs-comment">/*</span><br><span class="hljs-comment">					往右移，腾出左边的位置,</span><br><span class="hljs-comment">					array[j-1]&gt;tmp:大于号是升序排列，小于号是降序排列</span><br><span class="hljs-comment">				   */</span><br>					array[j] = array[j-<span class="hljs-number">1</span>];<br>			&#125;<br>			<span class="hljs-comment">//将当前位置的数插入到合适的位置</span><br>			array[j] = tmp;<br>		&#125;<br>	&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><ul>
+<li><p>基本思想：持续比较相邻的元素。如果第一个比第二个大，就交换他们两个。直到没有任何一对数字需要比较。</p>
+</li>
+<li><p>冒泡排序最好的时间复杂度为O(n)。冒泡排序的最坏时间复杂度为O(n^2)。因此冒泡排序总的平均时间复杂度为O(n^2)。</p>
+</li>
+<li><p>算法适用于少量数据的排序，是稳定的排序方法。</p>
+</li>
+<li><p>代码：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"> <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">bubbleSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array)</span>&#123;<br>	<span class="hljs-type">int</span> tmp;<br>	<span class="hljs-type">boolean</span> <span class="hljs-variable">flag</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;  <span class="hljs-comment">//设置是否发生交换的标志</span><br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> array.length-<span class="hljs-number">1</span>;i &gt;= <span class="hljs-number">0</span>;i--)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;i;j++)&#123;          <span class="hljs-comment">//每一轮都找到一个最大的数放在右边</span><br>			<span class="hljs-keyword">if</span>(array[j]&gt;array[j+<span class="hljs-number">1</span>])&#123;<br>				tmp = array[j];<br>				array[j] = array[j+<span class="hljs-number">1</span>];<br>				array[j+<span class="hljs-number">1</span>] = tmp;<br>				flag = <span class="hljs-literal">true</span>;   <span class="hljs-comment">//发生了交换</span><br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">if</span>(!flag)  <span class="hljs-keyword">break</span>;   <span class="hljs-comment">//这一轮循环没有发生交换，说明排序已经完成，退出循环</span><br>	&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><ul>
+<li><p>基本思想：每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>
+</li>
+<li><p>选择排序是不稳定的排序方法。时间复杂度 O(n^2)。</p>
+</li>
+<li><p>代码：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">selectSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array)</span>&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;i&lt;array.length-<span class="hljs-number">1</span>;i++)&#123;<br>			<span class="hljs-type">int</span>	<span class="hljs-variable">min</span> <span class="hljs-operator">=</span> array[i];<br>			<span class="hljs-type">int</span> <span class="hljs-variable">minindex</span> <span class="hljs-operator">=</span> i;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> i;j&lt;array.length;j++)&#123;<br>				<span class="hljs-keyword">if</span>(array[j]&lt;min)&#123;  <span class="hljs-comment">//选择当前最小的数</span><br>					min = array[j];<br>					minindex = j;<br>				&#125;<br>			&#125;<br>			<span class="hljs-keyword">if</span>(i != minindex)&#123; <span class="hljs-comment">//若i不是当前元素最小的，则和找到的那个元素交换</span><br>				array[minindex] = array[i];<br>				array[i] = min;<br>			&#125;<br>		&#125;<br>	&#125;<br><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><ul>
+<li><p>基本思想：先取一个小于n的整数d1作为第一个增量，把文件的全部记录分组。所有距离为d1的倍数的记录放在同一个组中。先在各组内进行直接插入排序；然后，取第二个增量d2&lt;d1重复上述的分组和排序，直至所取的增量dt&#x3D;1(dt&lt;dt-1…&lt;d2&lt;d1)，即所有记录放在同一组中进行直接插入排序为止。</p>
+</li>
+<li><p>在使用增量dk的一趟排序之后，对于每一个i，我们都有a[i]&lt;&#x3D;a[i+dk],即所有相隔dk的元素都被排序。</p>
+</li>
+<li><p>如图：增量序列为5，3，1，每一趟排序之后，相隔对应增量的元素都被排序了。当增量为1时，数组元素全部被排序。</p>
+</li>
+<li><p>希尔排序不稳定，时间复杂度 平均时间 O(nlogn) 最差时间O(n^2)</p>
+</li>
+<li><p>代码：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">shellSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array)</span>&#123;<br>			<span class="hljs-type">int</span> j;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">gap</span> <span class="hljs-operator">=</span> array.length/<span class="hljs-number">2</span>; gap&gt;<span class="hljs-number">0</span>; gap /= <span class="hljs-number">2</span>)&#123;<br>				<span class="hljs-comment">//定义一个增长序列，即分割数组的增量,d1=N/2   dk=(d(k-1))/2</span><br>				<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> gap; i&lt;array.length;i++)&#123;<br>					<span class="hljs-type">int</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> array[i];<br>					<span class="hljs-keyword">for</span>( j =i; j&gt;=gap&amp;&amp;tmp&lt;array[j-gap]; j -= gap)&#123;<br>						<span class="hljs-comment">//将相距为Dk的元素进行排序</span><br>						array[j] = array[j-gap];<br>					&#125;<br>					array[j] = tmp;<br>				&#125;<br>			&#125;<br>		&#125;<br><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><ul>
+<li>预备知识：</li>
+</ul>
+<p>二叉堆是完全二元树（二叉树）或者是近似完全二元树（二叉树）。 二叉堆有两种：最大堆和最小堆。 大根堆：父结点的键值总是大于或等于任何一个子节点的键值； 小根堆：父结点的键值总是小于或等于任何一个子节点的键值。 二叉堆一般用数组来表示。例如，根节点在数组中的位置是0，第n个位置的子节点分别在2n+1和 2n+2。因此，第0个位置的子节点在1和2，1的子节点在3和4。以此类推。这种存储方式便於寻找父节点和子节点。 例如初始要排序的数组为：49, 38, 65, 97, 76, 13, 27, 49 构造成大根堆之后的数组为：97 76 65 49 49 13 27 38 实际树形结构如图（最大堆）：</p>
+<ul>
+<li><p>堆排序基本思想：在排序过程中，将R[l..n]看成是一棵完全二叉树的顺序存储结构，利用完全二叉树中双亲结点和孩子结点之间的内在关系【参见二叉树的顺序存储结构】，在当前无序区中选择关键字最大(或最小)的记录。堆排序利用了大根堆(或小根堆)堆顶记录的关键字最大(或最小)这一特征，使得在当前无序区中选取最大(或最小)关键字的记录变得简单。</p>
+</li>
+<li><p>堆排序是一种选择排序,其时间复杂度为O(nlogn)。堆排序是不稳定的</p>
+</li>
+<li><p>代码：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">		 * 堆排序</span><br><span class="hljs-comment">		 * 调整最大堆，交换根元素和最后一个元素。</span><br><span class="hljs-comment">		 * 参数说明：</span><br><span class="hljs-comment">		 *     a -- 待排序的数组</span><br><span class="hljs-comment">		 */</span><br>		<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">heapSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] a)</span> &#123;<br>		    <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> a.length;<br>		    <span class="hljs-type">int</span> i,tmp;<br>		    <span class="hljs-comment">// 从(n/2-1) --&gt; 0逐次遍历。遍历之后，得到的数组实际上是一个(最大)二叉堆。</span><br>		    <span class="hljs-keyword">for</span> (i = n / <span class="hljs-number">2</span> - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)<br>		        maxHeapDown(a, i, n-<span class="hljs-number">1</span>);<br>		    <span class="hljs-comment">// 从最后一个元素开始对序列进行调整，不断的缩小调整的范围直到第一个元素</span><br>		    <span class="hljs-keyword">for</span> (i = n - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) &#123;<br>		        <span class="hljs-comment">// 交换a[0]和a[i]。交换后，a[i]是a[0...i]中最大的。</span><br>		        tmp = a[<span class="hljs-number">0</span>];<br>		        a[<span class="hljs-number">0</span>] = a[i];<br>		        a[i] = tmp;<br>		        <span class="hljs-comment">// 调整a[0...i-1]，使得a[0...i-1]仍然是一个最大堆。</span><br>		        <span class="hljs-comment">// 即，保证a[i-1]是a[0...i-1]中的最大值。</span><br>		        maxHeapDown(a, <span class="hljs-number">0</span>, i-<span class="hljs-number">1</span>);<br>		    &#125;<br>		&#125;<br>		<span class="hljs-comment">/*</span><br><span class="hljs-comment">		 * 注：数组实现的堆中，第N个节点的左孩子的索引值是(2N+1)，右孩子的索引是(2N+2)。</span><br><span class="hljs-comment">		 *     其中，N为数组下标索引值，如数组中第1个数对应的N为0。</span><br><span class="hljs-comment">		 *</span><br><span class="hljs-comment">		 * 参数说明：</span><br><span class="hljs-comment">		 *     a -- 待排序的数组</span><br><span class="hljs-comment">		 *     start -- 被下调节点的起始位置(一般为0，表示从第1个开始)</span><br><span class="hljs-comment">		 *     end   -- 截至范围(一般为数组中最后一个元素的索引)</span><br><span class="hljs-comment">		 */</span><br>		<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">maxHeapDown</span><span class="hljs-params">(<span class="hljs-type">int</span>[] a, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> &#123;<br>		    <span class="hljs-type">int</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> start;            <span class="hljs-comment">// 当前(current)节点的位置</span><br>		    <span class="hljs-type">int</span> <span class="hljs-variable">l</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>*c + <span class="hljs-number">1</span>;        <span class="hljs-comment">// 左(left)孩子的位置</span><br>		    <span class="hljs-type">int</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> a[c];            <span class="hljs-comment">// 当前(current)节点的大小</span><br>		    <span class="hljs-keyword">for</span> (; l &lt;= end; c=l,l=<span class="hljs-number">2</span>*l+<span class="hljs-number">1</span>) &#123;<br>		        <span class="hljs-comment">// &quot;l&quot;是左孩子，&quot;l+1&quot;是右孩子</span><br>		        <span class="hljs-keyword">if</span> ( l &lt; end &amp;&amp; a[l] &lt; a[l+<span class="hljs-number">1</span>])<br>		            l++;        <span class="hljs-comment">// 左右两孩子中选择较大者，即m_heap[l+1]</span><br>		        <span class="hljs-keyword">if</span> (tmp &gt;= a[l])<br>		            <span class="hljs-keyword">break</span>;        <span class="hljs-comment">// 调整结束</span><br>		        <span class="hljs-keyword">else</span> &#123;            <span class="hljs-comment">// 交换值</span><br>		            a[c] = a[l];<br>		            a[l]= tmp;<br>		        &#125;<br>		    &#125;<br>		&#125;<br><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ul>
+<li><p>归并排序的原理</p>
+<ul>
+<li>将待排序的数组分成前后两个部分，再递归的将前半部分数据和后半部分的数据各自归并排序，得到的两部分数据，然后使用merge合并算法（算法见代码）将两部分算法合并到一起。例如：如果N&#x3D;1；那么只有一个数据要排序，N&#x3D;2，只需要调用merge函数将前后合并，N&#x3D;4，……….. 也就是将一个很多数据的数组分成前后两部分，然后不断递归归并排序，再合并，最后返回有序的数组。</li>
+</ul>
+</li>
+<li><p>归并排序的时间复杂度</p>
+<ul>
+<li>归并排序的最好、最坏和平均时间复杂度都是O(nlogn)，而空间复杂度是O(n)，比较次数介于(nlogn)&#x2F;2和(nlogn)-n+1，赋值操作的次数是(2nlogn)。因此可以看出，归并排序算法比较占用内存，但却是效率高且稳定的排序算法。</li>
+</ul>
+</li>
+<li><p>代码：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MergeSort</span> &#123;<br>		<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">mergeSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array,<span class="hljs-type">int</span>[] tmp,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>&#123;<br>			<span class="hljs-keyword">if</span>(left&lt;right)&#123;<br>				<span class="hljs-type">int</span> <span class="hljs-variable">center</span> <span class="hljs-operator">=</span> ( left + right ) / <span class="hljs-number">2</span>;<span class="hljs-comment">//取数组的中点</span><br>				mergeSort(array,tmp,left,center);<span class="hljs-comment">//归并排序数组的前半部分</span><br>				mergeSort(array,tmp,center+<span class="hljs-number">1</span>,right);<span class="hljs-comment">//归并排序数组的后半部分</span><br>				merge(array,tmp,left,center+<span class="hljs-number">1</span>,right);<span class="hljs-comment">//将数组的前后半部分合并</span><br>			&#125;<br>		&#125;<br>		<span class="hljs-comment">/*</span><br><span class="hljs-comment">		 * 超简单的合并函数</span><br><span class="hljs-comment">		 */</span><br>		<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">merge</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array, <span class="hljs-type">int</span>[] tmp, <span class="hljs-type">int</span> leftPos, <span class="hljs-type">int</span> rightPos, <span class="hljs-type">int</span> rightEnd)</span> &#123;<br>			<span class="hljs-comment">// TODO Auto-generated method stub</span><br>			<span class="hljs-type">int</span> <span class="hljs-variable">leftEnd</span> <span class="hljs-operator">=</span> rightPos - <span class="hljs-number">1</span>;<br>			<span class="hljs-type">int</span> <span class="hljs-variable">tmpPos</span> <span class="hljs-operator">=</span> leftPos;<br>			<span class="hljs-type">int</span> <span class="hljs-variable">numElements</span> <span class="hljs-operator">=</span> rightEnd - leftPos + <span class="hljs-number">1</span>;<br>			<span class="hljs-keyword">while</span>(leftPos &lt;= leftEnd &amp;&amp; rightPos &lt;= rightEnd)&#123;<br>				<span class="hljs-keyword">if</span>(array[leftPos]&lt;=array[rightPos])&#123;<br>					tmp[tmpPos++] = array[leftPos++];<br>				&#125;<span class="hljs-keyword">else</span>&#123;<br>					tmp[tmpPos++] = array[rightPos++];<br>				&#125;<br>			&#125;<br>			<span class="hljs-keyword">while</span>(leftPos &lt;= leftEnd)&#123;<br>				tmp[tmpPos++] = array[leftPos++];<br>			&#125;<br>			<span class="hljs-keyword">while</span>(rightPos &lt;= rightEnd)&#123;<br>				tmp[tmpPos++] = array[rightPos++];<br>			&#125;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;numElements;i++,rightEnd--)&#123;<br>				array[rightEnd] = tmp[rightEnd];<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">mergeSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] array)</span>&#123;<br>			<span class="hljs-type">int</span>[] tmp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[array.length];<span class="hljs-comment">//声明一个用来合并的数组</span><br>			mergeSort(array,tmp,<span class="hljs-number">0</span>,array.length-<span class="hljs-number">1</span>);<span class="hljs-comment">//调用排序函数，传入数字的起点和终点</span><br>		&#125;<br>	&#125;<br><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><ul>
+<li><p>快速排序原理：</p>
+<ol>
+<li>如果数组S中元素是0或者1，则返回；</li>
+<li>区数组S中任一元素v，称之为枢纽元；</li>
+<li>将S-{v}（S中剩余的元素）划分成连个不相交的集合：S1&#x3D;{S-{v}|x&lt;&#x3D;v}和S2&#x3D;{S-{v}|x&gt;&#x3D;v};</li>
+<li>返回{quicksort(s1)}后跟v，继而返回{quicksort(S2)}。</li>
+</ol>
+</li>
+<li><p>选取枢纽元（三数中值分割法）</p>
+</li>
+<li><p>一般的做法是使用左端、右端和中心位置上的三个元素的中值作为基元。分割策略：在分割阶段吧所有小元素移到数组的左边，大元素移到数组右边。，大小是相对于枢纽元素而言的。当i在j的左边时，将i右移，移过哪些小于枢纽元的元素，并将j左移，已过那些大于枢纽元的元素，当i和j停止时，i指向一个大元素，而j指向一个小元素，如果i在j的左边，那么将这两个元素交换，其效果是把一个大元素推向右边，而把小元素推向左边。效果如图：</p>
+</li>
+<li><p>快速排序平均时间复杂度为O(nlogn)，最坏情况为O(n^2)，n越大，速度越快。不是稳定的排序算法。</p>
+</li>
+<li><p>代码：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">	 * 快速排序</span><br><span class="hljs-comment">	 * 两个方向，左边的i下标一直往右走，当a[i] &lt;= a[center_index]，</span><br><span class="hljs-comment">	 * 其中center_index是中枢元素的数组下标，而右边的j下标一直往左走，当a[j] &gt; a[center_index]</span><br><span class="hljs-comment">	 * 如果i和j都走不动了，i &lt;= j, 交换a[i]和a[j],重复上面的过程，直到i&gt;j</span><br><span class="hljs-comment">	 * 交换a[j]和a[center_index]，完成一趟快速排序</span><br><span class="hljs-comment">	 * 枢轴采用三数中值分割法可以优化</span><br><span class="hljs-comment">	 */</span><br>	<span class="hljs-comment">//递归快速排序</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">quickSort</span><span class="hljs-params">(<span class="hljs-type">int</span> a[])</span>&#123;<br>	    qSort(a, <span class="hljs-number">0</span>, a.length - <span class="hljs-number">1</span>);<br>	&#125;<br>	<span class="hljs-comment">//递归排序，利用两路划分</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">qSort</span><span class="hljs-params">(<span class="hljs-type">int</span> a[],<span class="hljs-type">int</span> low,<span class="hljs-type">int</span> high)</span>&#123;<br>	    <span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>	    <span class="hljs-keyword">if</span>(low &lt; high)&#123;<br>	        <span class="hljs-comment">//将数组一分为二</span><br>	        pivot = partition(a,low,high);<br>	        <span class="hljs-comment">//对第一部分进行递归排序</span><br>	        qSort(a,low,pivot);<br>	        <span class="hljs-comment">//对第二部分进行递归排序</span><br>	        qSort(a,pivot + <span class="hljs-number">1</span>,high);<br>	    &#125;<br>	&#125;<br>	<span class="hljs-comment">//partition函数，实现三数中值分割法</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">partition</span><span class="hljs-params">(<span class="hljs-type">int</span> a[],<span class="hljs-type">int</span> low,<span class="hljs-type">int</span> high)</span>&#123;<br>	    <span class="hljs-type">int</span> <span class="hljs-variable">pivotkey</span> <span class="hljs-operator">=</span> a[low];   <span class="hljs-comment">//选取第一个元素为枢轴记录</span><br>	    <span class="hljs-keyword">while</span>(low &lt; high)&#123;<br>	        <span class="hljs-comment">//将比枢轴记录小的交换到低端</span><br>	        <span class="hljs-keyword">while</span>(low &lt; high &amp;&amp; a[high] &gt;= pivotkey)&#123;<br>	            high--;<br>	        &#125;<br>	        <span class="hljs-comment">//采用替换而不是交换的方式操作</span><br>	        a[low] = a[high];<br>	        <span class="hljs-comment">//将比枢轴记录大的交换到高端</span><br>	        <span class="hljs-keyword">while</span>(low &lt; high &amp;&amp; a[low] &lt;= pivotkey)&#123;<br>	            low++;<br>	        &#125;<br>	        a[high] = a[low];<br>	    &#125;<br>	    <span class="hljs-comment">//枢纽所在位置赋值</span><br>	    a[low] = pivotkey;<br>	    <span class="hljs-comment">//返回枢纽所在的位置</span><br>	    <span class="hljs-keyword">return</span> low;<br>	&#125;<br><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="桶式排序"><a href="#桶式排序" class="headerlink" title="桶式排序"></a>桶式排序</h3><ul>
+<li><p>桶式排序不再是一种基于比较的排序方法，它是一种比较巧妙的排序方式，但这种排序方式需要待排序的序列满足以下两个特征：待排序列所有的值处于一个可枚举的范围之类；待排序列所在的这个可枚举的范围不应该太大，否则排序开销太大。</p>
+</li>
+<li><p>排序的具体步骤如下：</p>
+<p>(1)对于这个可枚举范围构建一个buckets数组，用于记录“落入”每个桶中元素的个数；(2)将（1）中得到的buckets数组重新进行计算，按如下公式重新计算：</p>
+</li>
+</ul>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">buckets[i] = buckets[i] +buckets[i-<span class="hljs-number">1</span>] (其中<span class="hljs-number">1</span>&lt;=i&lt;buckets.length);<br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>桶式排序是一种非常优秀的排序算法，时间效率极高，它只要通过2轮遍历：第1轮遍历待排数据，统计每个待排数据“落入”各桶中的个数，第2轮遍历buckets用于重新计算buckets中元素的值，2轮遍历后就可以得到每个待排数据在有序序列中的位置，然后将各个数据项依次放入指定位置即可。</p>
+</li>
+<li><p>桶式排序的空间开销较大，它需要两个数组，第1个buckets数组用于记录“落入”各桶中元素的个数，进而保存各元素在有序序列中的位置，第2个数组用于缓存待排数据.</p>
+</li>
+<li><p>桶式排序是稳定的。如果待排序数据的范围在0~k之间，那么它的时间复杂度是O(k+n)的.</p>
+</li>
+<li><p>但是它的限制多，比如它只能排整形数组。而且当k较大，而数组长度n较小，即k&gt;&gt;n时，辅助数组C[k+1]的空间消耗较大。当数组为整形，且k和n接近时, 可以用此方法排序。</p>
+</li>
+<li><p>代码实现：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//min的值为0，max的值为待排序数组中最大值+1</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">bucketSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] data, <span class="hljs-type">int</span> min, <span class="hljs-type">int</span> max)</span> &#123;<br>	        <span class="hljs-comment">// 缓存数组</span><br>	        <span class="hljs-type">int</span>[] tmp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[data.length];<br>	        <span class="hljs-comment">// buckets用于记录待排序元素的信息</span><br>	        <span class="hljs-comment">// buckets数组定义了max-min个桶</span><br>	        <span class="hljs-type">int</span>[] buckets = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[max - min];<br>	        <span class="hljs-comment">// 计算每个元素在序列出现的次数</span><br>	        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; data.length; i++) &#123;<br>	            buckets[data[i] - min]++;<br>	        &#125;<br>	        <span class="hljs-comment">// 计算“落入”各桶内的元素在有序序列中的位置</span><br>	        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; max - min; i++) &#123;<br>	            buckets[i] = buckets[i] + buckets[i - <span class="hljs-number">1</span>];<br>	        &#125;<br>	        <span class="hljs-comment">// 将data中的元素完全复制到tmp数组中</span><br>	        System.arraycopy(data, <span class="hljs-number">0</span>, tmp, <span class="hljs-number">0</span>, data.length);<br>	        <span class="hljs-comment">// 根据buckets数组中的信息将待排序列的各元素放入相应位置</span><br>	        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">k</span> <span class="hljs-operator">=</span> data.length - <span class="hljs-number">1</span>; k &gt;= <span class="hljs-number">0</span>; k--) &#123;<br>	            data[--buckets[tmp[k] - min]] = tmp[k];<br>	        &#125;<br>	    &#125;<br><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>下面是一个总的表格，大致总结了我们常见的所有的排序算法的特点。<br>选择	O(n2)	O(n2)	不稳定	O(1)	n小时较好<br>插入	O(n2)	O(n2)	稳定	O(1)	大部分已排序时较好<br>Shell(希尔)	O(nlogn)	O(ns)	不稳定	O(1)	s是所选分组<br>快速	O(nlogn)	O(n2)	不稳定	O(nlogn)	n大时较好<br>归并	O(nlogn)	O(nlogn)	稳定	O(1)	n大时较好<br>堆	O(nlogn)	O(nlogn)	不稳定	O(1)	n大时较好<br>桶式	O(k+n)	O(k+n)	稳定	O(1)	只能排整形数组</li>
+</ul>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/java/" rel="tag"><i class="fas fa-tags"></i>java</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A017%E7%A7%8D%E5%B8%B8%E8%A7%84%E7%AE%97%E6%B3%95/" rel="next" title="机器学习17种常规算法"><i class="fas fa-angle-left"></i><span class="nav-title">机器学习17种常规算法</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/03/02/%E5%B8%B8%E8%A7%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%BC%98%E7%BC%BA%E7%82%B9/" rel="prev" title="常见机器学习算法优缺点"><span class="nav-title">常见机器学习算法优缺点</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/02/%E5%85%AB%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/";
+    this.page.identifier = "2023/03/02/八大经典排序算法/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="toc-text">希尔排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="toc-text">堆排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">归并排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%A1%B6%E5%BC%8F%E6%8E%92%E5%BA%8F"><span class="toc-text">桶式排序</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

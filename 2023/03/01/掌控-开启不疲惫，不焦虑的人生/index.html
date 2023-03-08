@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>掌控-开启不疲惫，不焦虑的人生 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/01/%E6%8E%8C%E6%8E%A7-%E5%BC%80%E5%90%AF%E4%B8%8D%E7%96%B2%E6%83%AB%EF%BC%8C%E4%B8%8D%E7%84%A6%E8%99%91%E7%9A%84%E4%BA%BA%E7%94%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">掌控-开启不疲惫，不焦虑的人生</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-01T21:14:26+08:00">2023-03-01 21:14:26</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Reading-Note/" itemprop="url" rel="index"><span itemprop="name">Reading Note</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/01/%E6%8E%8C%E6%8E%A7-%E5%BC%80%E5%90%AF%E4%B8%8D%E7%96%B2%E6%83%AB%EF%BC%8C%E4%B8%8D%E7%84%A6%E8%99%91%E7%9A%84%E4%BA%BA%E7%94%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/01/掌控-开启不疲惫，不焦虑的人生/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="Chapter-01-精力管理-万事从0到1的终极秘诀"><a href="#Chapter-01-精力管理-万事从0到1的终极秘诀" class="headerlink" title="Chapter 01 精力管理-万事从0到1的终极秘诀"></a>Chapter 01 精力管理-万事从0到1的终极秘诀</h1><p>胖子核，外形看起来像是一个瘦子，bmi都在正常的范围之内，但是实际体脂的范围是20-25%，成年男性应该是15%-18%。体脂率过高，体重超过正常的20%，心肺功能，血脂，血压都会出现问题。这些人都有一个特征，四肢均称，腹腰肥胖。</p>
+<p><strong>健康体适能的概念：每天有足够的精力去工作和学习，有余力享受休闲生活，能够积极应对突发身体状况。</strong></p>
+<p>超量恢复是运动学的基础理论，指的是运动员或者普通人在经过一次训练之后，体能水平会逐渐下降，之后经过饮食和睡眠的恢复，体能水平组建上升，乃至超过原先的体能水平。</p>
+<p>精力管理的组成纬度：</p>
+<ol>
+<li>运动管理，找到身体的舒适区，让精力蓄水池保持流动状态。</li>
+<li>饮食管理，精力转换提供能量。</li>
+<li>休息管理，激活身体的复原机制。</li>
+<li>心态管理，寻找自己真实的意图。</li>
+</ol>
+<h2 id="精力管理的认知清单"><a href="#精力管理的认知清单" class="headerlink" title="精力管理的认知清单"></a>精力管理的认知清单</h2><ol>
+<li>什么是精力：精力包含身和心，包含专注力，体力，意志力等多个维度。精力是一个流动的状态，需要管理和有规划的使用。</li>
+<li>什么是精力管理：主动全面的掌控自己的体力，专注力和意志力。长期处在收放自如的状态。精力管理需要长期，科学，系统性的坚持。</li>
+<li>如何实现精力管理：精力管理通过各部分因素组成完成。包含运动，饮食，休息和心态控制。</li>
+</ol>
+<h1 id="Chapter-2-精力运动-20-的精准投入，80-的能量产出"><a href="#Chapter-2-精力运动-20-的精准投入，80-的能量产出" class="headerlink" title="Chapter 2 精力运动 - 20%的精准投入，80%的能量产出"></a>Chapter 2 精力运动 - 20%的精准投入，80%的能量产出</h1><p><strong>心肺功能决定一切</strong></p>
+<p>如果把五项身体的基本素质排名先后顺序：</p>
+<ol>
+<li>心肺功能</li>
+<li>身体成分组成</li>
+<li>柔韧度</li>
+<li>肌肉耐力</li>
+<li>肌肉力量</li>
+</ol>
+<p><strong>最大的摄氧量决定了你的运动安全区</strong></p>
+<p>男性最大摄氧量低于42，身体的问题就开始增多，男性最大摄氧量40 ，女性在36算的上基本及格。选择主流品牌的运动手表就可以测试最大摄氧量，要参考他们是否采用了firstbeat公司提供的数据。</p>
+<p>测试自己的最大心率和静止心率：</p>
+<ol>
+<li>最大心率：连续跑三个800米每个间隔3分钟查看最大心率。或者跑步机没两分钟将坡度提升1%，直到自己无法继续为止。</li>
+<li>静止心率：早上起来站立静止一分钟，之后进行测试就是自己的静止心率。</li>
+</ol>
+<p>建议运动心率计算公式： 【220-晨脉-年龄】*（35%～55%）+晨脉</p>
+<p><strong>走路时一门科学</strong></p>
+<p>建议在跑步机器上进行有坡度的走路。走路的要点：</p>
+<ol>
+<li>走路要加大摆臂的幅度</li>
+<li>要保持肚脐一直向前</li>
+<li>腹部始终要保持收紧的状态</li>
+<li>始终要吃脚尖向前</li>
+<li>大步走</li>
+<li>保持充分的水分</li>
+</ol>
+<p>走路训练最好隔天休息，不需要每天进行。</p>
+<p><strong>当你要选择开始跑步</strong></p>
+<p>正确的热身动作：泡沫轴按压-&gt;动态伸展（跑步10分钟，心率110）-&gt;运动-&gt;静态拉伸</p>
+<p><strong>轻松跑步第一步：找到四个基准点</strong></p>
+<p>首先，我们需要知道几个指标：</p>
+<ol>
+<li>体脂率，体脂率低于26%可以考虑跑步</li>
+<li>心率</li>
+<li>最大摄氧量</li>
+<li>疲劳指数</li>
+</ol>
+<p><strong>轻松跑步第二步：把目标改成最大摄氧量</strong></p>
+<p>从慢跑这种中低强度的运动开始训练，随然心肺功能没有得到锻炼，但是肌肉线粒体的能力得到了提升，所以最大摄氧量也会得到提升。慢跑一段时间之后，最大的摄氧量数据将不再产生变化，说明已经具备了一定的有氧能力基础。可以适当增加运动的强度。训练一年只有最大摄氧量就会到达峰值，未来的目标就是保持这个峰值为目标。</p>
+<p><strong>轻松跑步第三步：在6个强度的分区间循环渐进</strong></p>
+<p>当测试出最大心率和静态心率，就可以设置我们跑步强度分区了</p>
+<p>强度1区：e强度，轻松跑 （最大心率-静止心率）*（59%～74%）+静止心率 建议初跑者从e强度等级开始跑步。</p>
+<p>强度2区：m强度，马拉松配速跑 （最大心率-静止心率）*（74%～84%）+静止心率。</p>
+<p>强度3区：t强度，乳酸阀值强度 。（最大心率-静止心率）*（84%～88%）+静止心率。T强度训练的首要目标时增强身体的排乳酸的能力。不断提高乳酸的阀值。以提升跑者的耐力为目标</p>
+<p>强度4区：a强度 无氧耐力区间。（最大心率-静止心率）*（88%～95%）+静止心率。这个强度锻炼耐乳酸的能力。</p>
+<p>强度5区：i强度 最大摄氧量强度。（最大心率-静止心率）*（95%～100%）+静止心率。主要的目标提高最大的摄氧量。让跑者维持更长的运动时间。I强度最多维持10分钟-12分钟。</p>
+<p>强度6区：R强度 爆发力训练区 属于无氧运动。人体需要从无氧系统中获取更多支持。</p>
+<p><strong>轻松跑步第4步 ： 定好周期，4个月后就能跑半马</strong></p>
+<p>人在同一个运动强度适应期时在4-6周。之后需要调整运动的强度，提供新的刺激，运动能力才能不断的进步。对于初学者 4个月跑完半马 16周的训练分为5周的基础周 ，3周的进阶周，4周的巅峰期，4周的竞赛期。</p>
+<p>对于初学者来说，重点是e强度的跑步或者走路训练。开始训练的时候选择跑步5分钟走路1分钟时比较稳妥的选择。</p>
+<p><strong>姿势对了，效能翻倍</strong></p>
+<ol>
+<li>选择前脚掌落地，虽然开始会比较累，但是能保护关节</li>
+<li>跑步膝盖保持一定程度的弯曲</li>
+<li>提高自己的步频。每分钟180次为优。</li>
+</ol>
+<p><strong>用重力跑步</strong></p>
+<p>重力-&gt;质量-&gt;支撑-&gt;体重-&gt;肌肉做功-&gt;支撑转换-&gt;移动</p>
+<p><strong>耐力提升的诀窍 ： 从燃糖模式切换到燃脂模式</strong></p>
+<p>多做e区和m区的低强度运动，可以将身体从燃糖转换成燃脂。尽量做低烈度的运动使用的多数的是脂肪，而高强度运动多数燃烧的是糖分。</p>
+<h1 id="Chapter-3-精力饮食-吃对了，抗衰老，不疲惫"><a href="#Chapter-3-精力饮食-吃对了，抗衰老，不疲惫" class="headerlink" title="Chapter 3 精力饮食 - 吃对了，抗衰老，不疲惫"></a>Chapter 3 精力饮食 - 吃对了，抗衰老，不疲惫</h1><p>慎重的选择食物，如果一架车你会选择比较好的油品，那么对自己要更加精准的选择食物。大量劣质的燃料进入体内，消化会非常的吃力。</p>
+<ol>
+<li>不能补充体力，反而消耗了更多的时间</li>
+<li>入睡后消化系统还在工作</li>
+<li>摄入过多，超出了需要储备能量在身体里成为了负担</li>
+</ol>
+<h2 id="碳水化合物"><a href="#碳水化合物" class="headerlink" title="碳水化合物"></a>碳水化合物</h2><p>计算自己每日需要摄入的碳水化物：</p>
+<ol>
+<li>计算基础代谢率 bmr &#x3D; 66+(13.7_体重kg)+（5_身高cm）-（6.8*年龄year）</li>
+<li>计算每日摄入的总热量<ol>
+<li>几乎不懂 bmr*1.2</li>
+<li>稍微动 bmr*1.375</li>
+<li>中度运动 bmr*1.55</li>
+<li>积极运动 bmr*1.725</li>
+</ol>
+</li>
+<li>按照比例进行摄入 碳水化物55%，蛋白质15%，脂肪30%</li>
+</ol>
+<p>也可以计算碳水化合物摄入量&#x3D;体重kg*2g</p>
+<h2 id="蛋白质"><a href="#蛋白质" class="headerlink" title="蛋白质"></a>蛋白质</h2><p>肉类营养主要包括三大方面</p>
+<ol>
+<li>提供大量的蛋白质</li>
+<li>提供血红铁素，和人体接近易于吸收，还有其他微量元素</li>
+<li>提供维生素b族。</li>
+</ol>
+<p>红肉之所以被称为不好是因为红肉中脂肪含量较高。建议使用红色瘦肉。</p>
+<p>建议蛋白质摄入量为体重的每公斤0.8g-1.2g，如果是运动人群，体力劳动者可以是1.2-1.8g。不要超过1.9g，会对身体造成负担。</p>
+<h2 id="脂肪"><a href="#脂肪" class="headerlink" title="脂肪"></a>脂肪</h2><p>脂肪酸分为饱和脂肪酸和不饱和脂肪酸 。饱和脂肪酸主要在肉类脂肪粒，常温下呈现固态。而不饱和脂肪酸在植物里，常温下呈现液态。</p>
+<p>不饱和脂肪酸富含omega-3，可以清除血液垃圾，软化细胞膜，减少炎症的发作，增强心脏功能。主要包含在三文鱼，金枪鱼，鱼油，亚麻仁油，核桃，芝麻等。</p>
+<p>建议摄入人体体重的0.1%。体重78公斤的人，摄入脂肪为78克。</p>
+<p>鸡蛋黄胆固醇虽然不要在意，但是鸡蛋黄内脂肪含量比较高，每日摄入两个鸡蛋黄是可以接受的。如果需要的话还是可以单吃鸡蛋白。</p>
+<h2 id="水是最好的运动饮料"><a href="#水是最好的运动饮料" class="headerlink" title="水是最好的运动饮料"></a>水是最好的运动饮料</h2><p>每日饮水量是每千克体重30ml。</p>
+<h1 id="Chapter-4-精力恢复-会休息，压力也能赋能"><a href="#Chapter-4-精力恢复-会休息，压力也能赋能" class="headerlink" title="Chapter 4 精力恢复 - 会休息，压力也能赋能"></a>Chapter 4 精力恢复 - 会休息，压力也能赋能</h1><p>普通人比运动员更需要休息，普通人每日工作8-12小时中做到出类拔萃，工作强度不输给运动员，但是普通人的工作人生很长，长达40年，要远比运动员长，所以需要更加学会休息这件事。</p>
+<p>精力维度<strong>意志力</strong>和<strong>专注力</strong> 都需要休息来得到恢复，但是朋友圈，看新闻，看美剧这类所谓的休息方式，其实都需要消耗我们的意志力和专注力。</p>
+<p><strong>睡眠是最好的医疗手段</strong></p>
+<p>临睡前的90分钟应该远离各种电子产品，电子产品产生的蓝光会降低褪黑素的分泌</p>
+<p>跟踪自己的睡眠：观察睡眠总量，睡眠类别分布</p>
+<p><strong>人体蓄能的密码：深呼吸</strong></p>
+<ol>
+<li>我们唯一能够控制的内脏就是肺，而深呼吸就是有效的肺部调节</li>
+<li>深呼吸可以调动身体的副交感神经，这负责放松和消化吸收&#x2F;</li>
+</ol>
+<p><strong>冥想：让精力模式从耗散到生发</strong></p>
+<p>通过心率手表的压力数据来知道自己的压力边界，有了压力数据就可以用冥想来降低压力数据。下降压力数据能够得到足够的正反馈来解决这些问题。</p>
+<p><strong>筋膜放松：联通精力的恢复网</strong></p>
+<p>使用泡沫轴来放松筋膜</p>
+<p><strong>4种不起眼的高效充电模式</strong></p>
+<ol>
+<li>散步</li>
+<li>和朋友聚会聊天</li>
+<li>到大自然中去</li>
+<li>休假</li>
+</ol>
+<h1 id="Chapter-5-精力心法-变化的世界-不变的规则"><a href="#Chapter-5-精力心法-变化的世界-不变的规则" class="headerlink" title="Chapter 5 精力心法 -变化的世界 不变的规则"></a>Chapter 5 精力心法 -变化的世界 不变的规则</h1><p><strong>焦虑不源于未知，源于不自知</strong></p>
+<p>保障精力使用的高效：首先要知道自己精力的使用，如何使用，如何分配，主动使用又或者是被动使用。</p>
+<p><strong>比时间，金钱更加宝贵的是注意力</strong></p>
+<p>将大量信息填入脑中，实际上是分散了你自己的注意力，让你好像吃了一大堆的食物，脑子却会昏昏沉沉。每个人的注意力是可以自己做主的 ，除非你放弃主权。</p>
+<p>人类的本质不适合多线程处理事情，选择专注的处理事情，能够更加节约精力。总结不可以多任务同时处理的事情：</p>
+<ol>
+<li>困难的事务</li>
+<li>较大风险的事务</li>
+<li>有时效性的事务</li>
+<li>高价值事务</li>
+</ol>
+<p>认清自己，不要被情绪消耗，掌握心态管理核心要素：安心，真诚，认真</p>
+<ol>
+<li>安心就是去除情绪化，你给予事情越多的情绪，你将越疲惫</li>
+<li>真诚，真实的去面对人和事。不逃避自己必要处理的事情</li>
+<li>认真 字面意思。无法解释</li>
+</ol>
+<p><strong>需要克制的坚持&#x3D;必然的半途而废</strong></p>
+<p>如果一件事情是必须强制去做的，那么说明这是一件你不想去做的事情。不应该通过坚持，而是采用动力管理技巧来驱动自己：</p>
+<ol>
+<li>在做事之前赋予这件事情重大意义</li>
+<li>思考不做这件事情会有哪些重大影响</li>
+<li>为了减少个人的随意性，通过社团进行互相监督</li>
+</ol>
+<p><strong>找到自己人生的祈祷语</strong></p>
+<p>幸福感，健康，自由</p>
+<p>拥有健康的身体，去获取长期和heros相处的幸福，而在此之中我是自由的。</p>
+<p><strong>去化解而不是去对抗</strong></p>
+<p>自控力并不是肌肉，并不存在越锻炼越强这一说法。如果不能正确认识，那只是逃避了这一个事实，但总会有机会这一切都会被激活回到原地。最好的化解方法是打断其中的正反馈：</p>
+<p>耶鲁大学戒烟rain ： 识别感情 - 接受感情 - 观摩感情 - 分离感情</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%85%BB%E7%94%9F/" rel="tag"><i class="fas fa-tags"></i>养生</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/01/%E7%B3%BB%E7%BB%9F%E4%B9%8B%E7%BE%8E-%E5%86%B3%E7%AD%96%E8%80%85%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%9D%E8%80%83/" rel="next" title="系统之美-决策者的系统思考"><i class="fas fa-angle-left"></i><span class="nav-title">系统之美-决策者的系统思考</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/03/01/ORK%E5%B7%A5%E4%BD%9C%E6%B3%95/" rel="prev" title="ORK工作法"><span class="nav-title">ORK工作法</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/01/%E6%8E%8C%E6%8E%A7-%E5%BC%80%E5%90%AF%E4%B8%8D%E7%96%B2%E6%83%AB%EF%BC%8C%E4%B8%8D%E7%84%A6%E8%99%91%E7%9A%84%E4%BA%BA%E7%94%9F/";
+    this.page.identifier = "2023/03/01/掌控-开启不疲惫，不焦虑的人生/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Chapter-01-%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86-%E4%B8%87%E4%BA%8B%E4%BB%8E0%E5%88%B01%E7%9A%84%E7%BB%88%E6%9E%81%E7%A7%98%E8%AF%80"><span class="toc-text">Chapter 01 精力管理-万事从0到1的终极秘诀</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86%E7%9A%84%E8%AE%A4%E7%9F%A5%E6%B8%85%E5%8D%95"><span class="toc-text">精力管理的认知清单</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Chapter-2-%E7%B2%BE%E5%8A%9B%E8%BF%90%E5%8A%A8-20-%E7%9A%84%E7%B2%BE%E5%87%86%E6%8A%95%E5%85%A5%EF%BC%8C80-%E7%9A%84%E8%83%BD%E9%87%8F%E4%BA%A7%E5%87%BA"><span class="toc-text">Chapter 2 精力运动 - 20%的精准投入，80%的能量产出</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Chapter-3-%E7%B2%BE%E5%8A%9B%E9%A5%AE%E9%A3%9F-%E5%90%83%E5%AF%B9%E4%BA%86%EF%BC%8C%E6%8A%97%E8%A1%B0%E8%80%81%EF%BC%8C%E4%B8%8D%E7%96%B2%E6%83%AB"><span class="toc-text">Chapter 3 精力饮食 - 吃对了，抗衰老，不疲惫</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%A2%B3%E6%B0%B4%E5%8C%96%E5%90%88%E7%89%A9"><span class="toc-text">碳水化合物</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E8%9B%8B%E7%99%BD%E8%B4%A8"><span class="toc-text">蛋白质</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E8%84%82%E8%82%AA"><span class="toc-text">脂肪</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%B0%B4%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E8%BF%90%E5%8A%A8%E9%A5%AE%E6%96%99"><span class="toc-text">水是最好的运动饮料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Chapter-4-%E7%B2%BE%E5%8A%9B%E6%81%A2%E5%A4%8D-%E4%BC%9A%E4%BC%91%E6%81%AF%EF%BC%8C%E5%8E%8B%E5%8A%9B%E4%B9%9F%E8%83%BD%E8%B5%8B%E8%83%BD"><span class="toc-text">Chapter 4 精力恢复 - 会休息，压力也能赋能</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Chapter-5-%E7%B2%BE%E5%8A%9B%E5%BF%83%E6%B3%95-%E5%8F%98%E5%8C%96%E7%9A%84%E4%B8%96%E7%95%8C-%E4%B8%8D%E5%8F%98%E7%9A%84%E8%A7%84%E5%88%99"><span class="toc-text">Chapter 5 精力心法 -变化的世界 不变的规则</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

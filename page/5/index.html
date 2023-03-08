@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+
+<div id="index" class="index page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/" itemprop="url">MinIO介绍与FastDFS对比</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-28T17:35:12+08:00">2023-02-28 17:35:12</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Support-service-component/" itemprop="url" rel="index"><span itemprop="name">Support service component</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Support-service-component/Distributed-file-storage/" itemprop="url" rel="index"><span itemprop="name">Distributed file storage</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/28/MinIO介绍与FastDFS对比/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      分布式文件系统概念分布式文件系统具有冗余性，大量数据分散到不同的节点上存储。部分节点的故障并不影响整体的正常运行，而且即使出现故障的计算机存储的数据已经损坏，也可以由其它节点将损坏的数据恢复出来，大大减小了数据丢失的风险。 衡量分布式文件系统的劣势 数据的存储方式：无论采取何种存储方式，目的都是为了保证数据的存储安全和方便获取。 数据的读取速率：包括响应用户读取数据文件的请求、定位数据文件所在的节点、读取实际硬盘中数据文件的时间、不同节点间的数据传输时间以及一部分处理器的处理时间等。 MinIO 特点 高性能：作为高性能对象存储，在标准硬件条件下它能达到55GB&#x2F;s的读、35GG&#
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/minio/" rel="tag"><i class="fas fa-tags"></i>minio</a>
+        
+        <a class="post-tag button" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" rel="tag"><i class="fas fa-tags"></i>分布式</a>
+        
+        <a class="post-tag button" href="/tags/fastdfs/" rel="tag"><i class="fas fa-tags"></i>fastdfs</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" itemprop="url">cargo国内被墙导致失败解决办法</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-28T17:24:26+08:00">2023-02-28 17:24:26</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/" itemprop="url" rel="index"><span itemprop="name">Programming Language</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Rust-language/" itemprop="url" rel="index"><span itemprop="name">Rust language</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/28/cargo%E5%9B%BD%E5%86%85%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/28/cargo国内被墙导致失败解决办法/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      打开cargo 配置文件1vi ~/.cargo/config 替换文中内容123456789101112131415161718192021222324252627# 放到 `$HOME/.cargo/config` 文件中[source.crates-io]registry = &quot;https://github.com/rust-lang/crates.io-index&quot;# 替换成你偏好的镜像源replace-with = &#x27;sjtu&#x27;#replace-with = &#x27;ustc&#x27;# 清华大学[source.tuna]registry
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag"><i class="fas fa-tags"></i>环境配置</a>
+        
+        <a class="post-tag button" href="/tags/rust/" rel="tag"><i class="fas fa-tags"></i>rust</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/25/7%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2023/02/25/7%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" itemprop="url">7大程序设计原则</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-25T07:02:12+08:00">2023-02-25 07:02:12</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">软件设计思想（Program Design）</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/25/7%E5%A4%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/25/7大程序设计原则/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      编程的工作既是技术活，也是体力活，而编写优秀的软件，更是一件比较难的事情。 初级程序员只希望代码不出错，顶级程序员却把写代码当成艺术，当年雷军以过人的能力成为求伯君的左膀右臂，其早年的代码被说成“像诗一样优美”。 很多大牛，在着手写代码时并不是直接上手编写，而是根据需求进行设计，不但将代码中 Bug 出现的机率降到最低，还让代码具有高可读性，高安全性等等。 那大牛们都遵循怎样的原则呢，我们能不能学习一下？ 将大牛们的经验总结到一起，可以得到以下「7 大程序设计原则」 。这些设计原理源于对实际软件开发现场的分析，是提高代码质量的经验结晶。 让我们一起一探究竟吧！ 01 简单性原则Simplici
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/design/" rel="tag"><i class="fas fa-tags"></i>design</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/" itemprop="url">系统设计与架构关注问题</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-25T06:24:34+08:00">2023-02-25 06:24:34</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">软件设计思想（Program Design）</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/25/系统设计与架构关注问题/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      从产品到研发 常规业务系统设计关键-领域模型业务系统设计的关键是在于如何定义系统的模型以及模型之间的关系，其中主要是领域模型的定义，当我们在模型确定之后，模型之间的关系也会随之明确。模型设计可以参考领域模型的经典书籍《Domain-Driven Design》一书，通过这个基本可以对领域定义、防腐层、贫血模型等概念有一个较为清晰的认识了。单个应用内的领域模型系统也需要注意领域分层，作为开发大家是不是见过、重构过很多Controller-Service-DAO 样式的代码分层设计？往往在在做重构的时候会令人吐血。 设计较好的领域设计这里给一个分层建议： 接口层 Interface：主要负责与外部
+      
+    </main>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A9%9A%E5%A7%BB/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A9%9A%E5%A7%BB/" itemprop="url">如何看待婚姻</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A9%9A%E5%A7%BB/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-如何看待婚姻/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      我和我先生十五岁谈恋爱二十三岁结婚现在小孩会打酱油。 看了几个高票没有人说出关键问题，我毫无道理的在此怀疑很多人本身并没有什么特别成功的婚恋经验，都是在异想天开。 首先我要拨乱反正一点，【婚恋市场不是竞争，找对象也不是去旗舰店买手机。】 但凡把恋爱婚姻关系理解为招聘、买卖、生意的，情商堪忧、夫妻生活堪忧。 年龄、财富、颜值，都不是核心问题，比你穷比你老甚至比你丑的人就没有结婚甚至生活幸福的吗？？肯定有，估计也不少，毕竟基数大。 再换个角度看，你自己赚钱养家过得体面优雅，那纯粹是为了你自己好，你就是孤独终老也得体面优雅的孤独终老啊，和你找不找对象有什么关系。 说白了，如果你能明白婚恋不是市场挑菜
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%A9%9A%E5%A7%BB/" rel="tag"><i class="fas fa-tags"></i>婚姻</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%89%E5%93%AA%E4%BA%9B%E8%91%97%E5%90%8D%E7%9A%84%E6%88%96%E8%80%85%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%BA%E7%9B%97%E9%80%BB%E8%BE%91/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%89%E5%93%AA%E4%BA%9B%E8%91%97%E5%90%8D%E7%9A%84%E6%88%96%E8%80%85%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%BA%E7%9B%97%E9%80%BB%E8%BE%91/" itemprop="url">世界上有哪些著名的或者常见的强盗逻辑</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%89%E5%93%AA%E4%BA%9B%E8%91%97%E5%90%8D%E7%9A%84%E6%88%96%E8%80%85%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%BA%E7%9B%97%E9%80%BB%E8%BE%91/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-世界上有哪些著名的或者常见的强盗逻辑/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      1：你说鸡蛋不好吃？你生一个啊？（强人所难诡辩） 2：你说鸡蛋不好吃？呵呵你个鹅蛋脑残粉就知道嘚啵。（扣帽子诡辩） 3：你说鸡蛋不好吃？你说了就算啊，凭什么你能规定鸡蛋不好吃？（诉诸资历诡辩） 4：你说鸡蛋不好吃？再不好吃也是我们家的鸡蛋，吃里扒外的贱种！（诉诸人格诡辩） 5：你说鸡蛋不好吃？农民伯伯天天汗滴禾下土养鸡给你吃的鸡蛋，你有什么资格说不好吃？（道德绑架诡辩） 6：你说鸡蛋不好吃？得了吧，上次有鸭蛋粉往鸡蛋里注水被识破了，谁信你们说的谁傻。（强行联系诡辩） 7：你说鸡蛋不好吃？这是你远房舅舅给你买的鸡蛋，你怎么敢这么对待老人家啊？（诉诸情感诡辩） 8：你说鸡蛋不好吃？大青春作家XX明
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E9%80%BB%E8%BE%91/" rel="tag"><i class="fas fa-tags"></i>逻辑</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92%EF%BC%9F/" itemprop="url">什么是知识的诅咒？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-什么是知识的诅咒？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      想象一下这样一个场景：你和你的朋友参加一个答题节目，你们已经幸运地闯到了最后一关。 最后一关的题目是这样的：你和朋友需要分工协作，一个人听歌并描述，另一个人来回答。 描述的方式不是说话或表演，而是用手指来敲出节奏。 你是那个听歌的人，节目放的歌都是咱们耳熟能详的那些，比如《最炫民族风》、《青春修炼手册》…… 你一边听着耳机里传出的歌声，一边配合歌曲的节奏用手指敲击桌子。 你的朋友站在你的对面，一副一脸懵逼的样子，看上去他完全不知道你在敲什么东西。 你觉得很困惑，心里不免想着：这么火的歌，难道这个二货没听过？我已经敲得很好了啊。 接下来的每一首歌，你都觉得自己敲得很好，可你的朋友仍旧猜不出你敲的
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag"><i class="fas fa-tags"></i>心理学</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%E9%AA%97%E5%B1%80/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%E9%AA%97%E5%B1%80/" itemprop="url">如何避免投资理财骗局</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%E9%AA%97%E5%B1%80/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-如何避免投资理财骗局/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      用自己平常用不到的钱来进行投资 风险和收益要对等 你的收益并不能给你带来多少提升，但是风险却能让你叫爸爸。 投资理财的三原则 ： 安全性，流动性，盈利性 ，降序排列 。最重要的就是安全性 ，代表你东山再起的可能性。 投资要进行风险均摊 。一部分存款，一部分基金，一部分股票叫做风险均摊 ，你放在同一路p2p三个公司的时候 ，这不叫风险均摊，那叫行为艺术 不要投资自己看不懂的东西。如果你不知道自己投资的东西是什么，那么对方坑你的时候你就是个赤条条的小崽子。 投资不要加杠杆 ，杠杆就是借钱投资 。十倍的杠杆 ，你能接受10%的波动，百倍投资，你就只能接受1%的波动。 不要盲目相信高回报率 ，想想自己
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2/" rel="tag"><i class="fas fa-tags"></i>投资理财</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%85%B3%E4%BA%8E%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%A4%A7%E8%84%91%E5%B9%B6%E4%B8%8D%E6%93%85%E9%95%BF%E8%AE%B0%E5%BF%86%EF%BC%8C%E5%AE%83%E6%93%85%E9%95%BF%E8%BE%A8%E8%AF%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%85%B3%E4%BA%8E%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%A4%A7%E8%84%91%E5%B9%B6%E4%B8%8D%E6%93%85%E9%95%BF%E8%AE%B0%E5%BF%86%EF%BC%8C%E5%AE%83%E6%93%85%E9%95%BF%E8%BE%A8%E8%AF%86/" itemprop="url">关于高效学习：大脑并不擅长记忆，它擅长辨识</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%85%B3%E4%BA%8E%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%A4%A7%E8%84%91%E5%B9%B6%E4%B8%8D%E6%93%85%E9%95%BF%E8%AE%B0%E5%BF%86%EF%BC%8C%E5%AE%83%E6%93%85%E9%95%BF%E8%BE%A8%E8%AF%86/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-关于高效学习：大脑并不擅长记忆，它擅长辨识/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      在《超验骇客》中那样，将自己的意识全部上传到超级电脑当中得以永生，还是像《黑客帝国》中那样，通过 USB 插入后脑勺，就能在一天内学会所有类型的功夫——如果现实世界存在这样的好事的话，我相信每个人都愿意去尝试一番。不管这种尝试的背后，将会带来何种后果与灾难，反正，现在人类正在这条 NO ZUO NO DIE 的路上。只不过，残酷的现实是：刚才提到的两种情况都不可能实现。 ① 把人脑看作电脑不是唯一，从古至今，人们猜测人体的构造和运作机制有过至少六种比喻；② 记忆到底被存储在哪里，至今没有人知晓，但人脑和电脑的运作机制绝不是一回事；③不管是听歌、听故事、学习新事物、新技能，我们的大脑都以有序的方
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fas fa-tags"></i>学习</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E4%BB%A3%E4%BA%BA%E7%9A%84%E5%9B%B0%E6%83%91/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E4%BB%A3%E4%BA%BA%E7%9A%84%E5%9B%B0%E6%83%91/" itemprop="url">我们这一代人的困惑</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E4%BB%A3%E4%BA%BA%E7%9A%84%E5%9B%B0%E6%83%91/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-我们这一代人的困惑/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      我是大连人，高中就读于大连市二十四中。因为当时学习十分不努力，所以高中毕业之后选择了出国留学，这其实是很多本科出国留学的人不能说的秘密，辗转了几个学校，最终毕业于美国印第安纳大学凯利商学院，主修投资和金融衍生品。上学的时候迷恋炒股，学习依旧散漫，没能成为一个“放弃了华尔街的高薪工作毅然回国”海归精英，真的颇为遗憾，因为实在没有什么华尔街的公司愿意要我。碰巧的是，毕业前两年股市和外汇的行情比较好，赚到了一点点资本，于是我决定回国做点生意。现在在大连从事餐饮行业，目前拥有万达广场的不出二品，大都会，福佳新天地，奥林匹克广场的莉蒂娅城堡4家芝士蛋糕店，青泥洼桥2路车站，长春路百盛，和即将开业的罗斯福
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%88%90%E9%95%BF/" rel="tag"><i class="fas fa-tags"></i>成长</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/6/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

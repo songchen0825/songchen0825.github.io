@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>StopWatch统计耗时 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/03/StopWatch%E7%BB%9F%E8%AE%A1%E8%80%97%E6%97%B6/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">StopWatch统计耗时</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-03T16:08:05+08:00">2023-03-03 16:08:05</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/" itemprop="url" rel="index"><span itemprop="name">Programming Language</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Java-language/" itemprop="url" rel="index"><span itemprop="name">Java language</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/03/StopWatch%E7%BB%9F%E8%AE%A1%E8%80%97%E6%97%B6/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/03/StopWatch统计耗时/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>Java里面，经常使用 System.currentTimeMillis…这种方式统计耗时确实是用的最多的，因为它不用引入其他的 JAR 包，JDK 就能搞定，但是它用起来有几个不方便的地方：</p>
+<p>1）需要定义初始时间值，再用当前时间进行手工计算；</p>
+<p>2）统计多个任务的耗时比较麻烦，如果 start 赋值搞错可能还会出现逻辑问题；</p>
+<p>有没有其他的更好的替代方案呢？答案是肯定的：<strong>StopWatch</strong>！</p>
+<h1 id="StopWatch"><a href="#StopWatch" class="headerlink" title="StopWatch"></a>StopWatch</h1><p>StopWatch 是一个统计耗时的工具类：</p>
+<p>常用的 StopWatch 工具类有以下两种：</p>
+<ul>
+<li><p>commons-lang3（Apache 提供的通用工具包）</p>
+</li>
+<li><p>spring-core（Spring 核心包）</p>
+</li>
+</ul>
+<p>虽然两个工具类的名称是一样的，但是用法大不相同，本文栈长就给大家分别演示下。</p>
+<h2 id="commons-lang3-提供的-StopWatch"><a href="#commons-lang3-提供的-StopWatch" class="headerlink" title="commons-lang3 提供的 StopWatch"></a>commons-lang3 提供的 StopWatch</h2><h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>commons-lang3 是 Apache 开源的通用工具包，需要额外引入 Maven 依赖：</p>
+<figure class="hljs highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.commons<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>commons-lang3<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>$&#123;commons-lang3.version&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h3><p>创建一个 StopWatch 实例有以下 3 种方法：</p>
+<p>1） 使用 new 关键字</p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">StopWatch sw = new StopWatch();<br></code></pre></td></tr></table></figure>
+
+<p>2）使用 create 工厂方法</p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">StopWatch sw = StopWatch.create();<br></code></pre></td></tr></table></figure>
+
+<p>3）使用 createStarted 方法</p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">StopWatch sw = StopWatch.createStarted();<br></code></pre></td></tr></table></figure>
+
+<p>这个方法不但会创建一个实例，同时还会启动计时。</p>
+<p><strong>来看一个简单的例子：</strong></p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建一个 StopWatch 实例并开始计时</span><br><span class="hljs-type">StopWatch</span> <span class="hljs-variable">sw</span> <span class="hljs-operator">=</span> StopWatch.createStarted();<br><br><span class="hljs-comment">// 休眠1秒</span><br>Thread.sleep(<span class="hljs-number">1000</span>);<br><br><span class="hljs-comment">// 1002ms</span><br>System.out.printf(<span class="hljs-string">&quot;耗时：%dms.\n&quot;</span>, sw.getTime()); <br></code></pre></td></tr></table></figure>
+
+<h3 id="更多用法"><a href="#更多用法" class="headerlink" title="更多用法"></a>更多用法</h3><p>接之前的示例继续演示。</p>
+<p><strong>暂停计时：</strong></p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// 暂停计时<br>sw.suspend();<br><br>Thread.sleep(1000);<br><br>// 1000ms<br>System.out.printf(&quot;暂停耗时：%dms.\n&quot;, sw.getTime()); <br></code></pre></td></tr></table></figure>
+
+<p>因为暂停了，所以还是 1000ms，暂停后中间休眠的 1000 ms 不会被统计。</p>
+<p><strong>恢复计时：</strong></p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// 恢复计时<br>sw.resume();<br><br>Thread.sleep(1000);<br><br>// 2001ms<br>System.out.printf(&quot;恢复耗时：%dms.\n&quot;, sw.getTime()); <br></code></pre></td></tr></table></figure>
+
+<p>因为恢复了，结果是 2001 ms，恢复后中间休眠的 1000 ms 被统计了。</p>
+<p><strong>停止计时：</strong></p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Thread.sleep(1000);<br><br>// 停止计时<br>sw.stop();<br><br>Thread.sleep(1000);<br><br>// 3009ms<br>System.out.printf(&quot;总耗时：%dms.\n&quot;, sw.getTime()); <br></code></pre></td></tr></table></figure>
+
+<p>停止计时前休眠了 1000ms，所以结果是 3009ms，停止计时后就不能再使用暂停、恢复功能了。</p>
+<p><strong>重置计时：</strong></p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// 重置计时<br>sw.reset();<br><br>// 开始计时<br>sw.start();<br><br>Thread.sleep(1000);<br><br>// 1000ms<br>System.out.printf(&quot;重置耗时：%dms.\n&quot;, sw.getTime()); <br></code></pre></td></tr></table></figure>
+
+<p>因为重置计时了，所以重新开始计时后又变成了 1000ms。</p>
+<h2 id="Spring-提供的-StopWatch"><a href="#Spring-提供的-StopWatch" class="headerlink" title="Spring 提供的 StopWatch"></a>Spring 提供的 StopWatch</h2><p>来看一个简单的例子：</p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// 创建一个 StopWatch 实例<br>StopWatch sw = StopWatch(&quot;公众号Java技术栈：测试耗时&quot;);<br><br>// 开始计时<br>sw.start(&quot;任务1&quot;);<br><br>// 休眠1秒<br>Thread.sleep(1000);<br><br>// 停止计时<br>sw.stop();<br><br>// 1002ms<br>System.out.printf(&quot;任务1耗时：%d%s.\n&quot;, sw.getLastTaskTimeMillis(), &quot;ms&quot;);<br></code></pre></td></tr></table></figure>
+
+<p>Spring 创建实例的方法就是 new，开始计时，以及获取时间需要手动 start、stop。</p>
+<p>继续再新增 2 个任务：</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java">Thread.sleep(<span class="hljs-number">1000</span>);<br><br>sw.start(<span class="hljs-string">&quot;任务2&quot;</span>);<br>Thread.sleep(<span class="hljs-number">1100</span>);<br>sw.stop();<br><br><span class="hljs-comment">// 1100ms.</span><br>System.out.printf(<span class="hljs-string">&quot;任务2耗时：%d%s.\n&quot;</span>, sw.getLastTaskTimeMillis(), <span class="hljs-string">&quot;ms&quot;</span>);<br><br>sw.start(<span class="hljs-string">&quot;任务3&quot;</span>);<br>Thread.sleep(<span class="hljs-number">1200</span>);<br>sw.stop();<br><br><span class="hljs-comment">// 1203ms.</span><br>System.out.printf(<span class="hljs-string">&quot;任务3耗时：%d%s.\n&quot;</span>, sw.getLastTaskTimeMillis(), <span class="hljs-string">&quot;ms&quot;</span>);<br><br><span class="hljs-comment">// 3.309373456s.</span><br>System.out.printf(<span class="hljs-string">&quot;任务数量：%s，总耗时：%ss.\n&quot;</span>, sw.getTaskCount(), sw.getTotalTimeSeconds());<br></code></pre></td></tr></table></figure>
+
+<p>Spring 一个重要的亮点是支持格式化打印结果：</p>
+<figure class="hljs highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">System.out.println(sw.prettyPrint());<br></code></pre></td></tr></table></figure>
+
+<p>来看最后的输出结果：<br>不过有一点不友好的是，格式化结果显示的是纳秒，而且不能修改。。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>commons-lang3 工具包和 Spring 框架中的 StopWatch 都能轻松完成多个任务的计时以及总耗时，再也不要用手工计算耗时的方式了，手动计算如果 start 赋值错误可能还会出错。</p>
+<p>当然，以上两个 StopWatch 的功能也远不止栈长介绍的，栈长介绍的这些已经够用了，更多的可以深入研究。</p>
+<p>本文所有完整示例源代码已经上传：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/javastacks/javastack">https://github.com/javastacks/javastack</a></p>
+</blockquote>
+<p>欢迎 Star 学习，后面 Java 示例都会在这上面提供！</p>
+<p><strong>总结一下这两种计时工具类优缺点：</strong></p>
+<p>1）commons-lang3 中的 StopWatch 的用法比 Spring 中的要更简单一些；</p>
+<p>2）commons-lang3 中的 StopWatch 功能比 Spring 中的要更灵活、更强大一些，支持暂停、恢复、重置等功能；</p>
+<p>3）Spring 提供每个子任务名称，以及按格式化打印结果功能，针对多任务统计时更好一点；</p>
+<p>综上所述，个人推荐使用 commons-lang3 工具包中的，更灵活、更强大，如果不想额外引入包，也可以考虑 Spring 中的，根据自己的系统需求定。</p>
+<p><strong>所以，别再用 System.currentTimeMillis… 统计耗时了，太 low，赶紧分享转发下吧，规范起来！</strong></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%97%A5%E5%BF%97/" rel="tag"><i class="fas fa-tags"></i>日志</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/03/Java%E4%BD%BF%E7%94%A8Criteria%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" rel="next" title="Java使用Criteria实现多条件查询"><i class="fas fa-angle-left"></i><span class="nav-title">Java使用Criteria实现多条件查询</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/03/03/Java%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6/" rel="prev" title="Java日志框架"><span class="nav-title">Java日志框架</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/03/StopWatch%E7%BB%9F%E8%AE%A1%E8%80%97%E6%97%B6/";
+    this.page.identifier = "2023/03/03/StopWatch统计耗时/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#StopWatch"><span class="toc-text">StopWatch</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#commons-lang3-%E6%8F%90%E4%BE%9B%E7%9A%84-StopWatch"><span class="toc-text">commons-lang3 提供的 StopWatch</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96"><span class="toc-text">引入依赖</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B"><span class="toc-text">简单示例</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%9B%B4%E5%A4%9A%E7%94%A8%E6%B3%95"><span class="toc-text">更多用法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Spring-%E6%8F%90%E4%BE%9B%E7%9A%84-StopWatch"><span class="toc-text">Spring 提供的 StopWatch</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

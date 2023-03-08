@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>跟不上的时代 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2010/07/14/qzone-%E8%B7%9F%E4%B8%8D%E4%B8%8A%E7%9A%84%E6%97%B6%E4%BB%A3/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">跟不上的时代</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2010-07-14T17:14:18+08:00">2010-07-14 17:14:18</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2010/07/14/qzone-%E8%B7%9F%E4%B8%8D%E4%B8%8A%E7%9A%84%E6%97%B6%E4%BB%A3/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2010/07/14/qzone-跟不上的时代/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>突然发现时代的变化已经让我应接不暇，这似乎是一个我老了的讯号，其实像我这种偏自闭的人，世界怎么变化我是不太去管的。我关心的我记录，我不关心的我无视。不过这么大的变化不加以记录的话，实在说不上是一个观察者应有的态度。</p>
+<p>微博其实不算个新鲜事物了，但像我这种后知后觉的人，也是到了今年年初的时候才去很傻逼的百度了一下什么叫微博。诚然我当初认为这是一个很牛逼的东西，一个随时随地让自己与世界同在的东西。具体做什么，为什么，牛什么。我没研究，也没时间研究。而到了我真正看到微博的时候，我对其是很失望的，我根本不了解里面的意义。一个只有140字的聊天模式的东西，为什么就如此红火。140字，对于我这样混BBS回复都不只这点含字量的人实在是不够用，但是无数人却可以使用这140字表达出了自己很多很多的想法，虽然在我眼中都是水贴般的废话以及不着边际的空话。但依旧让人们乐此不疲。我明白人都有表达的欲望和分享的欲望。一个随时随地让你和朋友分享的东西，确实能极大的满足自己的表达欲。而这个表达欲的及时性和传播的扩张性也让人们很快摈弃了旧有分享的模式。有事微博没下，没事看别人微博一下。从那一刻起我们超越了时间，空间，我们让网络融入了生活的毛细血管中。无时无刻的出卖了自己的生活，无时无刻的窥探别人的生活。而这种窥探在于新型手机的帮衬下，我们甚至超越了地域的限制。小妞，别反抗了，我是有背景的人。大爷，别逗了，我是有微博的人。为什么我是个有微博的人，因为我不在这里，我有微博，我将不在这里，我将于大家同在，而且我将把你拉得与大家同在，在大家同在的时代，我们就是裸露下黑夜下的躯体，追逐着暗藏在黑夜里的光束，默默的明处注视着别人的一举一动，并出卖着自己的一举一动。我们不能通过毁灭世界达成的灵魂共有，却在网络之间慢慢的融合起来。将自己的灵魂投散在各个灵魂之间，达成共鸣。</p>
+<p>我知道豆瓣其实相当的早，但是我个人对于一切豆类以及类豆类植物的排斥，乃至于眼中掉对豆这个字眼都极度的敏感，甚至于反感，记得小时候还有一个词令我反感，就是豆蔻年华，所以我一直没有加入豆瓣的社区。不过我了解豆瓣的道路却很新颖。从豆瓣的网络编程技术角度去了解豆瓣的。敏捷型开发模式也曾经让我醉心不已。但这不是重点，重点在于豆瓣的模式。虽然现在看起来豆瓣的模式已经不算新颖。但是在当时，作为web2.0的进化者，在我眼中它是个将共享内容发挥的很好的站点。在参与信息产品的创造、传播和分享的过程中创造价值。而不同的人抱着不同的心理来构建的世界将线下和线上的世界结合起来确实令我觉得值得玩味。用更简单的方式来说，豆瓣就是BBS的进化版本，它将集群模式更便捷的提供给网站的使用者，将本身由网站的开发者需要寻求的主题开放给大众来开发。这样集结了更多的思维，创造出了更多新颖的团体和社群，让更多的受众都在一个网站中达成了自己创立团队的目的，也让更多人在同一个网站中更容易的寻求到了自己志同道合的伙伴。在伴以三条明线（电影，音乐，读书）和一条暗线（同城）加以连接各个独立的团体。这个产品对于生活在自己城市本身就有完善一套生活圈子的人来说可能并不是最重要的，但是对于那些生活在异地或者心灵本身就相对空虚的人们来说，寻求自己的团队就极其的重要，人毕竟还是社会性的动物，在一个群体当中找到自己的存在感是很重要的事情，而这个事情在于生活中寻求认同已经越来越不容易的时候。就转而到网络之间寻找更容易接纳彼此的团队。由于更容易，大家更愿意加入，也由于这份容易，使得这份接纳变得如此的廉价。混豆瓣的人都有着无时无刻显现的伪小资范。在伪小资范的阴霾下，格局未免就小了很多，这点可以从三条明线之间展露无遗，其本质既是神色犬马和纸醉金迷的产物，而在那条暗线下达成一种契机在现实中实例化。若寻求这之间有多少人与人之间抱着不正当的心态在社区的伪装下想着猥亵的勾当，就应当能明白这份格局的脆弱。</p>
+<p>世间的变化确实很快，李开复的那句：世界因你而不同让我看出了一个人对自己自信的极致。但由于我的专业问题，所以看待网络的发展却有着自己独道的角度和看法。网络的发展从根上就是一个共享。而我们不管是web X.X的版本概念，都是将这个共享的概念发展到极致。而这些不断改变我们生活形态的事物，其实就是一步步的走向网络最后的理想：我们共享了我们的全部。从服饰，饮食，居家到理念，创意，梦想，乃至我们的一切一切。全部都被这个网络肢解，共享。如果将这些信息全部收集起来，足以构建出一个强壮的世界。而这个健壮的世界足以慢慢的架空我们现实的世界。我们经常可以看到一群人坐在一桌子里，各自拿着各自的手机，玩着类型不等却又极其相似的游戏。将自己投射在网络上空而无视了现实的存在的空间。虽然现在，无数人还会把网络世界发展到线下的世界以获得感官上最大的冲击。不过以这个世界的发展，如果感官都可以100%的投入网络的时候，是否就会真正进入那个可怕的科幻世界，我们躺在一个个机器当中，将自己的身体的全部都分享成网络的信息，我们的睡眠欲，食欲，性欲都将在网络中被彻底的实现。我们是否就将不再期盼这个令人厌倦的世界有什么而彻底的沉迷在这个网络的世界之中。一旦网络世界的倒塌，我们从破损的机器之中爬出来的时候，看着身上腐烂的躯壳，是否会认为这是现实世界的末日？我想这并不是危言耸听，已经有很多人离开网络就会感觉自己的世界开始不完整。而这个时候，网络还没有实现我们种种的原始欲，一旦这些原始欲都已满足，就必须寄希望于网络的世界足够健壮了。虽然我认为世界如果因此而毁灭也没有什么不好的，起码，他们在毁灭的时候，还是幸福的吧。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2010/07/09/qzone-%E5%B0%8F%E6%92%B0/" rel="next" title="小撰"><i class="fas fa-angle-left"></i><span class="nav-title">小撰</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2010/07/14/qzone-%E7%8E%B0%E5%9C%A8%E6%98%AF%E4%BA%94%E7%82%B9%E9%9B%B6%E5%85%AB%E5%88%86/" rel="prev" title="现在是五点零八分"><span class="nav-title">现在是五点零八分</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2010/07/14/qzone-%E8%B7%9F%E4%B8%8D%E4%B8%8A%E7%9A%84%E6%97%B6%E4%BB%A3/";
+    this.page.identifier = "2010/07/14/qzone-跟不上的时代/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

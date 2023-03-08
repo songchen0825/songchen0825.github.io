@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>如何看待婚姻 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A9%9A%E5%A7%BB/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">如何看待婚姻</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A9%9A%E5%A7%BB/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-如何看待婚姻/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>我和我先生十五岁谈恋爱二十三岁结婚现在小孩会打酱油。</p>
+<p>看了几个高票没有人说出关键问题，我毫无道理的在此怀疑很多人本身并没有什么特别成功的婚恋经验，都是在异想天开。</p>
+<p>首先我要拨乱反正一点，【婚恋市场不是竞争，找对象也不是去旗舰店买手机。】</p>
+<p>但凡把恋爱婚姻关系理解为招聘、买卖、生意的，情商堪忧、夫妻生活堪忧。</p>
+<p>年龄、财富、颜值，都不是核心问题，比你穷比你老甚至比你丑的人就没有结婚甚至生活幸福的吗？？肯定有，估计也不少，毕竟基数大。</p>
+<p>再换个角度看，你自己赚钱养家过得体面优雅，那纯粹是为了你自己好，你就是孤独终老也得体面优雅的孤独终老啊，和你找不找对象有什么关系。</p>
+<p>说白了，如果你能明白婚恋不是市场挑菜，你罗列出来的种种的优点，你的颜值、收入、业余爱好，就不是核心竞争力。</p>
+<p>特别是年龄，你现在34，你又不是没有年轻过，你觉得年龄很重要？那你也年轻过，你怎么没有在年轻的时候好好嫁掉？年轻这个buff对你来说有用吗？</p>
+<p>说了这么多，我以我的个人经验告诉题主，两个人相处之道，最核心的竞争力就是“情绪价值”，就是你的存在能够让对方“感到幸福”、“忘记痛苦”。</p>
+<p>我和题主年龄差不多，但是我活得比你糙多了，我一直是一个很糙的女人，甚至间歇性的丧和懒，我也有点儿兴趣爱好，但是我的兴趣爱好都拿不上台面（比如在知乎装X）。我不健身、不旅游、不小资、不化妆、不打扮、做饭不摆盘，是个死宅中的战斗机，而且我现在也不年轻了，不过我先生一直很喜欢我，你觉得他喜欢我什么？</p>
+<p>我的意思是，如果婚恋市场不是旗舰店买手机，剥夺掉你所谓的这些外部标签，你，本人，还有什么存在价值？</p>
+<p>如果让你和一个男人不吃喝玩乐，没有任何现代化娱乐设备加成的情况下，面对面坐着，你能带给对方什么愉悦感？</p>
+<p>甚至你们要共同面对柴米油盐婆婆妈妈熊孩子一地鸡毛的琐碎生活的时候，你没有精力去维持你所谓的优雅人设的时候，你能带给对方什么？</p>
+<p>以上的一切的一切，不仅取决于你能否拿到婚姻的船票，更决定了你们这艘破船能在风浪中行驶多久。</p>
+<p>两个人结伴同行，需要的不是锦上添花，而是雪中送炭。【当代社会，一个人活着已经很爽了】，要牵起另一个人手，必然是在自己陷入困境的时候，ta能与你共同面对。</p>
+<p>所以，一个男人未必在意你一个月赚五千块还是八千块，他可能在意的是你们只有一个月五千块的时候你还能不能情绪稳定和他共度难关。</p>
+<p>还有，“主动”这个问题，我十五岁和我先生在一起的时候就是我主动的，当你主动的和一个表达出你的爱慕和感情的时候，这表示你把心放在他身上，这是一种【效忠】信号。</p>
+<p>你觉得男人在婚姻中最看重什么？忠诚。</p>
+<p>忠诚，不离不弃带给男人安全感。你心都不在对方身上，你对他不是百分百满意看中，【那就意味着你还可能看上别人】。也意味着你的感情没有被满足，这个男的没有征服你，他没有安全感和存在感。</p>
+<p>这个道理很好理解，换位思考，【其实题主本人想要的也是这个东西】，为什么很多女人希望男人主动舔，这样她才觉得这个男人真心喜欢上自己了，才有安全感。</p>
+<p>所以你说你自己被动，【被动这一条，就是最大的硬伤】。说白了，你们也知道，很多渣男茶女，也未必是高富帅白富美，但是人家身边不缺异性，其根本原因就是“相当主动”。</p>
+<p>综上所述，题主，你连最基本的效忠都无法自然的提供，更不用说在此基础之上能够提供给对方更高级的情绪价值。如果想脱单，请照着这个路线努力。</p>
+<p>不要过度强调你的那些外在价值，也不要把男人的外在条件挂在嘴上，那显得你很low。如果我去相亲，我不会和男人谈房子谈收入谈钱，这简直是情场上最掉价的话题了。</p>
+<p>说句大实话，【能和你相亲见面的，都是和你一个圈子一个阶级的】，差距太大的人你根本见不到。想了解对方的硬件条件，介绍人那边打听一下就行了。</p>
+<p>当然你可以说你见面的人都看不中，问题是，【你有本事让他们都看中你么？】</p>
+<p>在一顿饭的功夫，一席谈话之间，就让这个男人产生一种还想和你吃饭，还想和你见面，还想和你说说话，舍不得和你分开，甚至想娶你当老婆的冲动。</p>
+<p>这必然是因为你在这短暂相处的时光中，让他体会到了：被理解、被尊重、被欣赏、被需要的人生意义和幸福感，这种感觉是他独自一个人的时候很难获得的。</p>
+<p>这就是两个人在一起的核心竞争力，这种感觉能够持续，婚姻家庭就会相对稳固。</p>
+<p>毕竟，还是那句话，当代社会，一个人吃饱全家不饿的生活，是相当爽的。【你的竞争对手不是年轻姑娘，毕竟你又不是小三在挖墙脚需要和一个明确存在的异性竞争资源】。</p>
+<p>【你相亲见面的人都是单身，他们要真能那么容易找到年轻姑娘还用得着和你相亲？】所以不要因为年龄就妄自菲薄。你的难题是，两个人在一起的时候，能比他一个人生活的时候多些什么。</p>
+<p>当然，这个问题你自己也要好好思考，大概就不会觉得孤独终老有那么惨了。</p>
+<p>补充一句吧，结尾的意思就是：性格决定命运，如果你的性格就是不适合驾驭亲密关系，那么不管是鸡汤还是毒鸡汤都是没用的，随便结婚也大概率婚姻不幸福或是离婚的，还不如早早计划好独居生活，话说做人能不能有点儿骨气啊。</p>
+<p>最后，虽然我和我先生目前感情还可以，但是我俩一致观点依旧是：一个人吃饱全家不饿爽到爆。</p>
+<p>（所以不知道评论区怎么有人觉得我是因为早婚有优越感的？？？我这个人就是自恋，和结婚无关，我一直都是很自以为是的）</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%A9%9A%E5%A7%BB/" rel="tag"><i class="fas fa-tags"></i>婚姻</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%89%E5%93%AA%E4%BA%9B%E8%91%97%E5%90%8D%E7%9A%84%E6%88%96%E8%80%85%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%BA%E7%9B%97%E9%80%BB%E8%BE%91/" rel="next" title="世界上有哪些著名的或者常见的强盗逻辑"><i class="fas fa-angle-left"></i><span class="nav-title">世界上有哪些著名的或者常见的强盗逻辑</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/02/25/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%B6%E6%9E%84%E5%85%B3%E6%B3%A8%E9%97%AE%E9%A2%98/" rel="prev" title="系统设计与架构关注问题"><span class="nav-title">系统设计与架构关注问题</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A9%9A%E5%A7%BB/";
+    this.page.identifier = "2022/03/01/网络摘抄-如何看待婚姻/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>UNIX设计哲学：Do one thing and do it well | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/02/UNIX%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">UNIX设计哲学：Do one thing and do it well</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-02T19:13:53+08:00">2023-03-02 19:13:53</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">软件设计思想（Program Design）</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/02/UNIX%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/02/UNIX设计哲学/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>《UNIX编程艺术》一书，提出的17条编程原则，经过时间和实践的锤炼，发展成为Unix哲学17条原则，在维基百科能搜到。</p>
+<p>下面就来说说我对这17要原则的解读——</p>
+<p>1、模块化原则(Rule of Modularity)</p>
+<p>原文：开发人员应该使用定义良好的界面连接简单的部分来构建程序，所以问题是本地的，部分程序可以在未来的版本中替换以支持新的功能。此规则旨在节省调试复杂，长期且不可读的代码的时间。</p>
+<p>解读：这条规则，现在但凡学编程的人都知道，代码要模块化，这样不仅方便别人复用，自己也能更便捷的替换新代码。而实际上，不管是学习还是实践中，模块化原则都是非常好的一条原则，比如，我们学习写作，如果能将一篇文章分模块，并通过逻辑线索串联起来，就能形成一篇不错的文章，其实就是模块化原则在起作用，我们常说的格式化写作，就是这样的。因为模块是可以替换的，模块是组成一堵墙的单元结构，可以是漂亮的空心砖，也可以是纯色的实心砖。同样，工作中也很实用，将不同的大任务分解成不同的小人物和模块，逐个击破，也是非常实用的，关键点就在于模块化是可复用和可替换的。</p>
+<p>2、清晰原则(Rule of Clarity)</p>
+<p>原文：开发人员应该编写清晰的程序，就好像最重要的沟通是向开发人员读取和维护程序，而不是计算机。这个规则的目的是使代码在将来的代码中尽可能易读和易理解。</p>
+<p>解读：清晰在编程中意味着当别人看你写的代码时，能明白其中的含义，同样的，学习中也应该这样，就像我们写作就是为了梳理清楚我们的思考，表达出来让别人理解一样，看上去是在码字，实际上是在和别人沟通交流。说一些模糊和含混的话是容易的，但是要想表达出想法，清晰是非常重要的。</p>
+<p>3、和解原则(Rule of Composition)</p>
+<p>原文：开发人员应该编写能够与其他程序轻松通信的程序。这条规则的目的是让开发人员把项目分解成小而简单的程序，而不是过于复杂的单片程序。</p>
+<p>解读：也叫适当妥协原则，这个原则在人际交往中应用得更多，还有就是自我思维中用得多，比如，一天我们想要锻炼身体，跑5公里，于是感性会说，算了吧，有点冷，难得换衣服了吧，被窝很舒服，理性则会说，必须坚持，为了保持健康。于是，两者开始协商，最后协商好了以后，就变成了穿保暖一点的衣服去跑步，适当降低运动量。而在与人的交流中，我们有时也会面临自己的时间和别人时间冲突的时候，这时就会需要进行适当的和解以达成共识。和解原则更像一种处世原则，让我们不能一味的强调自己，而要照顾别人的感受。</p>
+<p>4、分离规则(Rule of Separation)</p>
+<p>原文：开发者应该将程序的机制与程序的策略分开;一种方法是将程序分成与该接口通信的前端接口和后端引擎。这条规则旨在通过允许改变策略，尽可能降低操作机制的不稳定性来防止错误引入。</p>
+<p>解读：这个有点不好理解，实际上后来发展出来就是java里的按照接口编程，简单说，就是A按照接口统一的协议来通信B，B提供相对应的具体功能实现，两者是分开的，互补干扰，但是对达成的共识是没有任何异议的，一旦要改变这个共识，需要重新协商并做好约束。举个例子，比如汽车的轮胎，分离规则，就是说轮胎的制造商只需要按照统一的接口生产对应尺寸的轮胎就可以了，至于在哪里生产，用什么材料生产，汽车组装时并不用关心，而和轴承对接的发动机同样也可以是多样化的。</p>
+<p>5、简单规则(Rule of Simplicity)，6、简约规则(Rule of Parsimony)</p>
+<p>5原文：开发人员应该设计简单的方法，通过寻找方法将程序系统分解成小而直接的合作件。这条规则的目的是阻止开发者写作“复杂而美丽的复杂性”，这是现实中容易出错的程序。</p>
+<p>6原文：开发人员应该避免编写大型程序。这一规则的目的是防止由于项目的所有者不愿抛弃显着的大量工作而导致失败或次优方法的过度投资。较小的程序不仅易于编写，优化和维护，弃用时更容易删除。</p>
+<p>解读：这两条规则是同一个意思，如果按照现在时髦的话说，就是一切都要尽量的小，尽量的简便可执行。因为一旦没有朝着简单的方向去做，就会越来越庞大，这一点对于编程来说尤其重要，越是简单的程序，越是容易维护，也容易发现问题。而那些看上去很复杂的程序，大多数都是冗余和不必要的，而实际上，要想简单，有时需要的反而是更强大的归纳总结能力。</p>
+<p>7、透明度原则(Rule of Transparency)</p>
+<p>原文：开发人员应该设计可见性和可发现性，通过编写这样一种方式，他们的思维过程可以清楚地被未来的项目开发人员所看到，并使用输入和输出格式，以便识别有效输入和正确输出。此规则旨在减少调试时间并延长程序的使用寿命。</p>
+<p>解读：这条原则容易被误解，对外部使用的人来说，只需要知道输入和输出就行了，比如计算器，按下数字进行加减乘除，只不过对于程序内部来说，透明是意味着要公开代码，这样才能更好的理解程序，方便改进程序。这条原则适用于自我提升，在反思中特别有用，比如写下了一天的工作思考，然后自己顺着写下的思路开始复盘自己一天的思考逻辑，哪些做得好，哪些做的不好。但是同样意味着，这样私密的东西，不一定都要告诉别人。</p>
+<p>8、稳健性规则(Rule of Robustness)</p>
+<p>原文：开发人员应该通过设计透明和可发现性来设计强大的程序，因为易于理解的代码更容易对复杂程序中无法预见的意外情况进行压力测试。此规则旨在帮助开发人员构建强大，可靠的产品。</p>
+<p>解读：可靠性是我们一直都非常重视的，即便是移动互联网如此发达今天，我们依然会遇见，程序APP崩溃，手机卡机的情况，实际上，这也是我们常说的反脆弱性，遇见一些特定的意外情况时，我们能不能够应对和处理，就是我们平时在编写我们自己这个“程序”时最重要的事了，有的人可靠性很高，一般的小打击都是打不倒的，而有的人可靠性不那么高，一点点挫折就会奔溃。说的就是这样稳健性。</p>
+<p>9、表示规则(Rule of Representation)</p>
+<p>原文：开发人员在面对选择时应该选择使数据更复杂，而不是程序的逻辑，因为与复杂的逻辑相比，人类更容易理解复杂的数据。这条规则的目的是使任何开发项目的开发人员都可以使程序更易读，从而使程序得以维护。</p>
+<p>解读：这条规则放在现在不是很适用了，因为有大数据，虽然人类擅长区分复杂的数据，但前提是数据量不是特别大，而按照今天大数据的量，还是更适合用机器去分析，有一门专业叫数据挖掘，专门干这个数据分析工作的。当然，逻辑清晰，数据详实，是很好的说明文体，也是更多增加文章的可信性的，我们现在的调查研究和综述报告就是这样的。换句话说，就是要有清晰的思路，多样的故事。</p>
+<p>10、最小惊喜规则(Rule of Least Surprise)</p>
+<p>原文：开发人员应该根据潜在用户的预期知识设计程序。例如，计算器程序中的“+”应该总是指“加法”。该规则旨在鼓励开发人员构建易于使用的直观产品。</p>
+<p>解读：意味着要尽量的让每个单元有一个独立的功能，也是现在发展出来的微服务一说最早的出处了，现在因为大数据和分布式的关系，微服务越来越普及，换句话说，不仅是在编程里，即便在我们平时的生活中，也应该遵循这样的原则，在某个时间里，尽量的专心只做一件事，而不是想着要一心多用。</p>
+<p>11、沉默的规则(Rule of Silence)</p>
+<p>原文：开发人员应该设计程序，以免打印不必要的输出。这个规则旨在允许其他程序和开发者从程序的输出中挑出他们需要的信息，而不必分析冗长。</p>
+<p>解读：意思本来是说，为了调试方便，程序员常常打很多日志，这样容易造成信息泄露或引起性能问题，但是，我觉得这条规则更像是简单规则的扩展，不过换个角度看，我们在思考的时候，需要适当的沉默，并不是所有的思考都要说出来，有的没有酝酿好的思考可以暂时放一放，不要急于去表达对一个观点的看法，应该尽可能多的搜集信息，再下结论。</p>
+<p>12、修理规则(Rule of Repair)</p>
+<p>原文：开发人员应该设计失败的程序，易于本地化和诊断，换句话说就是“失败”。这条规则旨在防止程序的错误输出成为输入，并破坏未被检测到的其他代码的输出。</p>
+<p>解读：有错误的输入没有关系，关键是我们能不能调整并修复，就像现在很多人每天都接受很多垃圾信息一样，并没有意识到自己在接受拉结，更没有处理应对的方法，这个原则告诉我们，当我们有了可以修理的意识后，对于输入错误的输入是可以控制的，在软件测试里又叫边界测试——通过输入一些超过范围的数值或非常规操作来测试输入——这样可以验证系统的可靠性，一个软件系统是一定存在某种问题的，有问题不可怕，可怕的是不知道问题出在哪里。</p>
+<p>13、经济规则(Rule of Economy)</p>
+<p>原文：开发人员应该重视开发人员在机器上的时间，因为与上世纪70年代的价格相比，今天的机器周期相对便宜。这条规则旨在降低项目的开发成本。</p>
+<p>解读：这个规则有点矛盾，一方面想要说人力成本的问题，一方面又说随着硬件价格的下降，成本的降低，我认为可以解释为，投入的成本和产出的成本，程序员的工作就是耗费时间和机器作斗争，让机器能按照人的意志而运行。付出成本是必然的，只要能在可接受的范围内就行了。</p>
+<p>14、生成规则(Rule of Generation)</p>
+<p>原文：开发人员应该避免手动编写代码，而是编写抽象的高级程序来生成代码。此规则旨在减少人为错误并节省时间。</p>
+<p>解读：现在很多集成编程环境都有这样的功能，对于一些固定规则的代码，可以快速自动生成，避免手工编写程序的错误。换句话说，就是我们常说的能用自动化替代的工作就用自动化，机器比人更能做好这些工作。但不是说人工的编写就没有意义，人工的操作就是为了纠正一些可能出现的错误，并处理核心逻辑。</p>
+<p>15、优化规则(Rule of Optimization)</p>
+<p>原文：开发人员应该在打磨软件之前制作原型。这条规则旨在防止开发者花费太多时间来获得边际收益。</p>
+<p>解读：现在的软件产品的制作，都会经过产品经理提出原型设计，在动手编写程序前，已经会优化很多了。这个规则特别适合思维的迭代升级过程，因为当使用这样的原则时，你会发现，自己的思考并不是完美的，而是存在很多漏洞的，但是有漏洞没有关系，慢慢找到并优化，提升，最后达到更好的效果。</p>
+<p>16、规则的多样性(Rule of Diversity)</p>
+<p>原文：开发者应该设计他们的程序是灵活的，开放的。这条规则的目的是使程序更加灵活，使其能够以开发者所期望的方式使用。</p>
+<p>解读：规则的多样性，就是我们的视角更多了，能应用的武器也更多了，因为思维武器是越多越好，因为视角就会越来越多，看待问题也会越来越精确。</p>
+<p>17、可扩展性规则(Rule of Extensibility)</p>
+<p>原文：开发人员应该通过使其协议可扩展来设计未来，允许轻松插件，而无需修改其他开发人员的程序架构。</p>
+<p>解读：扩展有点像多学一门技能和跨界，现在我们都提倡跨界，说的就是一个人的人生可能性，换句话说就是，人生的可扩展性很多，有的人不断学习成长，可扩展性非常大，有的人刚开始很厉害，可没有什么扩展性，只能在原有的基础上打转。</p>
+<p>好了，17条规则说完了，字还是有点多，你能看到这里，已经很厉害了。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/unix/" rel="tag"><i class="fas fa-tags"></i>unix</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/02/Zookeeper%E5%85%A8%E8%A7%A3%E6%9E%90%E2%80%94%E2%80%94Paxos%E4%BD%9C%E4%B8%BA%E7%81%B5%E9%AD%82/" rel="next" title="Zookeeper全解析——Paxos作为灵魂"><i class="fas fa-angle-left"></i><span class="nav-title">Zookeeper全解析——Paxos作为灵魂</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/03/02/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" rel="prev" title="软件设计的第一性原理：结构化抽象"><span class="nav-title">软件设计的第一性原理：结构化抽象</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/02/UNIX%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6/";
+    this.page.identifier = "2023/03/02/UNIX设计哲学/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

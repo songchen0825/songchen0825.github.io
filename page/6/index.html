@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+
+<div id="index" class="index page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%B2%A1%E6%9C%89%E8%B5%9A%E5%A4%A7%E9%92%B1%EF%BC%8C%E5%BD%93%E5%A4%A7%E5%AE%98%EF%BC%8C%E5%92%8C%E8%87%AA%E5%B7%B1%E7%88%B1%E7%9A%84%E4%BA%BA%E5%9C%A8%E4%B8%80%E8%B5%B7%EF%BC%88%E5%93%AA%E6%80%95%E4%B8%80%E6%AC%A1%EF%BC%89%EF%BC%8C%E6%B4%BB%E7%9D%80%E8%83%BD%E7%AE%97%E6%9C%89%E6%84%8F%E4%B9%89%E5%90%97%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%B2%A1%E6%9C%89%E8%B5%9A%E5%A4%A7%E9%92%B1%EF%BC%8C%E5%BD%93%E5%A4%A7%E5%AE%98%EF%BC%8C%E5%92%8C%E8%87%AA%E5%B7%B1%E7%88%B1%E7%9A%84%E4%BA%BA%E5%9C%A8%E4%B8%80%E8%B5%B7%EF%BC%88%E5%93%AA%E6%80%95%E4%B8%80%E6%AC%A1%EF%BC%89%EF%BC%8C%E6%B4%BB%E7%9D%80%E8%83%BD%E7%AE%97%E6%9C%89%E6%84%8F%E4%B9%89%E5%90%97%EF%BC%9F/" itemprop="url">没有赚大钱，当大官，和自己爱的人在一起（哪怕一次），活着能算有意义吗？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%B2%A1%E6%9C%89%E8%B5%9A%E5%A4%A7%E9%92%B1%EF%BC%8C%E5%BD%93%E5%A4%A7%E5%AE%98%EF%BC%8C%E5%92%8C%E8%87%AA%E5%B7%B1%E7%88%B1%E7%9A%84%E4%BA%BA%E5%9C%A8%E4%B8%80%E8%B5%B7%EF%BC%88%E5%93%AA%E6%80%95%E4%B8%80%E6%AC%A1%EF%BC%89%EF%BC%8C%E6%B4%BB%E7%9D%80%E8%83%BD%E7%AE%97%E6%9C%89%E6%84%8F%E4%B9%89%E5%90%97%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-没有赚大钱，当大官，和自己爱的人在一起（哪怕一次），活着能算有意义吗？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      我今天可以一次性地解决题主的这个问题。 只是解决的方式恐怕和题主期待的不一样。题主期待的解决方式是有个人来告诉题主人生有什么意义。而我提供的答案是： 我可以告诉你怎么摆脱这个问题的困扰。 摆脱这个问题的困扰其实不需要回答这个问题。 让我们顺着思路一步一步来。 这个世俗社会以金钱来衡量人的成功，题主不想和大多数人一样碌碌无为地过完一生，那样题主的人生就没有意义了。题主想要活得不一样，想要脱颖而出成为人上人，但是这世界上那么多人，成功的人那么少，这个概率小得让题主感到绝望。 于是，一方面，题主想要成功，想要被世俗认可，另一方面，题主觉得自己成功的机会渺茫，就算退而求其次找个深爱的人过一生也不是那么
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%88%90%E9%95%BF/" rel="tag"><i class="fas fa-tags"></i>成长</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E7%A9%B7%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E5%92%8C%E5%AF%8C%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E5%93%AA%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E7%A9%B7%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E5%92%8C%E5%AF%8C%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E5%93%AA%EF%BC%9F/" itemprop="url">穷养的女孩和富养的女孩的区别在哪？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E7%A9%B7%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E5%92%8C%E5%AF%8C%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E5%93%AA%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-穷养的女孩和富养的女孩的区别在哪？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      多穷是穷，多富是富？ 可以被一片口香糖骗走的女孩可以被600块衣服骗走的女孩可以被男友家安排工作骗走的女孩可以被男友送房送车骗走的女孩可以被男友送一个公司骗走的女孩。。。。。。。。。。。。。。。。。。可以被男友哄哄抱抱骗走的女孩可以被男友嘘寒问暖骗走的女孩可以被男友照顾婴儿般的溺爱骗走的女孩 还有她们身边那些咬牙切齿恨其不争，认为起码也要再出更高价才被骗走的女孩 你们什么时候能成长为物质和精神都可以自我照顾，自我治愈，然后成为一个完整成熟独立的人，再去与一个同样有尊严的正常人建立健康舒服的关系？ 骗，大意就是出价低于你底价？所以你是什么价？比谁低比谁又高？你什么时候能把自己当人看？也把别人当人
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%BA%B2%E5%AD%90/" rel="tag"><i class="fas fa-tags"></i>亲子</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E9%87%91%E5%88%9A%E7%BB%8F%E7%AE%80%E8%BF%B0/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E9%87%91%E5%88%9A%E7%BB%8F%E7%AE%80%E8%BF%B0/" itemprop="url">金刚经简述</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E9%87%91%E5%88%9A%E7%BB%8F%E7%AE%80%E8%BF%B0/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-金刚经简述/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      金刚经读了好几遍，直到这几年，我才看懂金刚经真正想说，而没有说透的一句话，那就是：人生只是一场游戏，不要着相，只要你能不着相地玩下去，所有的游戏都是好玩的，也不会有苦和恐惧来折磨你。 就好像佛是大人，带我们这些凡夫状的小孩去游乐场，每玩完一样好玩的，小孩子总想再多玩几次，赖着不肯走，佛陀告诉小孩不要执着一样游戏，于是小孩子又哭又闹，心不甘情不愿继续玩下一个游戏，同样的，这个游戏玩完了，又赖在原地吵着要再玩一次，等到全部游乐场的游戏都玩遍了，准备要回家时，小孩子又抱着游乐场大门的柱子不放，要死要活的哭闹不休，就是不肯离开这个好玩的游戏场，任凭佛陀一再解释这个游乐场是假的，只是个梦，但小孩子听不进
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%BD%9B%E5%AD%A6/" rel="tag"><i class="fas fa-tags"></i>佛学</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E8%87%AA%E6%9D%80%E7%9A%84%E4%BA%BA%E5%80%BC%E5%BE%97%E5%90%8C%E6%83%85%E5%90%97%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E8%87%AA%E6%9D%80%E7%9A%84%E4%BA%BA%E5%80%BC%E5%BE%97%E5%90%8C%E6%83%85%E5%90%97%EF%BC%9F/" itemprop="url">自杀的人值得同情吗？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E8%87%AA%E6%9D%80%E7%9A%84%E4%BA%BA%E5%80%BC%E5%BE%97%E5%90%8C%E6%83%85%E5%90%97%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-自杀的人值得同情吗？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      但凡自杀的人，都是想活得像个人样的人。这个人样，他们自己定义。他们自杀了，或者是觉得自己辜负了这个世界，或者感到这个世界辜负了自己。所以选择告别。 他一定有个自己做人的底线，哪怕这个标准多么幼稚或者荒唐，这个标准主客观条件对当时的他们而言都做不到了，他就选择了自杀。 自杀者往往都站在道德制高点上。 他们是活得更像人的人，饥荒时他们是不愿吃别人的肉的人，犯罪时他们是最畏罪的人，绝境处他们是不会苟且偷生的人，压迫中他们是以死抗争的人，贞操上他们是不惜一切保卫自己的尊严的人。重病中他们又是不愿连累子女的人。利他上他们是明知必死而为之的人。他们总是以道德的名义苛待自己。是有廉耻之心的人。 所以从道德层
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E7%A4%BE%E4%BC%9A/" rel="tag"><i class="fas fa-tags"></i>社会</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-25-%E5%B2%81%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%8C%E5%8F%AF%E5%9C%A8-5-%E5%B9%B4%E5%90%8E%E5%8F%97%E7%9B%8A%E5%8C%AA%E6%B5%85%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-25-%E5%B2%81%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%8C%E5%8F%AF%E5%9C%A8-5-%E5%B9%B4%E5%90%8E%E5%8F%97%E7%9B%8A%E5%8C%AA%E6%B5%85%EF%BC%9F/" itemprop="url">25 岁做什么，可在 5 年后受益匪浅？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-25-%E5%B2%81%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%8C%E5%8F%AF%E5%9C%A8-5-%E5%B9%B4%E5%90%8E%E5%8F%97%E7%9B%8A%E5%8C%AA%E6%B5%85%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-25-岁做什么，可在-5-年后受益匪浅？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      多数人告诉要做有意义的事 实际上人生就是在往无意义的方向在走 我们追求更好的食物，更美的衣服，更广的见识，更强的体魄 其实都是无意义远大于有意义的事情 都是超过身体基础需求而产生的溢价 而这样的生活，还有无数人告诉你做点什么才会有意义 其实不过是让你在无意义上越走越远 明确认知到这个世界 做任何事情不过是某部分人的偏好，各种学术大牛到了街头滑板少年的领地 一样被当废物看待 与其说做什么事情比较好 不如考虑一下什么事情不要做比较好 一般来说任何会妨碍你未来可能性的事情最好不要做 比如吸毒之类的 当然 其最后还是你个人选择 你能不妨碍他人按照自己自愿活着 那怎么着都是可以的
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%88%90%E9%95%BF/" rel="tag"><i class="fas fa-tags"></i>成长</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%8D%E4%BC%9A%E5%8C%96%E5%A6%86%E3%80%81%E4%B8%8D%E4%BC%9A%E6%90%AD%E9%85%8D%E3%80%81%E6%9C%89%E7%82%B9%E6%B1%89%E5%AD%90%E7%9A%84%E5%A5%B3%E7%94%9F%E9%9A%BE%E9%81%93%E4%B8%8D%E8%83%BD%E5%BE%88%E5%A5%BD%E7%94%9F%E6%B4%BB%E5%90%97%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%8D%E4%BC%9A%E5%8C%96%E5%A6%86%E3%80%81%E4%B8%8D%E4%BC%9A%E6%90%AD%E9%85%8D%E3%80%81%E6%9C%89%E7%82%B9%E6%B1%89%E5%AD%90%E7%9A%84%E5%A5%B3%E7%94%9F%E9%9A%BE%E9%81%93%E4%B8%8D%E8%83%BD%E5%BE%88%E5%A5%BD%E7%94%9F%E6%B4%BB%E5%90%97%EF%BC%9F/" itemprop="url">不会化妆、不会搭配、有点汉子的女生难道不能很好生活吗？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%8D%E4%BC%9A%E5%8C%96%E5%A6%86%E3%80%81%E4%B8%8D%E4%BC%9A%E6%90%AD%E9%85%8D%E3%80%81%E6%9C%89%E7%82%B9%E6%B1%89%E5%AD%90%E7%9A%84%E5%A5%B3%E7%94%9F%E9%9A%BE%E9%81%93%E4%B8%8D%E8%83%BD%E5%BE%88%E5%A5%BD%E7%94%9F%E6%B4%BB%E5%90%97%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-不会化妆、不会搭配、有点汉子的女生难道不能很好生活吗？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      好惨的题主 基本被群众打击了个遍 其实每个阶段有每个阶段的想法 题主无非是现在这么想顺便找点共鸣和同伴而已 青春肯定是无敌的 再后天的装饰也没法和年轻抗衡 而不再青春的人就会拥有财富和地位为社会重新定义美丽 比如优雅之类的词来给自己增色 掌握了社会话语权的人当然还是会有新的对自己有利的规则 唯一可惜的是青春不会一直都在 所以当你进去三十四十战场的时候 你不会你过去看不上的那些 你将在未来被淘汰而已 至于你未来是否只是想洗手作羹汤 无意和这个比美的战场较劲儿 那是你自己的选择了 至于汉子不汉子的 其实拥有男性特征本身是符合男性审美的 比如你能看到女扮男装的故事 却没有男扮女装的故事被传颂 就是这
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5/" rel="tag"><i class="fas fa-tags"></i>自我认知</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%AF%B9%E5%90%8C%E6%80%A7%E6%81%8B%E5%A9%9A%E5%A7%BB%E5%90%88%E6%B3%95%E5%8C%96%E7%9A%84%E7%AB%8B%E6%B3%95%E4%B8%BA%E4%BD%95%E6%AF%AB%E6%97%A0%E5%8A%A8%E9%9D%99%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%AF%B9%E5%90%8C%E6%80%A7%E6%81%8B%E5%A9%9A%E5%A7%BB%E5%90%88%E6%B3%95%E5%8C%96%E7%9A%84%E7%AB%8B%E6%B3%95%E4%B8%BA%E4%BD%95%E6%AF%AB%E6%97%A0%E5%8A%A8%E9%9D%99%EF%BC%9F/" itemprop="url">中国大陆对同性恋婚姻合法化的立法为何毫无动静？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%AF%B9%E5%90%8C%E6%80%A7%E6%81%8B%E5%A9%9A%E5%A7%BB%E5%90%88%E6%B3%95%E5%8C%96%E7%9A%84%E7%AB%8B%E6%B3%95%E4%B8%BA%E4%BD%95%E6%AF%AB%E6%97%A0%E5%8A%A8%E9%9D%99%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-中国大陆对同性恋婚姻合法化的立法为何毫无动静？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      坚决支持男同 坚决抵制女同 ———————吐槽分割线————————- 我们先假设个前提吧 题主的意思是 为何同性婚姻还未加入中国的婚姻法 那么我们就来分析一下婚姻法律的具体项目 发现只需要将第一章和第二章里面涉及到性别的“男女”两个字去掉 基本上婚姻法就能满足你的要求了 满足要求之后 带来的是什么 法律无非规定了权利和义务 权利基本上可以归结到财产 和义务基本是抚养子女 同性婚姻不存在子嗣问题（领养问题可以依照中华人民共和国收养法来保障），而财产问题也可以通过协约 合同等方式进行协调分配 从个人角度来看 未看出同性婚姻的急迫性和必须性 有很多其他方式来解决这个问题 那些期望法院采取法律手段来
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%B8%A4%E6%80%A7/" rel="tag"><i class="fas fa-tags"></i>两性</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%BA%E8%BF%9E%E5%81%A5%E4%B8%AA%E8%BA%AB%E9%83%BD%E6%9C%89%E4%BC%98%E8%B6%8A%E6%84%9F%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%BA%E8%BF%9E%E5%81%A5%E4%B8%AA%E8%BA%AB%E9%83%BD%E6%9C%89%E4%BC%98%E8%B6%8A%E6%84%9F%EF%BC%9F/" itemprop="url">为什么有人连健个身都有优越感？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%BA%E8%BF%9E%E5%81%A5%E4%B8%AA%E8%BA%AB%E9%83%BD%E6%9C%89%E4%BC%98%E8%B6%8A%E6%84%9F%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-为什么有人连健个身都有优越感？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      毕竟努力过 总不能在自己没有努力过的地方秀优越吧 他们换个领域就成为鄙视链的最底端了 鄙视链这东西 换了个环境就会很不一样 这是个很细分的社会 很少有人可以真的跨界 跨界的人一般也都处在鄙视链的末端 鄙视链的缺陷 并不是情感缺陷或者道德缺陷 而是将人禁锢在一个已有的优势环境里 不愿意去拓展新的领域和世界 人多倾向于待在心灵舒适区里 避免鄙视链最简单的方法有两个 1.找到自己的领域站在鄙视链的顶端 2.不要进入他人擅长的领域 可能有人认为这很难 其实这是心理问题 不是你想象的你做到了什么 很多人的优越并不是他们牛逼 只是他们的自我催眠 顺便说一下，楼上是不是有身材健壮的人士可能以为自己会拥有使用
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%88%90%E9%95%BF/" rel="tag"><i class="fas fa-tags"></i>成长</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%8B%E5%B8%88%E4%BC%9A%E5%B8%AE%E7%BD%AA%E5%A4%A7%E6%81%B6%E6%9E%81%E7%9A%84%E4%BA%BA%E8%BE%A9%E6%8A%A4%EF%BC%9F%E5%BE%8B%E5%B8%88%E4%BC%9A%E6%9C%89%E8%B4%9F%E7%BD%AA%E6%84%9F%E5%90%97%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%8B%E5%B8%88%E4%BC%9A%E5%B8%AE%E7%BD%AA%E5%A4%A7%E6%81%B6%E6%9E%81%E7%9A%84%E4%BA%BA%E8%BE%A9%E6%8A%A4%EF%BC%9F%E5%BE%8B%E5%B8%88%E4%BC%9A%E6%9C%89%E8%B4%9F%E7%BD%AA%E6%84%9F%E5%90%97%EF%BC%9F/" itemprop="url">为什么律师会帮罪大恶极的人辩护？律师会有负罪感吗？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%8B%E5%B8%88%E4%BC%9A%E5%B8%AE%E7%BD%AA%E5%A4%A7%E6%81%B6%E6%9E%81%E7%9A%84%E4%BA%BA%E8%BE%A9%E6%8A%A4%EF%BC%9F%E5%BE%8B%E5%B8%88%E4%BC%9A%E6%9C%89%E8%B4%9F%E7%BD%AA%E6%84%9F%E5%90%97%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-为什么律师会帮罪大恶极的人辩护？律师会有负罪感吗？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      因为法庭是人类的博弈 不是上帝的天平啊 楼主你太高估人类了 人类可能永远不知道真相是什么 就算知道真相 也永远无法评估量刑是否合理 所以在这种本身就很模糊的博弈局面下 你认为你自己握有真理去批判被告 那也只能用妄自尊大来形容 法律不是真理 如果法律是真理 为什么不同国家对于相同的犯罪认知不同 法律不是科学 如果是科学 那为何无法证明量刑的合理 法不过就是生活在某块土地上一群人的共识而已 不是上帝的传真 不是永恒的正义 而是想一出是一出的观念 还是随时变化的观念 依法还是依人 这之间的差别其实没有想象中的大 无非是事先告知还是事后告知而已 就算是专业人士 也无法穷尽人类自己规定的法则 大多数人依
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%B3%95%E5%BE%8B/" rel="tag"><i class="fas fa-tags"></i>法律</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%AD%E5%9B%BD%E5%A5%B3%E6%9D%83%E5%8F%91%E5%B1%95%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%9C%80%E5%A4%A7%E6%8C%91%E6%88%98%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%AD%E5%9B%BD%E5%A5%B3%E6%9D%83%E5%8F%91%E5%B1%95%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%9C%80%E5%A4%A7%E6%8C%91%E6%88%98%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" itemprop="url">中国女权发展面临的最大挑战是什么？</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-03-01T17:22:43+08:00">2021-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F/" itemprop="url" rel="index"><span itemprop="name">之乎者也</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2021/03/01/%E4%B9%8B%E4%B9%8E%E8%80%85%E4%B9%9F-%E4%B8%AD%E5%9B%BD%E5%A5%B3%E6%9D%83%E5%8F%91%E5%B1%95%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%9C%80%E5%A4%A7%E6%8C%91%E6%88%98%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2021/03/01/之乎者也-中国女权发展面临的最大挑战是什么？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      跟我徒弟聊天的节选 主要谈论的是道德 牵扯到一定的女性 随便看吧 人类的道德水平从来就没有提高过 过去鼓吹女人大门不出二门不迈的唯一原因 不过是没法确认孩子的所属权 而人类为了更好的繁衍必须有两个条件 一个是拥有后代 第二是把自己的财产留给后代 所以古代对于女人的道德压迫基本都来自于这两件事情 而现代为什么要鼓吹妇女解放 因为避孕套和dna已经解决这个问题了 不需要再限制 这种道德也渐渐被人唾弃 被认为是禁锢或者落后的思想 然后在开始鼓吹妇女解放 让女人参与工作 因为社会需要更多的劳动力参与分工 现在的劳动力需求是比古代大的多的 因为分工的品种要复杂 财富的创造仰赖更多人的协作 所以就要有新的
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%B8%A4%E6%80%A7/" rel="tag"><i class="fas fa-tags"></i>两性</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

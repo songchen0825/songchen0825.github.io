@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>机器学习17种常规算法 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A017%E7%A7%8D%E5%B8%B8%E8%A7%84%E7%AE%97%E6%B3%95/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">机器学习17种常规算法</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-02T19:54:28+08:00">2023-03-02 19:54:28</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E7%AE%97%E6%B3%95%EF%BC%88Algorithm%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">算法（Algorithm）</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A017%E7%A7%8D%E5%B8%B8%E8%A7%84%E7%AE%97%E6%B3%95/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/02/机器学习17种常规算法/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h3 id="监督式学习："><a href="#监督式学习：" class="headerlink" title="监督式学习："></a><strong>监督式学习：</strong></h3><p><img src="/.com//20230303104721.png"></p>
+<p>在监督式学习下，输入数据被称为“训练数据”，每组训练数据有一个明确的标识或结果，如对防垃圾邮件系统中“垃圾邮件”“非垃圾邮件”，对手写数字识别中的“1“，”2“，”3“，”4“等。在建立预测模型的时候，监督式学习建立一个学习过程，将预测结果与“训练数据”的实际结果进行比较，不断的调整预测模型，直到模型的预测结果达到一个预期的准确率。<strong>监督式学习的常见应用场景如分类问题和回归问题。</strong>常见算法有逻辑回归（Logistic Regression）和反向传递神经网络（Back Propagation Neural Network）</p>
+<h3 id="非监督式学习："><a href="#非监督式学习：" class="headerlink" title="非监督式学习："></a><strong>非监督式学习：</strong></h3><p><img src="/.com//20230303104738.png"></p>
+<p>在非监督式学习中，数据并不被特别标识，学习模型是为了推断出数据的一些内在结构。<strong>常见的应用场景包括关联规则的学习以及聚类等。</strong>常见算法包括Apriori算法以及k-Means算法。</p>
+<h3 id="半监督式学习："><a href="#半监督式学习：" class="headerlink" title="半监督式学习："></a><strong>半监督式学习：</strong></h3><p><img src="/.com//20230303104800.png"><br>在此学习方式下，输入数据部分被标识，部分没有被标识，这种学习模型可以用来进行预测，但是模型首先需要学习数据的内在结构以便合理的组织数据来进行预测。应用场景包括分类和回归，算法包括一些对常用监督式学习算法的延伸，这些算法首先试图对未标识数据进行建模，在此基础上再对标识的数据进行预测。如<strong>图论推理算法（Graph Inference）或者拉普拉斯支持向量机（Laplacian SVM.）等。</strong></p>
+<h3 id="强化学习："><a href="#强化学习：" class="headerlink" title="强化学习："></a><strong>强化学习：</strong></h3><p><img src="/.com//20230303104809.png"><br>在这种学习模式下，输入数据作为对模型的反馈，不像监督模型那样，输入数据仅仅是作为一个检查模型对错的方式，在强化学习下，输入数据直接反馈到模型，模型必须对此立刻作出调整。常见的应用场景包括动态系统以及机器人控制等。<strong>常见算法包括Q-Learning以及时间差学习（Temporal difference learning）</strong></p>
+<p>在企业数据应用的场景下， 人们最常用的可能就是监督式学习和非监督式学习的模型。在(图像识别)(<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tiia?from=10680)%E7%AD%89%E9%A2%86%E5%9F%9F%EF%BC%8C%E7%94%B1%E4%BA%8E%E5%AD%98%E5%9C%A8%E5%A4%A7%E9%87%8F%E7%9A%84%E9%9D%9E%E6%A0%87%E8%AF%86%E7%9A%84%E6%95%B0%E6%8D%AE%E5%92%8C%E5%B0%91%E9%87%8F%E7%9A%84%E5%8F%AF%E6%A0%87%E8%AF%86%E6%95%B0%E6%8D%AE%EF%BC%8C">https://cloud.tencent.com/product/tiia?from=10680)等领域，由于存在大量的非标识的数据和少量的可标识数据，</a> 目前半监督式学习是一个很热的话题。而强化学习更多的应用在机器人控制及其他需要进行系统控制的领域。</p>
+<h3 id="算法类似性"><a href="#算法类似性" class="headerlink" title="算法类似性"></a><strong>算法类似性</strong></h3><p>根据算法的功能和形式的类似性，我们可以把算法分类，比如说基于树的算法，基于神经网络的算法等等。当然，机器学习的范围非常庞大，有些算法很难明确归类到某一类。而对于有些分类来说，<strong>同一分类的算法可以针对不同类型的问题。</strong>这里，我们尽量把常用的算法按照最容易理解的方式进行分类。</p>
+<h3 id="回归算法："><a href="#回归算法：" class="headerlink" title="回归算法："></a><strong>回归算法：</strong></h3><p><img src="/.com//20230303104827.png"><br>回归算法是试图采用对误差的衡量来探索变量之间的关系的一类算法。<strong>回归算法是统计机器学习的利器。</strong>在机器学习领域，人们说起回归，有时候是指一类问题，有时候是指一类算法，这一点常常会使初学者有所困惑。常见的回归算法包括：最小二乘法（Ordinary Least Square），逻辑回归（Logistic Regression），逐步式回归（Stepwise Regression），多元自适应回归样条（Multivariate Adaptive Regression Splines）以及本地散点平滑估计（Locally Estimated Scatterplot Smoothing）</p>
+<h3 id="基于实例的算法"><a href="#基于实例的算法" class="headerlink" title="基于实例的算法"></a><strong>基于实例的算法</strong></h3><p><img src="/.com//20230303104838.png"><br>基于实例的算法常常用来对决策问题建立模型，这样的模型常常先选取一批样本数据，然后根据某些近似性把新数据与样本数据进行比较。通过这种方式来寻找最佳的匹配。因此，基于实例的算法常常也被称为“赢家通吃”学习或者“基于记忆的学习”。常见的算法包括 k-Nearest Neighbor(KNN), 学习矢量量化（Learning Vector Quantization， LVQ），以及自组织映射算法（Self-Organizing Map ， SOM）</p>
+<h3 id="正则化方法"><a href="#正则化方法" class="headerlink" title="正则化方法"></a><strong>正则化方法</strong></h3><p><img src="/.com//20230303104846.png"><br>正则化方法是其他算法（通常是回归算法）的延伸，根据算法的复杂度对算法进行调整。<strong>正则化方法通常对简单模型予以奖励而对复杂算法予以惩罚。</strong>常见的算法包括：Ridge Regression，Least Absolute Shrinkage and Selection Operator（LASSO），以及弹性网络（Elastic Net）。</p>
+<h3 id="决策树学习"><a href="#决策树学习" class="headerlink" title="决策树学习"></a><strong>决策树学习</strong></h3><p><img src="/.com//20230303104854.png"><br>决策树算法根据数据的属性采用树状结构建立决策模型， 决策树模型常常用来解决分类和回归问题。常见的算法包括：分类及回归树（Classification And Regression Tree， CART）， ID3 (Iterative Dichotomiser 3)， C4.5， Chi-squared Automatic Interaction Detection(CHAID), Decision Stump, 随机森林（Random Forest）， 多元自适应回归样条（MARS）以及梯度推进机（Gradient Boosting Machine， GBM）</p>
+<h3 id="贝叶斯方法"><a href="#贝叶斯方法" class="headerlink" title="贝叶斯方法"></a><strong>贝叶斯方法</strong></h3><p><img src="/.com//20230303104901.png"><br>贝叶斯方法算法是基于贝叶斯定理的一类算法，主要用来解决分类和回归问题。常见算法包括：朴素贝叶斯算法，平均单依赖估计（Averaged One-Dependence Estimators， AODE），以及Bayesian Belief Network（BBN）。</p>
+<h3 id="基于核的算法"><a href="#基于核的算法" class="headerlink" title="基于核的算法"></a><strong>基于核的算法</strong></h3><p><img src="/.com//20230303104908.png"><br>基于核的算法中最著名的莫过于支持向量机（SVM）了。基于核的算法把输入数据映射到一个高阶的向量空间， 在这些高阶向量空间里， 有些分类或者回归问题能够更容易的解决。常见的基于核的算法包括：支持向量机（Support Vector Machine， SVM）， 径向基函数（Radial Basis Function ，RBF)， 以及线性判别分析（Linear Discriminate Analysis ，LDA)等</p>
+<h3 id="聚类算法"><a href="#聚类算法" class="headerlink" title="聚类算法"></a><strong>聚类算法</strong></h3><p><img src="/.com//20230303104916.png"><br>聚类，就像回归一样，有时候人们描述的是一类问题，有时候描述的是一类算法。聚类算法通常按照中心点或者分层的方式对输入数据进行归并。<strong>所以的聚类算法都试图找到数据的内在结构，以便按照最大的共同点将数据进行归类。</strong>常见的聚类算法包括 k-Means算法以及期望最大化算法（Expectation Maximization， EM）。</p>
+<h3 id="关联规则学习"><a href="#关联规则学习" class="headerlink" title="关联规则学习"></a><strong>关联规则学习</strong></h3><p><img src="/.com//20230303104923.png"><br>关联规则学习通过寻找最能够解释数据变量之间关系的规则，来找出大量多元数据集中有用的关联规则。常见算法包括 Apriori算法和Eclat算法等。</p>
+<h3 id="人工神经网络"><a href="#人工神经网络" class="headerlink" title="人工神经网络"></a><strong>人工神经网络</strong></h3><p><img src="/.com//20230303104929.png"><br>人工神经网络算法模拟生物神经网络，是一类模式匹配算法。通常用于解决分类和回归问题。人工神经网络是机器学习的一个庞大的分支，有几百种不同的算法。（其中深度学习就是其中的一类算法，我们会单独讨论），重要的人工神经网络算法包括：感知器神经网络（Perceptron Neural Network）, 反向传递（Back Propagation）， Hopfield网络，自组织映射（Self-Organizing Map, SOM）。学习矢量量化（Learning Vector Quantization， LVQ）</p>
+<h3 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a><strong>深度学习</strong></h3><p><img src="/.com//20230303104936.png"><br>深度学习算法是对人工神经网络的发展。在近期赢得了很多关注， 特别是百度也开始发力深度学习后， 更是在国内引起了很多关注。 在计算能力变得日益廉价的今天，深度学习试图建立大得多也复杂得多的神经网络。很多深度学习的算法是半监督式学习算法，用来处理存在少量未标识数据的(大数据)(<a target="_blank" rel="noopener" href="https://cloud.tencent.com/solution/bigdata?from=10680)%E9%9B%86%E3%80%82%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%8C%85%E6%8B%AC%EF%BC%9A%E5%8F%97%E9%99%90%E6%B3%A2%E5%B0%94%E5%85%B9%E6%9B%BC%E6%9C%BA%EF%BC%88Restricted">https://cloud.tencent.com/solution/bigdata?from=10680)集。常见的深度学习算法包括：受限波尔兹曼机（Restricted</a> Boltzmann Machine， RBN）， Deep Belief Networks（DBN），卷积网络（Convolutional Network）, 堆栈式自动编码器（Stacked Auto-encoders）。</p>
+<h3 id="降低维度算法"><a href="#降低维度算法" class="headerlink" title="降低维度算法"></a><strong>降低维度算法</strong></h3><p><img src="/.com//20230303104942.png"><br>像聚类算法一样，降低维度算法试图分析数据的内在结构，不过降低维度算法是以非监督学习的方式试图利用较少的信息来归纳或者解释数据。<strong>这类算法可以用于高维数据的可视化或者用来简化数据以便监督式学习使用。</strong></p>
+<p>常见的算法包括：主成份分析（Principle Component Analysis， PCA），偏最小二乘回归（Partial Least Square Regression，PLS）， Sammon映射，多维尺度（Multi-Dimensional Scaling, MDS）, 投影追踪（Projection Pursuit）等。</p>
+<h3 id="集成算法："><a href="#集成算法：" class="headerlink" title="集成算法："></a><strong>集成算法：</strong></h3><p><img src="/.com//20230303104949.png"><br>集成算法用一些相对较弱的学习模型独立地就同样的样本进行训练，然后把结果整合起来进行整体预测。集成算法的主要难点在于究竟集成哪些独立的较弱的学习模型以及如何把学习结果整合起来。</p>
+<p>这是一类非常强大的算法，同时也非常流行。常见的算法包括：Boosting， Bootstrapped Aggregation（Bagging）， AdaBoost，堆叠泛化（Stacked Generalization， Blending），梯度推进机（Gradient Boosting Machine, GBM），随机森林（Random Forest）。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/ML/" rel="tag"><i class="fas fa-tags"></i>ML</a>
+        
+        <a class="post-tag button" href="/tags/AI/" rel="tag"><i class="fas fa-tags"></i>AI</a>
+        
+        <a class="post-tag button" href="/tags/DL/" rel="tag"><i class="fas fa-tags"></i>DL</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/02/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" rel="next" title="软件设计的第一性原理：结构化抽象"><i class="fas fa-angle-left"></i><span class="nav-title">软件设计的第一性原理：结构化抽象</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/03/02/%E5%85%AB%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="prev" title="八大经典排序算法"><span class="nav-title">八大经典排序算法</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A017%E7%A7%8D%E5%B8%B8%E8%A7%84%E7%AE%97%E6%B3%95/";
+    this.page.identifier = "2023/03/02/机器学习17种常规算法/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%9B%91%E7%9D%A3%E5%BC%8F%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="toc-text">监督式学习：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%BC%8F%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="toc-text">非监督式学习：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%BC%8F%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="toc-text">半监督式学习：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="toc-text">强化学习：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%AE%97%E6%B3%95%E7%B1%BB%E4%BC%BC%E6%80%A7"><span class="toc-text">算法类似性</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="toc-text">回归算法：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BE%8B%E7%9A%84%E7%AE%97%E6%B3%95"><span class="toc-text">基于实例的算法</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-text">正则化方法</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%E5%AD%A6%E4%B9%A0"><span class="toc-text">决策树学习</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%96%B9%E6%B3%95"><span class="toc-text">贝叶斯方法</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%A0%B8%E7%9A%84%E7%AE%97%E6%B3%95"><span class="toc-text">基于核的算法</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-text">聚类算法</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E5%AD%A6%E4%B9%A0"><span class="toc-text">关联规则学习</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-text">人工神经网络</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span class="toc-text">深度学习</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E9%99%8D%E4%BD%8E%E7%BB%B4%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-text">降低维度算法</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E9%9B%86%E6%88%90%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="toc-text">集成算法：</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

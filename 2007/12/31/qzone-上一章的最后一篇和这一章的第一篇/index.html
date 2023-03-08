@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>上一章的最后一篇和这一章的第一篇 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2007/12/31/qzone-%E4%B8%8A%E4%B8%80%E7%AB%A0%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E7%AF%87%E5%92%8C%E8%BF%99%E4%B8%80%E7%AB%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">上一章的最后一篇和这一章的第一篇</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2007-12-31T17:48:35+08:00">2007-12-31 17:48:35</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2007/12/31/qzone-%E4%B8%8A%E4%B8%80%E7%AB%A0%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E7%AF%87%E5%92%8C%E8%BF%99%E4%B8%80%E7%AB%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2007/12/31/qzone-上一章的最后一篇和这一章的第一篇/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>似乎有句话叫做为了忘却的纪念，那么好吧，我就记下这些东西。然后开口和他们说bye，永远别回来。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>连线的木偶&lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 我一贯是很鄙视一个按照别人设计好道路去行走的人，那就像被人操作的木偶一般一扭一扭的缺乏自己的真实感，不过很显然这只是我的幼稚，现实里你很难分辨出谁是按照自己的意愿在行走，又或者谁是被人操纵而止步不前。这两者之间本身就没有明确的界限，别人的操纵也可以被说成是自己的需求，是我把我的绳子交道这个人手里的，我自己无法掌握自己的绳子，这根绳子给他比给我更好，这样的理由十分充分，以至于似乎没有什么不妥。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>人是不可以随心所欲的&lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 在你需要选择上某条道路的时候，总是无法做到那么的潇洒，总有这样或者那样的顾及，一个活着绝对潇洒的人那也是个绝对孤独的人，很多事情不过就是在寻求一个契合点，如果这个点被找到了，那么事情就将变得十分顺意。但开始选择的时候总会有很多的疑惑，例如这条路是否适合自己，是否拥有很好的前途之类的云云。受教程度越高的人总是要比那些没受过什么文化教育的拥有更多的烦恼和顾虑，而这些顾虑在没文化的人眼里反而就是最好解决的事情。世界人民千千万，每天花在思考自己前途上的人不知道有多少，似乎有句闲话，人类一思考，上帝就发笑。这话现在想来：精准。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>没文化真可怕&lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 这句话时常被挂在嘴边，当然还有一些类似的话，比如：人可以没有见识，但必须要有常识。人的抱怨欲才是真的强的可怕。当然这也源于所谓的人生不如意十之八九。生活总是不如意的，要对生活满意的人估计拉到广场去死也未必有社会的米虫多。针对这个现象，nga也早就有了特有的词汇：“喷”。没错，对于同事你在喷，对于政府你在喷，对于社会你继续喷。喷似乎被认为是个很有才的表现。一个人要是同意别人的观点就要被贯上马屁的嘴脸。齐威王的故事是个好故事，人总是希望在反差之后达到超出预料的效果。凡是同意的就是云云众生，无能之辈。只有特立独行才是显示才华的最好表现。其实有时我真的很想告诉你们，我知道特立独行这个词的时候，那是形容了一只猪。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>君主论&lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 任何伟大的著作你都会看到曲解的影子，有些时候同样的东西被不同的人读到就能有完全不同的反差，尼可罗·马基亚维利是个可怜的家伙。我以为他应该把自己的想法带到自己的棺材里。因为一份总结的工作是不讨好的。其意义就在于没有任何的阴谋不再漫长的史诗里呈现过。而把其理论化就是你悲哀的影子。这种东西其实非常的多，因为我们无法分清楚什么是因，什么又是果。《幸运星》是个好动画，就算是在萌啊萌里面也夹杂着某种程度的说教。一个小段子，小司吃了一口草莓，然后很萌的说了句草莓有水果蛋糕的味道耶。小镜就说，是因为蛋糕里加了草莓啦。好吧，我粗糙的词汇是很难把一个很萌的画面呈现在你们的面前。写到这里我觉得这个段子入理太浅了，那就来个深刻且明白的物证：钱！</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>白头吟&lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 皑如山上雪 浩如云间月<br> 闻君有两意 故来相决绝<br> 今日斗酒会 明旦沟水头<br> 躞蹀御沟上 沟水东西流<br> 凄凄重凄凄 嫁娶不须啼<br> 愿求一心人 白首不相离<br> 竹竿何袅袅 鱼儿何簁簁<br> 男儿重义气 何用钱刀为</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>We can do nothing but to see the times go by in the path which God has chosen. &lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 我一直口述着一个事实，就是我是个虔诚的信徒。我对神的崇拜超出周围身边人的想象。我之所以没有接受现世的任何信仰只不过是我生命里还没有接受的明确的神谕。我希望得到神真是的存在感后在为此顶礼膜拜。我会有这样的想法我分析过一些道理，因为很多时候我认为很没戏的事情都会发生在我身上，就是说只要我想，很多东西都可以得到。而这的问题只是时间上的等待。当然很多事情是很微妙的，这点我也很难解释的清楚，和我亲近的朋友都应该知道我一个很无敌的能力，招雨。针对这个问题我实在不认为是件幸运的事情，因为这种事情最夸张的时候就发生在我回到家里杂货间停车的时候雨停了，而我出来走向离我家走道不到二十米的地方哗啦一阵吧我淋透。为此我的朋友还受了点灾，真是抱歉了。不过这针对于我而言这也是过去的事情了，今年我头上的三尺神明似乎离开了或者去打瞌睡了。我非常期望的事情被驳了回来，而我特意尝试的天阴的时候出门不带伞也不再出现一片瓢泼了。我不清楚这两者是否有必然的联系，但是他们都确实发生了。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>The greatest Salesman In The World&lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 作为一个杂学派的家伙，对于很多事情都有很高的兴趣，然而对于经济似乎是我极度匮乏的一面。而当我被这本书吸引的时候我承认我只是被最伟大这三个字给吸引。我似乎很喜欢这三个字眼，但本质上我觉得这本书只是个噱头，就如谁动了我的奶酪。他们似乎只是向你强调了一下一些生活必要的常识，而似乎又可能是被你们所遗忘的常识，翻阅这本书的时候，我似乎看到了很熟悉的影子，就如我猜想的一般，十篇羊皮卷里面没有一个字告诉你如何赚钱，就当我有一页没一页的翻阅着这本书的时候，十篇羊皮卷并不出彩。可以说都是些陈词滥调。但书并没有结束，这本书不但有正文篇，后面还有对于这本书的阅读方法。而我看到眼里的就是如果你没有XXXXXXX，那么你这本书就白买了。看完这句话，再翻到卷头：仅以此书，献给所有寻找人生价值的人们。武侠小说里总是有很多武林秘籍，只要你练了，基本不打个天下无敌，起码也是世界前三。对于看着这种俗烂情节成长的小孩，似乎都希望这世界也有本武林秘籍，哦，是赚钱秘籍。里面写满了第一步如何，第二步如何，第三步就能如何如何。好吧我承认我也这么想过。我曾经拿到书的第一个想法就是这本书有用嘛？但现实往往证明不是作者没用，而是自己没用。不要指望模仿能够出彩。再回到rn众很爱说的话上面：学什么先学做人。当然我明白他们的意思在这里不实用。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>人生五十载，与天地长久相较，如梦似幻；纵一度得生，又岂有不灭乎&lt;&lt;&lt;&lt;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> 在打了个哈欠过后，突然懒得动笔继续写下去了，不过在这个哈欠之前，也不过剪断了些闲话而已。不必在意，下一章,请开始吧。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/qzone/" rel="tag"><i class="fas fa-tags"></i>qzone</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2007/12/12/qzone-PleasureLine/" rel="next" title="PleasureLine"><i class="fas fa-angle-left"></i><span class="nav-title">PleasureLine</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2008/03/10/qzone-%E7%94%A8%E7%8E%B0%E4%BB%A3%E7%A7%91%E5%AD%A6%E5%8E%BB%E8%A7%A3%E9%87%8A%E7%81%B5%E9%AD%82-%E5%A4%A9%E5%A0%82%E8%BF%98%E6%9C%89%E5%9C%B0%E7%8B%B1/" rel="prev" title="用现代科学去解释灵魂,天堂还有地狱"><span class="nav-title">用现代科学去解释灵魂,天堂还有地狱</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2007/12/31/qzone-%E4%B8%8A%E4%B8%80%E7%AB%A0%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E7%AF%87%E5%92%8C%E8%BF%99%E4%B8%80%E7%AB%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/";
+    this.page.identifier = "2007/12/31/qzone-上一章的最后一篇和这一章的第一篇/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

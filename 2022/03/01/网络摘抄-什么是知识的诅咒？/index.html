@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>什么是知识的诅咒？ | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">什么是知识的诅咒？</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-什么是知识的诅咒？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>想象一下这样一个场景：你和你的朋友参加一个答题节目，你们已经幸运地闯到了最后一关。</p>
+<p>最后一关的题目是这样的：你和朋友需要分工协作，一个人听歌并描述，另一个人来回答。</p>
+<p>描述的方式不是说话或表演，而是用手指来敲出节奏。</p>
+<p>你是那个听歌的人，节目放的歌都是咱们耳熟能详的那些，比如《最炫民族风》、《青春修炼手册》……</p>
+<p>你一边听着耳机里传出的歌声，一边配合歌曲的节奏用手指敲击桌子。</p>
+<p>你的朋友站在你的对面，一副一脸懵逼的样子，看上去他完全不知道你在敲什么东西。</p>
+<p>你觉得很困惑，心里不免想着：这么火的歌，难道这个二货没听过？我已经敲得很好了啊。</p>
+<p>接下来的每一首歌，你都觉得自己敲得很好，可你的朋友仍旧猜不出你敲的是什么歌。</p>
+<p>最后，时间到了，你们一首歌都没猜对，大奖就这样与你们擦身而过。</p>
+<p>你当然很不爽，你质问你的朋友在搞什么飞机。而他则满脸无辜地回答你，敲成那样根本听不出来是什么歌啊。</p>
+<p>2</p>
+<p>在这个例子中，你和你的朋友都没有错，错的是信息的不对等。</p>
+<p>你一边听着歌一边敲，自然觉得与歌的节奏很吻合。</p>
+<p>但你的朋友就不一样了，他压根不知道节目组会选哪些歌作为测试题，因此他面对的其实是一个浩瀚的歌库。</p>
+<p>更要命的是，除了你的手指声音之外，他什么都听不见。</p>
+<p>你们的不对等之处就在这里：你能听到歌，而他听不到。</p>
+<p>你由于能够听到歌，并且明确知道是哪首歌，因此你完全不能理解：一个人在只能听到手指敲击声的情况下，要猜对一首歌是多么的困难。</p>
+<p><strong>这种情况，就是《让创意更有黏性》这本书所提出的“知识的诅咒”概念：当一个人知道一件事后，他就无法想象自己是不知道这件事的。</strong></p>
+<p>这里的“知识”倒不一定是真正的“知识”，也可以是信息、消息、情报等等。</p>
+<p>举个最常见的例子：当一部根据小说或漫画改编的电影上映时，看过原著的人，总是会比那些直接看电影的人，对片子更挑剔一些。</p>
+<p>就像我看了国内版的电影《嫌疑人X的献身》，由于我读过原作，因此任何悬疑与推理的地方对我而言都毫无新意，并且除了男主角的演技之外，其他人的演绎水平实在是不敢恭维……</p>
+<p>而像我女朋友这类没看过原作，直接看电影的人，普遍都觉得电影的质量还不错。</p>
+<p>也因此，这类电影只要一上映，原著党就会和电影党发生争吵。</p>
+<p>双方都觉得对方不可理喻，而造成他们分歧的根本原因就在于双方信息的不对等。</p>
+<p>原著党知道原著的内容，并且喜欢原著的内容，因此当电影的改编破坏了他们心中的经典时，他们会很不爽。</p>
+<p>而那些通过看电影才第一次了解故事的人，根本就看不出只有原著党才能看出的问题，因此他们会显得更宽容一点。</p>
+<p>3</p>
+<p>越低等的生物，对死亡的敏感度就越差，面对死亡时的恐惧也就越小。</p>
+<p>人类总是希望自己也能像低等生物一样，坦然地去面对死亡。</p>
+<p>然而，这是一件不可能办到的事。因为你得到了智慧，得到了思索一切的能力，你就没办法再退化到缺乏智慧、对死亡不敏感的地步。</p>
+<p>要知道，只有人能去思考是当一个痛苦的哲学家好， 还是当一头快乐的猪好。</p>
+<p>而猪是想不到这个问题的，因为它的智力还不够，它压根就不知道什么叫做哲学家。</p>
+<p>情侣之间的吵架，上级与下级之间的矛盾，父母与子女之间的互相不理解，很多时候都来自于“知识的诅咒”。</p>
+<p>路上吵架的小情侣，吵架的原因通常都很简单，比如女生想喝一杯奶茶，但她没有明说，而男生就想不到要给女生买。</p>
+<p>女生生气的原因是：你这个做男朋友的根本就不懂我的心思，居然完全没发现我想喝奶茶，这说明你对我不够重视。</p>
+<p>男生生气的原因是：你什么都没说，我怎么能知道你想喝奶茶呢？你想喝奶茶的话，为什么不说呢？不说，又为什么要生气呢？</p>
+<p>女生“想喝奶茶”的信息是她独有的，她却认为男生也享有这个信息，这就是典型的信息不对等。</p>
+<p>在我们的生活中，“知识的诅咒”到处都可见，当你的老板对你大发雷霆的时候，他显然忘了你没有他的地位、经验与阅历。</p>
+<p><strong>有些时候，不是别人的做法不可思议，而是我们总是难以想到，别人并没有像我们一样掌握着独享的信息。</strong></p>
+<p><strong>这有点像《了不起的盖茨比》中那句著名的话：“每逢你想要批评任何人的时候，你就记住，这个世界上所有的人，并不是个个都有过你拥有的那些优越条件。”</strong></p>
+<p>想到这一点，或许你以后能对他人更宽容一点。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag"><i class="fas fa-tags"></i>心理学</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%E9%AA%97%E5%B1%80/" rel="next" title="如何避免投资理财骗局"><i class="fas fa-angle-left"></i><span class="nav-title">如何避免投资理财骗局</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%89%E5%93%AA%E4%BA%9B%E8%91%97%E5%90%8D%E7%9A%84%E6%88%96%E8%80%85%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%BA%E7%9B%97%E9%80%BB%E8%BE%91/" rel="prev" title="世界上有哪些著名的或者常见的强盗逻辑"><span class="nav-title">世界上有哪些著名的或者常见的强盗逻辑</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92%EF%BC%9F/";
+    this.page.identifier = "2022/03/01/网络摘抄-什么是知识的诅咒？/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

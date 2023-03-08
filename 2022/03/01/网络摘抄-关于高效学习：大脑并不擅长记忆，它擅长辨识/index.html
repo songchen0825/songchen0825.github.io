@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>关于高效学习：大脑并不擅长记忆，它擅长辨识 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%85%B3%E4%BA%8E%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%A4%A7%E8%84%91%E5%B9%B6%E4%B8%8D%E6%93%85%E9%95%BF%E8%AE%B0%E5%BF%86%EF%BC%8C%E5%AE%83%E6%93%85%E9%95%BF%E8%BE%A8%E8%AF%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">关于高效学习：大脑并不擅长记忆，它擅长辨识</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%85%B3%E4%BA%8E%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%A4%A7%E8%84%91%E5%B9%B6%E4%B8%8D%E6%93%85%E9%95%BF%E8%AE%B0%E5%BF%86%EF%BC%8C%E5%AE%83%E6%93%85%E9%95%BF%E8%BE%A8%E8%AF%86/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-关于高效学习：大脑并不擅长记忆，它擅长辨识/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>在《超验骇客》中那样，将自己的意识全部上传到超级电脑当中得以永生，还是像《黑客帝国》中那样，通过 USB 插入后脑勺，就能在一天内学会所有类型的功夫——如果现实世界存在这样的好事的话，我相信每个人都愿意去尝试一番。不管这种尝试的背后，将会带来何种后果与灾难，反正，现在人类正在这条 NO ZUO NO DIE 的路上。只不过，残酷的现实是：刚才提到的两种情况都不可能实现。</p>
+<p>① 把人脑看作电脑不是唯一，从古至今，人们猜测人体的构造和运作机制有过至少六种比喻；② 记忆到底被存储在哪里，至今没有人知晓，但人脑和电脑的运作机制绝不是一回事；③不管是听歌、听故事、学习新事物、新技能，我们的大脑都以有序的方式被不断改造，但我们脑子里从未存储过一首歌、一段故事……；④ 我们可以通过一定的途径让一切更高效，比如顺应观察、寻找正确的指引，回应非重要感知，控制被惩罚的行为、做出更多能被奖励的行为。</p>
+<h3 id="（一）六种比喻。"><a href="#（一）六种比喻。" class="headerlink" title="（一）六种比喻。"></a><strong>（一）六种比喻。</strong></h3><p>人类拥有某种自圆其说的天性，而 [ 比喻 ] 作为一种手法，能够很好地帮助我们去理解此前无法理解的事情；但这种理解也仅限于当前的认知，并且一旦我们习惯用比喻自圆其说，就意为着某段求真之路的结束。</p>
+<p>比如在遥远的古代，当被问道为什么会下雨，我们会说，是龙王在哭，为什么会打雷？因为有雷公——真是完美。</p>
+<p>人类特别擅长用比喻手法去理解原本无法理解的事情，包括对人类自己。行为研究和科学技术美国研究所 ( American Institute for Behavioral Research and Technology ) 的资深研究心理学家  Robert Epstein 曾举出人类对于自身的六种比喻：</p>
+<p>① 将人比作泥土：  《圣经》 [ 创世纪 2：7 ] 耶和华神用地上的尘土造人，将生气吹在他鼻孔里，他就成了有灵的活人，名叫亚当。</p>
+<p>② 用水力学比喻人：公元前三世纪，水利工程的发展导致人类智能的水利模型解释流行：人体的体液流动，负责完成我们的物理运动和思维功能。水力学比喻持续超过 1600 年，绑架了当时的医学发展；</p>
+<p>③ 用弹簧、齿轮构造的机器比喻人：1500 年后，弹簧、齿轮驱动的人造机器发明出来，笛卡尔等哲学家开始认为，人类应该是复杂的机器；英国哲学家霍布斯甚至在 1600 年代提出，思考就像是人脑中的小型运动；</p>
+<p>④ 又 100 年后，电气 、化学探索引发了人类智慧的新理论；</p>
+<p>⑤ 到了 19 世纪中叶，受到通讯领域进展的启发，德国物理学家赫尔曼开始将人脑和电报进行比较。</p>
+<p>⑥ 而 到了 20 世纪，由于计算机技术的出现，人们开始将大脑比喻成电脑，将思想比喻成软件……</p>
+<p>接下来的主流权威研究及民间传说，都将人脑与电脑共同比较。人们采用这种 “信息处理”  的比喻指导自己的思想和行动，使其在人类当下的智慧当中占有极其重要的位置。</p>
+<p>人类自圆其说的天性，让我们总是基于当前的科技发展，做出看似合理的比喻。也正因为如此，我们把自己的学习、思考过程同电脑类比，把它当作一个简单的信息处理过程。与此同时，我们希望自己像计算机一样，拥有足够大的存储空间、强劲的运算速度……然而人脑的运算机制并非如此。</p>
+<h3 id="（二）记忆和学习过程中，大脑发生了怎样的变化-？"><a href="#（二）记忆和学习过程中，大脑发生了怎样的变化-？" class="headerlink" title="（二）记忆和学习过程中，大脑发生了怎样的变化 ？"></a><strong>（二）记忆和学习过程中，大脑发生了怎样的变化 ？</strong></h3><p>人的大脑拥有数千亿脑细胞，他们之间到底有着什么样的运作规律？这很难直接研究。于是哥伦比亚大学教授埃里克·坎德尔使用了更加简单的模型：海蜗牛的神经系统（大概拥有 20000 个神经细胞，而且神经细胞较大 ）。</p>
+<p>最终，坎德尔与其他科学家一起，解释了大脑的记忆产生过程、学习的发生过程。要理解这一过程，需要先认识我们的神经元细胞是什么样子。</p>
+<p>![[Pasted image 20211012162746.png]]</p>
+<p>图片@维基百科</p>
+<p>一个神经元细胞除了拥有细胞核、细胞体结构外，还拥有树突、轴突和突触等等。刚刚出生的婴儿大脑并未发育完全，数千亿的脑细胞需要相互连接形成树突，从而形成相互之间的信息传导。</p>
+<p>坎德尔的研究成果表明：学习这件事，和连接感觉神经细胞及产生保护性反射群活化的神经细胞之间的突触加强有关。</p>
+<p>当较弱的刺激产生时，离子通道受到影响，让更多的钙离子进入神经末梢，从而使得神经突触释放更多的神经递质，让反射加强，这就是短时记忆；而较强的刺激会以更复杂的机制使得突触功能持续增强。并且不论是短期记忆还是长期记忆，都发生在突触部位，而二者的不同之处在于，细胞核是否合成新的蛋白质。因为这可以导致突触的形状和功能都发生改变，从而形成长期记忆。</p>
+<p><strong>这里有两个问题：第一，记忆被存储在了哪里？第二，大脑如何记忆？</strong></p>
+<p>第一个问题尚无人能解答。虽然人们因为坎德尔的研究认为记忆应该就保存在新的突触当中。</p>
+<p>上个世纪 20 年代，美国心理学家卡尔·拉什利训练老鼠走出迷宫。当老鼠成功走出迷宫时，就把它的大脑皮层不同部位切除。但最终无论切除哪个部位，老鼠们都能顺利走出来。于是拉什利得出的结论是：记忆并不存储在某个部位，它分布在整个大脑中。</p>
+<p>后来科学家们通过对一些失意患者的研究发现，他们大多存在海马区、杏仁核和海马旁回等脑区损伤的情况。另外，科学家还认为，前额叶也是存储长期记忆的重要部位。</p>
+<p>坊间甚至有一种假说认为：人的记忆并不存在人体内，而是存在于无形空间当中。人脑无需存储记忆，只需要像收音机一样，调频准确、速度够快，就能准确链接并获取（ 细思极恐 ）。所以你一定听说过一种科幻假说，比如大脑皮层的褶皱让它看起来像是一种天线，而意识不过是大脑皮层感应到的一种信号。真实的本我可能在遥远的星系，即便科技再先进也不能以有限的时间用飞船将自己运载到遥远的地球；于是，将意识传输到地球上的生物（人类）身上……</p>
+<p><strong>第二个问题，大脑如何记忆？</strong></p>
+<p>大脑的记忆过程、学习过程并非像电脑数据拷贝一般，二者的模式拥有本质上的区别。</p>
+<p>电脑拥有一定的存储空间，数据文件直接通过拷贝复制一份，即可放入其中。而人脑呢，要形成长期记忆需要通过感受外界的刺激从而对大脑进行一定的改造。</p>
+<p>大脑如何被改造？</p>
+<h3 id="（三）大脑不擅长记忆，它更擅长辨识。"><a href="#（三）大脑不擅长记忆，它更擅长辨识。" class="headerlink" title="（三）大脑不擅长记忆，它更擅长辨识。"></a><strong>（三）大脑不擅长记忆，它更擅长辨识。</strong></h3><p>刚刚提到的 Robert Epstein 曾做过这样一个试验：</p>
+<p>他让学生在黑板上画出一美元的细节，越详细越好；当学生完成后，他用一张纸把画盖住，拿出一张一美元纸币贴上黑板，让学生再重复一遍。以下就是前后两张画的样子——</p>
+<p>![[Pasted image 20211012162822.png]]</p>
+<p>你会觉得这种情况很正常，第一张画是学生尽可能想到的状态，即便他在这之前，曾无数次地看过一美元的真身，但画出来的图好像连结构都记错了。第二张画是看着真身描摹的状态。</p>
+<p>为什么会出现这种情况？</p>
+<p>如果我们大脑当中有一个特定的存储空间，像电脑一样拍下一美元的样子，那在默画的时候为什么不能像电脑一样直接调取出来？</p>
+<p>在 Robert  看来，人们更擅长辨识，而不擅长回忆。这两者截然不同。当我们尝试去记住一些事情，不得不尝试重新去经历一遍这样的体验；而当我们辨识出某些事物时，我们仅仅是意识到，之前有过类似的感知而已。</p>
+<p>我们的大脑从未存储过一美元的样子，也从未存储过一首音乐、一段故事。这是一种很奇妙的体验。比如你会发现，听过同样一段个故事的两个人，如果让他们重新复述出来，会有一定的差别；如果过几十年让他们再叙述，有可能成为两个截然不同的版本。</p>
+<p>不论是听歌还是听故事，我们的大脑都以一种有序的方式发生改变。幸运的是，由于我们此前所接受的教育不同、个人经历不同、所处环境不同，我们的大脑在接收同一信息时，发生了不同的改变，这成为每个人之所以独一无二的原因，即便从生理角度看起来一样的同卵双胞胎，也不能避免。</p>
+<p>试想人脑如果真是电脑，大家拥有同样版本的记忆，同样的知识库，你的心里不一定是 “好神奇” 而是 “mmp” 。</p>
+<h3 id="（四）如何让生活本身变得更加高效？"><a href="#（四）如何让生活本身变得更加高效？" class="headerlink" title="（四）如何让生活本身变得更加高效？"></a><strong>（四）如何让生活本身变得更加高效？</strong></h3><p>否定人脑与电脑类似的同时，Robert  给 [ 如何高效学习 ] 提供了更好的思路。</p>
+<p>As we navigate through the world, we are changed by a variety of experiences. Of special note are experiences of three types: (1) we observe what is happening around us (other people behaving, sounds of music, instructions directed at us, words on pages, images on screens); (2) we are exposed to the pairing of unimportant stimuli (such as sirens) with important stimuli (such as the appearance of police cars); (3) we are punished or rewarded for behaving in certain ways.</p>
+<p>我们探索和体验着整个世界，也被自己的体验所改变。其中有三种体验最具代表性：第一，我们所观察到的周遭正在发生的事情（他人的行为、音乐、各种说明书或指引、纸上的文字、屏幕上的影像…）；第二，我们曝露在一系列重要感知（比如警车出现）和非重要的感知（比如鸣笛）当中；第三，我们因为一些特定的方式受到奖励和惩罚。</p>
+<p>如果我们要拥有高效的学习能力，最好不要再以错误的类比妄加猜测。至少要明白，人脑不是电脑，不要企图以 [ 信息处理 ] 的模式去苛求自己。与之相反，我们需要做出与以上提到的体验近乎一致的改变。比如，根据我们所观察的周遭事物，顺应自己的观察，找到正确的指引；比如像回应重要感知一样去回应非重要感知；比如控制被惩罚的行为，做出更多能被奖励的行为。</p>
+<p>听到警笛、救护车、消防车，你的注意力可以一下子被吸引。而听到一般的汽车鸣笛、施工，你司空见惯。我们对重要感知的回应敏捷，而对非重要感知显得迟钝。尝试去回应非重要感知，对于一部分人来说，途径是刻意练习；对于另一部分人来说，是保持长久以来的好奇心和思考力。</p>
+<p>控制被惩罚的行为，做出更多能被奖励的行为，这方面就不多说了。最大的问题在于，如何顺应自己的观察，找到正确的指引。</p>
+<p>正确的指引在当下的环境中，你很难去辨别。但如果你能拥有一位导师，将会是一大幸事。如果没有，也不用灰心。你的导师也可以是书——它可以是该领域经得起考验的教科书，也可能是长久历史积淀下来的经典。</p>
+<p>在过去数十年，人们普遍判定书本是否值得成为自己导师的标准是文笔如何、是否有趣等等，那时的学者们觉得这已经足够糟糕了，但历史总能给你惊喜——到了现在，不仅长篇读不下去了、生僻内容读不下去了，人们的要求大概已经变成浅显易懂、深入浅出、旁征博引，最好短小精悍、图文并茂，再加上 “大咖” 站队、标题诱人，甚好、甚好。</p>
+<p>为什么？</p>
+<p><strong>对于整个世界的体验，我们正在失去观察能力。</strong>他人的行为、音乐、说明书、文字、视频、媒体……这些周遭正在发生的一切，不再与我们自身有多么密切的联系，它们大多数不过就是多巴胺，给你刺激，然后消失，然后换来下一波刺激，然后消失……循环往复。而我们自身已经在一次次的多巴胺刺激当中，变得不再愿意观察。我们甚至看很多东西都像看皇帝的新衣，甚至，我们变得像从来不曾拥有过这双眼睛。</p>
+<p>如何重见光明？</p>
+<p><strong>当你真的关心自己，关心粮食和蔬菜的时候；当你真正关心常识、关心优劣的时候；当你真正关心时间、关心汗水的时候。</strong></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fas fa-tags"></i>学习</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E4%BB%A3%E4%BA%BA%E7%9A%84%E5%9B%B0%E6%83%91/" rel="next" title="我们这一代人的困惑"><i class="fas fa-angle-left"></i><span class="nav-title">我们这一代人的困惑</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%E9%AA%97%E5%B1%80/" rel="prev" title="如何避免投资理财骗局"><span class="nav-title">如何避免投资理财骗局</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E5%85%B3%E4%BA%8E%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%A4%A7%E8%84%91%E5%B9%B6%E4%B8%8D%E6%93%85%E9%95%BF%E8%AE%B0%E5%BF%86%EF%BC%8C%E5%AE%83%E6%93%85%E9%95%BF%E8%BE%A8%E8%AF%86/";
+    this.page.identifier = "2022/03/01/网络摘抄-关于高效学习：大脑并不擅长记忆，它擅长辨识/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%AD%E7%A7%8D%E6%AF%94%E5%96%BB%E3%80%82"><span class="toc-text">（一）六种比喻。</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AE%B0%E5%BF%86%E5%92%8C%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B%E4%B8%AD%EF%BC%8C%E5%A4%A7%E8%84%91%E5%8F%91%E7%94%9F%E4%BA%86%E6%80%8E%E6%A0%B7%E7%9A%84%E5%8F%98%E5%8C%96-%EF%BC%9F"><span class="toc-text">（二）记忆和学习过程中，大脑发生了怎样的变化 ？</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%A4%A7%E8%84%91%E4%B8%8D%E6%93%85%E9%95%BF%E8%AE%B0%E5%BF%86%EF%BC%8C%E5%AE%83%E6%9B%B4%E6%93%85%E9%95%BF%E8%BE%A8%E8%AF%86%E3%80%82"><span class="toc-text">（三）大脑不擅长记忆，它更擅长辨识。</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E5%A6%82%E4%BD%95%E8%AE%A9%E7%94%9F%E6%B4%BB%E6%9C%AC%E8%BA%AB%E5%8F%98%E5%BE%97%E6%9B%B4%E5%8A%A0%E9%AB%98%E6%95%88%EF%BC%9F"><span class="toc-text">（四）如何让生活本身变得更加高效？</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

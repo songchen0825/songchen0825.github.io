@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>卧龙苍天优化 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/03/%E5%8D%A7%E9%BE%99%E8%8B%8D%E5%A4%A9%E4%BC%98%E5%8C%96/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">卧龙苍天优化</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-03T21:04:55+08:00">2023-03-03 21:04:55</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Game/" itemprop="url" rel="index"><span itemprop="name">Game</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Game/Steam/" itemprop="url" rel="index"><span itemprop="name">Steam</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/03/%E5%8D%A7%E9%BE%99%E8%8B%8D%E5%A4%A9%E4%BC%98%E5%8C%96/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/03/卧龙苍天优化/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>鉴于《卧龙：苍天陨落》首发出现了大量优化、帧数波动和显示问题，我们寻找了以下解决方案，希望能够帮助到各位玩家。</p>
+<p><strong>问题一：键鼠视角移动拖拽感严重</strong></p>
+<p>解决方案：</p>
+<p>1.调整鼠标 dpi 至 6400</p>
+<p>2.运行《卧龙：苍天陨落》打开视角设定菜单</p>
+<p>3.将“左右旋转速度”“上线旋转速度”调整至3</p>
+<p><img src="https://picx.zhimg.com/80/v2-61daa12801f6319836254321e80944fc_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题二：游戏优化差帧数不稳定</strong></p>
+<p>解决方案：高画质帧数优化设置</p>
+<p>1.游戏设置里找到模式选择，选择【分辨率优先】</p>
+<p>2.帧数选择当前显示器支持的最大帧数</p>
+<p>3.图像设置中：</p>
+<p>【垂直同步】关闭</p>
+<p>【渲染分辨率】100%</p>
+<p>【材质品质】高画质</p>
+<p>【阴影（品质）】低画质</p>
+<p>【阴影（描绘距离）】近</p>
+<p>【环境光遮蔽（ 呈现更高品质的阴影）】开启</p>
+<p>【屏幕空间反射 (开关反射效果)】开启</p>
+<p>【次表面散射】开启</p>
+<p>【模型细节等级】低</p>
+<p>【体积雾分辨率】低</p>
+<p>【体积云品质】低</p>
+<p><img src="https://picx.zhimg.com/80/v2-6869b4c8b3f037305a603c7db62bf9b9_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题三：闪屏</strong></p>
+<p>解决方案：屏幕帧数设置过高，在游戏内将画面设置为 60 帧或者关闭设置中“环境光遮蔽”选项</p>
+<p><strong>问题四：设置《卧龙》程序优先级来提高帧数</strong></p>
+<p>解决办法：</p>
+<p>1.按下”Win+r”组合键</p>
+<p>2.输入”regedit”，单击确实进入注册表编辑器</p>
+<p>3.找到“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options”（可直接复制目录在注册表编辑器中）</p>
+<p>4.在 Image File Execution Options 目录新建项“WoLong.exe”</p>
+<p>5.WoLong.exe 创建 PerfOptions 文件夹</p>
+<p>6.在 PerfOptions 文件夹右键新建 DWORD（32）名称为 CpuPriorityClass</p>
+<p>7.双击 CpuPriorityClass，将 CPU 优先值调整为 3</p>
+<p><img src="https://pic1.zhimg.com/80/v2-7f5cadd437f9601c0b49e8e1671926a1_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题五：游戏默认集显运行掉帧严重，如何设置独显并保证帧数？</strong></p>
+<p>解决方案：</p>
+<p>1.打开【A 卡或 N 卡控制面板】</p>
+<p>2.管理 3D 设置</p>
+<p>3.打开程序设置或全局设置页面</p>
+<p>4.选择要自定义的程序添加《卧龙：苍天陨落》</p>
+<p>5.点击“为此程序选择首选图形处理器”手动选择高性能Nvidia处理器&#x2F;AMD处理器</p>
+<p>6.同页面下拉找到应用程序的最大帧速率</p>
+<p>7.帧数设置与游戏中保持一致，建议设置 60 FPS，120 FPS可能出现动作慢放、闪屏等问题</p>
+<p>8.运行《卧龙：苍天陨落》</p>
+<p>9.打开任务管理器或者Process Lasso</p>
+<p>10.点击“详细信息”页面找到《卧龙：苍天陨落》进程后右键点击</p>
+<p>11.设置优先级选择为“实时”</p>
+<p><img src="https://picx.zhimg.com/80/v2-4ca3aeafc12da375451b85e42093048f_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题六：键鼠按键冲突怎么解决？</strong></p>
+<p>解决方案：</p>
+<p>1.打开Steam点击左上角“Steam”标签打开“设置”页面</p>
+<p>2.打开设置中的“游戏中”页面</p>
+<p>3.将界面快捷键更改为用不到的按键，例如“F7”“~”等</p>
+<p>4.打开输入法设置的中英文切换界面选择“不使用快捷键”</p>
+<p><img src="https://pica.zhimg.com/80/v2-70e53facf45c4fcac77b0e9ac71cadf7_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题七：游戏UI图标怎么修改成键鼠适配？</strong></p>
+<p>解决方案：</p>
+<p>1.运行《卧龙：苍天陨落》</p>
+<p>2.打开“设定”界面点开“操作设定”</p>
+<p>3.将“控制器类型”改为“兼用鼠标”</p>
+<p><img src="https://picx.zhimg.com/80/v2-317aa2efd88d40ffd61c563b80b712d8_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题八：游戏启动无响应</strong></p>
+<p>解决方案：</p>
+<p>1.打开【A 卡或 N 卡控制面板】</p>
+<p>2.点击“管理3D设置”</p>
+<p>3.打开全局设置或程序设置的卧龙菜单</p>
+<p>4.下拉找到“电源管理模式”调整为“最佳功率”</p>
+<p><img src="https://pic1.zhimg.com/80/v2-4467763a4fa8b44f118365986a044131_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题九：打开游戏后黑屏，不显示开场 CG 但可以听到声音</strong></p>
+<p>解决方案：</p>
+<p>1.从微软商店、网盘、网页检索等途径下载“VP9视频解码器”；</p>
+<p>2.鼠标右键点击“开始菜单”，运行 PowerShell（管理员）；</p>
+<p>3.复制 PowerShell（管理员）显示的文件夹地址；</p>
+<p>4.打开我的电脑复制地址进入文件夹；</p>
+<p>5.将下载好的“VP9视频解码器”放进该文件夹；</p>
+<p>6.回到 PowerShell（管理员）在文件夹地址后输入：</p>
+<p>“Add-APPxpackage Microsoft.VP9VideoExtensions_1.0.50481.0_x64.Appx ”；</p>
+<p>按下回车运行即可解决。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-d65c26e59297fed1f2f77fe6fe1b4b65_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题十：无法调节分辨率</strong></p>
+<p>解决方案：</p>
+<p>打开设备管理器</p>
+<p>找到“通用串行总线控制器”</p>
+<p>在子类里找到“Lebo Virtual USB Monitor”选项</p>
+<p>右键该选项，点击禁用</p>
+<p><strong>问题十一：进入游戏后感觉到明显的画面模糊</strong></p>
+<p>解决方案：请在画面设置中检查“是否被锁定为较低分辨率”的情况</p>
+<p><img src="https://picx.zhimg.com/80/v2-a98aba85f4319a0ab060b2d57c3f2263_1440w.webp?source=1940ef5c"></p>
+<p><strong>问题十二：游戏进行过程中出现闪退、黑屏</strong></p>
+<p>解决方案：</p>
+<p>1打开设备管理器</p>
+<p>2显示适配器</p>
+<p>3禁用虚拟显示【virtual displaydevice】</p>
+<p>或者卸载虚拟显示相关的软件，例如【乐播投屏】。</p>
+<p><img src="https://picx.zhimg.com/80/v2-c26eedc843e8f8229609d64adc344b31_1440w.webp?source=1940ef5c"></p>
+<p>我们已协助将中国玩家的反馈交给光荣，目前开发团队正在加紧修复 BUG 中，预计将在下个补丁中修复玩家反馈意见集中的几项问题。如果广大玩家对上述问题有更好的解决方案，或者在游戏过程中遇到了其他问题，可以在评论区留言分享，我们也会积极响应以求保证大家的游戏体验。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/ARPG/" rel="tag"><i class="fas fa-tags"></i>ARPG</a>
+        
+        <a class="post-tag button" href="/tags/%E7%B1%BB%E9%AD%82/" rel="tag"><i class="fas fa-tags"></i>类魂</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/03/%E4%BE%9D%E9%9D%A0Springboot%E6%B3%A8%E8%A7%A3%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E8%84%B1%E6%95%8F/" rel="next" title="依靠Springboot注解对数据进行脱敏"><i class="fas fa-angle-left"></i><span class="nav-title">依靠Springboot注解对数据进行脱敏</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/03/%E5%8D%A7%E9%BE%99%E8%8B%8D%E5%A4%A9%E4%BC%98%E5%8C%96/";
+    this.page.identifier = "2023/03/03/卧龙苍天优化/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

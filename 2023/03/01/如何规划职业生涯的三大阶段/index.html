@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>远见 - 如何规划职业生涯的三大阶段 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/01/%E5%A6%82%E4%BD%95%E8%A7%84%E5%88%92%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF%E7%9A%84%E4%B8%89%E5%A4%A7%E9%98%B6%E6%AE%B5/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">远见 - 如何规划职业生涯的三大阶段</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-01T21:11:39+08:00">2023-03-01 21:11:39</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Reading-Note/" itemprop="url" rel="index"><span itemprop="name">Reading Note</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/01/%E5%A6%82%E4%BD%95%E8%A7%84%E5%88%92%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF%E7%9A%84%E4%B8%89%E5%A4%A7%E9%98%B6%E6%AE%B5/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/01/如何规划职业生涯的三大阶段/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <ul>
+<li><p>前言 ：《远见》可以被分为三个主要部</p>
+<ul>
+<li>第一部分会介绍正确的职场思维、框架和 工具。</li>
+<li>第二部分会提供一些实用性建议和案例，帮助你应对职业生涯的三个主要阶 段。</li>
+<li>第三部分的内容都以现实生活为基础，主题包括如何平衡职业策略与家庭的关系、怎样处理跨国调动和职场危机。</li>
+</ul>
+</li>
+<li><p>Part 1 远见思维与工具箱</p>
+<ul>
+<li><p>*远见思维:多行动，少忧虑 **</p>
+<ul>
+<li>打造职业规划要知道的五件事情：<ul>
+<li>职业生涯长的惊人，包括了截然不同的三个阶段，周期为45年。</li>
+<li>职业燃料很重要，职业生涯的基础决定结果。燃料主要指：可迁移的技能，有意义的经验和持久的关系。</li>
+<li>职业生涯需要通过对时间巧妙的投资来构建。</li>
+<li>职业生涯并非线性或者可预测的方向进行发展，必须时刻保持探索和学习的状态。</li>
+<li>职业生涯远不止一份工作，而生活是一大部分。</li>
+</ul>
+</li>
+<li>实现事业规划需要做到的五件事情：<ul>
+<li>学习职场数学，树立长期的思维方式</li>
+<li>盘点职场清单，梳理你有用的技能和关系。描绘职业生态系统，这包含了联系人，专家团，同事以及支持者。</li>
+<li>进行100小时测试并完成一份个人时间档案。</li>
+<li>尝试建立新的职场路径或者多个选项中进行抉择。</li>
+<li>时刻更新你的职业生涯。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3大阶段，聚焦45年职业生涯</p>
+<ul>
+<li>将职场划分为三个阶段，每个阶段15年：<ul>
+<li>添加燃料，强势开局</li>
+<li>聚焦长板，达到高点</li>
+<li>优化长尾，持续发挥影响力。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>储备3大职场燃料</p>
+<ul>
+<li>可迁移的技能 ：解决问题的能力，说服和沟通的技巧，完成问题的能力，人才引力，帮助和求助的能力，情商理解他人状态的能力。额外的可迁移的技能：如何和别人进行眼神交流和握手，如何搜索信息，如何呼吸。</li>
+<li>有意义的经验：有意义的经验结合起来可以让个人成为复合型的人才。创业，第二语言，跨过工作，志愿者项目或者电子商务经历。</li>
+<li>持久的关系：包含了你的上司，客户，商业伙伴，身边的人才，你的同类</li>
+<li>职场燃料的重点储备在于它们令我们拥有了选择权，自主力，延长我们的职业生涯</li>
+</ul>
+</li>
+<li><p>5个数字，树立正确的职场思维</p>
+<ul>
+<li>职业生涯的长度，62减去目前的年龄得到自己退休年龄。个人应该是65，大致还有31年。许多人认为40就已经结束，实际40还没有走到职业生涯的一半</li>
+<li>精通一项技能所需要的时间。10000小时定律</li>
+<li>40岁之后赚到钱占一生的比例，真实的答案是85%-90%。一个人的个人财富在65岁达到巅峰。40岁数字只有10%-15%。</li>
+<li>社交货币，计算自己好友的数量</li>
+<li>职场支持人数，导师，老师，和支持人。</li>
+<li>有了技能和规划才有资格碰到好运气，职业生涯是技能，规划和运气的组合。</li>
+</ul>
+</li>
+<li><p>4大黄金问题，评估职业价值</p>
+<ul>
+<li><p>1号盘点清单：学位，专业，语言，音乐，计算机语言，360环评被提到的优点，收到关于情商的评价，上司和同事对你社交状况和情感交流作出的评论以及人才账户</p>
+</li>
+<li><p>2号盘点清单：个人旅行，国外工作经历，企业管理或创业经验，社区志愿活动，个人贡献大型活动，产品发布，知名项目，公开演讲，写作，表演经历，教学，咨询，指导经历，兴趣爱好，业务生活，工作之外的热情，其他生活中的经验和挑战</p>
+</li>
+<li><p>3号盘点清单：联系人，校友会，协会，专业团，关键同事，支持者，你自己</p>
+<p><img src="https://api2.mubu.com/v3/document_image/3bdc247b-a4d4-444d-ba85-d3decdba83be-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/3bdc247b-a4d4-444d-ba85-d3decdba83be-11213753.jpg"></p>
+</li>
+<li><p>4大黄金问题</p>
+<ul>
+<li><p>每年都要给自己设定目标，并且要开始回顾过去这一年。</p>
+<ul>
+<li>是否在学习和成长？</li>
+<li>是否正在某些人，现在的公司，乃至社会具备影响力？</li>
+<li>体验到乐趣了吗？</li>
+<li>我是否得到了适当的奖励，并创造了经济价值。</li>
+</ul>
+</li>
+<li><p>可以针对四个问题设计不同的权重，针对每个问题依据10分制来对自己打分。评价自己的成果。</p>
+</li>
+<li><p>职业生涯第一件阶段权重：</p>
+<p><img src="https://api2.mubu.com/v3/document_image/773d3094-a406-4ef2-a7fc-12512adc495f-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/773d3094-a406-4ef2-a7fc-12512adc495f-11213753.jpg"></p>
+</li>
+<li><p>职业生涯第二阶段权重：</p>
+<p><img src="https://api2.mubu.com/v3/document_image/621d661d-2e1c-4973-9332-aff728f679e7-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/621d661d-2e1c-4973-9332-aff728f679e7-11213753.jpg"></p>
+</li>
+<li><p>职业生涯第三阶段权重：</p>
+<p><img src="https://api2.mubu.com/v3/document_image/9d65fb6d-032c-46cc-8e5a-8c3f33c37c06-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/9d65fb6d-032c-46cc-8e5a-8c3f33c37c06-11213753.jpg"></p>
+</li>
+<li><p>超过700分则认为优秀，低于500分则需要谨慎考虑。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>100小时测试，合理投资时间</p>
+<ul>
+<li><p>何种投资可以获得最高的投资，答案是资产投资。换句话说就是在正确的时间投资了正确的东西。职业生涯也一样，关键在于如何投资时间。</p>
+</li>
+<li><p>30岁的时候时间投资：</p>
+<p><img src="https://api2.mubu.com/v3/document_image/cc39859b-f18e-436d-8175-666a540cc2d6-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/cc39859b-f18e-436d-8175-666a540cc2d6-11213753.jpg"></p>
+</li>
+<li><p>50岁的时候时间投</p>
+<p><img src="https://api2.mubu.com/v3/document_image/22745db6-284a-4963-b5bd-d5574c7bb34a-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/22745db6-284a-4963-b5bd-d5574c7bb34a-11213753.jpg"></p>
+</li>
+<li><p>关注时间饼图的高效能部分，每年至少估算一次自己的时间档案。</p>
+</li>
+</ul>
+</li>
+<li><p>职场路径想到，作出正确的职业策划</p>
+<ul>
+<li>职业生涯中，我们会一直在寻找自己的甜蜜区，擅长，爱好和这个世界的交集。可以询问自己三个问题：<ul>
+<li>职业理想，或者一个想要达到的目标？</li>
+<li>目前手上具备什么燃料？</li>
+<li>需要什么样的燃料来帮助自己达到？</li>
+</ul>
+</li>
+<li>长期成功的基础是快速的成长。大多数人大学毕业每年成长的速度为10%，这意味着每个人7年就会提高一倍。大多数人29岁薪资是大学毕业的两倍。如果要成长的更加快速，需要满足以下工作条件：<ul>
+<li>你周围都是比你聪明的人</li>
+<li>你有失败的机会</li>
+<li>公司有让你这样的人肩负大任的传统</li>
+</ul>
+</li>
+<li>我们总是会低估未来才能兑现的好处这种表现被称为时间贴。发现新的机会是有益的，但是毫无意义的变化则是有害的。不要放任自己成为职业生涯中的快闪族。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Part 2 三大职业阶段</p>
+<ul>
+<li><p>第一阶段，添加燃料，强势开局</p>
+<ul>
+<li><p>每个成功的创业者都要直面质疑，许多人钦佩成功年轻创业者，一些人认为只是运气，实际问题并没有如此简单，每个成功者都要面对巨大的质疑。他需要不可动摇的热情和恒久不变的率真，一直关注着自己的回报，并且不断优化自己的方法。</p>
+</li>
+<li><p>成为自己的品牌经历，养成良好的职业习惯，了解更多公司的情况，成为某方面的专家。去了解自己公司如何建立，它的理念，如何盈利，关键人物以及未来的愿景是如何。把它们当作入职100天的任务。</p>
+</li>
+<li><p>高效的沟通，并选择正确的媒介，学会事先理清沟通的大纲：</p>
+<ul>
+<li>首先，话题是什么?我们的听众的注意力正在不同的电子邮件和会议之间快速 切换，有一半的时间他们完全不知道我们到底在说什么，所以每一次你都要说 得一清二楚。</li>
+<li>其次，写下你的三个重点，加上用于佐证的事实和原因加强说服力。这意味着 你既有观点，又有支撑它的证据。</li>
+<li>最后，直白地说出你希望听众接下来怎么做。这样一来，你的沟通至少是有力 和清楚的。这能让你领先于世界上80%左右的人。</li>
+</ul>
+</li>
+<li><p>亚里士多德认为德性存在两个极端之间的中间地带，故而勇敢就是处于懦弱和鲁莽之间的中道。理解自身的价值，为自己贡献争取公平的奖励</p>
+<p><img src="https://api2.mubu.com/v3/document_image/d90cda8d-2ffd-4ae4-a97d-5bdda6c042eb-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/d90cda8d-2ffd-4ae4-a97d-5bdda6c042eb-11213753.jpg"></p>
+</li>
+</ul>
+</li>
+<li><p>第二阶段：锚定甜蜜区，聚焦长板</p>
+<ul>
+<li>职业生涯的第二阶段是从15年后开始，它会带来一份独有的焦虑：我能获得多高的成就，如何找到下一步的方向，如何找到甜蜜区又避免倦怠和迂腐。如果第一阶段是寻找你的甜蜜区，那么第二阶段就是锚定它。要不断的问题自己：<ul>
+<li>我擅长什么？</li>
+<li>我爱好什么？</li>
+<li>这个世界需要什么？</li>
+</ul>
+</li>
+<li>在20多岁，甚至可能30多岁的时候，不管我们对工作是否有热情和兴 趣，我们都可以把工作做得非常好。因为我们年轻、充满活力，我们的满 足感主要来源于工作之外。但是到最后，由于与这一领域缺乏深度的联 系，各种困扰就会出现，这往往会发生在我们40多岁的时候。我们会感到 越来越无法投入工作，竞争力不断下降。我们天生的创造力已经快耗尽 了。我们无法关注所在领域发生的变化，因为我们已经脱轨。更年轻、更 有创造力，而且更廉价的人很快就会取代我们。</li>
+<li>技能冲刺法”，即以90天为一个循环，为提高某一项特定能力而进行周期性密集训练。这也反映出托德 的成功哲学:这是一种持续改进的不间断过程;或者用他自己的话来说，是“梦想要大，但前进的步子要小”。只要你能保持一直向前的动力，就能持续成功，即使 中间有些挫折也不碍事。</li>
+<li>作为领导者，需要注意你的巡航高度，你需要适时的飞回高空。调整领导风格，从命令和控制转为影响和感召。</li>
+<li>给予初任管理者的6条建议：<ul>
+<li>你的仪容、态度和举止正受到高度的关注和广泛的效仿。员工们会比过去更 加仔细地观察你，寻找蛛丝马迹来判断自己的表现如何。从今天开始，无论你表现 出快乐、压力、自信、愤恨、失望的情绪，还是处于危机中的状态，员工们都会察 觉你发出的信号，并据此调节他们自己的态度和行为。所以，请仔细思考你想要传 达的信号。</li>
+<li>一旦你确定了某个愿景，就应该简洁地表达出来，并且不停地重复重复再重 复。人们很容易过高地估计一个组织消化愿景和战斗口号的能力。你需要寻找一些 简单明了的词语，表达出你希望组织向哪个基本方向前进。它们只要在方向上正 确，并令人牢记于心就够了，不必完美无缺。你以后可以将“新闻”和变化融入长 期的信念和愿景之中。每次遇到机会时都要重复这种想法:“这种情况体现了我们 深层的信念，那就是X很重要。”你可能觉得已经做得够多了，但其实还不够。要知道，每年的员工流动率高达20%左右，他们为什么还要记得去年的事情呢?</li>
+<li>早早决定让谁上船。每个领导者都需要一支小型核心团队，由那些能够高质 量完成任务的亲密同事组成。选择这样一支团队往往是领导者最重要的任务。虽然 你并不需要立刻为每个位子找到对的人，但还是得尽早决定让谁上你这条船。不要 选择和你相似的人，寻找那些能够增强你的长板和弥补你短板的人，并一对一地去 了解这些参与者和候选人。探究一下他们的目标、信仰和关注点，看看它们与你的 目标、信仰和关注点是否契合。</li>
+<li>每一个有意义的商业问题都是少数人在一间安静的小会议室里解决的。观点 之间的对抗是有益的，但要确保它发生在恰当的讨论中。来回对骂的电子邮件要尽 量避免。有争议的问题最好是在较小的团队中解决，而不要放到严肃的大型公开会 议上讨论。即便你是老板，也要明确地表现出你对其他人观点的理解。用你的耳朵 来领导大家，不要只靠嘴巴。理清问题的前因后果，用自己的信念加以评判，最后 做出决定。</li>
+<li>你要表现得像个被人信赖的解答者，而不是高高在上的老板。你的办公室装 潢并不重要，重要的是你对组织的影响力。信念、诚信和公正会给你带来力量。让 消息在组织中透明地传播，告诉大家好消息和坏消息，帮助他们正确看待这些信息 对组织的影响。证明你会对这些事情全力以赴，证明你关心它们，不会撒手不管。</li>
+<li>你并不是无所不知。没人会无所不知，征询他人的意见才是明智之举。无知 并不可怕，只要你能发现这一点，并做出适当的决定就行了。你可以先在特定阶段 做个决定，而不必一锤定音。</li>
+</ul>
+</li>
+<li>经历第二阶段时，你应当不断地细微调整，有时还要大幅修正自己的职业生涯方向。我们需要定期确认自己走在正确的道路上。你可以问自己以下4个我们在第 5章中已经学到的关键的职业价值评估问题。<ul>
+<li>学习:我是否正在积累有助于成长的新的技能、经验和关系?</li>
+<li>影响力:我是否正在改变个人、公司，甚至整个社会?</li>
+<li>乐趣:我的职业总体上算不算我生活中正能量和乐趣的来源?</li>
+<li>奖励:我是否正在积累经济价值?</li>
+</ul>
+</li>
+<li>顶级首席执行官需要具备的特质：<ul>
+<li>诚实和契合。</li>
+<li>智力上的好奇和敏捷，将问题综合联系起来</li>
+<li>提升业务业绩的历史记录。</li>
+<li>真实，自我意识以及平衡。如果成功和失败都没有足够的反省，则会降低吸引力</li>
+<li>活力和热情</li>
+</ul>
+</li>
+<li>第三阶段：优化长尾，发挥持续影响力<ul>
+<li><p>合理规划第三阶段持续的时间超乎想象，且回报也会相当丰厚，关键在于进行永不懈怠的塑造。随波逐流并不能带你抵达想去的地方。</p>
+</li>
+<li><p>管理学习曲线，在一切还没有失效之前开始行动：</p>
+<p><img src="https://api2.mubu.com/v3/document_image/eda0e7e8-9c76-469d-91f6-c78d8b544175-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/eda0e7e8-9c76-469d-91f6-c78d8b544175-11213753.jpg"></p>
+</li>
+<li><p>停车熄火一定要慎重再慎重，大多数人都做不好这一点，对大多数人来说，能减速最好减速，而不是完全停下来。</p>
+</li>
+<li><p>在退休的那一刻到来之前，制定一份计划，将专业能力和精通的技能的火炬传递给下一代。 针对第三阶段有所发展的人，责任才是基础。你需要具备较强的专业性和精通的技能。人们不止想听过去的事情，还希望听到现在和未来。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Part 3 应对职场和生活的冲突</p>
+<ul>
+<li>如何做好职场父母<ul>
+<li>幸福工作的父母会培养出幸福的孩子，这将是一种良性循环。<ul>
+<li>不要让职业生涯和为人父母成为非此即彼的选项</li>
+<li>找到一个热爱家庭的雇主</li>
+<li>如果没有后方的恰当支持，你就无法生存</li>
+<li>设立现实的期望和严格的界限，善于划定界限的人都能清楚的指出哪里有余地，哪里又有阻力</li>
+<li>管理你的时间和精力，边工作边当父母是磨练时间管理技能的终极方法。</li>
+</ul>
+</li>
+<li>回归生项目，如果无论何种策略都要离开工作，也可以在未来回归<ul>
+<li>重新包装技能，将自己的技能年轻化，现代化。</li>
+<li>重新组织你的经验，更新行业和公司相关知识和语言。</li>
+<li>重新连接职业生态系统，参加第五章，重新在校友中活跃起来，请百人共进咖啡</li>
+<li>重新建立自信</li>
+</ul>
+</li>
+<li>如何看待跨过工作（相对于我就是出差）<ul>
+<li>国际化思维，职业生涯的关键区别点，国际化思维是一项可迁移性非常强的技能，它能让我们欣赏多样的思想和文化。</li>
+<li>生活环境不允许你转向跨国的全职工作呢?眼前还有什么更实际的选择吗?如果是这样，你可以考虑在国内公司工作，但要进入一个对接国际客户的部 门;申请为期几个月的短期任务，填补某个跨国工作的空缺;参加一些关于全球话题的课程;开展一项让你参与分析国际业务的特殊项目，例如评估正在进入国内市 场的外来竞争对手的威胁程度，或者帮助自己的组织确定是否应该进行全球扩张;自愿参加或者主动创建国际培训项目，让你与来自另一个国家的人合作。你要让老 板知道跨国工作是你职业规划的一部分，确保高层能听到你的想法，因为跨国业务 往往不是中层管理人员负责的。</li>
+</ul>
+</li>
+<li>如何应对职场危机<ul>
+<li>每个人都可能碰到危机，危机时职业生涯里正常而健康的部分，关键在于如何应对它，应对职场危机需要知道的事情：<ul>
+<li>应对职场危机应该清晰客观的认识问题。</li>
+<li>职场危机可能由他人对你技能，目标或业绩的错误认识引起。</li>
+<li>你的不足之处并不只存在于认知，而是真实存在</li>
+<li>有的职场危机是可以预见和规避的。关注你的行业和业绩的变化，就可以避免遭到突然的袭击</li>
+<li>你需要从逆境中快速恢复的方法<ul>
+<li>重新组装</li>
+<li>重新包装</li>
+<li>重新连接</li>
+<li>重新建立</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>遭遇职场危机的时候，请先放下骄傲</li>
+<li>升值之路归功于说行的态度和接受挑战的意愿。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>尾声 工作的未来</p>
+<ul>
+<li><p>既然职业生涯持续的时间这么久，又与我们的生活密不可分，那么在谈论职业生涯的未来时，我们就需要解答一些相当玄妙的问题了。</p>
+<ul>
+<li><p>我会被机器取代吗?</p>
+</li>
+<li><p>我未来会在哪里找工作，又如何找工作？</p>
+</li>
+<li><p>我该把时间用在哪里？</p>
+</li>
+<li><p>我会把钱花光吗?</p>
+</li>
+<li><p>工作如何能让我更快乐?</p>
+</li>
+<li><p>机器崛起对职业规划的启示：35%的工作在接下来20年都有被自动化的风险，所有机械重复的工作很容易被软件取代，相反艺术家，设计师等行业被取代的可能性很低，只有9%。1980-2012需要社交技能的工作增加了24% ，你需要一些和机器工作不同或互补人类技能。</p>
+<p><img src="https://api2.mubu.com/v3/document_image/a586bb68-b337-4723-8180-8de2608a805d-11213753.jpg" alt="https://api2.mubu.com/v3/document_image/a586bb68-b337-4723-8180-8de2608a805d-11213753.jpg"></p>
+</li>
+</ul>
+</li>
+<li><p>掌握软技能，学会与人接触，以及弥补技术不足成了关键。</p>
+</li>
+<li><p>智能时代下的工作选择，有一种值得尝试的模式叫做“数据驱动型就业”。突出具体技能集合的供需热点，提高透明度让全球就业市场效率的提高。</p>
+</li>
+<li><p>时间是人生的唯一货币，将时间货币投资道技能之上。创业和自由职业都在蓬勃发展，未来也会更加多样。</p>
+</li>
+<li><p>获得收入的答案就是工作，绝大多数人在65岁之后依旧需要挖空心思去寻求更多的收入。</p>
+</li>
+<li><p>如果注定要更努力，更长久的工作，要不断寻觅收入，还要和机器竞争。首先先来理解一下幸福，我们的幸福程度由三个要素组成：50%基因，10%环境，40%自愿，主动行为决定的。前两者都不能够做较多的改变，但可以通过主动行为来维持较高的幸福水平。幸福的12种策略：</p>
+</li>
+<li><p>表达感恩; 培养乐观的心态; 避免思虑过度和社会攀比; 多行善事; 维护人际关系; 发展合作的策略; 学会原谅; 增加心流体验; 享受生活的乐趣; 努力实现目标; 信仰宗教，寻找精神寄托; 关注身体健康。</p>
+</li>
+<li><p>选择三种策略应用到工作之中：</p>
+<ul>
+<li>1 增加心流</li>
+<li>2 努力实现目标 3</li>
+<li>表达感恩</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%81%8C%E5%9C%BA/" rel="tag"><i class="fas fa-tags"></i>职场</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/01/%E6%96%AF%E5%9D%A6%E7%A6%8F%E9%AB%98%E6%95%88%E7%9D%A1%E7%9C%A0%E6%B3%95/" rel="next" title="斯坦福高效睡眠法"><i class="fas fa-angle-left"></i><span class="nav-title">斯坦福高效睡眠法</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/03/01/%E7%B3%BB%E7%BB%9F%E4%B9%8B%E7%BE%8E-%E5%86%B3%E7%AD%96%E8%80%85%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%9D%E8%80%83/" rel="prev" title="系统之美-决策者的系统思考"><span class="nav-title">系统之美-决策者的系统思考</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/01/%E5%A6%82%E4%BD%95%E8%A7%84%E5%88%92%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF%E7%9A%84%E4%B8%89%E5%A4%A7%E9%98%B6%E6%AE%B5/";
+    this.page.identifier = "2023/03/01/如何规划职业生涯的三大阶段/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

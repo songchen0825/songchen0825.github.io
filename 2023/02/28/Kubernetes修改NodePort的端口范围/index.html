@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Kubernetes修改NodePort的端口范围 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Kubernetes%E4%BF%AE%E6%94%B9NodePort%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%8C%83%E5%9B%B4/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Kubernetes修改NodePort的端口范围</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-28T20:38:06+08:00">2023-02-28 20:38:06</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/" itemprop="url" rel="index"><span itemprop="name">Development & Operate</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/Kubernetes/" itemprop="url" rel="index"><span itemprop="name">Kubernetes</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/28/Kubernetes%E4%BF%AE%E6%94%B9NodePort%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%8C%83%E5%9B%B4/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/28/Kubernetes修改NodePort的端口范围/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>在 [[Kubernetes]] 集群中，NodePort 默认范围是 30000-32767，某些情况下，因为您所在公司的网络策略限制，您可能需要修改 NodePort 的端口范围，本文描述了具体的操作方法。</p>
+<p>下面的配置是基于 kubeadm 安装的集群  </p>
+<h1 id="Step-1修改kube-apiserver-yaml文件"><a href="#Step-1修改kube-apiserver-yaml文件" class="headerlink" title="Step 1修改kube-apiserver.yaml文件"></a>Step 1修改kube-apiserver.yaml文件</h1><p>修改service-node-port-range&#x3D;20000-22767</p>
+<p><code>vim /etc/kubernetes/manifests/kube-apiserver.yaml</code></p>
+<figure class="hljs highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span><br><span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span><br><span class="hljs-attr">metadata:</span><br>  <span class="hljs-attr">annotations:</span><br>    <span class="hljs-attr">kubeadm.kubernetes.io/kube-apiserver.advertise-address.endpoint:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.42</span><span class="hljs-string">:6443</span><br>  <span class="hljs-attr">creationTimestamp:</span> <span class="hljs-literal">null</span><br>  <span class="hljs-attr">labels:</span><br>    <span class="hljs-attr">component:</span> <span class="hljs-string">kube-apiserver</span><br>    <span class="hljs-attr">tier:</span> <span class="hljs-string">control-plane</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">kube-apiserver</span><br>  <span class="hljs-attr">namespace:</span> <span class="hljs-string">kube-system</span><br><span class="hljs-attr">spec:</span><br>  <span class="hljs-attr">containers:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">command:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">kube-apiserver</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--advertise-address=192.168.0.42</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--allow-privileged=true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--anonymous-auth=True</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--apiserver-count=3</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--audit-log-maxage=30</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--audit-log-maxbackup=10</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--audit-log-maxsize=100</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--audit-log-path=/var/log/audit/kube-apiserver-audit.log</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--audit-policy-file=/etc/kubernetes/audit-policy/apiserver-audit-policy.yaml</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--authorization-mode=Node,RBAC</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--bind-address=0.0.0.0</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--client-ca-file=/etc/kubernetes/ssl/ca.crt</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--default-not-ready-toleration-seconds=300</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--default-unreachable-toleration-seconds=300</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--enable-admission-plugins=NodeRestriction</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--enable-aggregator-routing=False</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--enable-bootstrap-token-auth=true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--endpoint-reconciler-type=lease</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--etcd-cafile=/etc/ssl/etcd/ssl/ca.pem</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--etcd-certfile=/etc/ssl/etcd/ssl/node-node1.pem</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--etcd-keyfile=/etc/ssl/etcd/ssl/node-node1-key.pem</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--etcd-servers=https://192.168.0.41:2379,https://192.168.0.42:2379,https://192.168.0.43:2379</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--event-ttl=1h0m0s</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--kubelet-client-certificate=/etc/kubernetes/ssl/apiserver-kubelet-client.crt</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--kubelet-client-key=/etc/kubernetes/ssl/apiserver-kubelet-client.key</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--kubelet-preferred-address-types=InternalDNS,InternalIP,Hostname,ExternalDNS,ExternalIP</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--profiling=False</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--proxy-client-cert-file=/etc/kubernetes/ssl/front-proxy-client.crt</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--proxy-client-key-file=/etc/kubernetes/ssl/front-proxy-client.key</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--request-timeout=1m0s</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--requestheader-allowed-names=front-proxy-client</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--requestheader-client-ca-file=/etc/kubernetes/ssl/front-proxy-ca.crt</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--requestheader-extra-headers-prefix=X-Remote-Extra-</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--requestheader-group-headers=X-Remote-Group</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--requestheader-username-headers=X-Remote-User</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--secure-port=6443</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--service-account-issuer=https://kubernetes.default.svc.cluster.local</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--service-account-key-file=/etc/kubernetes/ssl/sa.pub</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--service-account-lookup=True</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--service-account-signing-key-file=/etc/kubernetes/ssl/sa.key</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--service-cluster-ip-range=10.233.0.0/16</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--service-node-port-range=30000-32767</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--storage-backend=etcd3</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--tls-cert-file=/etc/kubernetes/ssl/apiserver.crt</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">--tls-private-key-file=/etc/kubernetes/ssl/apiserver.key</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">k8s.gcr.io/kube-apiserver:v1.25.5</span><br>    <span class="hljs-attr">imagePullPolicy:</span> <span class="hljs-string">IfNotPresent</span><br>    <span class="hljs-attr">livenessProbe:</span><br>      <span class="hljs-attr">failureThreshold:</span> <span class="hljs-number">8</span><br>      <span class="hljs-attr">httpGet:</span><br>        <span class="hljs-attr">host:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.42</span><br>        <span class="hljs-attr">path:</span> <span class="hljs-string">/livez</span><br>        <span class="hljs-attr">port:</span> <span class="hljs-number">6443</span><br>        <span class="hljs-attr">scheme:</span> <span class="hljs-string">HTTPS</span><br>      <span class="hljs-attr">initialDelaySeconds:</span> <span class="hljs-number">10</span><br>      <span class="hljs-attr">periodSeconds:</span> <span class="hljs-number">10</span><br>      <span class="hljs-attr">timeoutSeconds:</span> <span class="hljs-number">15</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">kube-apiserver</span><br>    <span class="hljs-attr">readinessProbe:</span><br>      <span class="hljs-attr">failureThreshold:</span> <span class="hljs-number">3</span><br>      <span class="hljs-attr">httpGet:</span><br>        <span class="hljs-attr">host:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.42</span><br>        <span class="hljs-attr">path:</span> <span class="hljs-string">/readyz</span><br>        <span class="hljs-attr">port:</span> <span class="hljs-number">6443</span><br>        <span class="hljs-attr">scheme:</span> <span class="hljs-string">HTTPS</span><br>      <span class="hljs-attr">periodSeconds:</span> <span class="hljs-number">1</span><br>      <span class="hljs-attr">timeoutSeconds:</span> <span class="hljs-number">15</span><br>    <span class="hljs-attr">resources:</span><br>      <span class="hljs-attr">requests:</span><br>        <span class="hljs-attr">cpu:</span> <span class="hljs-string">250m</span><br>    <span class="hljs-attr">startupProbe:</span><br>      <span class="hljs-attr">failureThreshold:</span> <span class="hljs-number">30</span><br>      <span class="hljs-attr">httpGet:</span><br>        <span class="hljs-attr">host:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.42</span><br>        <span class="hljs-attr">path:</span> <span class="hljs-string">/livez</span><br>        <span class="hljs-attr">port:</span> <span class="hljs-number">6443</span><br>        <span class="hljs-attr">scheme:</span> <span class="hljs-string">HTTPS</span><br>      <span class="hljs-attr">initialDelaySeconds:</span> <span class="hljs-number">10</span><br>      <span class="hljs-attr">periodSeconds:</span> <span class="hljs-number">10</span><br>      <span class="hljs-attr">timeoutSeconds:</span> <span class="hljs-number">15</span><br>    <span class="hljs-attr">volumeMounts:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/var/log/audit</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">audit-logs</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/etc/kubernetes/audit-policy</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">audit-policy</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/etc/ssl/certs</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">ca-certs</span><br>      <span class="hljs-attr">readOnly:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/etc/ca-certificates</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">etc-ca-certificates</span><br>      <span class="hljs-attr">readOnly:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/etc/pki</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">etc-pki</span><br>      <span class="hljs-attr">readOnly:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/etc/ssl/etcd/ssl</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">etcd-certs-0</span><br>      <span class="hljs-attr">readOnly:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/etc/kubernetes/ssl</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">k8s-certs</span><br>      <span class="hljs-attr">readOnly:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/usr/local/share/ca-certificates</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">usr-local-share-ca-certificates</span><br>      <span class="hljs-attr">readOnly:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/usr/share/ca-certificates</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">usr-share-ca-certificates</span><br>      <span class="hljs-attr">readOnly:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">hostNetwork:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">priorityClassName:</span> <span class="hljs-string">system-node-critical</span><br>  <span class="hljs-attr">securityContext:</span><br>    <span class="hljs-attr">seccompProfile:</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">RuntimeDefault</span><br>  <span class="hljs-attr">volumes:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/var/log/kubernetes/audit</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">audit-logs</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/kubernetes/audit-policy</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">audit-policy</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/ssl/certs</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">ca-certs</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/ca-certificates</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">etc-ca-certificates</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/pki</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">etc-pki</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/ssl/etcd/ssl</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">etcd-certs-0</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/kubernetes/ssl</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">k8s-certs</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/usr/local/share/ca-certificates</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">usr-local-share-ca-certificates</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/usr/share/ca-certificates</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">usr-share-ca-certificates</span><br><span class="hljs-attr">status:</span> &#123;&#125;<br><span class="hljs-string">root@node2:~#</span> <span class="hljs-string">vim</span> <span class="hljs-string">/etc/kubernetes/manifests/kube-apiserver.yaml</span> <br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">etc-ca-certificates</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/pki</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">etc-pki</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/ssl/etcd/ssl</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">etcd-certs-0</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/etc/kubernetes/ssl</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">k8s-certs</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/usr/local/share/ca-certificates</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">DirectoryOrCreate</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">usr-local-share-ca-certificates</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostPath:</span><br>      <span class="hljs-attr">path:</span> <span class="hljs-string">/usr/share/ca-certificates</span><br>      <span class="hljs-attr">type:</span> <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">usr-share-ca-certificates</span><br><span class="hljs-attr">status:</span> &#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="Step-2-重启apiserver"><a href="#Step-2-重启apiserver" class="headerlink" title="Step 2 重启apiserver"></a>Step 2 重启apiserver</h1><h2 id="获得-apiserver-的-pod-名字"><a href="#获得-apiserver-的-pod-名字" class="headerlink" title="获得 apiserver 的 pod 名字"></a>获得 apiserver 的 pod 名字</h2><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">export apiserver_pods=$(kubectl get pods --selector=component=kube-apiserver -n kube-system --output=jsonpath=&#123;.items…metadata.name&#125;)<br></code></pre></td></tr></table></figure>
+
+<h2 id="删除-apiserver-的-pod"><a href="#删除-apiserver-的-pod" class="headerlink" title="删除 apiserver 的 pod"></a>删除 apiserver 的 pod</h2><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">kubectl delete pod $apiserver_pods -n kube-system<br></code></pre></td></tr></table></figure>
+
+<h1 id="Step-3-验证结果"><a href="#Step-3-验证结果" class="headerlink" title="Step 3 验证结果"></a>Step 3 验证结果</h1><p>执行以下命令，验证修改是否生效：<br><code>kubectl describe pod $apiserver_pods -n kube-system</code></p>
+<p>输出结果如下所示：（此时，我们可以看到，apiserver 已经使用新的命令行参数启动）  </p>
+<figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs shell">执行以下命令，验证修改是否生效：<br><br>kubectl describe pod $apiserver_pods -n kube-system<br>输出结果如下所示：（此时，我们可以看到，apiserver 已经使用新的命令行参数启动）<br><br>Host Port:<br>Command:<br>kube-apiserver<br>–advertise-address=172.17.216.80<br>–service-node-port-range=20000-22767<br>State: Running<br>Started: Mon, 11 Nov 2019 21:31:39 +0800<br>Ready: True<br>Restart Count: 0<br>Requests:<br>cpu: 250m<br></code></pre></td></tr></table></figure>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"><i class="fas fa-tags"></i>网络</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/02/28/Kubernetes%E4%BE%9D%E9%9D%A0NFS%E5%8A%A8%E6%80%81PV-PVC%E6%9E%84%E5%BB%BA/" rel="next" title="Kubernetes依靠NFS动态PV,PVC构建"><i class="fas fa-angle-left"></i><span class="nav-title">Kubernetes依靠NFS动态PV,PVC构建</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/02/28/Kubernetes%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4pod-pv-pvc%E9%97%AE%E9%A2%98/" rel="prev" title="Kubernetes解决无法删除pod,pv,pvc问题"><span class="nav-title">Kubernetes解决无法删除pod,pv,pvc问题</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/02/28/Kubernetes%E4%BF%AE%E6%94%B9NodePort%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%8C%83%E5%9B%B4/";
+    this.page.identifier = "2023/02/28/Kubernetes修改NodePort的端口范围/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Step-1%E4%BF%AE%E6%94%B9kube-apiserver-yaml%E6%96%87%E4%BB%B6"><span class="toc-text">Step 1修改kube-apiserver.yaml文件</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Step-2-%E9%87%8D%E5%90%AFapiserver"><span class="toc-text">Step 2 重启apiserver</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E8%8E%B7%E5%BE%97-apiserver-%E7%9A%84-pod-%E5%90%8D%E5%AD%97"><span class="toc-text">获得 apiserver 的 pod 名字</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%88%A0%E9%99%A4-apiserver-%E7%9A%84-pod"><span class="toc-text">删除 apiserver 的 pod</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Step-3-%E9%AA%8C%E8%AF%81%E7%BB%93%E6%9E%9C"><span class="toc-text">Step 3 验证结果</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

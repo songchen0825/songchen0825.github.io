@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Helm快速入门指南 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Helm%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Helm快速入门指南</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-28T17:46:44+08:00">2023-02-28 17:46:44</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/" itemprop="url" rel="index"><span itemprop="name">Development & Operate</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/Kubernetes/" itemprop="url" rel="index"><span itemprop="name">Kubernetes</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/Kubernetes/Helm/" itemprop="url" rel="index"><span itemprop="name">Helm</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/28/Helm%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/28/Helm快速入门指南/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="1-快速安装"><a href="#1-快速安装" class="headerlink" title="1. 快速安装"></a>1. 快速安装</h1><p><strong>Helm</strong> 帮助您管理 Kubernetes 应用程序 ——Helm Charts 帮助您定义、安装和升级最复杂的 Kubernetes 应用程序。</p>
+<p>在线文档 ： <a target="_blank" rel="noopener" href="https://helm.sh/zh/docs/">Helm | Docs</a></p>
+<h2 id="1-1-先决条件"><a href="#1-1-先决条件" class="headerlink" title="1.1 先决条件"></a>1.1 先决条件</h2><p>想成功和正确地使用[[Helm]]，需要以下前置条件。</p>
+<ol>
+<li>一个 Kubernetes 集群</li>
+<li>确定你安装版本的安全配置</li>
+<li>安装和配置Helm。</li>
+</ol>
+<h2 id="1-2-安装或者使用现有的Kubernetes集群"><a href="#1-2-安装或者使用现有的Kubernetes集群" class="headerlink" title="1.2 安装或者使用现有的Kubernetes集群"></a>1.2 安装或者使用现有的Kubernetes集群</h2><p>使用Helm，需要一个Kubernetes集群。对于Helm的最新版本，我们建议使用Kubernetes的最新稳定版， 在大多数情况下，它是倒数第二个次版本。</p>
+<h2 id="1-3-使用源码Source-安装-Linux-macOS"><a href="#1-3-使用源码Source-安装-Linux-macOS" class="headerlink" title="1.3 使用源码Source 安装 (Linux, macOS)"></a>1.3 使用源码Source 安装 (Linux, macOS)</h2><p>从源码构建Helm的工作要稍微多一点，但如果你想测试最新（预发布）的Helm版本，这是最好的方式。</p>
+<p>您必须有可用的Go环境。</p>
+<figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">git <span class="hljs-built_in">clone</span> https://github.com/helm/helm.git</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> helm</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">make</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">mv</span> bin/helm /user/local/bin</span> <br></code></pre></td></tr></table></figure>
+
+<p>验证Helm 安装是否成功 </p>
+<p>![[Pasted image 20230202171107.png]]</p>
+<h1 id="2-入门-Chart"><a href="#2-入门-Chart" class="headerlink" title="2.  入门 Chart"></a>2.  入门 Chart</h1><p>在本指南中我们会创建一个名为<code>mychart</code>的chart，然后会在chart中创建一些模板。</p>
+<figure class="hljs highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs console"><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm create mychart</span><br>Creating mychart<br></code></pre></td></tr></table></figure>
+
+<p>快速查看 <code>mychart/templates/</code></p>
+<p>如果你看看 <code>mychart/templates/</code> 目录，会注意到一些文件已经存在了：</p>
+<ul>
+<li><code>NOTES.txt</code>: chart的”帮助文本”。这会在你的用户执行<code>helm install</code>时展示给他们。</li>
+<li><code>deployment.yaml</code>: 创建Kubernetes <a target="_blank" rel="noopener" href="https://kubernetes.io/docs/user-guide/deployments/">工作负载</a>的基本清单</li>
+<li><code>service.yaml</code>: 为你的工作负载创建一个 <a target="_blank" rel="noopener" href="https://kubernetes.io/docs/user-guide/services/">service终端</a>基本清单。</li>
+<li><code>_helpers.tpl</code>: 放置可以通过chart复用的模板辅助对象</li>
+</ul>
+<p>然后我们要做的是… <em>把它们全部删掉！</em> 这样我们就可以从头开始学习我们的教程。我们在开始时会创造自己的<code>NOTES.txt</code>和<code>_helpers.tpl</code>。</p>
+<figure class="hljs highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs console"><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">rm</span> -rf mychart/templates/*</span><br></code></pre></td></tr></table></figure>
+
+<p>编制生产环境级别的chart时，有这些chart的基础版本会很有用。因此在日常编写中，你可能不想删除它们。</p>
+<h2 id="2-1-第一个模板"><a href="#2-1-第一个模板" class="headerlink" title="2.1 第一个模板"></a>2.1 第一个模板</h2><p>第一个创建的模板是<code>ConfigMap</code>。Kubernetes中，配置映射只是用于存储配置数据的对象。其他组件，比如pod，可以访问配置映射中的数据。</p>
+<p>因为配置映射是基础资源，对我们来说是很好的起点。</p>
+<p>让我们以创建一个名为 <code>mychart/templates/configmap.yaml</code>的文件开始：</p>
+<figure class="hljs highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span><br><span class="hljs-attr">kind:</span> <span class="hljs-string">ConfigMap</span><br><span class="hljs-attr">metadata:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">mychart-configmap</span><br><span class="hljs-attr">data:</span><br>  <span class="hljs-attr">myvalue:</span> <span class="hljs-string">&quot;Hello World&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong> 模板名称不遵循严格的命名模式。但是建议以<code>.yaml</code>作为YAML文件的后缀，以<code>.tpl</code>作为helper文件的后缀。</p>
+<p>上述YAML文件是一个简单的配置映射，构成了最小的必需字段。因为文件在 <code>mychart/templates/</code>目录中，它会通过模板引擎传递。</p>
+<p>像这样将一个普通YAML文件放在<code>mychart/templates/</code>目录中是没问题的。当Helm读取这个模板时会按照原样传递给Kubernetes。</p>
+<p>有了这个简单的模板，现在有一个可安装的chart了。现在安装如下：</p>
+<figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm install full-coral ./mychart</span><br>NAME: full-coral<br>LAST DEPLOYED: Tue Nov  1 17:36:01 2016<br>NAMESPACE: default<br>STATUS: DEPLOYED<br>REVISION: 1<br>TEST SUITE: None<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-2-验证脚本"><a href="#2-2-验证脚本" class="headerlink" title="2.2 验证脚本"></a>2.2 验证脚本</h2><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">helm install --generate-name --dry-run --debug mychart<br></code></pre></td></tr></table></figure>
+
+<p>![[Pasted image 20230203093400.png]]</p>
+<h1 id="国内helm添加常用charts仓库"><a href="#国内helm添加常用charts仓库" class="headerlink" title="国内helm添加常用charts仓库"></a>国内helm添加常用charts仓库</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查看当前配置的仓库地址</span><br>    <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo list</span><br>    <br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除默认仓库，默认在国外pull很慢</span><br>    <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo remove stable</span><br>    <br><span class="hljs-meta prompt_"># </span><span class="language-bash">添加几个常用的仓库,可自定义名字</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo add stable https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts</span><br>    <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo add kaiyuanshe http://mirror.kaiyuanshe.cn/kubernetes/charts</span><br>    <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo add azure http://mirror.azure.cn/kubernetes/charts</span><br>    <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo add dandydev https://dandydeveloper.github.io/charts</span><br>    <br><span class="hljs-meta prompt_">$ </span><span class="language-bash">helm repo add bitnami https://charts.bitnami.com/bitnami</span><br></code></pre></td></tr></table></figure>
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/DevOps/" rel="tag"><i class="fas fa-tags"></i>DevOps</a>
+        
+        <a class="post-tag button" href="/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/" rel="tag"><i class="fas fa-tags"></i>虚拟化</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/02/28/MinIO%E4%BB%8B%E7%BB%8D%E4%B8%8EFastDFS%E5%AF%B9%E6%AF%94/" rel="next" title="MinIO介绍与FastDFS对比"><i class="fas fa-angle-left"></i><span class="nav-title">MinIO介绍与FastDFS对比</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/02/28/Helm%E5%AE%89%E8%A3%85Zookeeper-Kafka/" rel="prev" title="Helm安装Zookeeper+Kafka"><span class="nav-title">Helm安装Zookeeper+Kafka</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/02/28/Helm%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/";
+    this.page.identifier = "2023/02/28/Helm快速入门指南/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85"><span class="toc-text">1. 快速安装</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#1-1-%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6"><span class="toc-text">1.1 先决条件</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#1-2-%E5%AE%89%E8%A3%85%E6%88%96%E8%80%85%E4%BD%BF%E7%94%A8%E7%8E%B0%E6%9C%89%E7%9A%84Kubernetes%E9%9B%86%E7%BE%A4"><span class="toc-text">1.2 安装或者使用现有的Kubernetes集群</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#1-3-%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81Source-%E5%AE%89%E8%A3%85-Linux-macOS"><span class="toc-text">1.3 使用源码Source 安装 (Linux, macOS)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#2-%E5%85%A5%E9%97%A8-Chart"><span class="toc-text">2.  入门 Chart</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#2-1-%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%A8%A1%E6%9D%BF"><span class="toc-text">2.1 第一个模板</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#2-2-%E9%AA%8C%E8%AF%81%E8%84%9A%E6%9C%AC"><span class="toc-text">2.2 验证脚本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E5%9B%BD%E5%86%85helm%E6%B7%BB%E5%8A%A0%E5%B8%B8%E7%94%A8charts%E4%BB%93%E5%BA%93"><span class="toc-text">国内helm添加常用charts仓库</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

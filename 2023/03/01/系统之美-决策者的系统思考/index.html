@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>系统之美-决策者的系统思考 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/01/%E7%B3%BB%E7%BB%9F%E4%B9%8B%E7%BE%8E-%E5%86%B3%E7%AD%96%E8%80%85%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%9D%E8%80%83/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">系统之美-决策者的系统思考</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-01T21:12:32+08:00">2023-03-01 21:12:32</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Reading-Note/" itemprop="url" rel="index"><span itemprop="name">Reading Note</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/01/%E7%B3%BB%E7%BB%9F%E4%B9%8B%E7%BE%8E-%E5%86%B3%E7%AD%96%E8%80%85%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%9D%E8%80%83/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/01/系统之美-决策者的系统思考/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="第1章系统的基础"><a href="#第1章系统的基础" class="headerlink" title="第1章系统的基础"></a>第1章系统的基础</h1><ul>
+<li>系统包含：要素，连接，目标或者功能<ul>
+<li>没有内在连接的功能随机组合不能称之为系统。</li>
+<li>系统中，非人因素称之为功能，人为因素称之为目标。</li>
+</ul>
+</li>
+<li>总体大于系统之和<ul>
+<li>系统既有外在的整体性，也有一套内在机制保持其整体性</li>
+<li>每个系统都有一个核心目标，那就是保障这个系统永续存在</li>
+</ul>
+</li>
+<li>从关注要素到透视游戏规则<ul>
+<li>系统中嵌套着子系统目标中还有其他目标，成功就是让个体目标和系统目标达成一致</li>
+<li>改变要素是影响系统最小的方式，不要改变内在的连接和目标，就算更换所有的要素，也可以保持系统的稳定，反之会产生显著的变化。</li>
+</ul>
+</li>
+<li>理解系统之中的动态性<ul>
+<li>定义：<ul>
+<li>– 存量 ： 可观察，感知，计数的系统要素</li>
+<li>– 流量 ：一段时间之内改变的状况</li>
+</ul>
+</li>
+<li>模型的本质是现实世界的简化（抽象）</li>
+<li>存量变化依赖于流量的运作时间，尤其是比较大的存量只能通过逐步增加和解放来实现，即便是突如其来的变化。</li>
+<li>系统之中的存量迟滞，也是整个系统的稳定根源所在。</li>
+</ul>
+</li>
+<li>系统是如何运作<ul>
+<li>系统思考者将世界的运作视为各种反馈过程的组合。</li>
+<li>回路类型，当存量的变化影响其相关的流入和流出，则形成了回路：</li>
+<li>– 反馈回路倾向于调节和矫正作用保持存量稳定</li>
+<li>– 增强回路倾向于持续增强存量</li>
+</ul>
+</li>
+</ul>
+<h1 id="第2章系统大观园"><a href="#第2章系统大观园" class="headerlink" title="第2章系统大观园"></a>第2章系统大观园</h1><ul>
+<li>单存量系统</li>
+<li>系统1.1 一个存量，两个相互制衡的调节回路 典型代表：温度调节器<ul>
+<li>思考：反馈回路所传递回来的信息只能影响未来，不能立即改变系统当前的行为。因为行为和结果之间存在延迟性。</li>
+</ul>
+</li>
+<li>系统1.2 一个存量，一个增强回路以及一个调节回路系统 典型代表：人口和工业经济<ul>
+<li>主导地位是系统思考中一个重要的概念，当一个回路相对于另外一个回路居于主导地位，它对系统就会更加具备影响力。虽然系统中可能存在多个回路，但是居于主导地位的回路才能决定系统的行为</li>
+</ul>
+</li>
+<li>系统1.3 含有时间延迟的系统 典型代表 ：库存<ul>
+<li>库存系统中存在多个延迟 ：<ul>
+<li><ol>
+<li>感知延迟，个体主观因素，人们的判断是基于过去的判断而非真实的变化</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>反应延迟，趋势即使是真实的，也感知到了，也未必会相信趋势的变化，只会进行部分的调整来进一步观察确认趋势</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>交货延迟，无法控制的调控时间</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>解决延迟的方式和最终的结果未必能有你想象中的那样效果反而可能产生数据震荡导致系统无法稳定 ，所以改变系统中的延迟可能使系统更容易被管理，或者走向完全相反的情况。如果我们无法确认延迟在哪儿，时间多长，我们就无法理解系统的真正行为。</li>
+<li>双存量系统</li>
+</ul>
+</li>
+<li>系统2.1 一个可再生存量受到另外一个不可再生存量约束的系统 典型代表：石油经济<ul>
+<li>在呈现指数级成长的实体系统中，必然存在至少一个增强回路，正是它们驱动着系统的成长，也存在一个调节回路，限制系统的成长。因为没有无力系统可以永续存在。</li>
+</ul>
+</li>
+<li>系统2.2 有两个可再生存量的系统 典型代表：渔业经济<ul>
+<li>– 有生命的可再生资源，可以经由一个增强回路实现自我再生</li>
+<li>– 无生命的可再生资源，如阳光，空气，水，虽然没有可再生增强回路，但是它们都可以持续稳定的补给输入来源</li>
+<li>– 病毒和日用品消耗也是可再生的存量。</li>
+<li>可再生资源受限于流量，如果开发速度快于再生速度，资源存量则会产生关键转折，从而变成不可再生资源</li>
+<li>两个影响因素：<ul>
+<li><ol>
+<li>关键转折是否被突破</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>资源衰减的时候抑制投资增长的调节力度。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>可再生资源的三种行为模式：<ul>
+<li>– 过度开发，然后逐渐适应，调治相对平衡状态，并且长期保持</li>
+<li>– 过度开发，超出均衡状态，上下震摆</li>
+<li>– 过度开发，资源枯竭，产业崩溃</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="第3章系统之美-系统的3大特征"><a href="#第3章系统之美-系统的3大特征" class="headerlink" title="第3章系统之美 系统的3大特征"></a>第3章系统之美 系统的3大特征</h1><ul>
+<li>适应力<ul>
+<li>– 形容物体，指的是被压缩或者拉伸之后能够恢复原有的形状</li>
+<li>– 形容个人，快速恢复能力，包括力量，精神，幽默感以及其他方面</li>
+<li>– 形容系统，系统在多变的环境中保持自身存在和运作能力。与适应力相对的是脆弱性和刚性。</li>
+<li>有适应力的系统可能是经常动态变化的，相反一直保持恒定的系统恰恰不具备适应力。</li>
+</ul>
+</li>
+<li>自组织<ul>
+<li>系统所具备使自身结构更加复杂的能力，被称为“自组织”</li>
+<li>自组织特性会产生出异质性和不可预测性：系统有可能演变成全新的结构，发展出全新的模式</li>
+</ul>
+</li>
+<li>层次性<ul>
+<li>在新结构不断产生，复杂性逐渐增加的过程，自组织系统经常生成一定的层级和层次性。系统和子系统之间的包含关系被称之为层次性。</li>
+<li>在具备层次性的系统中，各个子系统的内部联系要多于并强于系统之间的联系。</li>
+<li>层次性连接设计合理，反馈延迟就会减少，能挺高系统运行效率和适应能力。</li>
+<li>层次性的目的是为了帮助系统更好的工作，但是层次越高或者越低往往会忘记这一目的。某个子系统的目标占据了整个系统的上风，这样的行为结果被叫做“次优化”</li>
+</ul>
+</li>
+</ul>
+<h1 id="第4章系统之奇-系统的6大障碍"><a href="#第4章系统之奇-系统的6大障碍" class="headerlink" title="第4章系统之奇 系统的6大障碍"></a>第4章系统之奇 系统的6大障碍</h1><ul>
+<li>启示<ul>
+<li><ol>
+<li>我们的模型和现实高度一致，所以我们认为我们是这个世界最成功的物种</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>但是我们的模型远远达不到描绘完整世界的程度，所以我们经常会犯错</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>别被表象所迷惑<ul>
+<li>系统作为一个黑盒子，事件就是黑盒子时时刻刻的产出，事件只是更为复杂系统中可见的一小部分，但往往不是主要原因</li>
+<li>善于进行系统思考的人，需要寻找数据，了解系统的历史情况以及行为随着时间变化的趋势</li>
+<li>系统之思：系统的结构是行为的根源，系统的行为体现为随时间发生的一系列事件</li>
+</ul>
+</li>
+<li>在非线性的世界里，不要用线性的思维模式<ul>
+<li>非线性关系意味着因果之间存在不是固定比例关系，二者的关系只能用曲线或者不规则线来进行表示</li>
+</ul>
+</li>
+<li>恰当的划定边界<ul>
+<li>边界只是人为的区分，处于观察，思考，理解，表达的需要心理上设定或者社会上公认的虚拟边界。</li>
+<li>我们试着去理解一件事情，就必须要将其建华，这就意味着所谓的边界。</li>
+</ul>
+</li>
+<li>看清各种限制因素<ul>
+<li>最小因子定律 ：所有必不可少的要素，只要缺少其中一个，则其他因子再多也都无法运转。</li>
+<li>任何一个有着多重输入和输出的物质实体，都受到多重限制因素的制约。</li>
+<li>在限定的环境里，永远保持持续成长是不可能的，因此从根本上讲，关键不是追求持续成长，而是选择在那些因素限制下维持永续 。</li>
+</ul>
+</li>
+<li>无所不在的时间延迟<ul>
+<li>在系统之中时间延迟比比皆是。每一个存量都有延迟，大部分的流量也有延迟，包含运输延迟，感知延迟，处理延迟，成熟延迟等</li>
+<li>改变延迟的长短可以彻底的改变系统行为，延迟也常常作为敏感的政策杠杆点。</li>
+<li>时间延迟决定了系统的反应效率，达到目的的准确性以及系统在信息传递中的及时性。</li>
+</ul>
+</li>
+<li>有限理性<ul>
+<li>有限理性意味着人们基于其掌握的信息制定理性的决策，但是由于人们掌握信息通畅有限，不完整尤其对于系统中相隔较远或不熟悉的部分，由此导致它们决策往往并非整体最优。</li>
+<li>人们甚至无法很好解读现有掌握的那些有限信息：<ul>
+<li>– 我们对于风险的评估，对危害估计的过高，或者轻视一些危险</li>
+<li>– 我们也容易过度夸大当下状况的重要性，对眼前的经验非常重视，而从未对过去给予足够的重视。</li>
+<li>– 我们更加关注当前事件，而非长期事件。对于未来的价值有着自己的价值判断，受经济和生态方面的影响。</li>
+<li>– 所有输入的信号，不能正确评估其重要性。我们不会全盘接受自己不喜欢的，或者不符合自己心智模式的信息。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="第5章系统的危与机-系统的8大陷阱与对策"><a href="#第5章系统的危与机-系统的8大陷阱与对策" class="headerlink" title="第5章系统的危与机 系统的8大陷阱与对策"></a>第5章系统的危与机 系统的8大陷阱与对策</h1><ul>
+<li>系统的固有特性都是难以改变的（时间延迟，非线性，模糊边界等）要想使得复杂的系统不再那么让人出乎意料，最主要的途径就是加强学习，提高复杂性的理解，尊重和利用的能力。</li>
+<li>我们把产生常见问题行为模式的系统结构称为“基模”</li>
+<li>政策阻力：治标不治本<ul>
+<li>定义<ul>
+<li>当系统多个参与者有着不同的目标，从而系统存量忘不同方向拉扯，结果就是政策阻力。</li>
+<li>一般来说，目标和实际情况之间的差异越大，行动的压力或强度也就会越大。当各个子系统的目标不同和不一致时，就回产生变革的阻力。这一类的系统类似棘轮，任何一方增强的努力，都会导致所有人努力的增强（这难道就是传说中的内卷？）</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>相对于压制，应对政策阻力的另外一种方式是放弃，废止无效的政策，将资源和能量应用于增强和坚持更具建设性的目标。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>公地悲剧<ul>
+<li>公地悲剧之所以产生，一个重要的原因是资源的消耗和资源的使用者数量增长之间反馈的缺失，或者时间延长导致的。</li>
+<li>定义<ul>
+<li>当存在一种公共资源，每个使用者都可以从资源的使用中获利，用的越多，收益越大。但是过度使用的成本是由所有人一起承担。因此资源的整体状况和资源使用者之间的反馈关联非常的弱，结果导致资源耗尽。</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>使用者进行劝解和教育，理解过度使用资源的后果。也可以增强资源状况和使用者时间的弱反馈连接：1 私有化 2进行监管</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>目标侵蚀<ul>
+<li>定义<ul>
+<li>绩效标准受过去绩效的影响，尤其是当人们对过去的绩效偏负面的时候，过多的关注坏消息，启动一个恶性循环，使得目标和绩效水平不断的下降</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>保持一个绝对的绩效标准。更好的状况是将绩效标准设定会过去的最佳水平，从而不断提高自己的目标，并以此来激励自己。追求更好的绩效。系统结构没有变化但是由于转向不同，便能得到一个良心的循环。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>竞争升级<ul>
+<li>定义<ul>
+<li>系统的存量状态是取决于另外一个存量状态，并且试图超越对方，就构成了一个增强回路，使得系统陷入竞争升级的陷阱，表现为军备竞赛，财富攀比，口水仗。</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>单方面让步，切断增强回路，或者协商引入一个调节回路，对竞争进行一定的限制。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>富者愈富：竞争排斥<ul>
+<li>定义<ul>
+<li>如果系统中，竞争者的赢家会持续强化其进一步获胜的方式，这就形成了一个增强的回路。如果这个回路不受限制，那么这个回路就会一直运转下去</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>多元化，允许竞争落败的一方推出，开启另外一场博弈。</li>
+<li>反垄断法，严格限制赢家所占有的最大分比例原则，或对处于劣势的参与者特别的关照增强其竞争力（施舍，馈赠，税赋调节，转移支付）</li>
+<li>对获胜者的多样奖励，避免下一轮竞争中夺取一个有限的资源，产生偏差。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>转嫁负担：上瘾<ul>
+<li>这本质上是一个调节回路，要么改变流入量，要么调节流出量。</li>
+<li>将负担转嫁给干预者，有可能是一件好事，但是干预也可能变成一个系统的陷阱。防止上瘾的状况，秘诀在于不要以英雄式的接管开始，而是从提出一系列问题开始。</li>
+<li>定义<ul>
+<li>当面对系统问题，如果采用的解决方法无法解决潜在的问题，只是缓解了问题的症状，就会产生专家负担，依赖性和上瘾性。</li>
+<li>如果选择实施干预措施，导致系统原本的自我调适能力萎缩或者受到侵蚀，就会引发一个破坏性的增强回路。系统调适能力越差，就需要越多的干预回路，使得自我调适的能力越差，不能不依赖更多的干预。</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>提前预防，避免跌入陷阱，一定要意识到只是缓解症状和掩饰信号的政策和做法。都不能真正的解决问题。要将短期救济转移到长期结构上来进行调节。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>规避规则<ul>
+<li>定义<ul>
+<li>任何规则都存在漏洞或者例外，因而存在规避规则的机会，也就是说，虽然一些行为在表面上遵守或者未违背规则，但实质上不符合规则，基本扭曲了系统</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>重新设计规则，从规则规避中或者创造性的反馈，实现规则的本来目的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>目标错位<ul>
+<li>与规避规则恰恰相反的是，追求错误的目标，陶醉于错误的指标是系统扭曲的另外一个特征。</li>
+<li>定义<ul>
+<li>系统行为对于反馈回路的目标特别敏感，如果目标定义不完整或者不明确，即使系统忠实的所有的运作规则，产生的结果也不是人们所想要的。</li>
+</ul>
+</li>
+<li>对策<ul>
+<li>恰当的设定目标和指标，反映真实的福利状况。不要将努力和结果混淆，否则系统将只产出特定的努力，而不是你期望的结果。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="第6章系统之杠杆点-系统的12大变革方式"><a href="#第6章系统之杠杆点-系统的12大变革方式" class="headerlink" title="第6章系统之杠杆点 系统的12大变革方式"></a>第6章系统之杠杆点 系统的12大变革方式</h1><ul>
+<li>一些简单的存量和流量，互相连接起来，可以创造出非常庞大，复杂且动态变化的系统，其复杂程度超乎想象。</li>
+<li>以下是包含改变系统的方法：<ul>
+<li>– 数字，包含各种常量和参数：通过数值的改变调节系统是效力最低的一种方式，无法改变系统的结构。姿势调节一些细枝末节，并不会起到太大的杠杆效应。</li>
+<li>– 缓冲期，比流量更大更稳定的存量 ：通过提高缓冲期的存量来使得系统稳定下来，但是如果缓冲期过大，也会造成系统变得缺乏弹性。改变缓冲期的大小会成为改变系统的杠杆，但是缓冲期往往是实体，不太容易改变</li>
+<li>– 存量-流量结构，实体系统的交叉节点 ：无理结构对系统至关重要，但他们很少是杠杆，因为他们很难改变并且见效慢</li>
+<li>– 时间延迟，系统对变化作出反应的速度：时间延迟是一个高杠杆点，但是时间延迟并不容易被改变</li>
+<li>– 调节回路，试图修正外界影响的反馈回路 ：调节回路三要素，目标，监控，反馈。调节回路具有将关联的存量保持在预定的目标附近的能力 。</li>
+<li>– 增强回路，驱动收益增长的反馈力量，调节回路是自我修正，增强回路是自我强化。增强回路是系统中出现增长，爆发，腐蚀和崩溃的根源。</li>
+<li>– 信息流，谁能获得信息的结构：荷兰电表的故事说明了信息结构是一个高杠杆点，它不涉及参数的调整，也不是对反馈回路的强化或者弱化，它是一个新的回路，让人们在之前的不到信息的地方得到反馈。信息的缺失是系统功能不良的最常见原因之一 。在恰当的位置，以有效的方式恢复缺失的反馈是非常重要的方式 。</li>
+<li>– 系统规则，激励，惩罚和限制条件：规则定义了范围，边界和自由度。当我们努力重塑规则，并且明白这些规则的变化如何影响人们的行为时，我们才懂得规则的力量。法律，处罚，激励以及社会约定都是一些人为的规则，强度依次降低。</li>
+<li>– 自组织，系统结构增加，变化或进化的力量：强调单一文化认同是关闭了学习的大门，也削弱了人类的适应力。这里的介入点也很明显，就是鼓励多样性，但这不受欢迎，因为很多人认为多样性就是失控的象征。</li>
+<li>– 目标，系统的目的或者功能：推动人们试图控制，消除多样性的动因，正是目标。</li>
+<li>– 社会范式，决定系统之所以为系统的心智模式：凡是在范式上采用干预措施或者推动变革都在根本上改变了系统。系统结构师告诉我们，可以通过建构系统的模型来改变范式，因为建模的过程可以跳出系统之外把系统视为一个整体。如何改变范式：<ul>
+<li><ol>
+<li>持续留意在旧的范式有哪些异常和失效之处，对于新的范式你需要不断的宣讲和行动，并持之以恒</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>在可能的情况下，加入新范式已被接纳并占主导地位的社会环境之中，切身体验新的范式</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>不要与反对改革人接触，浪费时间，相反，你要积极的变革代理人合作，置身心心胸开阔，愿意接纳新事物的社会人群之中。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>– 超越范式：让自己改变范式的控制，保持灵活性意识到没有范式才是真实，如果没有任何范式或世界观是正确的，为了实现你的目标，可以选择任何合适的手段。对于达成目标的任何想法，可以仔细观察大自然的运作。</li>
+</ul>
+</li>
+</ul>
+<h1 id="第7章与系统共舞-系统的15大生存法则"><a href="#第7章与系统共舞-系统的15大生存法则" class="headerlink" title="第7章与系统共舞 系统的15大生存法则"></a>第7章与系统共舞 系统的15大生存法则</h1><ul>
+<li>问题1: 理解如何修补一个系统和实际去修补它，完全是两码事。社会系统是人类文化思考模式的外在体现，也是深层次需求，情绪，优势和劣势的反映。</li>
+<li>问题2:系统的洞察力会产生更多的问题，自组织，非线性，反馈系统从本质上是不可预测和被控制的，因此我们只能以最一般的方式去理解他们。我们无法控制系统，或者将其搞清楚，但是我们可以和系统共舞。</li>
+<li>与系统共舞：<ul>
+<li><ol>
+<li>跟上系统的节拍，在你想用任何方式去干预系统的时候，首先要学会观察它是如何运作的，强迫自己关注事实而不是理论。要去观察真实的情况而不是去听人们对于发生状况的解释，这样可以规避掉无意义的因果假设。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>把你的心智模式展露在阳光下：各种方式都可以表达自己的想法，但请牢记，你所知道的每一件事，以及任何人知道的任何事，都只是一个模型。把模型拿出来，用各种证据来检验如果没有证据支撑，也应该勇于舍弃。心智上的灵活性，是你充满各种灵活系统中生存的必备条件，这包括重新划定系统边界，注意系统转换到另外一种模式，以及了解如何重新设计一款系统的方式</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>相信，尊重并分享信息。不能歪曲，延迟或者隐瞒任何信息。从某种意义上来说，信息就是权力。</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>谨慎的使用语言，并使用系统概念去丰富语言，尊重信息意味着要避免语言污染，尽可能清晰，准确的使用语言，要想办法扩展我们的语言以便更有效的谈论复杂性。</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>关注重要的，而不是容易衡量的。</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>为反馈系统制定带有反馈功能的政策。</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>追求整体利益，层级组织的存在目的是为了服务最底层，而非最顶层。</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>聆听系统的智慧，帮助并鼓励有助于系统自我运行的力量和结构</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>界定系统的职责</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>保持谦逊，作为一个学习者。每个人心智模型都是不完整的，而世界是如此的复杂，因为我们有很多不知道的东西。</li>
+</ol>
+</li>
+<li><ol start="11">
+<li>庆祝复杂性</li>
+</ol>
+</li>
+<li><ol start="12">
+<li>扩展时间的范围，考虑的时间范围越长，生存的机会也就会越好。</li>
+</ol>
+</li>
+<li><ol start="13">
+<li>打破各种清规戒律</li>
+</ol>
+</li>
+<li><ol start="14">
+<li>扩大关切范围要想在一个充满复杂系统的世界中生存，不仅需要扩展时间范围，也需要拓展思考范围。</li>
+</ol>
+</li>
+<li><ol start="15">
+<li>不要降低善的标准。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag"><i class="fas fa-tags"></i>思维</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/01/%E5%A6%82%E4%BD%95%E8%A7%84%E5%88%92%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF%E7%9A%84%E4%B8%89%E5%A4%A7%E9%98%B6%E6%AE%B5/" rel="next" title="远见 - 如何规划职业生涯的三大阶段"><i class="fas fa-angle-left"></i><span class="nav-title">远见 - 如何规划职业生涯的三大阶段</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/03/01/%E6%8E%8C%E6%8E%A7-%E5%BC%80%E5%90%AF%E4%B8%8D%E7%96%B2%E6%83%AB%EF%BC%8C%E4%B8%8D%E7%84%A6%E8%99%91%E7%9A%84%E4%BA%BA%E7%94%9F/" rel="prev" title="掌控-开启不疲惫，不焦虑的人生"><span class="nav-title">掌控-开启不疲惫，不焦虑的人生</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/01/%E7%B3%BB%E7%BB%9F%E4%B9%8B%E7%BE%8E-%E5%86%B3%E7%AD%96%E8%80%85%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%9D%E8%80%83/";
+    this.page.identifier = "2023/03/01/系统之美-决策者的系统思考/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E7%AC%AC1%E7%AB%A0%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="toc-text">第1章系统的基础</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E7%AC%AC2%E7%AB%A0%E7%B3%BB%E7%BB%9F%E5%A4%A7%E8%A7%82%E5%9B%AD"><span class="toc-text">第2章系统大观园</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E7%AC%AC3%E7%AB%A0%E7%B3%BB%E7%BB%9F%E4%B9%8B%E7%BE%8E-%E7%B3%BB%E7%BB%9F%E7%9A%843%E5%A4%A7%E7%89%B9%E5%BE%81"><span class="toc-text">第3章系统之美 系统的3大特征</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E7%AC%AC4%E7%AB%A0%E7%B3%BB%E7%BB%9F%E4%B9%8B%E5%A5%87-%E7%B3%BB%E7%BB%9F%E7%9A%846%E5%A4%A7%E9%9A%9C%E7%A2%8D"><span class="toc-text">第4章系统之奇 系统的6大障碍</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E7%AC%AC5%E7%AB%A0%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%B1%E4%B8%8E%E6%9C%BA-%E7%B3%BB%E7%BB%9F%E7%9A%848%E5%A4%A7%E9%99%B7%E9%98%B1%E4%B8%8E%E5%AF%B9%E7%AD%96"><span class="toc-text">第5章系统的危与机 系统的8大陷阱与对策</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E7%AC%AC6%E7%AB%A0%E7%B3%BB%E7%BB%9F%E4%B9%8B%E6%9D%A0%E6%9D%86%E7%82%B9-%E7%B3%BB%E7%BB%9F%E7%9A%8412%E5%A4%A7%E5%8F%98%E9%9D%A9%E6%96%B9%E5%BC%8F"><span class="toc-text">第6章系统之杠杆点 系统的12大变革方式</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E7%AC%AC7%E7%AB%A0%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%85%B1%E8%88%9E-%E7%B3%BB%E7%BB%9F%E7%9A%8415%E5%A4%A7%E7%94%9F%E5%AD%98%E6%B3%95%E5%88%99"><span class="toc-text">第7章与系统共舞 系统的15大生存法则</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

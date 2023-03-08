@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Kubernetes解决无法删除pod,pv,pvc问题 | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Kubernetes%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4pod-pv-pvc%E9%97%AE%E9%A2%98/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Kubernetes解决无法删除pod,pv,pvc问题</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-02-28T20:39:49+08:00">2023-02-28 20:39:49</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/" itemprop="url" rel="index"><span itemprop="name">Development & Operate</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Development-Operate/Kubernetes/" itemprop="url" rel="index"><span itemprop="name">Kubernetes</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/02/28/Kubernetes%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4pod-pv-pvc%E9%97%AE%E9%A2%98/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/02/28/Kubernetes解决无法删除pod-pv-pvc问题/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="删除PV"><a href="#删除PV" class="headerlink" title="删除PV"></a>删除PV</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">kubectl patch pvc kafka-kafka-2 -p &#x27;&#123;&quot;metadata&quot;:&#123;&quot;finalizers&quot;:null&#125;&#125;&#x27; -n micro-service<br></code></pre></td></tr></table></figure>
+
+<h1 id="删除pod"><a href="#删除pod" class="headerlink" title="删除pod"></a>删除pod</h1><figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">kubectl delete pod xxx -n xxx --force --grace-period=0<br></code></pre></td></tr></table></figure>
+
+
+<p>如果强制删除还不行，设置 finalizers 为空</p>
+<figure class="hljs highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">kubectl patch pod xxx -n xxx -p &#x27;&#123;&quot;metadata&quot;:&#123;&quot;finalizers&quot;:null&#125;&#125;&#x27;<br></code></pre></td></tr></table></figure>
+
+
+<p>尽管此操作很简单，但其他因素可能会干扰删除，包括 finalizers 和 owner references。</p>
+<h2 id="K8s-中对象删除基本流程如下"><a href="#K8s-中对象删除基本流程如下" class="headerlink" title="K8s 中对象删除基本流程如下"></a>K8s 中对象删除基本流程如下</h2><p>（1）客户端提交删除请求到 API Server（可选传递 GracePeriodSeconds 参数）</p>
+<p>（2）API Server 做 Graceful Deletion 检查（若对象实现了 RESTGracefulDeleteStrategy 接口，会调用对应的实现并返回是否需要进行 Graceful 删除）</p>
+<p>（3）API Server 检查 Finalizers 并结合是否需要进行 graceful 删除，来决定是否立即删除对象（若对象需要进行 graceful 删除，更新 metadata.DeletionGracePeriodSecond 和metadata.DeletionTimestamp 字段，不从存储中删除对象；若对象不需要进行 Graceful 删除时：metadata.Finalizers 为空，直接删除。metadata.Finalizers 不为空，不删除，只更新 metadata.DeletionTimestamp。</p>
+<h2 id="finalizers介绍"><a href="#finalizers介绍" class="headerlink" title="finalizers介绍"></a>finalizers介绍</h2><p>Finalizers 字段属于 Kubernetes GC 垃圾收集器，是一种删除拦截机制，能够让控制器实现异步的删除前（Pre-delete）回调。其存在于任何一个资源对象的 Meta中，在 k8s 源码中声明为 []string，该 Slice 的内容为需要执行的拦截器名称。</p>
+<p>常见用途：</p>
+<p>（1）控制器在对象刚创建时，在 metadata.finalizers 写入一个自定义字符串</p>
+<p>（2）APIServer 在 metadata.finalizers 数组不为空时，不会删除对象。此逻辑是硬性，对所有对象生效。</p>
+<p>（3）当有客户端删除对象时，控制器可以发现对象出于删除状态，然后执行相应的 pre-delete 逻辑。执行完成后，将之前写入的自定义字符串移除。</p>
+<p>（4）当所有控制器都将各自写入到 metadata.finalizers 的字符串移除后。API Server 就自动将对象删除。</p>
+<p>注：若对象同时实现了 graceful 删除策略，删除请求需要满足 GracefulPeriodSeconds &#x3D; 0 条件</p>
+<h2 id="Graceful-Deletion"><a href="#Graceful-Deletion" class="headerlink" title="Graceful Deletion"></a>Graceful Deletion</h2><p>APIServer 在处理 Pod 删除请求时，会根据 pod 的 pod.Spec.TerminationGracePeriodSeconds 和 deleteOptions.GracefulPeriodSeconds 综合判断，是否进行 Graceful 删除。若是，并判断最终的 GracefulPeriodSeconds 该设置为多少。</p>
+<p>（1）当删除请求选项中有设置 GracefulPeriodSeconds，以选项中为准。若没有，使用 pod.Spec.TerminationGracePeriodSeconds 。若 pod.Spec.TerminationGracePeriodSeconds 也没有设置，使用默认值 0 。</p>
+<p>（2）当 Pod 没有调度，或者已经结束（无论成功还是失败）。GracePeriodSeconds 都重置为 0.</p>
+<p>GracePeriodSeconds 为 0 表示不进行优雅删除。非 0 表示进行优雅删除。Pod 的默认优雅删除时间为 30 s ，在对象创建时配置在 pod.Spec.TerminationGracePeriodSeconds 字段。</p>
+<p>优雅删除的目的是给予 Kubelet 一定时间对 Pod 实行优雅退出。在用户对 Pod 执行 Delete 操作时，Pod 对象不会立即从 API Server 删除，而只是进入 Termination 阶段。Kubelet 会对运行中的 Pod 的容器发送 TERM 信号，通知其退出。并执行用户配置的 preStop hooks 逻辑。当优雅时间过了之后，再开始使用 KILL 信号尝试强制杀容器。</p>
+<p>当 kubelet 将 Pod 清理干净后，就会使用 GracefulPeriodSeconds&#x3D;&#x3D;0 的参数执行删除操作。</p>
+<p>因为 Pod 实现优雅删除目的是为了给予 Kubelet 时间做资源清理操作，所以这也是为什么在设置 GracePeriodSeconds 阶段，若 Pod 没有被调度或者已经退出，也就可以直接允许立即删除 (GracePeriodSeconds &#x3D; 0)。</p>
+<p>注： 理解该流程可以结合 Kubernetes 官网的 Pod Termination 说明：<a href="https://link.zhihu.com/?target=https://kubernetes.io/docs/concepts/workloads/pods/pod/%23termination-of-pods">https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods</a> 对象第一次执行优雅删除操作时，会将当时 GracefulPeriodSeconds 配置在 metadata.DeletionGracefulPeriodSeconds 字段。 Deletion 操作在 API Server 是不可回退的操作。metadata.DeletionTimestamp 设置后不可更改，metadata.DeletionGracefulPeriodSeconds 只能减小，不能增加。</p>
+<h2 id="对象无法删除的原因"><a href="#对象无法删除的原因" class="headerlink" title="对象无法删除的原因"></a>对象无法删除的原因</h2><p>在了解以上机制后，对象无法删除无外乎以下两个原因：</p>
+<p>对象存在 finalizers，关联的控制器故障未能执行或执行 finalizer 函数卡住</p>
+<p>比如namespace控制器无法删除完空间内所有的对象，特别是在使用 aggregated apiserver 时，第三方 apiserver 服务故障导致无法删除其对象。此时，需要会恢复第三方 apiserver 服务或移除该 apiserver 的聚合，具体选择哪种方案需根据实际情况而定。</p>
+<p>集群内安装的控制器给一些对象增加了自定义 finalizers ，未删除完 fianlizers 就下线了该控制器，导致这些 fianlizers 没有控制器来移除他们。此时，需要恢复该控制器会手动移除 finalizers，具体选择哪种方案根据实际情况而定。</p>
+<p>对象需要优雅删除，但执行者不能完成删除。比如 Pod 因为 kubelet 无法下线节点上 node 容器、存储卷而无法删除。比较常见有以下原因：</p>
+<ul>
+<li>kubelet 无法通过 container runtime 杀死进程。比如进程进入 D (Uninterruptible) 状态，container runtime 或操作内核遇到 bug 等。对于进程进入 D 状态，若能恢复照成 D 的故障，比如恢复关联的外设访问等，能解决问题。若不能，或者是因为后者内核 bug，一般并不能走正常流程让 kubelet 杀死进程。一般需要重启操作系统才能解决。</li>
+<li>kubelet 进程停止或者 node 失去联系。 该情况下，并没有 kubelet 运行或者运行中的 kubelet 与 apiserver 已经断开，无法收到 pod 需要删除下线的消息。所以，没有执行者来进行优雅删除。该情况下，需要恢复节点以及 kubelet 的运行即可。</li>
+</ul>
+<p>两种机制都有强制跳过的方案：</p>
+<ul>
+<li>删除 finalizers ，让关联的逻辑不需要执行</li>
+<li>kubelet delete –force –grace-period 0 直接删除</li>
+</ul>
+<p>但应仅当关联清理工作已经不重要或已手动执行时，才可选择。不然容易照成数据、状态不一致等。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/" rel="tag"><i class="fas fa-tags"></i>疑难杂症</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/02/28/Kubernetes%E4%BF%AE%E6%94%B9NodePort%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%8C%83%E5%9B%B4/" rel="next" title="Kubernetes修改NodePort的端口范围"><i class="fas fa-angle-left"></i><span class="nav-title">Kubernetes修改NodePort的端口范围</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2023/02/28/Kubernetes%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="prev" title="Kubernetes常见面试题"><span class="nav-title">Kubernetes常见面试题</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/02/28/Kubernetes%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4pod-pv-pvc%E9%97%AE%E9%A2%98/";
+    this.page.identifier = "2023/02/28/Kubernetes解决无法删除pod-pv-pvc问题/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E5%88%A0%E9%99%A4PV"><span class="toc-text">删除PV</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E5%88%A0%E9%99%A4pod"><span class="toc-text">删除pod</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#K8s-%E4%B8%AD%E5%AF%B9%E8%B1%A1%E5%88%A0%E9%99%A4%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B%E5%A6%82%E4%B8%8B"><span class="toc-text">K8s 中对象删除基本流程如下</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#finalizers%E4%BB%8B%E7%BB%8D"><span class="toc-text">finalizers介绍</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Graceful-Deletion"><span class="toc-text">Graceful Deletion</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">对象无法删除的原因</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

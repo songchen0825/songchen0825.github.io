@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>穷养的女孩和富养的女孩的区别在哪？ | Privacy Field - ���A2 2B 9S ���</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">���A2 2B 9S ���</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E7%A9%B7%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E5%92%8C%E5%AF%8C%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E5%93%AA%EF%BC%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">穷养的女孩和富养的女孩的区别在哪？</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-03-01T17:22:43+08:00">2022-03-01 17:22:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">网络摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E7%A9%B7%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E5%92%8C%E5%AF%8C%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E5%93%AA%EF%BC%9F/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2022/03/01/网络摘抄-穷养的女孩和富养的女孩的区别在哪？/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>多穷是穷，多富是富？</p>
+<p>可以被一片口香糖骗走的女孩可以被600块衣服骗走的女孩可以被男友家安排工作骗走的女孩可以被男友送房送车骗走的女孩可以被男友送一个公司骗走的女孩。。。。。。。。。。。。。。。。。。可以被男友哄哄抱抱骗走的女孩可以被男友嘘寒问暖骗走的女孩可以被男友照顾婴儿般的溺爱骗走的女孩</p>
+<p>还有她们身边那些咬牙切齿恨其不争，认为起码也要再出更高价才被骗走的女孩</p>
+<p>你们什么时候能成长为物质和精神都可以自我照顾，自我治愈，然后成为一个完整成熟独立的人，再去与一个同样有尊严的正常人建立健康舒服的关系？</p>
+<p>骗，大意就是出价低于你底价？所以你是什么价？比谁低比谁又高？你什么时候能把自己当人看？也把别人当人看？</p>
+<p>又或者，骗，就是当初看中了对方能提供的，便托付以人生的价值和意义。日久天长，习惯了已得的层次看惯了更高的层次，反顾此身，发现还有太多的东西不是靠别人的供应就能满足的，于是人到中年，开始抱怨当初被骗所以选错了？</p>
+<p>父母们当然大多都是好意。你们不愿意看到女儿们栽在低劣到令人发指的诱惑上。但是随着出价一步步走高，会不会有那么一个点，她就算跌倒了，变成曹七巧，元春，薛宝钗了。你们这帮家人朋友们的，还对她钦羡不已，啧啧称赞。在她回过神来痛哭着的时候，边不疼不痒安慰两句，边暗自欢喜地摸着那只沉重的金镯子，告诉她说，你这样一辈子也足够了，多少人还羡慕你，还有什么不满足的呢？</p>
+<p>是的，父母大致都是将自己眼睛望得见的好去处指给儿女们看。可你们真有那自信，觉得你的眼睛望得见最好最美丽的去处？</p>
+<p>又有多少女孩，能在她们年轻的时候，就在心底下定主意，知道无论金钱还是童话般的爱情，都无法回答尽这世上的一切问题。物质和情感，都没资格被当作理想。总归是要站在土地上，向下生根，向上长枝，明白自己是这样活生生的存在。自己，自己这辈子，就是理想。</p>
+<p>。。。。。。。。。。。。。。。。。。。。。</p>
+<p>所以父母们该纠结的到底是孩子的穷养富养，还是别把自己多年来在物质的猴子树上受的鸟气和越来越噬心的欲望投射到孩子心上？像灰姑娘的继母给自己女儿准备华服一般，暗下决心让孩子们走出去不能丢脸，教会她们对一切衣衫灰暗的人尽可以做出胜利者的嘲笑，但碰到水晶鞋也可以抓住时机削掉自己的脚后跟。如果有一只青蛙胆敢自称王子，那应该一脚把它踢回它的池塘。如果一头多毛的野兽送来丰厚的礼金，那也可以假装诚恳地前往，等到它睡梦中露出脖子，就让从背篓里爬出来的哥哥用一把小刀割开它的咽喉。</p>
+<p>对于孩子来说，青少年时期蓬勃的物欲和审美情怀，是应该被冷着脸告知：如果你胆敢表露对美丽事物的向往，就证明了你人格的劣质和意志力的薄弱，为了微不足道的审美情怀，就对父母进行残酷的榨取。你是个坏孩子，你有的是肮脏的虚荣的欲望；还是像倪萍的姥姥一样，冬天用红蜡做出花瓣，小米做蕊，告诉孩子们心和眼睛要用美来养着。衣服永远要费大功夫浆洗熨烫得整洁挺括，定时还要用鸡蛋换了染料来补充颜色。让孩子知道，就算没有奢侈的讲究，靠自己的双手也可以把日子过得体面细致。手边随时有一碗热汤一包咸菜可以馈赠邻人，因为我们是丰盛的不是匮乏的，是可以分享而不是费尽心机去夺取的。如果要体会世间的丰盛和自我的丰盛，那就去读书，去攀登。在山脚下住了一辈子的人说的平静安宁不是值得的追求。</p>
+<p>对现实不满的孩子们。日子看起来就像被判监禁。独含苦果，默默向隅。人生来难道不是为了在丰盛中被爱？一切愿望都被满足，一切要求都有回应，举手投足皆有热切的眼光注视，连走过的路都步步生花？可是现实如同生锈的水管，融化的冰淇淋，角落里爬出的蟑螂，处处都令人生厌。如果午夜有几只老鼠引领，你会不会爬过一个秘密的隧道，那里有一对纽扣眼睛的父母，还有修正好了一切瑕疵的另一版人生。因为它们能满足你一切自我中心宇宙全能王的欲望，所以付出一对眼睛，缝上纽扣也在所不惜？还是噩梦醒来，和现实中不完美的父母一起种下郁金花球，因为美好和丰盛不能靠别人的施舍或馈赠，双手得来的不光更甜美，还能让你认识到更贵重的东西：你自己的力量。（电影：鬼妈妈）</p>
+<p>渴求情感的安慰就像离水的鱼空鼓着鳃一样的孩子们。是的，世上有那么一种难言的渴望，使你们一直在寻求传说中的仙泉，从父母熨帖毛孔的关切和照顾，到朋友们的肝胆相照生死与共，再到恋人心心相印世间万物皆可抛的追随，你一再期待又一再失望，带着这个梦最后直追到各种各样的神那里去，因为它们许诺会给你完美父母般的爱。每步你都失望，每次都有不对劲的地方，你告诉自己没关系，情感的巅峰体验你尝过了，所以一定要找到一种方式让这种体验能永驻。</p>
+<p>说不定都是因为没遇到对的人，说不定只是你运气不好上苍不公，说不定下一次你就遇到一个彩虹般的人，他会像上帝一样戴着圣光慈爱地拯救了你。像传说中一样，你们从此幸福地生活在一起。所有的遗憾都被弥补，所有的痛苦都得到消除，所有的伤口都被涂上芬芳的药膏。你这样想着，这样捂着撕裂的伤口跌跌撞撞地找着。每次都赌上全部身心，赌这一个就是对的那个。你像堂吉诃德，像被嫌弃的松子，像卖火柴的小女孩拿着最后三根火柴，在带泪的幻想里抚慰着绝望的眼睛。</p>
+<p>其它的酸甜苦辣咸你不想尝，你只要那种忘我的纯粹。所以呢？和同样焦渴的人谈各种各样的打打闹闹纠纠缠缠的恋爱？车轱辘一样争吵着你到底在乎不在乎我你看不起我你凭什么这么对我？脑子里各种各样念头争来吵去没有停歇？谁谁又说了一句什么难听的好过分我以前那么对她！再然后，游戏血拼胡吃海塞，一直到酒精毒品性？你的大脑就是你的敌人，不把它打晕你没法活下去。什么努力什么坚持，你说你累着呢，头脑里太乱了，筋疲力尽只想无意识地栽倒睡一觉。有什么事明天再说吧。结果天亮就像诅咒一样，密密麻麻黑压压的烦恼又勾上心头。</p>
+<p>一年两年三年，你的自我像一颗年轻稚嫩的树，没长大就枯死一半。难言的焦渴其实是你的自我对你忙碌眼睛的呼喊，能不能向内看一看，就看一眼，你就能看到它。水深及膝，你却只想从别人的水袋里讨一口水喝。然而你的根系再往下长，就能触碰到一个更古老永恒的存在，这世上一切看上去有那么点笃定执着勇气的人，都是从那里获得滋养。</p>
+<p>有一天凌晨天半明半暗的时候，你做了一个梦。你穿着病人的白袍子，在一片白光中，赤脚走进一个纯白的房间，你看到八岁的你脸蛋红润声音爽朗地对你说，长大了，我要当一个特别利害的人！你哭着跪在她面前说，对不起宝贝，我把日子过糟了。我的心忙着去怨恨去羡慕去渴求去挣扎去贪念，我已经忘了你的愿望。那个小小的你抱着你的头说，没关系，我一直还在这里。她也还在那里。你顺着她的手指看过去，看见一个更成熟更美更自若，脸上微笑散发光芒的你，对你说：</p>
+<p>别害怕，我在未来等你，等你抵达。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E4%BA%B2%E5%AD%90/" rel="tag"><i class="fas fa-tags"></i>亲子</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E9%87%91%E5%88%9A%E7%BB%8F%E7%AE%80%E8%BF%B0/" rel="next" title="金刚经简述"><i class="fas fa-angle-left"></i><span class="nav-title">金刚经简述</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E6%B2%A1%E6%9C%89%E8%B5%9A%E5%A4%A7%E9%92%B1%EF%BC%8C%E5%BD%93%E5%A4%A7%E5%AE%98%EF%BC%8C%E5%92%8C%E8%87%AA%E5%B7%B1%E7%88%B1%E7%9A%84%E4%BA%BA%E5%9C%A8%E4%B8%80%E8%B5%B7%EF%BC%88%E5%93%AA%E6%80%95%E4%B8%80%E6%AC%A1%EF%BC%89%EF%BC%8C%E6%B4%BB%E7%9D%80%E8%83%BD%E7%AE%97%E6%9C%89%E6%84%8F%E4%B9%89%E5%90%97%EF%BC%9F/" rel="prev" title="没有赚大钱，当大官，和自己爱的人在一起（哪怕一次），活着能算有意义吗？"><span class="nav-title">没有赚大钱，当大官，和自己爱的人在一起（哪怕一次），活着能算有意义吗？</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2022/03/01/%E7%BD%91%E7%BB%9C%E6%91%98%E6%8A%84-%E7%A9%B7%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E5%92%8C%E5%AF%8C%E5%85%BB%E7%9A%84%E5%A5%B3%E5%AD%A9%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E5%93%AA%EF%BC%9F/";
+    this.page.identifier = "2022/03/01/网络摘抄-穷养的女孩和富养的女孩的区别在哪？/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">139</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
