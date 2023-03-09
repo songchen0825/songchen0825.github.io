@@ -209,6 +209,66 @@
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/09/%E5%BC%82%E5%B8%B8%E9%87%8D%E8%AF%95%E6%A1%86%E6%9E%B6SpringRetry/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="songchen">
+        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2023/03/09/%E5%BC%82%E5%B8%B8%E9%87%8D%E8%AF%95%E6%A1%86%E6%9E%B6SpringRetry/" itemprop="url">异常重试框架SpringRetry</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-09T17:25:33+08:00">2023-03-09 17:25:33</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/" itemprop="url" rel="index"><span itemprop="name">Programming Language</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Java-language/" itemprop="url" rel="index"><span itemprop="name">Java language</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Java-language/%E6%A1%86%E6%9E%B6%EF%BC%88Framework%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">框架（Framework）</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Java-language/%E6%A1%86%E6%9E%B6%EF%BC%88Framework%EF%BC%89/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/09/%E5%BC%82%E5%B8%B8%E9%87%8D%E8%AF%95%E6%A1%86%E6%9E%B6SpringRetry/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/09/异常重试框架SpringRetry/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      1. 重试机制的业务背景外部服务对于调用者来说一般都是不可靠的，尤其是在网络环境比较差的情况下，网络抖动很容易导致请求超时等异常情况，这时候就需要用失败重试策略重新调用 API 接口来获取。 在分布式系统中，为了保证数据分布式事务的强一致性，大家在调用RPC接口或者发送MQ时，针对可能会出现网络抖动请求超时情况采取一下重试操作。 大家用的最多的重试方式就是MQ了，但是如果你的项目中没有引入MQ，那就不方便了。 2. 重试策略的介绍和限制重试策略在服务治理方面也有很广泛的使用，通过定时检测，来查看服务是否存活。 重试是有场景限制的，不是什么场景都适合重试，比如参数校验不合法、写操作等（要考虑写是
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%9C%BA%E5%88%B6/" rel="tag"><i class="fas fa-tags"></i>机制</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/03/%E5%8D%A7%E9%BE%99%E8%8B%8D%E5%A4%A9%E4%BC%98%E5%8C%96/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="songchen">
@@ -757,60 +817,6 @@
     </footer>
   </article>
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/02/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="songchen">
-        <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
-        <meta itemprop="image" content="/images/avatar.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Privacy Field">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2023/03/02/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/" itemprop="url">软件设计的第一性原理：结构化抽象</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-02T19:27:26+08:00">2023-03-02 19:27:26</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Software-Engineering/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%88Program-Design%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">软件设计思想（Program Design）</span></a></span>
-        </span>
-        
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-comment-count">
-          <i class="far fa-comments"></i><span><a href="/2023/03/02/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/02/软件设计的第一性原理/" itemprop="commentCount"></span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      软件设计的第一性原理，是结构化抽象。术生于道，技术生于原理。 引语所谓的第一性原理，就是无论使用什么方法论，都无法绕过的那最最基础的部分。无论是 DDD 设计，还是面向模式的架构设计，或 微服务架构，均建基于结构化抽象。 何为结构化抽象 ？先回答 “何为抽象” 与 “何为结构化” 两个问题。 何为抽象 ？ “编程漫谈（三）：抽象” 一文阐述了什么是抽象及在编程与计算中的意义； “代码抽象与分层” 则列举了从代码中提炼出来的六类抽象，涵盖了编程开发中常见的实体及处理。 何为结构化 ？结构，是事物的组成元素及关联和作用。 “编程漫谈（十一）：编程概要” 一文阐述了编程中的各种数据结构及控制结构，“
-      
-    </main>
-    <footer class="post-footer">
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -858,7 +864,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">139</a></div>
+      <div><a href="/archives/">140</a></div>
     </div>
     
     
@@ -872,7 +878,7 @@
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">70</a></div>
+      <div><a href="/tags/">71</a></div>
     </div>
     
     

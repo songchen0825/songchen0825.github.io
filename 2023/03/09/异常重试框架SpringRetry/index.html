@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDRSSLTKWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtag = function () {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JDRSSLTKWM");
+    </script>
+    
+    
+    
+    <meta name="keywords" content="Life, Programming, Game">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Privacy Field" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-light.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>异常重试框架SpringRetry | Privacy Field - ⛱️ A2 2B 9S ☔</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Privacy Field</a></h1>
+        <h2 class="subtitle">⛱️ A2 2B 9S ☔</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/09/%E5%BC%82%E5%B8%B8%E9%87%8D%E8%AF%95%E6%A1%86%E6%9E%B6SpringRetry/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="songchen">
+       <meta itemprop="description" content="只存在可能存在之物，只发生可能发生之事">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Privacy Field">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">异常重试框架SpringRetry</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-03-09T17:25:33+08:00">2023-03-09 17:25:33</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/" itemprop="url" rel="index"><span itemprop="name">Programming Language</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Java-language/" itemprop="url" rel="index"><span itemprop="name">Java language</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Java-language/%E6%A1%86%E6%9E%B6%EF%BC%88Framework%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">框架（Framework）</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming-Language/Java-language/%E6%A1%86%E6%9E%B6%EF%BC%88Framework%EF%BC%89/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a></span>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i><span><a href="/2023/03/09/%E5%BC%82%E5%B8%B8%E9%87%8D%E8%AF%95%E6%A1%86%E6%9E%B6SpringRetry/#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="2023/03/09/异常重试框架SpringRetry/" itemprop="commentCount"></span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h3 id="1-重试机制的业务背景"><a href="#1-重试机制的业务背景" class="headerlink" title="1. 重试机制的业务背景"></a>1. 重试机制的业务背景</h3><p>外部服务对于调用者来说一般都是不可靠的，尤其是在网络环境比较差的情况下，网络抖动很容易导致请求超时等异常情况，这时候就需要用失败重试策略重新调用 API 接口来获取。</p>
+<p>在分布式系统中，为了保证数据分布式事务的强一致性，大家在调用RPC接口或者发送MQ时，针对可能会出现网络抖动请求超时情况采取一下重试操作。 大家用的最多的重试方式就是MQ了，但是如果你的项目中没有引入MQ，那就不方便了。</p>
+<h3 id="2-重试策略的介绍和限制"><a href="#2-重试策略的介绍和限制" class="headerlink" title="2. 重试策略的介绍和限制"></a>2. 重试策略的介绍和限制</h3><p>重试策略在服务治理方面也有很广泛的使用，通过定时检测，来查看服务是否存活。</p>
+<p>重试是有场景限制的，不是什么场景都适合重试，比如参数校验不合法、写操作等（要考虑写是否幂等）都不适合重试。</p>
+<ul>
+<li>远程调用超时、网络突然中断可以重试。在微服务治理框架中，通常都有自己的重试与超时配置，比如dubbo可以设置retries&#x3D;1，timeout&#x3D;500调用失败只重试1次，超过500ms调用仍未返回则调用失败。</li>
+</ul>
+<h3 id="3-重试的场景有哪些？"><a href="#3-重试的场景有哪些？" class="headerlink" title="3. 重试的场景有哪些？"></a>3. 重试的场景有哪些？</h3><p>外部 RPC 调用，或者数据入库等操作，如果一次操作失败，可以进行多次重试，提高调用成功的可能性。</p>
+<h3 id="4-常用的重试框架"><a href="#4-常用的重试框架" class="headerlink" title="4. 常用的重试框架"></a>4. 常用的重试框架</h3><ul>
+<li>Spring异常重试框架Spring Retry：Spring Retry支持集成到Spring或者Spring Boot项目中，而它支持AOP的切面注入写法，所以在引入时必须引入aspectjweaver.jar包。</li>
+<li>sisyphus 综合了 spring-retry 和 gauva-retrying 的优势，使用起来也非常灵活。</li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://github.com/houbb/sisyphus">https://github.com/houbb/sisyphus</a></li>
+<li>guava-retrying 模块提供了一种通用方法， 可以使用Guava谓词匹配增强的特定停止、重试和异常处理功能来重试任意Java代码。</li>
+</ul>
+<h3 id="5-spring-retry的重试机制"><a href="#5-spring-retry的重试机制" class="headerlink" title="5. spring-retry的重试机制"></a>5. spring-retry的重试机制</h3><p>Spring Retry 为 Spring 应用程序提供了声明性重试支持。 它用于Spring批处理、Spring集成、Apache Hadoop(等等)的Spring。</p>
+<p>This is a small extension to Google’s Guava library to allow for the creation of configurable retrying strategies for an arbitrary function call, such as something that talks to a remote service with flaky uptime.</p>
+<h3 id="6-maven-依赖"><a href="#6-maven-依赖" class="headerlink" title="6. maven 依赖"></a>6. maven 依赖</h3> <dependency>
+  <groupId>org.springframework.retry</groupId>
+  <artifactId>spring-retry</artifactId>
+ </dependency>
+
+<h3 id="7-启用重试功能"><a href="#7-启用重试功能" class="headerlink" title="7. 启用重试功能"></a>7. 启用重试功能</h3><p>启动类上面添加@EnableRetry注解，启用重试功能，或者在使用retry的service上面添加也可以，或者Configuration配置类上面。建议所有的Enable配置加在启动类上，可以清晰地统一管理使用的功能。</p>
+<p>image</p>
+<h3 id="8-添加-Retryable和-Recover注解"><a href="#8-添加-Retryable和-Recover注解" class="headerlink" title="8. 添加@Retryable和@Recover注解"></a>8. 添加@Retryable和@Recover注解</h3><h5 id="Retryable注解，被注解的方法发生异常时会重试"><a href="#Retryable注解，被注解的方法发生异常时会重试" class="headerlink" title="@Retryable注解，被注解的方法发生异常时会重试"></a>@Retryable注解，被注解的方法发生异常时会重试</h5><ul>
+<li>value：指定发生的异常进行重试</li>
+<li>include：和value一样，默认空，当exclude也为空时，所有异常都重试</li>
+<li>exclude：指定异常不重试，默认空 ，当include也为空时，所有异常都重试</li>
+<li>maxAttemps：重试次数，默认3</li>
+<li>backoff：重试补偿机制，默认没有</li>
+</ul>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.mail.elegant.service.TestRetryService;<br><span class="hljs-keyword">import</span> org.springframework.retry.annotation.Backoff;<br><span class="hljs-keyword">import</span> org.springframework.retry.annotation.Retryable;<br><span class="hljs-keyword">import</span> org.springframework.stereotype.Service;<br><span class="hljs-keyword">import</span> java.time.LocalTime;<br> <br><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestRetryServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">TestRetryService</span> &#123;<br> <br>	<span class="hljs-meta">@Override</span><br>	<span class="hljs-meta">@Retryable(value = Exception.class,maxAttempts = 3,backoff = @Backoff(delay = 2000,multiplier = 1.5))</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> code)</span> <span class="hljs-keyword">throws</span> Exception&#123;<br>		System.out.println(<span class="hljs-string">&quot;test被调用,时间：&quot;</span>+LocalTime.now());<br>		  <span class="hljs-keyword">if</span> (code==<span class="hljs-number">0</span>)&#123;<br>			  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Exception</span>(<span class="hljs-string">&quot;情况不对头！&quot;</span>);<br>		  &#125;<br>		System.out.println(<span class="hljs-string">&quot;test被调用,情况对头了！&quot;</span>);<br>	<br>		<span class="hljs-keyword">return</span> <span class="hljs-number">200</span>;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="Backoff注解"><a href="#Backoff注解" class="headerlink" title="@Backoff注解"></a>@Backoff注解</h5><ul>
+<li>delay:指定延迟后重试</li>
+<li>multiplier:指定延迟的倍数，比如delay&#x3D;5000l,multiplier&#x3D;2时，第一次重试为5秒后，第二 次为10秒，第三次为20秒</li>
+</ul>
+<h5 id="Recover注解"><a href="#Recover注解" class="headerlink" title="@Recover注解"></a>@Recover注解</h5><p>当重试到达指定次数时，被注解的方法将被回调，可以在该方法中进行日志处理。需要注意的是发生的异常和入参类型一致时才会回调。</p>
+<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Recover</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">recover</span><span class="hljs-params">(Exception e, <span class="hljs-type">int</span> code)</span>&#123;<br>   System.out.println(<span class="hljs-string">&quot;回调方法执行！！！！&quot;</span>);<br>   <span class="hljs-comment">//记日志到数据库 或者调用其余的方法</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">400</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<p>可以看到传参里面写的是 Exception e，这个是作为回调的接头暗号（重试次数用完了，还是失败，我们抛出这个Exception e通知触发这个回调方法）。对于@Recover注解的方法，需要特别注意的是：</p>
+<p>•方法的返回值必须与@Retryable方法一致</p>
+<p>•方法的第一个参数，必须是Throwable类型的，建议是与@Retryable配置的异常一致，其他的参数，需要哪个参数，写进去就可以了（@Recover方法中有的）</p>
+<p>•该回调方法与重试方法写在同一个实现类里面</p>
+<h3 id="9-注意事项"><a href="#9-注意事项" class="headerlink" title="9. 注意事项"></a><strong>9. 注意事项</strong></h3><ul>
+<li>由于是基于AOP实现，所以不支持类里自调用方法</li>
+<li>如果重试失败需要给@Recover注解的方法做后续处理，那这个重试的方法不能有返回值，只能是void</li>
+<li>方法内不能使用try catch，只能往外抛异常</li>
+<li>@Recover注解来开启重试失败后调用的方法(注意,需跟重处理方法在同一个类中)，此注解注释的方法参数一定要是@Retryable抛出的异常，否则无法识别，可以在该方法中进行日志处理。</li>
+</ul>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%9C%BA%E5%88%B6/" rel="tag"><i class="fas fa-tags"></i>机制</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2023/03/03/%E5%8D%A7%E9%BE%99%E8%8B%8D%E5%A4%A9%E4%BC%98%E5%8C%96/" rel="next" title="卧龙苍天优化"><i class="fas fa-angle-left"></i><span class="nav-title">卧龙苍天优化</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  <script defer id="dsq-count-scr" src="//songchen-git.disqus.com/count.js"></script>
+  
+  <div id="disqus_thread" class="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = "http://example.com/2023/03/09/%E5%BC%82%E5%B8%B8%E9%87%8D%E8%AF%95%E6%A1%86%E6%9E%B6SpringRetry/";
+    this.page.identifier = "2023/03/09/异常重试框架SpringRetry/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://songchen-git.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.jpg" alt="songchen">
+  
+  <h1 class="author-name">songchen</h1>
+  <h2 class="author-description">只存在可能存在之物，只发生可能发生之事</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">140</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">71</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#1-%E9%87%8D%E8%AF%95%E6%9C%BA%E5%88%B6%E7%9A%84%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF"><span class="toc-text">1. 重试机制的业务背景</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#2-%E9%87%8D%E8%AF%95%E7%AD%96%E7%95%A5%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E9%99%90%E5%88%B6"><span class="toc-text">2. 重试策略的介绍和限制</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#3-%E9%87%8D%E8%AF%95%E7%9A%84%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">3. 重试的场景有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#4-%E5%B8%B8%E7%94%A8%E7%9A%84%E9%87%8D%E8%AF%95%E6%A1%86%E6%9E%B6"><span class="toc-text">4. 常用的重试框架</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#5-spring-retry%E7%9A%84%E9%87%8D%E8%AF%95%E6%9C%BA%E5%88%B6"><span class="toc-text">5. spring-retry的重试机制</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#6-maven-%E4%BE%9D%E8%B5%96"><span class="toc-text">6. maven 依赖</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#7-%E5%90%AF%E7%94%A8%E9%87%8D%E8%AF%95%E5%8A%9F%E8%83%BD"><span class="toc-text">7. 启用重试功能</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#8-%E6%B7%BB%E5%8A%A0-Retryable%E5%92%8C-Recover%E6%B3%A8%E8%A7%A3"><span class="toc-text">8. 添加@Retryable和@Recover注解</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-5"><a class="list-group-item toc-link" href="#Retryable%E6%B3%A8%E8%A7%A3%EF%BC%8C%E8%A2%AB%E6%B3%A8%E8%A7%A3%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%91%E7%94%9F%E5%BC%82%E5%B8%B8%E6%97%B6%E4%BC%9A%E9%87%8D%E8%AF%95"><span class="toc-text">@Retryable注解，被注解的方法发生异常时会重试</span></a></li><li class="toc-item toc-level-5"><a class="list-group-item toc-link" href="#Backoff%E6%B3%A8%E8%A7%A3"><span class="toc-text">@Backoff注解</span></a></li><li class="toc-item toc-level-5"><a class="list-group-item toc-link" href="#Recover%E6%B3%A8%E8%A7%A3"><span class="toc-text">@Recover注解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#9-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">9. 注意事项</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:songchen0825@gmail.com" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/songchen0825/songchen0825.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">songchen</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
