@@ -12,6 +12,8 @@
     "version": "6.3.0"
   },
   "dependencies": {
+    "eslint": "^8.56.0",
+    "gitalk": "^1.8.0",
     "hexo": "^6.3.0",
     "hexo-asset-image-fix": "^0.1.0",
     "hexo-asset-img": "^1.1.0",
