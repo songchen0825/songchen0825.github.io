@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Wallpaper-Engine-解包PKG获取壁纸图片 | 诸行</title>
+  <title>安装Hadoop-yarn集群 | 诸行</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Wallpaper-Engine-解包PKG获取壁纸图片 | 诸行">
+  <meta name="description" content="安装Hadoop-yarn集群 | 诸行">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="spark下载速度太慢清华下载地址https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;apache&#x2F;spark&#x2F; Hadoop下载速度太慢清华下载地址https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;apache&#x2F;hadoop&#x2F;common&#x2F;hadoop-3.3.5&#x2F; Hadoop 安装环境搭建修改主机名 hostnamectl set hostnam">
 <meta property="og:type" content="article">
@@ -395,9 +395,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-实用工具/Wallpaper-Engine-解包PKG获取壁纸图片" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-软件工程/安装Hadoop-yarn集群" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Wallpaper-Engine-解包PKG获取壁纸图片</h1>
+        <h1 class="article-title">安装Hadoop-yarn集群</h1>
     
     <div class="article-meta">
         
@@ -407,9 +407,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="实用工具">实用工具</a> > 
+            <a  data-rel="软件工程">软件工程</a> > 
             
-            <a  data-rel="实用工具&lt;---&gt;windows工具">windows工具</a>
+            <a  data-rel="软件工程&lt;---&gt;大数据">大数据</a>
             
         </span>
         
@@ -417,7 +417,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-03 17:58:21'>2024-01-04 09:54</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-03 19:50:31'>2024-01-04 11:42</time>
         
     </div>
     <div class="article-meta">
@@ -439,7 +439,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop-%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">Hadoop 安装环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AELinux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">设置Linux环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%88%E5%AF%B9Linux%E7%8E%AF%E5%A2%83%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">针对Linux环境修改配置信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hadoop%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="toc-text">Hadoop的配置文件信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#core-site-xml"><span class="toc-text">core-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hdfs-site-xml"><span class="toc-text">hdfs-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#workers"><span class="toc-text">workers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapred-env-sh"><span class="toc-text">mapred-env.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapred-site-xml"><span class="toc-text">mapred-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yarn-env-sh"><span class="toc-text">yarn-env.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yarn-site-xml"><span class="toc-text">yarn-site.xml</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9start-dfs-sh-stop-dfs-sh"><span class="toc-text">修改start-dfs.sh stop-dfs.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9start-yarn-sh%EF%BC%8Cstop-yarn-sh"><span class="toc-text">修改start-yarn.sh，stop-yarn.sh</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop%E9%9B%86%E7%BE%A4%E5%90%AF%E5%8A%A8"><span class="toc-text">Hadoop集群启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96NameNode"><span class="toc-text">格式化NameNode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8HDFS%EF%BC%9Astart-dfs-sh"><span class="toc-text">启动HDFS：start-dfs.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8Yarn%EF%BC%9Astart-yarn-sh"><span class="toc-text">启动Yarn：start-yarn.sh</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -455,24 +455,152 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>解包从 wallpaper engine 下载到的桌面壁纸文件提取图片</p>
-<p>github.com&#x2F;notscuffed&#x2F;repkg</p>
-<p>下载发行版本  <a target="_blank" rel="noopener" href="https://github.com/notscuffed/repkg/releases/tag/v0.2.2-alpha">https://github.com/notscuffed/repkg/releases/tag/v0.2.2-alpha</a></p>
-<img src="/2024/01/05/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Wallpaper-Engine-%E8%A7%A3%E5%8C%85PKG%E8%8E%B7%E5%8F%96%E5%A3%81%E7%BA%B8%E5%9B%BE%E7%89%87/image.png" class title="配置图1">
+        <p>spark下载速度太慢清华下载地址<br><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/apache/spark/">https://mirrors.tuna.tsinghua.edu.cn/apache/spark/</a></p>
+<p>Hadoop下载速度太慢清华下载地址<br><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.5/">https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.5/</a></p>
+<h2 id="Hadoop-安装环境搭建"><a href="#Hadoop-安装环境搭建" class="headerlink" title="Hadoop 安装环境搭建"></a>Hadoop 安装环境搭建</h2><p>修改主机名 hostnamectl set hostname ,本地服务器ip信息如下：</p>
+<table>
+<thead>
+<tr>
+<th>Server name</th>
+<th>Ip</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ser03</td>
+<td>192.168.0.62</td>
+</tr>
+<tr>
+<td>ser04</td>
+<td>192.168.0.63</td>
+</tr>
+<tr>
+<td>ser05</td>
+<td>192.168.0.64</td>
+</tr>
+</tbody></table>
+<h2 id="设置Linux环境变量"><a href="#设置Linux环境变量" class="headerlink" title="设置Linux环境变量"></a>设置Linux环境变量</h2><p>每一台采用同意的配置环境 </p>
+<pre><code class="bash">export JAVA_HOME=/home/centos/jdk1.8.0_381
+export HADOOP_HOME=/home/centos/hadoop/hadoop-3.3.5
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 
-<p>下载完成后解压缩</p>
-<p>在 wallpaper engine 中找到你要解包的壁纸文件-右键-点击在资源管理器中打开作</p>
-<p>将此文件夹复制后放到根目录新建文件夹-REPKG </p>
-<img src="/2024/01/05/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Wallpaper-Engine-%E8%A7%A3%E5%8C%85PKG%E8%8E%B7%E5%8F%96%E5%A3%81%E7%BA%B8%E5%9B%BE%E7%89%87/image-1.png" class title="配置图2">
+export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+</code></pre>
+<h2 id="针对Linux环境修改配置信息"><a href="#针对Linux环境修改配置信息" class="headerlink" title="针对Linux环境修改配置信息"></a>针对Linux环境修改配置信息</h2><h3 id="Hadoop的配置文件信息"><a href="#Hadoop的配置文件信息" class="headerlink" title="Hadoop的配置文件信息"></a>Hadoop的配置文件信息</h3><h4 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
+    &lt;!--用来指定hdfs的老大--&gt;
+    &lt;property&gt;
+        &lt;name&gt;fs.defaultFS&lt;/name&gt;
+        &lt;value&gt;hdfs://ser03:9000&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--用来指定hadoop运行时产生文件的存放目录--&gt;
+    &lt;property&gt;
+        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+        &lt;value&gt;/home/centos/hadoop/temp&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<h4 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
+    &lt;!--设置名称节点的目录--&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;
+        &lt;value&gt;/home/centos/hadoop/temp/namenode&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--设置数据节点的目录--&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;
+        &lt;value&gt;/home/centos/hadoop/temp/datanode&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--设置辅助名称节点--&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;
+        &lt;value&gt;ser03:50090&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--hdfs web的地址，默认为9870，可不配置--&gt;
+    &lt;!--注意如果使用hadoop2，默认为50070--&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.namenode.http-address&lt;/name&gt;
+        &lt;value&gt;0.0.0.0:9870&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--副本数，默认为3，可不配置--&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+        &lt;value&gt;3&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--是否启用hdfs权限，当值为false时，代表关闭--&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.permissions.enabled&lt;/name&gt;
+        &lt;value&gt;false&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<h4 id="workers"><a href="#workers" class="headerlink" title="workers"></a>workers</h4><ul>
+<li>ser03</li>
+<li>ser04</li>
+<li>ser05</li>
+</ul>
+<h4 id="mapred-env-sh"><a href="#mapred-env-sh" class="headerlink" title="mapred-env.sh"></a>mapred-env.sh</h4><pre><code class="bash">export JAVA_HOME=/home/centos/jdk1.8.0_381
+</code></pre>
+<h4 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
+    &lt;!--配置MR资源调度框架YARN--&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+        &lt;value&gt;yarn&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.map.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<h4 id="yarn-env-sh"><a href="#yarn-env-sh" class="headerlink" title="yarn-env.sh"></a>yarn-env.sh</h4><pre><code class="bash">export JAVA_HOME=/home/centos/jdk1.8.0_381
+export HADOOP_HOME=/home/centos/hadoop/hadoop-3.3.5
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+</code></pre>
+<h4 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a>yarn-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
+    &lt;!--配置资源管理器：集群master--&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+        &lt;value&gt;ser03&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--配置节点管理器上运行的附加服务--&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!--关闭虚拟内存检测，在虚拟机环境中不做配置会报错--&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.vmem-check-enabled&lt;/name&gt;
+        &lt;value&gt;false&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<h3 id="修改start-dfs-sh-stop-dfs-sh"><a href="#修改start-dfs-sh-stop-dfs-sh" class="headerlink" title="修改start-dfs.sh stop-dfs.sh"></a>修改start-dfs.sh stop-dfs.sh</h3><p>在两个文件头部添加</p>
+<pre><code>HDFS_DATANODE_USER=root
+HADOOP_SECURE_DN_USER=hdfs
+HDFS_NAMENODE_USER=root
+HDFS_SECONDARYNAMENODE_USER=root
+</code></pre>
+<h3 id="修改start-yarn-sh，stop-yarn-sh"><a href="#修改start-yarn-sh，stop-yarn-sh" class="headerlink" title="修改start-yarn.sh，stop-yarn.sh"></a>修改start-yarn.sh，stop-yarn.sh</h3><pre><code>YARN_RESOURCEMANAGER_USER=root
+HADOOP_SECURE_DN_USER=yarn
+YARN_NODEMANAGER_USER=root
+</code></pre>
+<h2 id="Hadoop集群启动"><a href="#Hadoop集群启动" class="headerlink" title="Hadoop集群启动"></a>Hadoop集群启动</h2><h3 id="格式化NameNode"><a href="#格式化NameNode" class="headerlink" title="格式化NameNode"></a>格式化NameNode</h3><pre><code class="shell">hdfs namenode -format
+</code></pre>
+<p>看到以下日志代表成功</p>
+<pre><code class="log">INFO common.Storage: Storage directory /home/centos/hadoop/temp/namenode has been successfully formatted.
+</code></pre>
+<h3 id="启动HDFS：start-dfs-sh"><a href="#启动HDFS：start-dfs-sh" class="headerlink" title="启动HDFS：start-dfs.sh"></a>启动HDFS：<code>start-dfs.sh</code></h3><img src="/2024/01/05/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%AE%89%E8%A3%85Hadoop-yarn%E9%9B%86%E7%BE%A4/image.png" class title="配置图">
 
-<p>然后在文件夹空白处按 shift+右键打开 powershell</p>
-<img src="/2024/01/05/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Wallpaper-Engine-%E8%A7%A3%E5%8C%85PKG%E8%8E%B7%E5%8F%96%E5%A3%81%E7%BA%B8%E5%9B%BE%E7%89%87/image-2.png" class title="配置图3">
-
-<p>三. 输入：</p>
-<p><code>.\repkg extract -o ./output D:\REPKG</code></p>
-<img src="/2024/01/05/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Wallpaper-Engine-%E8%A7%A3%E5%8C%85PKG%E8%8E%B7%E5%8F%96%E5%A3%81%E7%BA%B8%E5%9B%BE%E7%89%87/image-3.png" class title="配置图4">
-
-<p>一般 JPG、PNG 图片都在文件 ..\output*\materials\ 目录下</p>
+<h3 id="启动Yarn：start-yarn-sh"><a href="#启动Yarn：start-yarn-sh" class="headerlink" title="启动Yarn：start-yarn.sh"></a>启动Yarn：<code>start-yarn.sh</code></h3><img src="/2024/01/05/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%AE%89%E8%A3%85Hadoop-yarn%E9%9B%86%E7%BE%A4/image1.png" class title="配置图">
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至songchen0825@gmail.com </span>
