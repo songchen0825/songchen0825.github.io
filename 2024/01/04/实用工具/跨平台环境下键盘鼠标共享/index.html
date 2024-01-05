@@ -42,6 +42,8 @@
 
 
 
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -473,22 +475,25 @@
 
 
 
-    <div id="comments">
-<script>
-{
-    const comments = document.getElementById('comments');
-    const script = document.createElement('script');
-    script.src = 'https://utteranc.es/client.js';
-    script.setAttribute('repo', "songchen0825/songchen0825.github.io");
-    script.setAttribute('issue-term', "pathname");
-    script.setAttribute('theme', "github-light");
-    script.setAttribute('label', "utteranc");
-    script.setAttribute('crossorigin', 'anonymous');
-    script.setAttribute('async', '');
-    comments.appendChild(script)
-}
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '0541c003cdcbe5c99c43',
+            clientSecret: 'fc3463af53d7db5968a123057fdbbe7348efe670',
+            repo: 'songchen0825/songchen0825.github.io',
+            owner: 'songchen0825',
+            admin: ['songchen'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
 </script>
-</div>
 
 
 
