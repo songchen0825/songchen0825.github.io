@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>单体到微服务架构演化 | 诸行</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="单体到微服务架构演化 | 诸行">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="1. 现存的单体服务架构[[软件设计]] [[系统架构]]单体架构优势 ：  应用开发简单，只需要构建单一应用 易于针对应用程序作大规模的修改 测试相对简单而直观，只需要进行端对端的测试，启动程序测试api 易于横向扩展，可以部署多个实例进行负载均衡的服务调度  单体架构的缺陷：  过度的复杂性，研发要理解架构的全部，修复和新增功能都变得耗时费力，并因此造成恶性循环 ，因为更改的难度增加，每次的更">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单体到微服务架构演化">
+<meta property="og:url" content="https://songchen0825.github.io/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/index.html">
+<meta property="og:site_name" content="诸行">
+<meta property="og:description" content="1. 现存的单体服务架构[[软件设计]] [[系统架构]]单体架构优势 ：  应用开发简单，只需要构建单一应用 易于针对应用程序作大规模的修改 测试相对简单而直观，只需要进行端对端的测试，启动程序测试api 易于横向扩展，可以部署多个实例进行负载均衡的服务调度  单体架构的缺陷：  过度的复杂性，研发要理解架构的全部，修复和新增功能都变得耗时费力，并因此造成恶性循环 ，因为更改的难度增加，每次的更">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://songchen0825.github.io/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image.png">
+<meta property="og:image" content="https://songchen0825.github.io/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-1.png">
+<meta property="og:image" content="https://songchen0825.github.io/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-2.png">
+<meta property="og:image" content="https://songchen0825.github.io/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-3.png">
+<meta property="og:image" content="https://songchen0825.github.io/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-4.png">
+<meta property="article:published_time" content="2024-01-08T18:43:26.000Z">
+<meta property="article:modified_time" content="2024-01-08T02:48:42.568Z">
+<meta property="article:author" content="songchen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://songchen0825.github.io/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>songchen</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <i class="iconfont icon-rss"></i>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:songchen0825@gmail.com"
+               target="_blank">
+                
+                    <i class="iconfont icon-email"></i>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=21712552&site=qq&menu=yes"
+               target="_blank">
+                
+                    <i class="iconfont icon-qq"></i>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(13)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="软件工程">
+            <i class="fold iconfont icon-right"></i>
+            软件工程
+            <small>(5)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="软件工程&lt;---&gt;编码功能案例">
+            <i class="fold iconfont icon-right"></i>
+            编码功能案例
+            <small>(2)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="软件工程&lt;---&gt;编码功能案例&lt;---&gt;java">
+            
+            java
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="软件工程&lt;---&gt;大数据">
+            <i class="fold iconfont icon-right"></i>
+            大数据
+            <small>(2)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="软件工程&lt;---&gt;大数据&lt;---&gt;数据分析">
+            
+            数据分析
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="软件工程&lt;---&gt;架构">
+            <i class="fold iconfont icon-right"></i>
+            架构
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="软件工程&lt;---&gt;架构&lt;---&gt;微服务">
+            
+            微服务
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="实用工具">
+            <i class="fold iconfont icon-right"></i>
+            实用工具
+            <small>(2)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="实用工具&lt;---&gt;跨平台工具">
+            
+            跨平台工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="实用工具&lt;---&gt;windows工具">
+            
+            windows工具
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="树洞">
+            
+            树洞
+            <small>(4)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="13">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://www.xiaohongshu.com/user/profile/54e5bc042e1d935fe38525c5?xhsshare=CopyLink&appuid=54e5bc042e1d935fe38525c5&apptime=1660629676">疏影书影-小红书</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 软件工程 架构 微服务 "
+           href="/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="单体到微服务架构演化">单体到微服务架构演化</span>
+            <span class="post-date" title="2024-01-08 10:43:26">2024/01/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/01/06/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E8%AF%B4%E6%98%8E/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="流程引擎业务场景说明">流程引擎业务场景说明</span>
+            <span class="post-date" title="2024-01-05 16:15:47">2024/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2024/01/06/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2pinpoint%E7%9B%91%E6%8E%A7%E5%92%8C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="安装部署pinpoint监控和微服务接入说明">安装部署pinpoint监控和微服务接入说明</span>
+            <span class="post-date" title="2024-01-05 16:06:18">2024/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 软件工程 大数据 数据分析 "
+           href="/2024/01/06/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%88%86%E9%98%B6%E6%AE%B5%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据分析分阶段学习路线">数据分析分阶段学习路线</span>
+            <span class="post-date" title="2024-01-05 15:10:29">2024/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 树洞 "
+           href="/2024/01/06/%E6%A0%91%E6%B4%9E/%E8%B0%93%E4%B9%8B%E7%BA%AF%E7%9C%9F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="谓之纯真">谓之纯真</span>
+            <span class="post-date" title="2024-01-05 15:05:43">2024/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 树洞 "
+           href="/2024/01/06/%E6%A0%91%E6%B4%9E/%E4%B8%8E%E5%A4%A9%E4%BD%BF%E6%89%93%E4%BA%A4%E9%81%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="与天使打交道">与天使打交道</span>
+            <span class="post-date" title="2024-01-05 15:04:48">2024/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 树洞 "
+           href="/2024/01/06/%E6%A0%91%E6%B4%9E/%E8%AF%97%E7%BB%8F%C2%B7%E9%82%B6%E9%A3%8E%C2%B7%E5%87%BB%E9%BC%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="诗经·邶风·击鼓">诗经·邶风·击鼓</span>
+            <span class="post-date" title="2024-01-05 15:02:44">2024/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 树洞 "
+           href="/2024/01/06/%E6%A0%91%E6%B4%9E/%E6%A0%87%E5%87%86%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="标准的胡言乱语">标准的胡言乱语</span>
+            <span class="post-date" title="2024-01-05 15:01:17">2024/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 软件工程 大数据 "
+           href="/2024/01/05/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%AE%89%E8%A3%85Hadoop-yarn%E9%9B%86%E7%BE%A4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="安装Hadoop-yarn集群">安装Hadoop-yarn集群</span>
+            <span class="post-date" title="2024-01-04 11:42:58">2024/01/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 实用工具 windows工具 "
+           href="/2024/01/05/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Wallpaper-Engine-%E8%A7%A3%E5%8C%85PKG%E8%8E%B7%E5%8F%96%E5%A3%81%E7%BA%B8%E5%9B%BE%E7%89%87/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Wallpaper-Engine-解包PKG获取壁纸图片">Wallpaper-Engine-解包PKG获取壁纸图片</span>
+            <span class="post-date" title="2024-01-04 09:54:06">2024/01/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 实用工具 跨平台工具 "
+           href="/2024/01/04/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="跨平台环境下键盘鼠标共享">跨平台环境下键盘鼠标共享</span>
+            <span class="post-date" title="2024-01-03 16:36:29">2024/01/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 软件工程 编码功能案例 java "
+           href="/2024/01/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E9%80%9A%E8%BF%87Javacv%E7%9A%84%E6%96%B9%E5%BC%8F%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E6%88%AA%E5%9B%BE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="通过Javacv的方式获取视频截图">通过Javacv的方式获取视频截图</span>
+            <span class="post-date" title="2024-01-03 11:45:39">2024/01/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 软件工程 编码功能案例 java "
+           href="/2024/01/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/java%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF%E6%BA%90%E4%BB%A3%E7%A0%81/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="java获取视频基础信息源代码">java获取视频基础信息源代码</span>
+            <span class="post-date" title="2024-01-03 11:01:54">2024/01/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-软件工程/单体到微服务架构演化" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">单体到微服务架构演化</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="软件工程">软件工程</a> > 
+            
+            <a  data-rel="软件工程&lt;---&gt;架构">架构</a> > 
+            
+            <a  data-rel="软件工程&lt;---&gt;架构&lt;---&gt;微服务">微服务</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-01-07 18:48:42'>2024-01-08 10:43</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%8E%B0%E5%AD%98%E7%9A%84%E5%8D%95%E4%BD%93%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84"><span class="toc-text">1. 现存的单体服务架构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BB%8E%E4%BC%A0%E7%BB%9F%E5%88%86%E5%B1%82%E5%BC%8F%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E8%BD%AC%E5%90%91-%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E6%9E%B6%E6%9E%84"><span class="toc-text">2. 从传统分层式架构风格转向[[微服务]]架构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E4%BC%A0%E7%BB%9FMVC-%E7%B3%BB%E7%BB%9F%E5%88%86%E5%B1%82"><span class="toc-text">2.1传统MVC 系统分层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B"><span class="toc-text">2.2 微服务架构演进</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88"><span class="toc-text">3. 微服务升级实现方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%8B%86%E5%88%86%E5%92%8C%E5%AE%9A%E4%B9%89"><span class="toc-text">3.1  微服务的拆分和定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0%E5%9B%BE"><span class="toc-text">3.1 微服务架构实现图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-%E8%AF%B4%E6%98%8E"><span class="toc-text">3.2 微服务[[系统架构]]说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-%E5%BA%94%E7%94%A8%E5%B1%95%E7%A4%BA%E5%89%8D%E5%8F%B0"><span class="toc-text">3.2.1  应用展示前台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-%E9%80%9A%E4%BF%A1%E7%BD%91%E5%85%B3"><span class="toc-text">3.2.2  通信网关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-%E6%A0%B8%E5%BF%83%E4%B8%9A%E5%8A%A1%E5%9F%9F"><span class="toc-text">3.2.3 核心业务域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-4-%E5%9F%BA%E7%A1%80%E6%9C%8D%E5%8A%A1%E5%9F%9F"><span class="toc-text">3.2.4 基础服务域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-5-%E5%BC%80%E6%94%BE%E5%9F%9F"><span class="toc-text">3.2.5 开放域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-5-%E6%94%AF%E6%92%91%E5%B9%B3%E5%8F%B0%E5%B1%82"><span class="toc-text">3.2.5 支撑平台层</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-5-1-%E5%88%86%E5%B8%83%E5%BC%8F%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F"><span class="toc-text">3.2.5.1 分布式调度系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-5-2-%E5%88%86%E5%B8%83%E5%BC%8F%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1"><span class="toc-text">3.2.5.2 分布式对象存储服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-5-3-%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E"><span class="toc-text">3.2.5.3 搜索引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-5-4-%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BC%95%E6%93%8E"><span class="toc-text">3.2.5,4 工作流引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-5-5-%E8%A7%86%E5%9B%BE%E5%B1%95%E7%A4%BA%E5%BC%95%E6%93%8E"><span class="toc-text">3.2.5.5 视图展示引擎</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-6-%E5%BA%95%E5%B1%82%E5%B9%B3%E5%8F%B0"><span class="toc-text">3.2.6 底层平台</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-6-1-%E5%BA%95%E5%B1%82%E5%B9%B3%E5%8F%B0%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8"><span class="toc-text">3.2.6.1 底层平台组件列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-6-2-%E5%BA%95%E5%B1%82%E5%B9%B3%E5%8F%B0%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E"><span class="toc-text">3.2.6.2 底层平台功能说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-7-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%9B%86%E7%BE%A4%E5%8C%96%E7%AE%A1%E7%90%86"><span class="toc-text">3.2.7 微服务集群化管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-7-1-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%9B%86%E7%BE%A4%E5%8C%96%E7%AE%A1%E7%90%86%E7%BB%84%E4%BB%B6"><span class="toc-text">3.2.7.1 微服务集群化管理组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-7-2-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%9B%86%E7%BE%A4%E5%8C%96%E7%AE%A1%E7%90%86%E8%AF%B4%E6%98%8E"><span class="toc-text">3.2.7.2 微服务集群化管理说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-8-%E5%AE%B9%E5%99%A8%E5%8C%96%E7%AE%A1%E7%90%86"><span class="toc-text">3.2.8 容器化管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-8-1-%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E7%BB%84%E4%BB%B6"><span class="toc-text">3.2.8.1 容器管理组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-8-2-%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E"><span class="toc-text">3.2.8.2 容器管理功能说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-8-3%E7%BB%9F%E4%B8%80%E9%80%9A%E4%BF%A1%E7%BD%91%E5%85%B3%E6%9C%8D%E5%8A%A1"><span class="toc-text">3.2.8.3统一通信网关服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-8-4-%E5%AE%B9%E5%99%A8%E5%8C%96%E7%AE%A1%E7%90%86%E7%BB%84%E4%BB%B6"><span class="toc-text">3.2.8.4 容器化管理组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-8-5-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86"><span class="toc-text">3.2.8.5 微服务集群管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-8-6-%E5%BA%95%E5%B1%82%E5%B9%B3%E5%8F%B0"><span class="toc-text">3.2.8.6 底层平台</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-现存的单体服务架构"><a href="#1-现存的单体服务架构" class="headerlink" title="1. 现存的单体服务架构"></a>1. 现存的单体服务架构</h1><p>[[软件设计]] [[系统架构]]单体架构优势 ：</p>
+<ol>
+<li>应用开发简单，只需要构建单一应用</li>
+<li>易于针对应用程序作大规模的修改</li>
+<li>测试相对简单而直观，只需要进行端对端的测试，启动程序测试api</li>
+<li>易于横向扩展，可以部署多个实例进行负载均衡的服务调度</li>
+</ol>
+<p>单体架构的缺陷：</p>
+<ol>
+<li>过度的复杂性，研发要理解架构的全部，修复和新增功能都变得耗时费力，并因此造成恶性循环 ，因为更改的难度增加，每次的更改都会使得项目变得更加复杂，难懂</li>
+<li>难以扩展，不同模块针对不同资源需求相互冲突，例如库存数据可以保存在一个大型的内存数据库中，理想情况下该服务应该具备一个较大的内存性能，而图片处理服务又需要较快的cpu来进行完成运算，这些不同的模块附着在一个系统的内部，系统针对服务器的必须同时满足所有的条件，又或者因为某个条件不满足对相应模块的性能造成拖累。</li>
+</ol>
+<p>单体架构图：</p>
+<img src="/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image.png" class title="配置图">
+<h1 id="2-从传统分层式架构风格转向-微服务-架构"><a href="#2-从传统分层式架构风格转向-微服务-架构" class="headerlink" title="2. 从传统分层式架构风格转向[[微服务]]架构"></a>2. 从传统分层式架构风格转向[[微服务]]架构</h1><h2 id="2-1传统MVC-系统分层"><a href="#2-1传统MVC-系统分层" class="headerlink" title="2.1传统MVC 系统分层"></a>2.1传统MVC 系统分层</h2><p>按照软件元素层来进行划分，每个层都具备独立的逻辑和明确定义的指责。相互之间还存在的一定的依存关系。</p>
+<ul>
+<li>表现层 ： 包含实现用户界面和外部api的代码</li>
+<li>业务逻辑层 ： 包含业务逻辑</li>
+<li>数据持久层 ： 实现数据交互逻辑</li>
+</ul>
+<p>这之间存在着明显的一些弊端</p>
+<ul>
+<li>单个表现层无法满足应用程序不止是单个系统调用的情况</li>
+<li>单一数据持久层 无法实现应用程序多个数据库交互的事实</li>
+<li>将业务逻辑层依赖于数据持久层 ： 将领域模型和数据模型进行混淆，将逻辑视图和数据视图混淆，会严重的影响业务的扩展能力。</li>
+</ul>
+<p>要摆脱这些限制，所设计的架构风格核心上要把业务逻辑和表现层和数据访问层的逻辑进行分离 。</p>
+<h2 id="2-2-微服务架构演进"><a href="#2-2-微服务架构演进" class="headerlink" title="2.2 微服务架构演进"></a>2.2 微服务架构演进</h2><p>为满足服务的扩展性需求，服务的扩展服务架构，可以描述成为一个非常有用的三维扩展结构：</p>
+<img src="/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-1.png" class title="配置图">
+
+<p>在这个模型中包含了三种的扩展纬度 </p>
+<ul>
+<li><p>X轴扩展：在多个实例之间的负载均衡</p>
+</li>
+<li><p>Z轴扩展：需要运营单体应用程序的多个实例，与负载均衡不同的是，每个实例本质上只负责数据的一个子集，通常方法是根据用户userID来进行路的分发工作，根据userID的头部信息在应用程序中选择其中一个。对于应用程序需要处理增加数据量的时候是个较好的方式</p>
+</li>
+<li><p>Y轴扩展：x轴和z轴可以有效的增加吞吐量和可用性，然后这两种方式都没有解决日益增长的开发问题和应用复杂问题 。所以需要进行Y轴的扩展进行功能分解。把单体应用构建成一组服务。</p>
+</li>
+</ul>
+<img src="/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-2.png" class title="配置图">
+
+
+<p>使大型复杂应用程序可以持续交付和持续部署 ，微服务架构包含了持续交付和持续部署的可测试性，可部署性以及开发团队自主松散耦合。演进后的微服务架构如下：</p>
+<img src="/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-3.png" class title="配置图">
+
+<ul>
+<li>每个服务都相对较小而易于维护，开发者容易理解服务，提升工作效率</li>
+<li>服务可以独立部署，无论使用X轴扩展实例的克隆，还是Z轴的流量分区。每个服务都可以部署在适合的服务上。这和单体应用选择硬件截然不同。</li>
+<li>更好的容错性，微服务的架构可以实现故障的隔离，某个服务的内存泄露不会造成其他服务的影响，相比单体应用的单一故障都可能拖垮整个应用，但是多服务之间要注意可能存在的雪崩效应。</li>
+<li>更容易实验和采纳新的技术方案。微服务的架构可以消除对某项技术的长期依赖。原则上开发新的服务可以自由选择使用这个服务的任何语言和框架。当每个服务相对较小，使用更好的编程语言和技术来重写一个服务就会变得可能。针对一个新的技术尝试的失败也不至于带来整体的风险。</li>
+</ul>
+<h1 id="3-微服务升级实现方案"><a href="#3-微服务升级实现方案" class="headerlink" title="3. 微服务升级实现方案"></a>3. 微服务升级实现方案</h1><h1 id="3-1-微服务的拆分和定义"><a href="#3-1-微服务的拆分和定义" class="headerlink" title="3.1  微服务的拆分和定义"></a>3.1  微服务的拆分和定义</h1><p>通常考虑到服务的拆分，考虑根据业务进行划分通过梳理业务 ，首先进行了业务模块的纵向拆分，其拆分逻辑如下所示：</p>
+<ul>
+<li>原子服务：业务对象定义，可以是一个单表，也可以是几个相关表，总之是一组在完整性上是不可拆分的数据，实现时要将事务异常向上抛出，确保事务完整。也可以指Kafka、Redis Proxy、ElasticSearch等其他外部数据资源。</li>
+<li>单元服务：实现中心内部的业务功能，由一个到多个本中心原子服务组成。可以捕获原子服务的异常，对异常进行友好处理并返回错误代码及提示信息给调用者。</li>
+<li>功能服务：功能服务一般由一个或多个单元服务构成。实现逻辑只限于输入输出参数转换，校验（可以调用校验类的单元服务），以及条件分支判断，即如何调用不同的单元服务。</li>
+</ul>
+<p>在服务拆分时，先从业务角度确定拆分的方案。拆分的边界要充分考虑业务的独立性和专业性，比如客户触点类服务、营销类服务等，按服务的业务功能合理地划出拆分边界。</p>
+<h1 id="3-1-微服务架构实现图"><a href="#3-1-微服务架构实现图" class="headerlink" title="3.1 微服务架构实现图"></a>3.1 微服务架构实现图</h1><img src="/2024/01/09/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E4%BD%93%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/image-4.png" class title="配置图">
+
+<p><strong>服务拆解目标</strong></p>
+<ul>
+<li>web端前后端分离；</li>
+<li>业务解耦：docker容器内部署应用的微服务组件；</li>
+<li>服务端使用SpringBoot作为构建基础微服务框架，使得开发部署极其简单；</li>
+<li>开放平台网关采取OAuth2.0认证标准，第三方系统基于JWT安全认证；</li>
+<li>所有服务基于Restful做到无状态；</li>
+<li>所有服务部署到docker集群中，资源动态伸缩，异常崩溃自动恢复；</li>
+<li>使用sentinel做服务熔断降级处理，避免单个服务不可用引起系统雪崩，保障系统的高可用。</li>
+</ul>
+<h2 id="3-2-微服务-系统架构-说明"><a href="#3-2-微服务-系统架构-说明" class="headerlink" title="3.2 微服务[[系统架构]]说明"></a>3.2 微服务[[系统架构]]说明</h2><p>微服务中提供了多重的业务支持，包含了业务逻辑，业务数据，业务模型等方面。</p>
+<h3 id="3-2-1-应用展示前台"><a href="#3-2-1-应用展示前台" class="headerlink" title="3.2.1  应用展示前台"></a>3.2.1  应用展示前台</h3><p>前后端剥离，服务端支持前台的多种展示形式 。</p>
+<h3 id="3-2-2-通信网关"><a href="#3-2-2-通信网关" class="headerlink" title="3.2.2  通信网关"></a>3.2.2  通信网关</h3><p>支持服务发现、服务路由以及协议代理等，同时包含监控、ssl接入、服务模块化等功能，所有服务统一接入口。负责认证拦截，权限控制，服务限流，API管理。</p>
+<ul>
+<li><p>服务限流 ： 主要以流量为切入点，从限流、流量整形、熔断降级、系统负载保护、热点防护等多个维度来帮助开发者保障微服务的稳定性。</p>
+</li>
+<li><p>认证拦截 ： 根据统一认证中心，针对分布式应用，做好统一会话管理和拦截工作，解决在微服务架构下会话一致性等问题 </p>
+</li>
+<li><p>ACL控制 ： 应用在路由器接口的指令列表。针对微服务架构下合法访问控制列表，这些指令列表用来告诉路由器哪些数据包可以收、哪些数据包需要拒绝。至于数据包是被接收还是拒绝，可以由类似于源地址、目的地址、端口号等的特定指示条件来决定。 </p>
+</li>
+<li><p>路由管理：通过一系列谓词和过滤器的组合为微服务模块配置了路由规则，在微服务平台，除了配置静态路由配置，还实现动态路由，根据一定的路由规则实现路由的动态切换。</p>
+</li>
+<li><p>API管理 ： 利用微服务平台提供的接口数据写入工具以及简单的点击操作就可以实现接口的管理，并通过通信网关统一进行发布和实现。</p>
+</li>
+</ul>
+<h3 id="3-2-3-核心业务域"><a href="#3-2-3-核心业务域" class="headerlink" title="3.2.3 核心业务域"></a>3.2.3 核心业务域</h3><ul>
+<li>站点资源管理：为全市各级各部门提供了一个集数据采集、数据编辑、数据审核和信息发布为一体的网站工作管理平台</li>
+<li>政府信息公开：为全市各级各部门政府网站信息公开提供信息编辑、审核和发布展示功能。</li>
+<li>网上办事：实现网上办事的在线申报、指南、表格下载、在线咨询、办事投诉、常见问题解答等业务的综合办事服务。</li>
+<li>互动交流：实现政府门户网站在线访谈、信箱管理、网上咨询投诉、民意征集、建言献策、网上留言、在线调查等应用功能，满足政府机关通过门户与广大公众进行在线互动和交流的一体化需求</li>
+<li>重大建设项目：实现全市重大项目信息维护，内容公开及监察功能。</li>
+<li>政务新媒体：提供新媒体信息采编、审核、发布及统计功能。</li>
+<li>部门定制应用：各部门定制业务应用</li>
+</ul>
+<h3 id="3-2-4-基础服务域"><a href="#3-2-4-基础服务域" class="headerlink" title="3.2.4 基础服务域"></a>3.2.4 基础服务域</h3><ul>
+<li>组织机构服务：负责平台组织机构的管理，提供注册、变更、注销、获取组织机构信息及目录权限配置服务。</li>
+<li>用户管理服务：负责平台用户信息的管理，提供注册、变更、停用、注销及获取用户信息服务。</li>
+<li>身份认证服务：基于用户、设备、业务的认证、授权服务，包含单点登录。</li>
+<li>权限管理服务：用户创建角色，权限，绑定角色权限，分配用户权限等服务业务 。</li>
+<li>流程代理人服务： 提供流程代理人添加、删除、检查是否代理人、获取代理人服务、</li>
+<li>短信服务：统一对接短信通道，维护短信模板，通信，溯源，并确认提供详尽完善的短信服务支持</li>
+<li>邮件服务：统一对接各种短信协议，支撑业务电子邮件平台，维护邮箱模板等功能模块 </li>
+<li>全文检索服务：提供索引的维护，映射的构建 ，数据的导入，各种组合搜索查询，聚合查询服务</li>
+</ul>
+<h3 id="3-2-5-开放域"><a href="#3-2-5-开放域" class="headerlink" title="3.2.5 开放域"></a>3.2.5 开放域</h3><p>开放平台为第三方开发者提供了一个便捷的接入平台，基于Oauth2.0协议，富含丰富的API，帮助开发者定制开发企业应用。基于平台开放能力，可以帮助第三方快速、 低成本的开发，实现生产、管理、协作、运营的数字化，满足个性化需求。</p>
+<ul>
+<li>应用管理服务： 第三方应用接入基础信息进行维护管理工作 。 </li>
+<li>应用授权服务： 针对内部资源，进行能力化设计，并对于第三方应用接入进行授权工作。</li>
+<li>应用资源服务：通过网关代理对外提供能力服务。在网关层需要对外部调用进行账号的创建、授权以及流量的管控，包括内部以及外部合作厂商应用级能力的调用。</li>
+</ul>
+<h3 id="3-2-5-支撑平台层"><a href="#3-2-5-支撑平台层" class="headerlink" title="3.2.5 支撑平台层"></a>3.2.5 支撑平台层</h3><h4 id="3-2-5-1-分布式调度系统"><a href="#3-2-5-1-分布式调度系统" class="headerlink" title="3.2.5.1 分布式调度系统"></a>3.2.5.1 分布式调度系统</h4><p>分布式调度系统具备单机调度系统所不具备的优势，<br>单机版的定式任务调度只能在一台机器上运行，如果程序或者系统出现异常就会导致功能不可用。虽然可以在单机程序实现的足够稳定，但始终有机会遇到非程序引起的故障，而这个对于一个系统的核心功能来说是不可接受的。分布式调度服务可以保证定时任务的高可用。<br>其次，分布式调度可以解决单机性能瓶颈问题，一旦调度服务业务倍增，无法即时相应业务的诉求，就会导致服务进入瘫痪的和锁死的状况，采用分布式调度服务就能任意控制和分配服务资源针对不同的业务随时采用灵活策略进行服务调度</p>
+<h4 id="3-2-5-2-分布式对象存储服务"><a href="#3-2-5-2-分布式对象存储服务" class="headerlink" title="3.2.5.2 分布式对象存储服务"></a>3.2.5.2 分布式对象存储服务</h4><p>对象存储（Object-based Storage)是一种新的网络存储架构，基于对象存储技术的设备就是对象存储设备（Object-based Storage Device）简称OSD<br>核心是将数据通路（数据读或写）和控制通路（元数据）分离，并且基于对象存储设备构建存储系统，每个对象存储设备具有一定的只能，能够自动管理其上的数据分布。对象存储结构由对象、对象存储设备、元数据服务器、对象存储系统的客户端四部分组成。<br>统一通信平台的对象存储采用分布式，可扩展，高容错的技术方案，保障数据的安全性和有效性，并针对对象操作提供一些列便捷操作 </p>
+<h4 id="3-2-5-3-搜索引擎"><a href="#3-2-5-3-搜索引擎" class="headerlink" title="3.2.5.3 搜索引擎"></a>3.2.5.3 搜索引擎</h4><p>全文检索系统可以以各种计算机数据诸如文字，图像，声音等数据作为主要处理对象，基于文内的标引，使用自然语言进行检索的技术。与普通的数据库查询不同，全文检索不仅要查询结构化数据，还要对非结构化的数据进行高效查询 ，比起传统索引方式，全文索引提供了全新的，强大的检索方式 ，方便从多角度和和多层面的综合的提高信息的利用率 。</p>
+<h4 id="3-2-5-4-工作流引擎"><a href="#3-2-5-4-工作流引擎" class="headerlink" title="3.2.5,4 工作流引擎"></a>3.2.5,4 工作流引擎</h4><p>工作流引擎提供丰富的应用接口，以支持系统的二次开发及管理、维护，支持“以流程为中心”的企业应用集成的框架。工作流引擎借助于一个或多个工作流状态机，激活并解释过程定义的全部或部分，并同外部的应用程序进行交互，完成工作流过程实例的创建、执行与管理，为工作流程的运行提供一个运行时环境。流程管理及监控提供对工作流的运行实例、活动实例的状态情况进行监控和管理，如挂起、重启动、终止某个过程实例。</p>
+<h4 id="3-2-5-5-视图展示引擎"><a href="#3-2-5-5-视图展示引擎" class="headerlink" title="3.2.5.5 视图展示引擎"></a>3.2.5.5 视图展示引擎</h4><p>提供了数据的业务视图，对外提供了支撑视图的获取，筛选，过滤，展示等聚合功能。</p>
+<h3 id="3-2-6-底层平台"><a href="#3-2-6-底层平台" class="headerlink" title="3.2.6 底层平台"></a>3.2.6 底层平台</h3><h4 id="3-2-6-1-底层平台组件列表"><a href="#3-2-6-1-底层平台组件列表" class="headerlink" title="3.2.6.1 底层平台组件列表"></a>3.2.6.1 底层平台组件列表</h4><ul>
+<li><p>关系型数据库 ： [[Oracle]]</p>
+</li>
+<li><p>NoSQL数据库 ： [[mongoDB]] ，[[Hbase]]</p>
+</li>
+<li><p>分布式文件系统： [[MinIO]]</p>
+</li>
+<li><p>分布式缓存服务 ： [[Redis]] Cluster </p>
+</li>
+<li><p>消息中间件 ： [[RabbitMQ]]</p>
+</li>
+</ul>
+<h4 id="3-2-6-2-底层平台功能说明"><a href="#3-2-6-2-底层平台功能说明" class="headerlink" title="3.2.6.2 底层平台功能说明"></a>3.2.6.2 底层平台功能说明</h4><ul>
+<li><p>关系型数据库：采用了关系模型来组织数据的数据库，其以行和列的形式存储数据，以便于用户理解，关系型数据库这一系列的行和列被称为表，一组表组成了数据库。支持的数据源类型包括：Oracle,PGSQL等主流的关系型数据库。</p>
+</li>
+<li><p>非关系型数据库： 泛指非关系型的数据库。去掉关系数据库的关系型特性。数据之间无关系，这样就非常容易扩展。无形之间也在架构的层面上带来了可扩展的能力。大数据量，高性能，NoSQL数据库都具有非常高的读写性能，尤其在大数据量下，同样表现优秀。这得益于它的无关系性，数据库的结构简单。</p>
+</li>
+<li><p>缓存服务：分布式缓存服务，专注于提供即开即用、安全可靠、弹性扩容、便捷管理的在线分布式缓存能力。</p>
+</li>
+<li><p>消息队列： 构建实时数据管道和数据流应用。是在消息的传输过程中保存消息的容器。通过生产者、消费者模型。生产者不断向消息队列中生产消息，消费者不断的从队列中获取消息。因为消息的生产和消费都是异步的，而且只关心消息的发送和接收，没有业务逻辑的侵入，这样就实现了生产者和消费者的解耦。</p>
+</li>
+<li><p>分布式文件： 分布式文件系统把大量数据分散到不同的节点上存储，大大减小了数据丢失的风险。分布式文件系统具有冗余性，部分节点的故障并不影响整体的正常运行，而且即使出现故障的计算机存储的数据已经损坏，也可以由其它节点将损坏的数据恢复出来。因此，安全性是分布式文件系统最主要的特征。</p>
+</li>
+</ul>
+<h3 id="3-2-7-微服务集群化管理"><a href="#3-2-7-微服务集群化管理" class="headerlink" title="3.2.7 微服务集群化管理"></a>3.2.7 微服务集群化管理</h3><h4 id="3-2-7-1-微服务集群化管理组件"><a href="#3-2-7-1-微服务集群化管理组件" class="headerlink" title="3.2.7.1 微服务集群化管理组件"></a>3.2.7.1 微服务集群化管理组件</h4><ul>
+<li><p>分布式系统网关：Spring Cloud Gateway</p>
+</li>
+<li><p>分布式协调系统：Spring Cloud Alibaba Nacos Server</p>
+</li>
+<li><p>分布式配置中心：Spring Cloud Alibaba [[nacos]] Config</p>
+</li>
+<li><p>分布式熔断降级：Spring Cloud Alibaba [[Sentinel]]</p>
+</li>
+<li><p>分布式事务： [[Seata]]</p>
+</li>
+<li><p>分布式消息系统 ： [[RocketMQ]]</p>
+</li>
+<li><p>服务调用链监控 ： [[pinpoint]]</p>
+</li>
+<li><p>分布式日志收集 ： [[logstash]]</p>
+</li>
+<li><p>分布式搜索引擎 ： [[Elasticsearch]]</p>
+</li>
+<li><p>日志分析看板 ：[[Kibana]]</p>
+</li>
+</ul>
+<h4 id="3-2-7-2-微服务集群化管理说明"><a href="#3-2-7-2-微服务集群化管理说明" class="headerlink" title="3.2.7.2 微服务集群化管理说明"></a>3.2.7.2 微服务集群化管理说明</h4><ul>
+<li>服务注册和发现：服务注册到统一的信息平台，客户端向服务端注册自己的服务信息，同时将服务端的服务信息缓存到本地。客户端会和服务端周期性的进行心跳交互，以更新服务租约和服务信息。</li>
+<li>统一的配置中心管理 ： 集中信息配置，并实时同步修改的信息</li>
+<li>应用日志的监控： 统一应用日志管理 </li>
+<li>系统性能监控：宿主机性能监控</li>
+<li>服务可用性监控：服务探针保障服务可用性。</li>
+<li>服务性能指标监控：单体服务性能指标监控</li>
+<li>服务调用链回溯 ： 分布式事务跟踪系统的平台，用于基于java的大规模分布式系统，通过跟踪分布式应用之间的调用来提供解决方案，以帮助分析系统的总体结构和内部模块之间如何相互联系。</li>
+<li>服务熔断 ： 为了保证其高可用，单个服务通常会集群部署。由于网络原因或者自身的原因，服务并不能保证100%可用，如果单个服务出现问题，调用这个服务就会出现线程阻塞，此时若有大量的请求涌入，Servlet容器的线程资源会被消耗完毕，导致服务瘫痪。服务与服务之间的依赖性，故障会传播，会对整个微服务系统造成灾难性的严重后果，为避免雪崩效应引入的服务熔断。</li>
+</ul>
+<h3 id="3-2-8-容器化管理"><a href="#3-2-8-容器化管理" class="headerlink" title="3.2.8 容器化管理"></a>3.2.8 容器化管理</h3><h4 id="3-2-8-1-容器管理组件"><a href="#3-2-8-1-容器管理组件" class="headerlink" title="3.2.8.1 容器管理组件"></a>3.2.8.1 容器管理组件</h4><ul>
+<li><p>[[Docker]] ： 平台管理的基础单元是容器。</p>
+</li>
+<li><p>[[Kubernetes]]: 分布式资源调度平台服务编排 </p>
+</li>
+<li><p>[[cAdvisor]] : 容器监控 </p>
+</li>
+<li><p>[[Zabbix]]：系统监控 </p>
+</li>
+<li><p>[[Prometheus]]：集群监控</p>
+</li>
+<li><p>Kuboard ：  Kubernetes 图形化管理工具</p>
+</li>
+<li><p>[[Grafana]]： 可视化大型测量数据的开源程序</p>
+</li>
+</ul>
+<h4 id="3-2-8-2-容器管理功能说明"><a href="#3-2-8-2-容器管理功能说明" class="headerlink" title="3.2.8.2 容器管理功能说明"></a>3.2.8.2 容器管理功能说明</h4><p>本次方案中将客服应用侧的各类功能解耦，部署于docker容器中，容器技术的重要特点可有效的改善传统应用部署中衍生的重复建设、周期过长、复用性差等问题。</p>
+<p>微服务以docker镜像的形式发布，运行在docker引擎下的容器中。Docker的优点是能够使用镜像，快速创建新的容器，以实现服务的随需运行，比虚机的方式更灵活。</p>
+<p>采用kubernetes对容器进行编排，进行容器云的集中管理，Kubernetes中的大部分概念如Node、Pod、Replication Controller、 Service等都可以被看作一种资源对象，几乎所有资源对象都可以通过 Kubernetes提供的kubectl工具(或者API编程调用)执行增、删、改、查 等操作并将其保存在etcd中持久化存储。</p>
+<p>采用kuboard对容器编排进行图形化管理， 作为一个Kubernetes 图形化管理工具，Kuboard 力图帮助用户快速在 Kubernetes 上落地微服务。</p>
+<h4 id="3-2-8-3统一通信网关服务"><a href="#3-2-8-3统一通信网关服务" class="headerlink" title="3.2.8.3统一通信网关服务"></a>3.2.8.3统一通信网关服务</h4><ul>
+<li><p>服务限流 ： 主要以流量为切入点，从限流、流量整形、熔断降级、系统负载保护、热点防护等多个维度来帮助开发者保障微服务的稳定性。</p>
+</li>
+<li><p>认证拦截 ： 根据统一认证中心，针对分布式应用，做好统一会话管理和拦截工作，解决在微服务架构下会话一致性等问题 </p>
+</li>
+<li><p>ACL控制 ： 应用在路由器接口的指令列表。针对微服务架构下合法访问控制列表，这些指令列表用来告诉路由器哪些数据包可以收、哪些数据包需要拒绝。至于数据包是被接收还是拒绝，可以由类似于源地址、目的地址、端口号等的特定指示条件来决定。 </p>
+</li>
+<li><p>路由管理：通过一系列谓词和过滤器的组合为微服务模块配置了路由规则，在微服务平台，除了配置静态路由配置，还实现动态路由，根据一定的路由规则实现路由的动态切换。</p>
+</li>
+<li><p>API管理 ： 利用微服务平台提供的接口数据写入工具以及简单的点击操作就可以实现接口的管理，并通过通信网关统一进行发布和实现。</p>
+</li>
+</ul>
+<h4 id="3-2-8-4-容器化管理组件"><a href="#3-2-8-4-容器化管理组件" class="headerlink" title="3.2.8.4 容器化管理组件"></a>3.2.8.4 容器化管理组件</h4><ul>
+<li><p>Docker ： 平台管理的基础单元是容器。</p>
+</li>
+<li><p>Kubernetes: 分布式资源调度平台服务编排 </p>
+</li>
+<li><p>cAdvisor : 容器监控 </p>
+</li>
+<li><p>Zabbix：系统监控 </p>
+</li>
+<li><p>Prometheus：集群监控</p>
+</li>
+<li><p>Kuboard ：  Kubernetes 图形化管理工具</p>
+</li>
+<li><p>Grafana： 可视化大型测量数据的开源程序</p>
+</li>
+</ul>
+<h4 id="3-2-8-5-微服务集群管理"><a href="#3-2-8-5-微服务集群管理" class="headerlink" title="3.2.8.5 微服务集群管理"></a>3.2.8.5 微服务集群管理</h4><ul>
+<li><p>分布式系统网关：Spring Cloud Gateway</p>
+</li>
+<li><p>分布式协调系统：Spring Cloud Alibaba Nacos Server</p>
+</li>
+<li><p>分布式配置中心：Spring Cloud Alibaba Nacos Config</p>
+</li>
+<li><p>分布式熔断降级：Spring Cloud Alibaba Sentinel</p>
+</li>
+<li><p>分布式事务： Seata</p>
+</li>
+<li><p>分布式消息系统 ： RocketMQ</p>
+</li>
+<li><p>服务调用链监控 ： PinPoint</p>
+</li>
+<li><p>分布式日志收集 ： logstash</p>
+</li>
+<li><p>分布式搜索引擎 ： ElasticSearch</p>
+</li>
+<li><p>日志分析看板 ： Kibana</p>
+</li>
+</ul>
+<h4 id="3-2-8-6-底层平台"><a href="#3-2-8-6-底层平台" class="headerlink" title="3.2.8.6 底层平台"></a>3.2.8.6 底层平台</h4><ul>
+<li><p>关系型数据库 ： Oracle</p>
+</li>
+<li><p>NoSQL数据库 ： Mongodb ，Hbase</p>
+</li>
+<li><p>分布式文件系统： Minio</p>
+</li>
+<li><p>分布式缓存服务 ： Redis Cluster </p>
+</li>
+<li><p>消息中间件 ： RabbitMQ</p>
+</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至songchen0825@gmail.com </span>
+    </div>
+</article>
+
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '0541c003cdcbe5c99c43',
+            clientSecret: 'fc3463af53d7db5968a123057fdbbe7348efe670',
+            repo: 'songchen0825.github.io',
+            owner: 'songchen0825',
+            admin: ['songchen0825'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2023-2029
+</p>
+<!-- <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p> -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 642px;
+    }
+    .nav.fullscreen {
+        margin-left: -642px;
+    }
+    .nav-left {
+        width: 220px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 572px;
+        }
+        .nav.fullscreen {
+            margin-left: -572px;
+        }
+        .nav-left {
+            width: 180px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 572px;
+            margin-left: -572px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>
