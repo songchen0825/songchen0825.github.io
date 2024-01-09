@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>java获取视频基础信息源代码 | 诸行</title>
-  <meta name="keywords" content=" java ">
-  <meta name="description" content="java获取视频基础信息源代码 | 诸行">
+  <title>SaaS架构：多租户系统架构设计 | 诸行</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="SaaS架构：多租户系统架构设计 | 诸行">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="一、什么是多租户?　　多租户技术是一种软件架构技术，它是在探讨与实现如何于多用户的环境下共用相同的系统或程序组件，并且仍可确保各用户间数据的隔离性。它是为共用的数据中心内如何以单一系统架构与服务提供多数客户端相同甚至可定制化的服务，并且仍可保障客户的数据隔离。简单来说是一个单独的实例可以为多个组织服务。 二、多租户技术特点 多个租户共享平台；  租户之间数据隔离；  租户之间发布更新互不影响；">
 <meta property="og:type" content="article">
@@ -591,9 +591,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-软件工程/java获取视频基础信息源代码" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-软件工程/SaaS架构：多租户系统架构设计" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">java获取视频基础信息源代码</h1>
+        <h1 class="article-title">SaaS架构：多租户系统架构设计</h1>
     
     <div class="article-meta">
         
@@ -605,24 +605,15 @@
             
             <a  data-rel="软件工程">软件工程</a> > 
             
-            <a  data-rel="软件工程&lt;---&gt;编码功能案例">编码功能案例</a> > 
-            
-            <a  data-rel="软件工程&lt;---&gt;编码功能案例&lt;---&gt;java">java</a>
+            <a  data-rel="软件工程&lt;---&gt;架构设计">架构设计</a>
             
         </span>
         
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color5">java</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-03 02:05:30'>2024-01-03 11:01</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-09 02:10:33'>2024-01-09 18:06</time>
         
     </div>
     <div class="article-meta">
@@ -655,7 +646,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E7%A7%9F%E6%88%B7"><span class="toc-text">一、什么是多租户?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%9A%E7%A7%9F%E6%88%B7%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9"><span class="toc-text">二、多租户技术特点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A4%9A%E7%A7%9F%E6%88%B7%E6%A8%A1%E5%9E%8B"><span class="toc-text">三、多租户模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BC%A0%E7%BB%9F%E8%BD%AF%E4%BB%B6%E6%A8%A1%E5%BC%8F%E5%92%8CSaaS%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">四、传统软件模式和SaaS模式的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84"><span class="toc-text">五、多租户系统应用架构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81SaaS%E5%A4%9A%E7%A7%9F%E6%88%B7%E9%9A%94%E7%A6%BB%E6%A8%A1%E5%BC%8F"><span class="toc-text">六、SaaS多租户隔离模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AB%96%E4%BA%95%E9%9A%94%E7%A6%BB%E6%A8%A1%E5%BC%8F"><span class="toc-text">1. 竖井隔离模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%85%B1%E4%BA%AB%E6%A8%A1%E5%BC%8F"><span class="toc-text">2. 共享模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%86%E5%9F%9F%E9%9A%94%E7%A6%BB%E6%A8%A1%E5%BC%8F"><span class="toc-text">3. 分域隔离模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9A%E4%BD%8D"><span class="toc-text">七、多租户系统的定位</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%A4%9A%E7%A7%9F%E6%88%B7%E6%A0%B8%E5%BF%83%E5%9C%BA%E6%99%AF"><span class="toc-text">八、多租户核心场景</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,41 +662,106 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code class="yaml">&lt;dependency&gt;  
-    &lt;groupId&gt;ws.schild&lt;/groupId&gt;  
-    &lt;artifactId&gt;jave-core&lt;/artifactId&gt;  
-    &lt;version&gt;2.7.3&lt;/version&gt;  
-&lt;/dependency&gt;  
-&lt;dependency&gt;  
-    &lt;groupId&gt;com.github.dadiyang&lt;/groupId&gt;  
-    &lt;artifactId&gt;jave&lt;/artifactId&gt;  
-    &lt;version&gt;1.0.2&lt;/version&gt;  
-&lt;/dependency&gt;
-</code></pre>
-<pre><code class="java">try&#123;  
-    File file = File.createTempFile(UUID.randomUUID().toString(),null);  
-    try (FileOutputStream fos = new FileOutputStream(file)) &#123;  
-        fos.write(bytes);  
-    &#125;  
-    Encoder encoder = new Encoder();  
-    FileChannel fc = null;  
-    MultimediaInfo mi = encoder.getInfo(file);  
-    long duration = mi.getDuration();  
-    int width = mi.getVideo().getSize().getWidth();  
-    int height = mi.getVideo().getSize().getHeight();  
-    String format = mi.getFormat();  
-    int audioChannels = mi.getAudio().getChannels();  
-    String audioDecoder = mi.getAudio().getDecoder();  
-    int audioSamplingRate = mi.getAudio().getSamplingRate();  
-    String videoDecoder = mi.getVideo().getDecoder();  
-    float videoFrameRate = mi.getVideo().getFrameRate();  
-  
-&#125; catch (IOException e) &#123;  
-    throw new GenericException(e);  
-&#125; catch (EncoderException e) &#123;  
-    throw new RuntimeException(e);  
-&#125;
-</code></pre>
+        <h1 id="一、什么是多租户"><a href="#一、什么是多租户" class="headerlink" title="一、什么是多租户?"></a>一、什么是多租户?</h1><p>　　多租户技术是一种软件架构技术，它是在探讨与实现如何于多用户的环境下共用相同的系统或程序组件，并且仍可确保各用户间数据的隔离性。它是为共用的数据中心内如何以单一系统架构与服务提供多数客户端相同甚至可定制化的服务，并且仍可保障客户的数据隔离。简单来说是一个单独的实例可以为多个组织服务。</p>
+<h1 id="二、多租户技术特点"><a href="#二、多租户技术特点" class="headerlink" title="二、多租户技术特点"></a>二、多租户技术特点</h1><ol>
+<li><p>多个租户共享平台；</p>
+</li>
+<li><p>租户之间数据隔离；</p>
+</li>
+<li><p>租户之间发布更新互不影响；</p>
+</li>
+<li><p>签订合约租户无线扩展。</p>
+</li>
+</ol>
+<h1 id="三、多租户模型"><a href="#三、多租户模型" class="headerlink" title="三、多租户模型"></a>三、多租户模型</h1><p>　　在云计算中，租户可以理解为一个项目、团队或组织，而用户是这个租户下的具体使用者，不同的用户通过角色来实现操作权限与工作中职责的划分。</p>
+<p>　　在这里，通常会认为一个企业会是一个租户，然后由租户管理员建立内部组织，并为组织下的用户赋予相应的角色。再由具备权限的用户(项目负责人)按照实际场景创建项目，通过项目申请各类云服务。这样，既实现了不同租户间的数据和行为隔离，又可以在租户内部按项目实现数据和行为的隔离。</p>
+<p>概念模型设计如下：</p>
+<p>（1）SaaS平台可以创建与管理多个平台用户、多个租户、多个资源域；</p>
+<p>（2）单个平台用户可以关联到多个租户下，例如，平台用户张三，可以是租户A的用户，也可以是租户B的用户；</p>
+<p>（3）单个租户下可以拥有多个用户；</p>
+<p>（4）单个租户可以订购多个解决方案，解决方案可以包含多个产品能力，产品能力运行在某个资源域上；</p>
+<p>（5）组织单元间有上下级关系，单个组织下可以有多个员工，员工与单个用户进行绑定。</p>
+<img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image.png" class title="配置图">
+
+<p>如图所示，涉及主要模型有以下几类：</p>
+<p>（1）租户：指一个企业客户或是个人客户，租户之间数据与行为隔离，上下级租户间通过授权实现数据共享。每个租户只能操作归属或授权给该租户的数据；</p>
+<p>（2）组织：如果租户是一个企业客户，通常就会拥有自己的组织架构；</p>
+<p>（3）用户：租户下的具体使用者，拥有用户名、密码、邮箱等账号信息的自然人；</p>
+<p>（4）角色：用户操作权限的集合；</p>
+<p>（5）员工：组织内的某位员工；</p>
+<p>（6）解决方案：为了解决客户的某类型业务问题，SaaS供应商一般都将产品和服务组合在一起，为客户提供整体的打包方案；</p>
+<p>（7）产品能力：能够帮助客户实现场景解决方案闭环的能力；</p>
+<p>（8）资源域：用来运行1个或多个产品应用的一套云资源环境；</p>
+<p>（9）云资源：SaaS产品一般都部署在各种云平台上，例如阿里云、腾讯云、华为云等。对这些云平台提供的计算、存储、网络、容器等资源，抽象为云资源。</p>
+<h1 id="四、传统软件模式和SaaS模式的区别"><a href="#四、传统软件模式和SaaS模式的区别" class="headerlink" title="四、传统软件模式和SaaS模式的区别"></a>四、传统软件模式和SaaS模式的区别</h1><ol>
+<li><p>开发和交互模式：传统软件的开发模式是以软件产品为中心，通过市场推广不断寻找更多的客户购买产品来实现业务增长，一般通过磁盘等固体介质或者以软件下载安装传播，并且软件需要安装到使用者的电脑上。而在SaaS模式中，厂家会先把软件安装在自己的服务器上，客户不需要安装任何类似传统模式的客户端软件，而且基于云端，只要有设备能够连接并浏览互联网，客户就可以“随时随地”通过手机、电脑、IPAD等多种方式接入软件系统，从而进行操作和管理。</p>
+</li>
+<li><p>部署方式：传统软件采用本地部署方式，部署时间较长，会耗费较多的IT资源和时间。而SaaS软件采用云端部署方式，部署时间相对较短，可快速上线使用，比如针对软件中的报销审批这一特定功能的部署只需要一周多的时间，大型的SaaS软件部署最多也不会超过90天。</p>
+</li>
+<li><p>数据安全性：传统软件都是安装在用户自己的服务器上，掌握在自己手里，数据基本处于可控状态，稳定性和安全性都会有很大的保障。而SaaS软件的数据是存放在SaaS平台供应商的服务器上，数据不受自己控制，也不能对运维的细节进行控制，比如基础架构的备份、灾难恢复和安全策略等，数据的隐私性和安全性存在一定的隐患。</p>
+</li>
+<li><p>商业模式：传统软件的付费模式，通常都会包含：一次性投入数额高昂的购买费、安装费、维护费、管理费等，所以传统软件生产商最主要的盈利模式便是通过销售软件产品来盈利。而SaaS不需要一次性购买软件，而是将软件采购变成了软件租赁，信息化门槛降低，迅速覆盖了中小微企业市场，如果软件无法满足需求，客户可以随时和SaaS供应商终止合作。SaaS以标准产品为主，标准化才能规模化。</p>
+</li>
+<li><p>集成性：传统软件的集成性就相对较强，通常一个软件可以关联很多系统。而SaaS用户对应用程序细节的控制非常少，甚至没有，比如对版本、支持的特性和额外插件的控制。这会对SaaS产品与现有的本地应用程序和数据源或者其他SaaS产品的集成带来一些困难。</p>
+</li>
+</ol>
+<img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image-1.png" class title="配置图">
+
+<h1 id="五、多租户系统应用架构"><a href="#五、多租户系统应用架构" class="headerlink" title="五、多租户系统应用架构"></a>五、多租户系统应用架构</h1><img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image-2.png" class title="配置图">
+
+<h1 id="六、SaaS多租户隔离模式"><a href="#六、SaaS多租户隔离模式" class="headerlink" title="六、SaaS多租户隔离模式"></a>六、SaaS多租户隔离模式</h1><p>　　在SaaS模式中，多租户之间最基础的能力则是资源隔离，出于成本和运营效率考虑，SaaS服务商需要构建多租户能同时访问软件的环境，不同租户能访问同一套SaaS产品服务，但对资源访问要进行严格的隔离。</p>
+<p>SaaS资源隔离包含几个层次：</p>
+<p>第一层是隔离SaaS系统底层所涉及到的计算、存储、网络等资源；</p>
+<p>第二层是隔离系统的基础数据，如：组织、用户、角色、权限、产品能力授权关系等；</p>
+<p>第三层是系统使用过程中，各类业务动态数据的隔离，如：业务单据、操作记录等。</p>
+<p>　　多租户架构主要是解决第一层的隔离问题。为了实现多租户隔离架构，下面我们来看看常见的几种多租户隔离模式。</p>
+<h2 id="1-竖井隔离模式"><a href="#1-竖井隔离模式" class="headerlink" title="1. 竖井隔离模式"></a>1. 竖井隔离模式</h2><img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image-3.png" class title="配置图">
+
+<p>　　有些SaaS服务商会选择竖井隔离模式，即每个租户都运行在隔离的一组资源中。有人会说，这不就是传统软件模式吗，为什么会是SaaS模式呢？因为这些竖井式的资源，如果是拥有标准化的租户身份识别、入驻流程、计费体系、部署流程、运营流程，那它依然是SaaS模式，只不过每个客户都有一套端到端的基础设施。<br>优势：</p>
+<p>（1）满足强隔离需求：一些客户为了系统和数据的安全性，可能提出非常严格的隔离需求，期望软件产品能够部署在一套完全独立的环境中，不和其他租户的应用实例、数据放在一起；</p>
+<p>（2）计费逻辑简单：SaaS服务商需要针对租户使用资源进行计费，对于复杂的业务场景，计算、存储、网络资源间的关系同样也会非常复杂，计费模型是很有挑战的，但在竖井模式下，计费模型相对来说是比较简单的；</p>
+<p>（3）降低故障影响：因为每个客户的系统都部署在自己的环境中，如果其中一个环境出现故障，并不会影响其他客户使用软件服务。</p>
+<p>劣势：</p>
+<p>（1）规模化问题：由于租户的SaaS环境是独立的，所以每入驻一个租户，就需要创建和运营一套SaaS环境，如果只是少量的租户，还可能可以管理，但如果是成千上万的租户，管理和运营这些环境将会是非常大的挑战；</p>
+<p>（2）成本问题：每个租户都有独立的环境，花费在单个客户上的成本将非常高，会大幅度削弱SaaS软件服务的盈利能力；</p>
+<p>（3）敏捷迭代问题：SaaS模式的一个优势是能够快速响应市场需求，迭代产品功能。但竖井隔离策略会阻碍这种敏捷迭代能力，因为更新、管理、支撑这些租户的SaaS环境，会变得非常复杂和低效；</p>
+<p>（4）系统管理与监控：在同一套环境中，对部署的基础设施进行管理与监控，是较为简单的。但每个租户都有独立的环境，在这种非中心化的模式下，对每个租户的基础设施进行管理与监控，同样也是非常复杂、困难的。</p>
+<h2 id="2-共享模式"><a href="#2-共享模式" class="headerlink" title="2. 共享模式"></a>2. 共享模式</h2><img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image-4.png" class title="配置图">
+
+<p>　　据信，许多SaaS服务商会优先选择共享模式，即多租户共享一套基础设施资源，这将使SaaS软件服务更加高效、灵活、低成本。</p>
+<p>优势：</p>
+<p>（1）高效管理：在共享策略下，所有租户都可以集中管理并以高管理效率运营。同时，管理和监控基础结构配置将更容易。相比竖井策略，产品的迭代更新会更快；</p>
+<p>（2）低成本：SaaS服务商的成本结构很大一块是基础设施成本。在共享模型下，服务商可以根据租户们的实际资源负载动态扩展系统，这样基础设施的利用率将非常高。</p>
+<p>劣势：</p>
+<p>（1）租户相互影响：因为所有租户共享一组资源，当一个租户占用大量机器资源时，其他租户的使用体验很可能受到影响，在这种情况下，就有必要对技术架构，设计一些限制(限流、降级、服务器隔离等)，以使影响可控；</p>
+<p>（2）租户计费困难：在竖井模型下，非常容易计算租户的资源消耗。然而，在共享模型下，因为所有租户共享一组资源，所以需要更多的精力来计算单个租户的合理成本。</p>
+<h2 id="3-分域隔离模式"><a href="#3-分域隔离模式" class="headerlink" title="3. 分域隔离模式"></a>3. 分域隔离模式</h2><img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image-7.png" class title="配置图">
+
+<p>　　传统的大型企业更喜欢私有化部署和个性化交付的传统模式，因为他们需要更强的管控和更高的安全性。然而，中小企业支付能力有限，他们的需求往往更加标准化，因此他们更喜欢便宜、更简单的SaaS产品。为了满足不同客户的需求，还有一种将竖井模型与共享模型相结合的模式，即分域隔离模式。</p>
+<p>　　在此模式中，基础域和专用域被细分。基础域是使用共享模型，所有租户共享一组套资源，专用域是使用竖井模型，每个租户都有独立的资源环境。对于大多数中小型客户，他们都在基础域环境中使用SaaS产品。只有少数大客户会在特殊领域使用SaaS产品。一般来说，他们这种是有很强的支付能力和很强的隔离需求。</p>
+<p>　　但是，需要注意的是，为了避免多个产品版本，SaaS服务商需要确保基础域、专用域的产品版本一致，个性化部分应尽可能通过PaaS平台构建，以便于ISV参与建设。否则，一旦SaaS产品的标准化降低，后续版本的维护将会成为一场灾难。</p>
+<h1 id="七、多租户系统的定位"><a href="#七、多租户系统的定位" class="headerlink" title="七、多租户系统的定位"></a>七、多租户系统的定位</h1><p>　　多租户系统旨在满足多个用户使用一组产品的需求，并实现用户之间的数据和行为隔离。根据不同的用户需求，软件和硬件资源可以共享或隔离，系统架构可以灵活地支持多种隔离模式。</p>
+<p>多租户系统需要具备的能力有：</p>
+<p>（1）多个租户支持共享一套云资源，如计算、存储、网络资源等。单个租户也可以独占一套云资源；</p>
+<p>（2）多个租户间能够实现数据和行为的隔离，能够对租户进行分权分域控制；</p>
+<p>（3）租户内部能够支持基于组织架构的管理，可以对产品能力进行授权和管理；</p>
+<p>（4）不同的产品能力可以根据客户需求，支持运行在不同的云资源上。</p>
+<h1 id="八、多租户核心场景"><a href="#八、多租户核心场景" class="headerlink" title="八、多租户核心场景"></a>八、多租户核心场景</h1><ol>
+<li>租户内部模型关系</li>
+</ol>
+<p>　　业务租户为云平台对外开放面向使用者的租户，用户在注册创建租户后，可根据自身组织架构规划或是业务架构在该租户内部创建组织、添加人员并赋予角色；如客户有分级运营需求，可将内部的某个组织映射为内部子租户，实现独立运营，但同时可以由上级组织进行管理并查询相关数据；上级组织管理角色可以查看、管理归属下级组织的云资源。普通用户可以通过加入业务系统进行申请或使用云资源。</p>
+<img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image-5.png" class title="配置图">
+
+<ol>
+<li>租户身份识别</li>
+</ol>
+<p>　　在各种隔离模式下，识别租户身份，获取租户的资源配置，是非常关键的。当一个用户登录SaaS系统后，系统会返回租户上下文信息，上下文会包含用户绑定的租户信息，以及隔离模式。租户上下文信息会被附加在每一次系统交互中，贯穿整个系统调用链路，让上游调用方知道路由到哪些下游资源。</p>
+<img src="/2024/01/10/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/SaaS%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/image-6.png" class title="配置图">
+
+<ol start="3">
+<li>租户计费计量管理</li>
+</ol>
+<p>　　在竖井隔离模式下，由于资源本身就是隔离的，所以可以根据占用的计算、存储、网络资源来计费计量，逻辑相对简单。在共享模式下，计费计量就比较复杂，我们要能准确地采集到各个租户对实际资源的使用情况，一般会根据请求并发量、存储容量、数据对象数量等数据来进行组合计费。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至songchen0825@gmail.com </span>
