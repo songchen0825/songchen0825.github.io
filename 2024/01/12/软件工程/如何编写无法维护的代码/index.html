@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>安装Hadoop-yarn集群 | 诸行</title>
+  <title>如何编写无法维护的代码 | 诸行</title>
   <meta name="keywords" content="">
-  <meta name="description" content="安装Hadoop-yarn集群 | 诸行">
+  <meta name="description" content="如何编写无法维护的代码 | 诸行">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="一、什么是多租户?　　多租户技术是一种软件架构技术，它是在探讨与实现如何于多用户的环境下共用相同的系统或程序组件，并且仍可确保各用户间数据的隔离性。它是为共用的数据中心内如何以单一系统架构与服务提供多数客户端相同甚至可定制化的服务，并且仍可保障客户的数据隔离。简单来说是一个单独的实例可以为多个组织服务。 二、多租户技术特点 多个租户共享平台；  租户之间数据隔离；  租户之间发布更新互不影响；">
 <meta property="og:type" content="article">
@@ -615,9 +615,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-软件工程/安装Hadoop-yarn集群" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-软件工程/如何编写无法维护的代码" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">安装Hadoop-yarn集群</h1>
+        <h1 class="article-title">如何编写无法维护的代码</h1>
     
     <div class="article-meta">
         
@@ -629,7 +629,7 @@
             
             <a  data-rel="软件工程">软件工程</a> > 
             
-            <a  data-rel="软件工程&lt;---&gt;大数据">大数据</a>
+            <a  data-rel="软件工程&lt;---&gt;杂记">杂记</a>
             
         </span>
         
@@ -637,7 +637,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-07 18:48:07'>2024-01-04 11:42</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-11 00:36:21'>2024-01-11 16:34</time>
         
     </div>
     <div class="article-meta">
@@ -670,7 +670,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop-%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">Hadoop 安装环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AELinux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">设置Linux环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%88%E5%AF%B9Linux%E7%8E%AF%E5%A2%83%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">针对Linux环境修改配置信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hadoop%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="toc-text">Hadoop的配置文件信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#core-site-xml"><span class="toc-text">core-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hdfs-site-xml"><span class="toc-text">hdfs-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#workers"><span class="toc-text">workers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapred-env-sh"><span class="toc-text">mapred-env.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapred-site-xml"><span class="toc-text">mapred-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yarn-env-sh"><span class="toc-text">yarn-env.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yarn-site-xml"><span class="toc-text">yarn-site.xml</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9start-dfs-sh-stop-dfs-sh"><span class="toc-text">修改start-dfs.sh stop-dfs.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9start-yarn-sh%EF%BC%8Cstop-yarn-sh"><span class="toc-text">修改start-yarn.sh，stop-yarn.sh</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop%E9%9B%86%E7%BE%A4%E5%90%AF%E5%8A%A8"><span class="toc-text">Hadoop集群启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96NameNode"><span class="toc-text">格式化NameNode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8HDFS%EF%BC%9Astart-dfs-sh"><span class="toc-text">启动HDFS：start-dfs.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8Yarn%EF%BC%9Astart-yarn-sh"><span class="toc-text">启动Yarn：start-yarn.sh</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-text">如何编写无法维护的代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E4%BD%93%E5%8E%9F%E5%88%99"><span class="toc-text">总体原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D"><span class="toc-text">命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%99%E7%94%A8%E5%AE%9D%E5%AE%9D%E8%B5%B7%E5%90%8D%E5%A4%A7%E5%85%A8"><span class="toc-text">妙用宝宝起名大全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E5%AD%97%E6%AF%8D%E5%8F%98%E9%87%8F%E5%90%8D"><span class="toc-text">单字母变量名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E5%AD%97%E6%AF%8D%E5%A4%A7%E5%86%99%E7%9A%84%E7%BC%A9%E5%86%99"><span class="toc-text">首字母大写的缩写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%94%A8%E5%91%BD%E5%90%8D"><span class="toc-text">重用命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%9D%9E%E8%8B%B1%E8%AF%AD%E5%AD%97%E6%AF%8D"><span class="toc-text">使用非英语字母</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF%EF%BC%8C%E4%B8%80%E4%BD%8D%E7%9C%9F%E6%AD%A3%E7%9A%84%E6%9C%8B%E5%8F%8B"><span class="toc-text">下划线，一位真正的朋友</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95-ASCII-%E5%AD%97%E7%AC%A6"><span class="toc-text">扩展 ASCII 字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%91%BD%E5%90%8D"><span class="toc-text">其他语言的命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E8%A3%85"><span class="toc-text">伪装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E4%BB%A3%E7%A0%81%E4%BC%AA%E8%A3%85%E6%88%90%E6%B3%A8%E9%87%8A%EF%BC%8C%E5%8F%8D%E4%B9%8B%E4%BA%A6%E7%84%B6"><span class="toc-text">把代码伪装成注释，反之亦然</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E8%BF%9E%E6%8E%A5%E7%AC%A6%E9%9A%90%E8%97%8F%E5%8F%98%E9%87%8F"><span class="toc-text">用连接符隐藏变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-text">文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E6%B3%A8%E9%87%8A%E4%B8%AD%E6%92%92%E8%B0%8E"><span class="toc-text">在注释中撒谎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E8%AE%B0%E5%BD%95%E6%98%BE%E8%80%8C%E6%98%93%E8%A7%81%E7%9A%84%E4%B8%9C%E8%A5%BF"><span class="toc-text">只记录显而易见的东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95-How-%E8%80%8C%E4%B8%8D%E6%98%AF-Why"><span class="toc-text">记录 How 而不是 Why</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%A5%E5%86%99%E7%9A%84%E5%88%AB%E5%86%99"><span class="toc-text">该写的别写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E9%87%8F%E5%8D%95%E4%BD%8D"><span class="toc-text">计量单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%91"><span class="toc-text">坑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E%E5%8F%98%E9%87%8F"><span class="toc-text">说明变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E6%B3%A8%E9%87%8A%E9%87%8C%E6%8C%91%E6%8B%A8%E7%A6%BB%E9%97%B4"><span class="toc-text">在注释里挑拨离间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-text">程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B0%B8%E8%BF%9C%E4%B8%8D%E5%81%9A%E6%A0%A1%E9%AA%8C"><span class="toc-text">永远不做校验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E7%A4%BC%E8%B2%8C%EF%BC%8C%E6%97%A0%E6%96%AD%E8%A8%80"><span class="toc-text">有礼貌，无断言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%BF%E5%85%8D%E5%B0%81%E8%A3%85"><span class="toc-text">避免封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E4%BF%AE%E6%94%B9"><span class="toc-text">复制粘贴修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E6%95%B0%E7%BB%84"><span class="toc-text">使用静态数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%82%BB%E7%93%9C%E6%8E%A5%E5%8F%A3"><span class="toc-text">傻瓜接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%BD%E4%BA%8B%E6%88%90%E5%A0%86TM"><span class="toc-text">好事成堆TM</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -686,153 +686,102 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>spark下载速度太慢清华下载地址<br><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/apache/spark/">https://mirrors.tuna.tsinghua.edu.cn/apache/spark/</a></p>
-<p>Hadoop下载速度太慢清华下载地址<br><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.5/">https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.5/</a></p>
-<h2 id="Hadoop-安装环境搭建"><a href="#Hadoop-安装环境搭建" class="headerlink" title="Hadoop 安装环境搭建"></a>Hadoop 安装环境搭建</h2><p>修改主机名 hostnamectl set hostname ,本地服务器ip信息如下：</p>
-<table>
-<thead>
-<tr>
-<th>Server name</th>
-<th>Ip</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ser03</td>
-<td>192.168.0.62</td>
-</tr>
-<tr>
-<td>ser04</td>
-<td>192.168.0.63</td>
-</tr>
-<tr>
-<td>ser05</td>
-<td>192.168.0.64</td>
-</tr>
-</tbody></table>
-<h2 id="设置Linux环境变量"><a href="#设置Linux环境变量" class="headerlink" title="设置Linux环境变量"></a>设置Linux环境变量</h2><p>每一台采用同意的配置环境 </p>
-<pre><code class="bash">export JAVA_HOME=/home/centos/jdk1.8.0_381
-export HADOOP_HOME=/home/centos/hadoop/hadoop-3.3.5
-export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
-
-export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
-</code></pre>
-<h2 id="针对Linux环境修改配置信息"><a href="#针对Linux环境修改配置信息" class="headerlink" title="针对Linux环境修改配置信息"></a>针对Linux环境修改配置信息</h2><h3 id="Hadoop的配置文件信息"><a href="#Hadoop的配置文件信息" class="headerlink" title="Hadoop的配置文件信息"></a>Hadoop的配置文件信息</h3><h4 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
-    &lt;!--用来指定hdfs的老大--&gt;
-    &lt;property&gt;
-        &lt;name&gt;fs.defaultFS&lt;/name&gt;
-        &lt;value&gt;hdfs://ser03:9000&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--用来指定hadoop运行时产生文件的存放目录--&gt;
-    &lt;property&gt;
-        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
-        &lt;value&gt;/home/centos/hadoop/temp&lt;/value&gt;
-    &lt;/property&gt;
-&lt;/configuration&gt;
-</code></pre>
-<h4 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
-    &lt;!--设置名称节点的目录--&gt;
-    &lt;property&gt;
-        &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;
-        &lt;value&gt;/home/centos/hadoop/temp/namenode&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--设置数据节点的目录--&gt;
-    &lt;property&gt;
-        &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;
-        &lt;value&gt;/home/centos/hadoop/temp/datanode&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--设置辅助名称节点--&gt;
-    &lt;property&gt;
-        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;
-        &lt;value&gt;ser03:50090&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--hdfs web的地址，默认为9870，可不配置--&gt;
-    &lt;!--注意如果使用hadoop2，默认为50070--&gt;
-    &lt;property&gt;
-        &lt;name&gt;dfs.namenode.http-address&lt;/name&gt;
-        &lt;value&gt;0.0.0.0:9870&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--副本数，默认为3，可不配置--&gt;
-    &lt;property&gt;
-        &lt;name&gt;dfs.replication&lt;/name&gt;
-        &lt;value&gt;3&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--是否启用hdfs权限，当值为false时，代表关闭--&gt;
-    &lt;property&gt;
-        &lt;name&gt;dfs.permissions.enabled&lt;/name&gt;
-        &lt;value&gt;false&lt;/value&gt;
-    &lt;/property&gt;
-&lt;/configuration&gt;
-</code></pre>
-<h4 id="workers"><a href="#workers" class="headerlink" title="workers"></a>workers</h4><ul>
-<li>ser03</li>
-<li>ser04</li>
-<li>ser05</li>
-</ul>
-<h4 id="mapred-env-sh"><a href="#mapred-env-sh" class="headerlink" title="mapred-env.sh"></a>mapred-env.sh</h4><pre><code class="bash">export JAVA_HOME=/home/centos/jdk1.8.0_381
-</code></pre>
-<h4 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
-    &lt;!--配置MR资源调度框架YARN--&gt;
-    &lt;property&gt;
-        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
-        &lt;value&gt;yarn&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;property&gt;
-        &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;
-        &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;property&gt;
-        &lt;name&gt;mapreduce.map.env&lt;/name&gt;
-        &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;property&gt;
-        &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;
-        &lt;value&gt;HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;&lt;/value&gt;
-    &lt;/property&gt;
-&lt;/configuration&gt;
-</code></pre>
-<h4 id="yarn-env-sh"><a href="#yarn-env-sh" class="headerlink" title="yarn-env.sh"></a>yarn-env.sh</h4><pre><code class="bash">export JAVA_HOME=/home/centos/jdk1.8.0_381
-export HADOOP_HOME=/home/centos/hadoop/hadoop-3.3.5
-export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
-</code></pre>
-<h4 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a>yarn-site.xml</h4><pre><code class="xml">&lt;configuration&gt;
-    &lt;!--配置资源管理器：集群master--&gt;
-    &lt;property&gt;
-        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
-        &lt;value&gt;ser03&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--配置节点管理器上运行的附加服务--&gt;
-    &lt;property&gt;
-        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
-        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;!--关闭虚拟内存检测，在虚拟机环境中不做配置会报错--&gt;
-    &lt;property&gt;
-        &lt;name&gt;yarn.nodemanager.vmem-check-enabled&lt;/name&gt;
-        &lt;value&gt;false&lt;/value&gt;
-    &lt;/property&gt;
-&lt;/configuration&gt;
-</code></pre>
-<h3 id="修改start-dfs-sh-stop-dfs-sh"><a href="#修改start-dfs-sh-stop-dfs-sh" class="headerlink" title="修改start-dfs.sh stop-dfs.sh"></a>修改start-dfs.sh stop-dfs.sh</h3><p>在两个文件头部添加</p>
-<pre><code>HDFS_DATANODE_USER=root
-HADOOP_SECURE_DN_USER=hdfs
-HDFS_NAMENODE_USER=root
-HDFS_SECONDARYNAMENODE_USER=root
-</code></pre>
-<h3 id="修改start-yarn-sh，stop-yarn-sh"><a href="#修改start-yarn-sh，stop-yarn-sh" class="headerlink" title="修改start-yarn.sh，stop-yarn.sh"></a>修改start-yarn.sh，stop-yarn.sh</h3><pre><code>YARN_RESOURCEMANAGER_USER=root
-HADOOP_SECURE_DN_USER=yarn
-YARN_NODEMANAGER_USER=root
-</code></pre>
-<h2 id="Hadoop集群启动"><a href="#Hadoop集群启动" class="headerlink" title="Hadoop集群启动"></a>Hadoop集群启动</h2><h3 id="格式化NameNode"><a href="#格式化NameNode" class="headerlink" title="格式化NameNode"></a>格式化NameNode</h3><pre><code class="shell">hdfs namenode -format
-</code></pre>
-<p>看到以下日志代表成功</p>
-<pre><code class="log">INFO common.Storage: Storage directory /home/centos/hadoop/temp/namenode has been successfully formatted.
-</code></pre>
-<h3 id="启动HDFS：start-dfs-sh"><a href="#启动HDFS：start-dfs-sh" class="headerlink" title="启动HDFS：start-dfs.sh"></a>启动HDFS：<code>start-dfs.sh</code></h3><img src="/2024/01/05/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%AE%89%E8%A3%85Hadoop-yarn%E9%9B%86%E7%BE%A4/image.png" class title="配置图">
-
-<h3 id="启动Yarn：start-yarn-sh"><a href="#启动Yarn：start-yarn-sh" class="headerlink" title="启动Yarn：start-yarn.sh"></a>启动Yarn：<code>start-yarn.sh</code></h3><img src="/2024/01/05/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%AE%89%E8%A3%85Hadoop-yarn%E9%9B%86%E7%BE%A4/image1.png" class title="配置图">
-
+        <p>看过一篇专门讲 “防御性编程” 的好文章，是一位国外大佬写的，由 coderLMN 翻译。讲了很多 “<strong>写出无法维护的代码</strong>” 的方法。<br>大家看个乐就好，最好还是别轻易实践</p>
+<h1 id="如何编写无法维护的代码"><a href="#如何编写无法维护的代码" class="headerlink" title="如何编写无法维护的代码"></a>如何编写无法维护的代码</h1><blockquote>
+<p>让自己稳拿铁饭碗 ;-)</p>
+<p>– Roedy Green</p>
+<p>永远不要（把自己遇到的问题）归因于（他人的）恶意，这恰恰说明了（你自己的）无能。</p>
+<p>– 拿破仑</p>
+</blockquote>
+<p>为了造福大众，在Java编程领域创造就业机会，兄弟我在此传授大师们的秘籍。</p>
+<p>这些大师写的代码极其难以维护，后继者就是想对它做最简单的修改都需要花上数年时间。</p>
+<p>而且，如果你能对照秘籍潜心修炼，你甚至可以给自己弄个铁饭碗，因为除了你之外，没人能维护你写的代码。</p>
+<p>再而且，如果你能练就秘籍中的 <strong>全部</strong> 招式，那么连你自己都无法维护你的代码了！</p>
+<p>你不想练功过度走火入魔吧。那就不要让你的代码 <strong>一眼看去</strong> 就完全无法维护，只要它 <strong>实质上是</strong> 那样就行了。否则，你的代码就有被重写或重构的风险！</p>
+<h2 id="总体原则"><a href="#总体原则" class="headerlink" title="总体原则"></a>总体原则</h2><p>想挫败维护代码的程序员，你必须先明白他的思维方式。他接手了你的庞大程序，没有时间把它全部读一遍，更别说理解它了。他无非是想快速找到修改代码的位置、改代码、编译，然后就能交差，并希望他的修改不会出现意外的副作用。</p>
+<p>他查看你的代码不过是管中窥豹，一次只能看到一小段而已。你要确保他永远看不到全貌。要尽量和让他难以找到他想找的代码。但更重要的是，要让他不能有把握 <strong>忽略</strong> 任何东西。</p>
+<p>程序员都被编程惯例洗脑了，还为此自鸣得意。每一次你处心积虑地违背编程惯例，都会迫使他必须用放大镜去仔细阅读你的每一行代码。</p>
+<p>你可能会觉得每个语言特性都可以用来让代码难以维护，其实不然。你必须精心地误用它们才行。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>编写无法维护代码的技巧的重中之重是变量和方法命名的艺术。如何命名是和编译器无关的。这就让你有巨大的自由度去利用它们迷惑维护代码的程序员。</p>
+<h2 id="妙用宝宝起名大全"><a href="#妙用宝宝起名大全" class="headerlink" title="妙用宝宝起名大全"></a>妙用宝宝起名大全</h2><p>买本宝宝起名大全，你就永远不缺变量名了。比如 Fred 就是个好名字，而且键盘输入它也省事。如果你就想找一些容易输入的变量名，可以试试 adsf 或者 aoeu 之类。</p>
+<h2 id="单字母变量名"><a href="#单字母变量名" class="headerlink" title="单字母变量名"></a>单字母变量名</h2><p>如果你给变量起名为 a, b, c，用简单的文本编辑器就没法搜索它们的引用。而且，没人能猜到它们的含义。</p>
+<h2 id="首字母大写的缩写"><a href="#首字母大写的缩写" class="headerlink" title="首字母大写的缩写"></a>首字母大写的缩写</h2><p>用首字母大写缩写（比如 GNU 代表 GNU’s Not Unix) 使代码简洁难懂。真正的汉子 (无论男女) 从来不说明这种缩写的含义，他们生下来就懂。</p>
+<h2 id="重用命名"><a href="#重用命名" class="headerlink" title="重用命名"></a>重用命名</h2><p>在语言规则允许的地方，尽量把类、构造器、方法、成员变量、参数和局部变量都命名成一样。更高级的技巧是在 {} 块中重用局部变量。这样做的目的是迫使维护代码的程序员认真检查每个示例的范围。特别是在 Java 代码中，可以把普通方法伪装成构造器。</p>
+<h2 id="使用非英语字母"><a href="#使用非英语字母" class="headerlink" title="使用非英语字母"></a>使用非英语字母</h2><p>在命名中偷偷使用不易察觉的非英语字母，例如 <code>typedef struct &#123; int i; &#125; ínt;</code> 。</p>
+<p>看上去没啥不对是吧？嘿嘿嘿…这里的第二个 ínt 的 <code>í</code> 实际上是东北欧字母，并不是英语中的 i 。在简单的文本编辑器里，想看出这一点点区别几乎是不可能的。</p>
+<h2 id="下划线，一位真正的朋友"><a href="#下划线，一位真正的朋友" class="headerlink" title="下划线，一位真正的朋友"></a>下划线，一位真正的朋友</h2><p>可以拿 _ 和 __ 作为标示符。</p>
+<h2 id="扩展-ASCII-字符"><a href="#扩展-ASCII-字符" class="headerlink" title="扩展 ASCII 字符"></a>扩展 ASCII 字符</h2><p>扩展 ASCII 字符用于变量命名是完全合法的，包括 ß, Ð, 和 ñ 等。在简单的文本编辑器里，除了拷贝&#x2F;粘贴，基本上没法输入。</p>
+<h2 id="其他语言的命名"><a href="#其他语言的命名" class="headerlink" title="其他语言的命名"></a>其他语言的命名</h2><p>使用外语字典作为变量名的来源。例如，可以用德语单词 punkt 代替 point。除非维护代码的程序员也像你一样熟练掌握了德语. 不然他就只能尽情地在代码中享受异域风情了。</p>
+<h2 id="伪装"><a href="#伪装" class="headerlink" title="伪装"></a>伪装</h2><blockquote>
+<p>当一个bug需要越长的时间才会暴露，它就越难被发现。</p>
+<p>– Roedy Green（本文作者）</p>
+</blockquote>
+<p>编写无法维护代码的另一大秘诀就是伪装的艺术，即隐藏它或者让它看起来像其他东西。很多招式有赖于这样一个事实：编译器比肉眼或文本编辑器更有分辨能力。下面是一些伪装的最佳招式。</p>
+<h2 id="把代码伪装成注释，反之亦然"><a href="#把代码伪装成注释，反之亦然" class="headerlink" title="把代码伪装成注释，反之亦然"></a>把代码伪装成注释，反之亦然</h2><p>下面包括了一些被注释掉的代码，但是一眼看去却像是正常代码。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/mngWTkJEOYKzwhlZ5SLjTsuNjSVHhQYWHPDEB3hwnJ0Re6B9a0k88ib07IKbibC85lz3yAqPcxBagMu2vhqRI5gQ/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="图片"></p>
+<p>图片</p>
+<p>如果不是用绿色标出来，你能注意到这三行代码被注释掉了么？</p>
+<h2 id="用连接符隐藏变量"><a href="#用连接符隐藏变量" class="headerlink" title="用连接符隐藏变量"></a>用连接符隐藏变量</h2><p>对于下面的定义</p>
+<p><code>#define local_var xy_z   </code></p>
+<p>可以把 “xy_z” 打散到两行里：</p>
+<p><code>#define local_var xy\   _z // local_var OK   </code></p>
+<p>这样全局搜索 xy_z 的操作在这个文件里就一无所获了。对于 C 预处理器来说，第一行最后的 “” 表示继续拼接下一行的内容。</p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><blockquote>
+<p>任何傻瓜都能说真话，而要把谎编圆则需要相当的智慧。– Samuel Butler (1835 - 1902)</p>
+</blockquote>
+<blockquote>
+<p>不正确的文档往往比没有文档还糟糕。– Bertrand Meyer</p>
+</blockquote>
+<p>既然计算机是忽略注释和文档的，你就可以在里边堂而皇之地编织弥天大谎，让可怜的维护代码的程序员彻底迷失。</p>
+<h2 id="在注释中撒谎"><a href="#在注释中撒谎" class="headerlink" title="在注释中撒谎"></a>在注释中撒谎</h2><p>实际上你不需要主动地撒谎，只要没有及时保持注释和代码更新的一致性就可以了。</p>
+<h2 id="只记录显而易见的东西"><a href="#只记录显而易见的东西" class="headerlink" title="只记录显而易见的东西"></a>只记录显而易见的东西</h2><p>往代码里掺进去类似于 <code>/* 给 i 加 1 */</code> 这样的注释，但是永远不要记录包或者方法的整体设计这样的干货。</p>
+<h2 id="记录-How-而不是-Why"><a href="#记录-How-而不是-Why" class="headerlink" title="记录 How 而不是 Why"></a>记录 How 而不是 Why</h2><p>只解释一个程序功能的细节，而不是它要完成的任务是什么。</p>
+<p>这样的话，如果出现了一个bug，修复者就搞不清这里的代码应有的功能。</p>
+<h2 id="该写的别写"><a href="#该写的别写" class="headerlink" title="该写的别写"></a>该写的别写</h2><p>比如你在开发一套航班预定系统，那就要精心设计，让它在增加另一个航空公司的时候至少有25处代码需要修改。</p>
+<p>永远不要在文档里说明要修改的位置。后来的开发人员要想修改你的代码门都没有，除非他们能把每一行代码都读懂。</p>
+<h2 id="计量单位"><a href="#计量单位" class="headerlink" title="计量单位"></a>计量单位</h2><p>永远不要在文档中说明任何变量、输入、输出或参数的计量单位，如英尺、米、加仑等。</p>
+<p>计量单位对数豆子不是太重要，但在工程领域就相当重要了。同理，永远不要说明任何转换常量的计量单位，或者是它的取值如何获得。</p>
+<p>要想让代码更乱的话，你还可以在注释里写上错误的计量单位，这是赤裸裸的欺骗，但是非常有效。</p>
+<p>如果你想做一个恶贯满盈的人，不妨自己发明一套计量单位，用自己或某个小人物的名字命名这套计量单位，但不要给出定义。万一有人挑刺儿，你就告诉他们，你这么做是为了把浮点数运算凑成整数运算而进行的转换。</p>
+<h2 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h2><p>永远不要记录代码中的坑。如果你怀疑某个类里可能有bug，天知地知你知就好。如果你想到了重构或重写代码的思路，看在老天爷的份上，千万别写出来。</p>
+<p>切记电影《小鹿斑比》里那句台词 “如果你不能说好听的话，那就什么也不要说。”。万一这段代码的原作者看到你的注释怎么办？万一老板看到了怎么办？万一客户看到了怎么办？搞不好最后你自己被解雇了。</p>
+<p>一句”这里需要修改“的匿名注释就好多了，尤其是当看不清这句注释指的是哪里需要修改的情况下。</p>
+<p>切记难得糊涂四个字，这样大家都不会感觉受到了批评。</p>
+<h2 id="说明变量"><a href="#说明变量" class="headerlink" title="说明变量"></a>说明变量</h2><p><strong>永远不要</strong> 对变量声明加注释。有关变量使用的方式、边界值、合法值、小数点后的位数、计量单位、显示格式、数据录入规则等等，后继者完全可以自己从程序代码中去理解和整理嘛。</p>
+<p>如果老板强迫你写注释，就把方法体代码混进去，但绝对不要对变量声明写注释，即使是临时变量！</p>
+<h2 id="在注释里挑拨离间"><a href="#在注释里挑拨离间" class="headerlink" title="在注释里挑拨离间"></a>在注释里挑拨离间</h2><p>为了阻挠任何雇佣外部维护承包商的倾向，可以在代码中散布针对其他同行软件公司的攻击和抹黑，特别是可能接替你工作的其中任何一家。例如：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/mngWTkJEOYKzwhlZ5SLjTsuNjSVHhQYWicLphIXem4ZJhee45VSficc2ROcVGVTIvtJl3nkIyWmicHORK9dcQpy8g/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="图片"></p>
+<p>图片</p>
+<p>可能的话，除了注释之外，这些攻击抹黑的内容也要掺到代码里的重要部分，这样如果管理层想清理掉这些攻击性的言论然后发给外部承包商去维护，就会破坏代码结构。</p>
+<h2 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h2><blockquote>
+<p>编写无法维护代码的基本规则就是：在尽可能多的地方，以尽可能多的方式表述每一个事实。</p>
+<p>– Roedy Green</p>
+</blockquote>
+<p>编写可维护代码的关键因素是只在一个地方表述应用里的一个事实。</p>
+<p>如果你的想法变了，你也只在一个地方修改，这样就能保证整个程序正常工作。所以，编写无法维护代码的关键因素就是反复地表述同一个事实，在尽可能多的地方，以尽可能多的方式进行。</p>
+<p>令人高兴的是，像Java这样的语言让编写这种无法维护代码变得非常容易。</p>
+<p>例如，改变一个被引用很多的变量的类型几乎是不可能的，因为所有造型和转换功能都会出错，而且关联的临时变量的类型也不合适了。</p>
+<p>而且，如果变量值要在屏幕上显示，那么所有相关的显示和数据录入代码都必须一一找到并手工进行修改。类似的还有很多，比如由 C 和 Java 组成的 Algol 语言系列，Abundance甚至Smalltalk对于数组等结构的处理，都是大有可为的。</p>
+<h2 id="永远不做校验"><a href="#永远不做校验" class="headerlink" title="永远不做校验"></a>永远不做校验</h2><p>永远不要对输入数据做任何的正确性或差异性检查。</p>
+<p>这样能表现你对公司设备的绝对信任，以及你是一位信任所有项目伙伴和系统管理员的团队合作者。</p>
+<p>总是返回合理的值，即使数据输入有问题或者错误。</p>
+<h2 id="有礼貌，无断言"><a href="#有礼貌，无断言" class="headerlink" title="有礼貌，无断言"></a>有礼貌，无断言</h2><p>避免使用 assert() 机制，因为它可能把三天的debug盛宴变成10分钟的快餐。</p>
+<h2 id="避免封装"><a href="#避免封装" class="headerlink" title="避免封装"></a>避免封装</h2><p>为了提高效率，不要使用封装。</p>
+<p>方法的调用者需要所有能得到的外部信息，以便了解方法的内部是如何工作的。</p>
+<h2 id="复制粘贴修改"><a href="#复制粘贴修改" class="headerlink" title="复制粘贴修改"></a>复制粘贴修改</h2><p>以效率的名义，使用 复制+粘贴+修改。</p>
+<p>这样比写成小型可复用模块效率高得多。在用代码行数衡量你的进度的小作坊里，这招尤其管用。</p>
+<h2 id="使用静态数组"><a href="#使用静态数组" class="headerlink" title="使用静态数组"></a>使用静态数组</h2><p>如果一个库里的模块需要一个数组来存放图片，就定义一个静态数组。</p>
+<p>没人会有比512 X 512 更大的图片，所以固定大小的数组就可以了。为了最佳精度，就把它定义成 double 类型的数组。</p>
+<h2 id="傻瓜接口"><a href="#傻瓜接口" class="headerlink" title="傻瓜接口"></a>傻瓜接口</h2><p>编写一个名为 “WrittenByMe” 之类的空接口，然后让你的所有类都实现它。然后给所有你用到的Java 内置类编写包装类。</p>
+<p>这里的思想是确保你程序里的每个对象都实现这个接口。最后，编写所有的方法，让它们的参数和返回类型都是这个 WrittenByMe。这样就几乎不可能搞清楚某个方法的功能是什么，并且所有类型都需要好玩的造型方法。</p>
+<p>更出格的玩法是，让每个团队成员编写它们自己的接口(例如 WrittenByJoe)，程序员用到的任何类都要实现他自己的接口。这样你就可以在大量无意义接口中随便找一个来引用对象了。</p>
+<h2 id="好事成堆TM"><a href="#好事成堆TM" class="headerlink" title="好事成堆TM"></a>好事成堆TM</h2><p>狂野地使用封装和OO思想。例如</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/mngWTkJEOYKzwhlZ5SLjTsuNjSVHhQYWVrgpyz5bCO7VLq4XH4S6qaGoHib5ibToiaTJQWmRnWAnySUic88ovghoww/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="图片"></p>
+<p>这段很可能看起来不怎么好笑。别担心，只是时候未到而已。</p>
+<hr>
+<p>就分享到这里了。</p>
+<p>很难想象作者是被同事折磨了多久才能写出这份教程。。</p>
+<p>你学废了么</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至songchen0825@gmail.com </span>
