@@ -637,7 +637,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-11 00:36:21'>2024-01-11 16:34</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-11 00:43:44'>2024-01-11 16:34</time>
         
     </div>
     <div class="article-meta">
@@ -718,7 +718,8 @@
 </blockquote>
 <p>编写无法维护代码的另一大秘诀就是伪装的艺术，即隐藏它或者让它看起来像其他东西。很多招式有赖于这样一个事实：编译器比肉眼或文本编辑器更有分辨能力。下面是一些伪装的最佳招式。</p>
 <h2 id="把代码伪装成注释，反之亦然"><a href="#把代码伪装成注释，反之亦然" class="headerlink" title="把代码伪装成注释，反之亦然"></a>把代码伪装成注释，反之亦然</h2><p>下面包括了一些被注释掉的代码，但是一眼看去却像是正常代码。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/mngWTkJEOYKzwhlZ5SLjTsuNjSVHhQYWHPDEB3hwnJ0Re6B9a0k88ib07IKbibC85lz3yAqPcxBagMu2vhqRI5gQ/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="图片"></p>
+<img src="/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/image.png" class title="配置图">
+
 <p>图片</p>
 <p>如果不是用绿色标出来，你能注意到这三行代码被注释掉了么？</p>
 <h2 id="用连接符隐藏变量"><a href="#用连接符隐藏变量" class="headerlink" title="用连接符隐藏变量"></a>用连接符隐藏变量</h2><p>对于下面的定义</p>
@@ -750,7 +751,8 @@
 <h2 id="说明变量"><a href="#说明变量" class="headerlink" title="说明变量"></a>说明变量</h2><p><strong>永远不要</strong> 对变量声明加注释。有关变量使用的方式、边界值、合法值、小数点后的位数、计量单位、显示格式、数据录入规则等等，后继者完全可以自己从程序代码中去理解和整理嘛。</p>
 <p>如果老板强迫你写注释，就把方法体代码混进去，但绝对不要对变量声明写注释，即使是临时变量！</p>
 <h2 id="在注释里挑拨离间"><a href="#在注释里挑拨离间" class="headerlink" title="在注释里挑拨离间"></a>在注释里挑拨离间</h2><p>为了阻挠任何雇佣外部维护承包商的倾向，可以在代码中散布针对其他同行软件公司的攻击和抹黑，特别是可能接替你工作的其中任何一家。例如：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/mngWTkJEOYKzwhlZ5SLjTsuNjSVHhQYWicLphIXem4ZJhee45VSficc2ROcVGVTIvtJl3nkIyWmicHORK9dcQpy8g/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="图片"></p>
+<img src="/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/image-1.png" class title="配置图">
+
 <p>图片</p>
 <p>可能的话，除了注释之外，这些攻击抹黑的内容也要掺到代码里的重要部分，这样如果管理层想清理掉这些攻击性的言论然后发给外部承包商去维护，就会破坏代码结构。</p>
 <h2 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h2><blockquote>
@@ -776,7 +778,8 @@
 <p>这里的思想是确保你程序里的每个对象都实现这个接口。最后，编写所有的方法，让它们的参数和返回类型都是这个 WrittenByMe。这样就几乎不可能搞清楚某个方法的功能是什么，并且所有类型都需要好玩的造型方法。</p>
 <p>更出格的玩法是，让每个团队成员编写它们自己的接口(例如 WrittenByJoe)，程序员用到的任何类都要实现他自己的接口。这样你就可以在大量无意义接口中随便找一个来引用对象了。</p>
 <h2 id="好事成堆TM"><a href="#好事成堆TM" class="headerlink" title="好事成堆TM"></a>好事成堆TM</h2><p>狂野地使用封装和OO思想。例如</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/mngWTkJEOYKzwhlZ5SLjTsuNjSVHhQYWVrgpyz5bCO7VLq4XH4S6qaGoHib5ibToiaTJQWmRnWAnySUic88ovghoww/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="图片"></p>
+<img src="/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/image-2.png" class title="配置图">
+
 <p>这段很可能看起来不怎么好笑。别担心，只是时候未到而已。</p>
 <hr>
 <p>就分享到这里了。</p>

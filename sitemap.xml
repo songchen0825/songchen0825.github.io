@@ -213,13 +213,6 @@
   </url>
   
   <url>
-    <loc>https://songchen0825.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%9E%B6%E6%9E%84/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://songchen0825.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -227,7 +220,7 @@
   </url>
   
   <url>
-    <loc>https://songchen0825.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <loc>https://songchen0825.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -235,6 +228,13 @@
   
   <url>
     <loc>https://songchen0825.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%9D%82%E8%AE%B0/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://songchen0825.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
