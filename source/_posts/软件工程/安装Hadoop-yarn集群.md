@@ -203,3 +203,4 @@ INFO common.Storage: Storage directory /home/centos/hadoop/temp/namenode has bee
 ### 启动Yarn：`start-yarn.sh`
 
 {% asset_img image1.png 配置图 %}
+
