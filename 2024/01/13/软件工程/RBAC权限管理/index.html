@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据分析分阶段学习路线 | 诸行</title>
+  <title>RBAC权限管理 | 诸行</title>
   <meta name="keywords" content="">
-  <meta name="description" content="数据分析分阶段学习路线 | 诸行">
+  <meta name="description" content="RBAC权限管理 | 诸行">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="看过一篇专门讲 “防御性编程” 的好文章，是一位国外大佬写的，由 coderLMN 翻译。讲了很多 “写出无法维护的代码” 的方法。大家看个乐就好，最好还是别轻易实践 如何编写无法维护的代码 让自己稳拿铁饭碗 ;-) – Roedy Green 永远不要（把自己遇到的问题）归因于（他人的）恶意，这恰恰说明了（你自己的）无能。 – 拿破仑  为了造福大众，在Java编程领域创造就业机会，兄弟我在此传">
 <meta property="og:type" content="article">
@@ -653,9 +653,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-软件工程/数据分析分阶段学习路线" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-软件工程/RBAC权限管理" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据分析分阶段学习路线</h1>
+        <h1 class="article-title">RBAC权限管理</h1>
     
     <div class="article-meta">
         
@@ -667,9 +667,9 @@
             
             <a  data-rel="软件工程">软件工程</a> > 
             
-            <a  data-rel="软件工程&lt;---&gt;大数据">大数据</a> > 
+            <a  data-rel="软件工程&lt;---&gt;需求设计">需求设计</a> > 
             
-            <a  data-rel="软件工程&lt;---&gt;大数据&lt;---&gt;数据分析">数据分析</a>
+            <a  data-rel="软件工程&lt;---&gt;需求设计&lt;---&gt;边缘功能">边缘功能</a>
             
         </span>
         
@@ -677,7 +677,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-04 23:12:33'>2024-01-05 15:10</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-11 17:38:49'>2024-01-12 09:36</time>
         
     </div>
     <div class="article-meta">
@@ -710,7 +710,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B6%E6%AE%B5%E4%B8%80%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">阶段一：基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-text">1. 编程语言基础：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-text">2. 统计学基础：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96%E5%92%8C%E5%AD%98%E5%82%A8%EF%BC%9A"><span class="toc-text">3. 数据获取和存储：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B6%E6%AE%B5%E4%BA%8C%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%92%8C%E5%88%86%E6%9E%90"><span class="toc-text">阶段二：数据处理和分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-text">1. 数据清洗和预处理：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A"><span class="toc-text">2. 数据可视化：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-text">3. 机器学习基础：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B6%E6%AE%B5%E4%B8%89%EF%BC%9A%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%AE%9E%E8%B7%B5"><span class="toc-text">阶段三：深入学习和实践</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="toc-text">1. 大数据处理技术：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="toc-text">2. 深度学习：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B6%E6%AE%B5%E5%9B%9B%EF%BC%9A%E8%BF%9B%E9%98%B6%E5%92%8C%E4%B8%93%E4%B8%9A%E5%8C%96"><span class="toc-text">阶段四：进阶和专业化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BC%98%E5%8C%96%E5%92%8C%E8%B0%83%E4%BC%98%EF%BC%9A"><span class="toc-text">1. 优化和调优：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%92%8C%E5%BA%94%E7%94%A8%EF%BC%9A"><span class="toc-text">2. 高级数据分析和应用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%92%8C%E5%B7%A5%E5%85%B7%EF%BC%9A"><span class="toc-text">3. 大数据架构和工具：</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-text">1.用户管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%A7%92%E8%89%B2%E7%AE%A1%E7%90%86"><span class="toc-text">2.角色管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%BE%97%E5%9F%BA%E7%A1%80%E8%A7%92%E8%89%B2"><span class="toc-text">1. 自动获得基础角色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%B4%E6%97%B6%E8%A7%92%E8%89%B2%E4%B8%8E%E5%A4%B1%E6%95%88%E6%97%B6%E9%97%B4"><span class="toc-text">2. 临时角色与失效时间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%99%9A%E6%8B%9F%E8%A7%92%E8%89%B2"><span class="toc-text">3. 虚拟角色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%BB%91%E7%99%BD%E5%90%8D%E5%8D%95"><span class="toc-text">4. 黑白名单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-text">5. 权限管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A1%B5%E9%9D%A2-%E8%8F%9C%E5%8D%95%E6%9D%83%E9%99%90"><span class="toc-text">1. 页面&#x2F;菜单权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%93%8D%E4%BD%9C%E6%9D%83%E9%99%90"><span class="toc-text">2. 操作权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E6%9D%83%E9%99%90"><span class="toc-text">3. 数据权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%95%B0%E6%8D%AE%E6%9D%83%E9%99%90%E5%A6%82%E4%BD%95%E7%AE%A1%E6%8E%A7"><span class="toc-text">6. 数据权限如何管控</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E4%B8%8B%E8%BF%99%E5%9B%9B%E4%B8%AARBAC%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="toc-text">7.简单介绍下这四个RBAC模型：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-RBAC0%E6%A8%A1%E5%9E%8B"><span class="toc-text">1. RBAC0模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-RBAC1%E6%A8%A1%E5%9E%8B"><span class="toc-text">2. RBAC1模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-RBAC2%E6%A8%A1%E5%9E%8B"><span class="toc-text">3. RBAC2模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-RBAC3%E6%A8%A1%E5%9E%8B"><span class="toc-text">4. RBAC3模型</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -726,17 +726,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="阶段一：基础知识"><a href="#阶段一：基础知识" class="headerlink" title="阶段一：基础知识"></a>阶段一：基础知识</h1><h2 id="1-编程语言基础："><a href="#1-编程语言基础：" class="headerlink" title="1. 编程语言基础："></a>1. 编程语言基础：</h2><p>  ○ 学习编程语言：Python 和&#x2F;或 R 是大数据分析中常用的编程语言，从基本语法开始学起。，掌握变量、数据类型、条件语句、循环等基本概念，熟悉基本的数据结构和函数。</p>
-<h2 id="2-统计学基础："><a href="#2-统计学基础：" class="headerlink" title="2. 统计学基础："></a>2. 统计学基础：</h2><p>  ○ 学习概率分布、统计指标（均值、中位数、标准差等）。<br>  ○ 了解基本的统计推断方法，如置信区间、假设检验。回归分析等统计方法。</p>
-<h2 id="3-数据获取和存储："><a href="#3-数据获取和存储：" class="headerlink" title="3. 数据获取和存储："></a>3. 数据获取和存储：</h2><p>  ○ 学习 SQL，能够编写查询语句从数据库中提取数据。<br>  ○ 了解数据格式，如 CSV、JSON、Excel，以及如何读取和写入这些格式的数据。</p>
-<h1 id="阶段二：数据处理和分析"><a href="#阶段二：数据处理和分析" class="headerlink" title="阶段二：数据处理和分析"></a>阶段二：数据处理和分析</h1><h2 id="1-数据清洗和预处理："><a href="#1-数据清洗和预处理：" class="headerlink" title="1. 数据清洗和预处理："></a>1. 数据清洗和预处理：</h2><p>  ○ 掌握 Pandas（Python）NumPy 等库，用于数据清洗、处理缺失值和重复值。<br>  ○ 学习数据规范化、标准化和特征工程。</p>
-<h2 id="2-数据可视化："><a href="#2-数据可视化：" class="headerlink" title="2. 数据可视化："></a>2. 数据可视化：</h2><p>  ○ 学习使用 Matplotlib、Seaborn（Python）等库进行数据可视化。<br>  ○ 掌握绘制各种图表，如折线图、柱状图、散点图等。<br>  ○ 掌握如何添加标签、标题、图例等，以及创建交互式可视化。</p>
-<h2 id="3-机器学习基础："><a href="#3-机器学习基础：" class="headerlink" title="3. 机器学习基础："></a>3. 机器学习基础：</h2><p>  ○ 了解机器学习基本概念，如监督学习、无监督学习、特征工程等。<br>  ○ 学习常见的机器学习算法，如线性回归、决策树、聚类等。</p>
-<h1 id="阶段三：深入学习和实践"><a href="#阶段三：深入学习和实践" class="headerlink" title="阶段三：深入学习和实践"></a>阶段三：深入学习和实践</h1><h2 id="1-大数据处理技术："><a href="#1-大数据处理技术：" class="headerlink" title="1. 大数据处理技术："></a>1. 大数据处理技术：</h2><p>  ○ 学习 Hadoop 生态系统，了解 HDFS、MapReduce、Hive、Hbase 等。<br>  ○ 学习 Apache Spark，掌握 Spark SQL 和 Spark MLlib。</p>
-<h2 id="2-深度学习："><a href="#2-深度学习：" class="headerlink" title="2. 深度学习："></a>2. 深度学习：</h2><p>  ○ 学习 TensorFlow 或 PyTorch，掌握神经网络的基本概念。<br>  ○ 了解卷积神经网络（CNN）、循环神经网络（RNN）等深度学习架构。</p>
-<h1 id="阶段四：进阶和专业化"><a href="#阶段四：进阶和专业化" class="headerlink" title="阶段四：进阶和专业化"></a>阶段四：进阶和专业化</h1><h2 id="1-优化和调优："><a href="#1-优化和调优：" class="headerlink" title="1. 优化和调优："></a>1. 优化和调优：</h2><p>  ○ 学习模型评估指标，如准确率、精确率、召回率、F1 分数等。<br>  ○ 掌握模型选择和调参技巧，如交叉验证、网格搜索等。</p>
-<h2 id="2-高级数据分析和应用："><a href="#2-高级数据分析和应用：" class="headerlink" title="2. 高级数据分析和应用："></a>2. 高级数据分析和应用：</h2><p>  ○ 学习时间序列分析、文本分析、图像处理等高级数据分析技术。<br>  ○ 了解自然语言处理（NLP）的基本概念，如词嵌入、情感分析等。</p>
-<h2 id="3-大数据架构和工具："><a href="#3-大数据架构和工具：" class="headerlink" title="3. 大数据架构和工具："></a>3. 大数据架构和工具：</h2><p>  ○ 了解大数据处理架构，如 Lambda 架构、Kappa 架构等。<br>  ○ 学习使用 NoSQL 数据库，如 MongoDB、Cassandra。</p>
+        <p>RBAC 权限模型由三大部分构成，即<strong>用户管理</strong>、<strong>角色管理</strong>、<strong>权限管理</strong>。</p>
+<p>用户管理按照企业架构或业务线架构来划分，这些结构本身比较清晰，扩展性和可读性都非常好。</p>
+<p>角色管理一定要在深入理解业务逻辑后再来设计，一般使用各部门真实的角色作为基础，再根据业务逻辑进行扩展。</p>
+<p>权限管理是前两种管理的再加固，做太细容易太碎片，做太粗又不够安全，这里我们需要根据经验和实际情况来设计。</p>
+<h2 id="1-用户管理"><a href="#1-用户管理" class="headerlink" title="1.用户管理"></a>1.用户管理</h2><p>用户管理中的用户，是企业里每一位员工，他们本身就有自己的组织架构，我们可以直接使用企业部门架构或者业务线架构来作为线索，构建用户管理系统。</p>
+<p><strong>需要特殊注意</strong>：实际业务中的组织架构可能与企业部门架构、业务线架构不同，需要考虑数据共享机制，一般的做法为授权某个人、某个角色组共享某个组织层级的某个对象组数据。</p>
+<h2 id="2-角色管理"><a href="#2-角色管理" class="headerlink" title="2.角色管理"></a>2.角色管理</h2><p>在设计系统角色时，我们应该深入理解公司架构、业务架构后，再根据需求设计角色及角色内的等级。</p>
+<p>一般角色相对于用户来说是固定不变的，每个角色都有自己明确的权限和限制，这些权限在系统设计之处就确定了，之后也轻易不会再变动。</p>
+<h3 id="1-自动获得基础角色"><a href="#1-自动获得基础角色" class="headerlink" title="1. 自动获得基础角色"></a>1. 自动获得基础角色</h3><p>当员工入职到某部门时，该名员工的账号应该自动被加入该部门对应的基础角色中，并拥有对应的基础权限。这种操作是为了保证系统安全的前提下，减少了管理员大量手动操作。使新入职员工能快速使用系统，提高工作效率。</p>
+<h3 id="2-临时角色与失效时间"><a href="#2-临时角色与失效时间" class="headerlink" title="2. 临时角色与失效时间"></a>2. 临时角色与失效时间</h3><p>公司业务有时需要外援来支持，他们并不属于公司员工，也只是在某个时段在公司做支持。此时我们需要设置临时角色，来应对这种可能跨多部门协作的临时员工。</p>
+<p>如果公司安全级别较高，此类账号默认有固定失效时间，到达失效时间需再次审核才能重新开启。避免临时账号因为流程不完善，遗忘在系统中，引起安全隐患。</p>
+<h2 id="3-虚拟角色"><a href="#3-虚拟角色" class="headerlink" title="3. 虚拟角色"></a>3. 虚拟角色</h2><p>部门角色中的等级，可以授权同等级的员工拥有相同的权限，但某些员工因工作原因，需要调用角色等级之外的权限，相同等级不同员工需要使用的权限还不相同。</p>
+<p>这种超出角色等级又合理的权限授予，我们可以设置虚拟角色。这一虚拟角色可集成这一工作所需的所有权限，然后将它赋予具体的员工即可。这样即不用调整组织架构和对应的角色，也可以满足工作中特殊情况的权限需求。</p>
+<h2 id="4-黑白名单"><a href="#4-黑白名单" class="headerlink" title="4. 黑白名单"></a>4. 黑白名单</h2><p><strong>白名单</strong>：某些用户自身不拥有某部门的顶级角色，但处于业务需求，需要给他角色外的高级权限，那么我们可以设计限制范围的白名单，将需要的用户添加进去即可。</p>
+<p>在安全流程中，我们仅需要对白名单设计安全流程，即可审核在白名单中的特殊用户，做到监控拥有特殊权限的用户，减少安全隐患。</p>
+<p><strong>黑名单</strong>：比较常见的黑名单场景是某些犯了错误的员工，虽然在职，但已经不能给他们任何公司权限了。这种既不能取消角色关联，也不能完全停用账号的情况，可以设置黑名单，让此类用户可以登录账号，查看基本信息，但大多数关键权限已经被黑名单限制。</p>
+<h2 id="5-权限管理"><a href="#5-权限管理" class="headerlink" title="5. 权限管理"></a>5. 权限管理</h2><p>权限管理一般从三个方面来做限制。<strong>页面&#x2F;菜单权限</strong>，<strong>操作权限</strong>，<strong>数据权限</strong>。</p>
+<h3 id="1-页面-菜单权限"><a href="#1-页面-菜单权限" class="headerlink" title="1. 页面&#x2F;菜单权限"></a>1. 页面&#x2F;菜单权限</h3><p>对于没有权限操作的用户，直接隐藏对应的页面入口或菜单选项。这种方法简单快捷直接，对于一些安全不太敏感的权限，使用这种方式非常高效。</p>
+<h3 id="2-操作权限"><a href="#2-操作权限" class="headerlink" title="2. 操作权限"></a>2. 操作权限</h3><p>操作权限通常是指对同一组数据，不同的用户是否可以增删改查。对某些用户来说是只读浏览数据，对某些用户来说是可编辑的数据。</p>
+<h3 id="3-数据权限"><a href="#3-数据权限" class="headerlink" title="3. 数据权限"></a>3. 数据权限</h3><p>对于安全需求高的权限管理，仅从前端限制隐藏菜单，隐藏编辑按钮是不够的，还需要在数接口上做限制。如果用户试图通过非法手段编辑不属于自己权限下的数据，服务器端会识别、记录并限制访问。</p>
+<h2 id="6-数据权限如何管控"><a href="#6-数据权限如何管控" class="headerlink" title="6. 数据权限如何管控"></a>6. 数据权限如何管控</h2><p>数据权限可以分为行权限和列权限。行权限控制：看多少条数据。列权限控制：看一条数据的多少个字段</p>
+<p>简单系统中可以通过组织架构来管控行权限，按照角色来配置列权限，但是遇到复杂情况，组织架构是承载不了复杂行权限管控，角色也更不能承载列的特殊化展示。</p>
+<p>目前行业的做法是提供行列级数据权规则配置，把规则当成类似权限点配置赋予某个角色或者某个用户。</p>
+<p>权限系统设计 - RBAC：基于角色的权限访问控制</p>
+<p>RBAC模型可以分为：<strong>RBAC0</strong>、<strong>RBAC1</strong>、<strong>RBAC2</strong>、<strong>RBAC3</strong> 四个阶段，一般公司使用<strong>RBAC0</strong>的模型就可以。另外，<strong>RBAC0</strong>相当于底层逻辑，后三者都是在<strong>RBAC0</strong>模型上的拔高。</p>
+<h2 id="7-简单介绍下这四个RBAC模型："><a href="#7-简单介绍下这四个RBAC模型：" class="headerlink" title="7.简单介绍下这四个RBAC模型："></a>7.简单介绍下这四个RBAC模型：</h2><h3 id="1-RBAC0模型"><a href="#1-RBAC0模型" class="headerlink" title="1. RBAC0模型"></a>1. RBAC0模型</h3><p>用户和角色、角色和权限多对多关系。</p>
+<p>简单来说就是一个用户拥有多个角色，一个角色可以被多个用户拥有，这是用户和角色的多对多关系；同样的，角色和权限也是如此。</p>
+<p><strong>RBAC0</strong>模型如下图：没有画太多线，但是已经能够看出多对多关系。</p>
+<h3 id="2-RBAC1模型"><a href="#2-RBAC1模型" class="headerlink" title="2. RBAC1模型"></a>2. RBAC1模型</h3><p>相对于<strong>RBAC0</strong>模型，增加了<strong>角色分级</strong>的逻辑，类似于树形结构，下一节点继承上一节点的所有权限，如<strong>role1</strong>根节点下有<strong>role1.1</strong>和<strong>role1.2</strong>两个子节点</p>
+<p>角色分级的逻辑可以有效的规范角色创建（主要得益于权限继承逻辑），我之前做过BD工具（类CRM），BD之间就有分级（经理、主管、专员），如果采用RBAC0模型做权限系统，我可能需要为经理、主管、专员分别创建一个角色（角色之间权限无继承性），极有可能出现一个问题，由于权限配置错误，主管拥有经理都没有权限。</p>
+<p>而RBAC1模型就很好解决了这个问题，创建完经理角色并配置好权限后，主管角色的权限继承经理角色的权限，并且支持针对性删减主管权限。</p>
+<h3 id="3-RBAC2模型"><a href="#3-RBAC2模型" class="headerlink" title="3. RBAC2模型"></a>3. RBAC2模型</h3><p>基于<strong>RBAC0</strong>模型，对角色增加了更多约束条件。</p>
+<p>如<strong>角色互斥</strong>，比较经典的案例是财务系统中出纳不得兼管稽核，那么在赋予财务系统操作人员角色时，同一个操作员不能同时拥有出纳和稽核两个角色。</p>
+<p>如<strong>角色数量限制</strong>，例如：一个角色专门为公司CEO创建的，最后发现公司有10个人拥有CEO角色，一个公司有10个CEO？这就是对角色数量的限制，它指的是有多少用户能拥有这个角色。</p>
+<p><strong>RBAC2</strong> 模型主要是为了增加角色赋予的限制条件，这也符合权限系统的目标：权责明确，系统使用安全、保密。</p>
+<h3 id="4-RBAC3模型"><a href="#4-RBAC3模型" class="headerlink" title="4. RBAC3模型"></a>4. RBAC3模型</h3><p>同样是基于<strong>RBAC0</strong>模型，但是综合了<strong>RBAC1</strong>和<strong>RBAC2</strong>的所有特点</p>
+<p>这里就不在多描述，读者返回去看<strong>RBAC1</strong>和<strong>RBAC2</strong>模型的描述即可。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至songchen0825@gmail.com </span>
