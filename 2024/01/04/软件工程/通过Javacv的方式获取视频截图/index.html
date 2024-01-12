@@ -6,21 +6,17 @@
   <meta name="keywords" content="">
   <meta name="description" content="通过Javacv的方式获取视频截图 | 诸行">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="看过一篇专门讲 “防御性编程” 的好文章，是一位国外大佬写的，由 coderLMN 翻译。讲了很多 “写出无法维护的代码” 的方法。大家看个乐就好，最好还是别轻易实践 如何编写无法维护的代码 让自己稳拿铁饭碗 ;-) – Roedy Green 永远不要（把自己遇到的问题）归因于（他人的）恶意，这恰恰说明了（你自己的）无能。 – 拿破仑  为了造福大众，在Java编程领域创造就业机会，兄弟我在此传">
+<meta name="description" content="我们可以见到许多有意思的编程风格，又没有精神为之一振的感觉，仿佛里面的例子就在自己身上，或者离自己很近。其实，对于文档、代码的评审，也是有诸多风格可言的，我这里列举一些有意思的典型： 一坨屎型评审 阅读文档、代码的时候，这些东西在自己眼里就是一坨屎：“我这么高智商的人都看不懂，明显是你有问题！”。 这样的人有一个他自己相当认可的世界观，凡是和这个世界观相冲突的无论对错的事务，必须强力排斥。这样的人">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何编写无法维护的代码">
-<meta property="og:url" content="https://songchen0825.github.io/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/index.html">
+<meta property="og:title" content="那些牛叉无比的评审风格">
+<meta property="og:url" content="https://songchen0825.github.io/2024/01/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E9%82%A3%E4%BA%9B%E7%89%9B%E5%8F%89%E6%97%A0%E6%AF%94%E7%9A%84%E8%AF%84%E5%AE%A1%E9%A3%8E%E6%A0%BC/index.html">
 <meta property="og:site_name" content="诸行">
-<meta property="og:description" content="看过一篇专门讲 “防御性编程” 的好文章，是一位国外大佬写的，由 coderLMN 翻译。讲了很多 “写出无法维护的代码” 的方法。大家看个乐就好，最好还是别轻易实践 如何编写无法维护的代码 让自己稳拿铁饭碗 ;-) – Roedy Green 永远不要（把自己遇到的问题）归因于（他人的）恶意，这恰恰说明了（你自己的）无能。 – 拿破仑  为了造福大众，在Java编程领域创造就业机会，兄弟我在此传">
+<meta property="og:description" content="我们可以见到许多有意思的编程风格，又没有精神为之一振的感觉，仿佛里面的例子就在自己身上，或者离自己很近。其实，对于文档、代码的评审，也是有诸多风格可言的，我这里列举一些有意思的典型： 一坨屎型评审 阅读文档、代码的时候，这些东西在自己眼里就是一坨屎：“我这么高智商的人都看不懂，明显是你有问题！”。 这样的人有一个他自己相当认可的世界观，凡是和这个世界观相冲突的无论对错的事务，必须强力排斥。这样的人">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://songchen0825.github.io/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/image.png">
-<meta property="og:image" content="https://songchen0825.github.io/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/image-1.png">
-<meta property="og:image" content="https://songchen0825.github.io/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/image-2.png">
-<meta property="article:published_time" content="2024-01-12T00:34:45.000Z">
-<meta property="article:modified_time" content="2024-01-11T08:43:44.878Z">
+<meta property="article:published_time" content="2024-01-12T19:30:30.000Z">
+<meta property="article:modified_time" content="2024-01-12T03:30:58.590Z">
 <meta property="article:author" content="songchen">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://songchen0825.github.io/2024/01/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%97%A0%E6%B3%95%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%BB%A3%E7%A0%81/image.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -141,7 +137,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(17)</small>
+                <small>(19)</small>
             
         </div>
     </li>
@@ -181,7 +177,7 @@
         <div data-rel="软件工程">
             <i class="fold iconfont icon-right"></i>
             软件工程
-            <small>(9)</small>
+            <small>(11)</small>
         </div>
         
             <ul class="sub hide">
@@ -288,6 +284,32 @@
                 
                     
     <li>
+        <div data-rel="软件工程&lt;---&gt;系统运维">
+            <i class="fold iconfont icon-right"></i>
+            系统运维
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="软件工程&lt;---&gt;系统运维&lt;---&gt;云计算">
+            
+            云计算
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
         <div data-rel="软件工程&lt;---&gt;需求设计">
             <i class="fold iconfont icon-right"></i>
             需求设计
@@ -317,7 +339,7 @@
         <div data-rel="软件工程&lt;---&gt;杂记">
             
             杂记
-            <small>(1)</small>
+            <small>(2)</small>
         </div>
         
     </li>
@@ -410,6 +432,14 @@
             
         
     
+        
+            
+        
+    
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -425,7 +455,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="17">
+<input type="hidden" id="yelog_site_posts_number" value="19">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -481,6 +511,24 @@
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 软件工程 系统运维 云计算 "
+           href="/2024/01/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%B0%81%E6%9D%A5%E6%8B%AF%E6%95%91%E4%BA%91%E8%AE%A1%E7%AE%97/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="谁来拯救云计算">谁来拯救云计算</span>
+            <span class="post-date" title="2024-01-12 11:31:17">2024/01/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 软件工程 杂记 "
+           href="/2024/01/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E9%82%A3%E4%BA%9B%E7%89%9B%E5%8F%89%E6%97%A0%E6%AF%94%E7%9A%84%E8%AF%84%E5%AE%A1%E9%A3%8E%E6%A0%BC/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="那些牛叉无比的评审风格">那些牛叉无比的评审风格</span>
+            <span class="post-date" title="2024-01-12 11:30:30">2024/01/12</span>
+        </a>
         
         
         <a  class="全部文章 软件工程 需求设计 边缘功能 "
