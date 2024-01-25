@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>诗经·邶风·击鼓 | 圣人迅雷风烈必变安得不畏</title>
+  <title>AdvAPI自动接口方案使用说明 | 圣人迅雷风烈必变安得不畏</title>
   <meta name="keywords" content="">
-  <meta name="description" content="诗经·邶风·击鼓 | 圣人迅雷风烈必变安得不畏">
+  <meta name="description" content="AdvAPI自动接口方案使用说明 | 圣人迅雷风烈必变安得不畏">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1：你说鸡蛋不好吃？你生一个啊？（强人所难诡辩） 2：你说鸡蛋不好吃？呵呵你个鹅蛋脑残粉就知道嘚啵。（扣帽子诡辩） 3：你说鸡蛋不好吃？你说了就算啊，凭什么你能规定鸡蛋不好吃？（诉诸资历诡辩） 4：你说鸡蛋不好吃？再不好吃也是我们家的鸡蛋，吃里扒外的贱种！（诉诸人格诡辩） 5：你说鸡蛋不好吃？农民伯伯天天汗滴禾下土养鸡给你吃的鸡蛋，你有什么资格说不好吃？（道德绑架诡辩） 6：你说鸡蛋不好吃？得了吧">
 <meta property="og:type" content="article">
@@ -857,9 +857,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-树洞/诗经·邶风·击鼓" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-软件工程/AdvAPI自动接口方案使用说明" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">诗经·邶风·击鼓</h1>
+        <h1 class="article-title">AdvAPI自动接口方案使用说明</h1>
     
     <div class="article-meta">
         
@@ -869,7 +869,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="树洞">树洞</a>
+            <a  data-rel="软件工程">软件工程</a> > 
+            
+            <a  data-rel="软件工程&lt;---&gt;低代码">低代码</a>
             
         </span>
         
@@ -877,7 +879,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-04 23:03:14'>2024-01-05 15:02</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-24 23:19:28'>2024-01-25 15:18</time>
         
     </div>
     <div class="article-meta">
@@ -910,7 +912,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E7%9B%AE%E6%A0%87"><span class="toc-text">1. 自动化接口的功能和目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E8%87%AA%E5%8A%A8%E6%8E%A5%E5%8F%A3%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6"><span class="toc-text">2. 自动接口前置条件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-maven%E4%BE%9D%E8%B5%96"><span class="toc-text">2.1 maven依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">2.2 配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Springboot%E6%B7%BB%E5%8A%A0%E6%89%AB%E6%8F%8F%E8%B7%AF%E5%BE%84"><span class="toc-text">2.3 Springboot添加扫描路径</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95"><span class="toc-text">3. 操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8D%95%E5%BD%A2%E5%BC%8F"><span class="toc-text">3.1 接口简单形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95"><span class="toc-text">3.2 操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-GET%EF%BC%9A%E6%99%AE%E9%80%9A%E5%8D%95%E4%BD%93%E6%95%B0%E6%8D%AE"><span class="toc-text">3.2.1 GET：普通单体数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-GET%EF%BC%9A%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE"><span class="toc-text">3.2.2 GET：获取列表数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-GET%EF%BC%9A%E8%8E%B7%E5%8F%96%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE"><span class="toc-text">3.2.3 GET：获取分页数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-4-POST%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-text">3.2.4 POST：添加数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-5-PUT%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-text">3.2.5 PUT：添加数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-6-DELETE%EF%BC%9A%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-text">3.2.6 DELETE：删除数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-7-HEAD%EF%BC%9A%E6%99%AE%E9%80%9A%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1"><span class="toc-text">3.2.7 HEAD：普通数据统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-8-%E8%8E%B7%E5%8F%96%E5%BC%80%E6%94%BE%E8%A1%A8%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">3.2.8 获取开放表数据信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-9-%E8%8E%B7%E5%8F%96%E5%BC%80%E6%94%BE%E8%A1%A8%E6%95%B0%E6%8D%AE%E5%AD%97%E6%AE%B5%E4%BF%A1%E6%81%AF"><span class="toc-text">3.2.9 获取开放表数据字段信息</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%8A%9F%E8%83%BD%E7%AC%A6"><span class="toc-text">4. 功能符</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -926,16 +928,399 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　总是在特殊的日子就开始给予特殊的感伤，有时候我都理解这种情绪近乎于无聊，因为这个时候可是时间啊，不管你怎么想都是会来的。而赋予的特殊意义就像是自己给予自己加诸奇妙的味道，真切的感受它在喉管里流动着。</p>
-<p>　　我经常在某个瞬间呆掉，这个瞬间我会陷入很深的迷茫和恐慌，仿佛觉得一切都很奇妙，感觉这个人怎么会是存在在我的身边，我怎么会有如此的陌生感，在这个时刻，在做着这件事情，这种感触夹杂着很多的幸福，虚幻，以及很多莫名其妙。我试着抽离自己去想想这样是否是幸福的感觉，又或者是不知不觉自己陷入的迷思。现在幸福的一切的一切都是自己主观的一厢情愿，而在下一个瞬间很多事情都会打破这份在一起的感受，我们互相埋怨，互相的不满乃至于翻出很多的旧账指责着对方的忘恩负义。很本能且主观的不想受到伤害，不想受到伤害的唯一方式就是去攻击对方，不管自己是斗败的还是斗胜的，其实都遍体鳞伤，都不肯放下。</p>
-<p>　　是否是太年轻了，年轻的容不下自己的世界有一个另外一个世界的侵犯，这个侵入不是可以用生活上的相依相伴就能够掩饰掉的，我们都捍卫着自己的疆土，而我们又都太年轻了，抱着内心的疆土比谁都重要在执着，一刻也不放松。即使我已经渐渐的开始感受到所有的一切一切都是你学习来的，并没有什么是你与生俱来的东西，但“我执”这个词却很难放下。哲学都被我们滥用了，我们开始莫名其妙的告诉自己什么是自己的底线，什么是我不能接受的，你最好不要侵犯到我最后的尊严，为了这样或者那样的一切，发现对方总是有意无意的去践踏自己认为真正珍贵的东西。开始不可抑制的发作，你怎么这样，你怎么不懂，你怎么连这点都不放过。一遍遍的去原谅对方，其实心里告诉自己我的领地又被伤到了。最好下不为例，为下次却依然再犯，换来更大的愤怒和伤害。于是有一天突然开始学习用爱的名义为对方掩饰，开始试着了解本不属于自己的领地，即使是装了解也好，也许这样的伤害会小一点。我知道你的什么什么，但是……其实哪有“我知道”，只有“但是”。说话的方式就是前面半句其实没有意义，我们却相信这样的说话方式能够让对方更好的接受，其实对方连“但是”后面都没有听到。我们总是选择性的失聪掉自己不想听话的话，因为我们不过是个凡人，对自己不利的时候就开始原谅自己的平凡，而不再告诉自己是那么的独一无二。想想如果真的是如此平凡，你的执念又有谁在意呢。</p>
-<p>　　回来的时候外婆病了，我回来时候就看望了她老人家，病痛折磨的她略显的有点苍老。看的我很心疼，但是我依然是个不懂的表达情绪的家伙，只有玩世不恭的说着不着四六的话来转移情绪。送外婆出病房去做B超时候我看到我的外公（虽然不是真正的，但从我有意识开始，这个老人就扮演着我外公的角色）从电梯里出来，他并没有对我回来有我想象的兴奋，而是立刻俯身下来询问我外婆的情况，问得话都很平淡，而伴随着福州话以及老人家特有略大的嗓门，其实很难说那是种温柔，但他直起身的时候我看到他眼神里的焦虑我觉得我一瞬间我读懂了，读懂了自己的愚蠢，也读懂了他们的幸福。他们的爱情早就超脱了我这种孩子能够理解范围，他们已经不在是需要文采去修饰的爱情，而把所有对对方最真实的情感都包含在了最平淡的语言上了。他们根本就不会去提一些我们这些孩子还在考虑的幼稚问题，这份看似平淡的心定是需要多少沧桑换来的。我不需要告诉你我能赚多少钱回来，我也不用告诉你我有多么漂亮，而这份相依只是因为彼此的存在，直到生命的最后一刻。在这个生命的进程里面，我们都看到了彼此，很难想象失去彼此的生活有多么的寂寞，而要在一起我不要你为了做什么，我只要你好好的活着，只要生命能够延续下去，我们的爱情就能延续下去，我们彼此分享的生命就不会在这一刻结束，请活下去吧。</p>
-<p>　　在我已经开始怀疑那句我挚爱的话：“从今以后我们只有死别,没有生离”的时候，我又开始相信这个世界上确实有着无数相守的两个人，我们用掉了一半的牙齿去吃麦当劳，你扶着我因为中风而不再便利的身躯花别人几倍的时间走完这条小路。我们相视而笑，当年我们相爱的一切理由都随着生命的流逝从身上丢掉了，但我们依然相爱。当我开始理解这个时候，我发现这不过是一种心定，我不会拿你身上的缺点去和别人比较，我不会因为你有这般那般不好就去说你怎么不学学某某某，脾气不好又如何，懒惰又如何，如果这些不是和别人比较，又怎么会得出这种结果呢。而在我眼中就根本没有别人，你又怎么会不好呢。因为是你，都是微笑才有意义，因为是你，都是艰辛我也愿意承受。因为这一切的一切都会消逝，而我对你的感情从不参杂着这份因素，这一切从一开始就不是我爱你的理由，所以请不要在意你已经不再青春的年华，不再窈窕的身材，不要聪明的智慧，那些对别人有意义，但对我没有。此刻看着你的我，就是我对你的爱情。</p>
-<p>　　我一直是个很倔强的人，经常有人喜欢对着我的生活指指点点，我总是自视很高的认为别人的观点非常浅薄，而且如果这些道理真的如你们所说的那么管用，为什么你们的人生过的如此不堪。不过在爱情上，我应该收拾起自己的傲慢了。外婆只是简单的说了：要幸福啊。也许很多人都告诉过我了。但只有这一刻的他们让我如此感动。是啊，要幸福。在这个美丽的节日里，如果你爱他(她)，收起那该死的一切，丢掉所有“我执”，因为在这个时刻，他(她)就是你的一切，所以请平静的走到你的爱人面前，真诚的对他(她)说一句：我爱你。在这个略显冷漠的城市里，在迷失和彷徨间，让他(她)知道，冥冥之中，自有一双属于你的双手，它们紧紧地握住你，陪你走过所有的阴天和所有的艳阳天，直到一生一世。</p>
-<p>　　执子之手,与子共著.</p>
-<p>　　执子之手,与子同眠.</p>
-<p>　　执子之手,与子偕老.</p>
-<p>　　执子之手,夫复何求?</p>
+        <h1 id="1-自动化接口的功能和目标"><a href="#1-自动化接口的功能和目标" class="headerlink" title="1. 自动化接口的功能和目标"></a>1. 自动化接口的功能和目标</h1><p>通过apijson框架实现 JSON 网络传输协议 以及 基于这套协议实现的 ORM 库。为各种增删改查提供了完全自动化的万能通用接口，设计数据结构完成后，自动实现各种新增和变更需求。能大幅降低开发和沟通成本，简化开发流程，缩短开发周期。通过万能通用接口，前端可以定制任何数据、任何结构。，自动化接口生成功能使得开发者能够更容易地创建、维护和使用API，降低了开发的复杂性，提高了开发的效率。</p>
+<h1 id="2-自动接口前置条件"><a href="#2-自动接口前置条件" class="headerlink" title="2. 自动接口前置条件"></a>2. 自动接口前置条件</h1><p>本文档基于 Springboot3.2 版本编写。经测试暂时无法满足Springboot2.x功能，请升级到指定版本及对应jdk21以满足实现。数据库连接池采用druid，与往常项目无异，无需额外配置，仅需引入当前数据库驱动即可。</p>
+<p>微服务框架依赖framework-core 1.2.0版本</p>
+<p>版本说明<br>在下载组件之前，请选择合适的版本。advapi 通过公司服务 Nexus Repository 管理开放的下载源码路径。</p>
+<p>依赖包下载<br>依赖包下载请参考公司内部 <a target="_blank" rel="noopener" href="http://192.168.0.99:8081/nexus/">Nexus</a></p>
+<h2 id="2-1-maven依赖"><a href="#2-1-maven依赖" class="headerlink" title="2.1 maven依赖"></a>2.1 maven依赖</h2><pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.ylsoft&lt;/groupId&gt;
+    &lt;artifactId&gt;yl-adv-api&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="2-2-配置文件"><a href="#2-2-配置文件" class="headerlink" title="2.2 配置文件"></a>2.2 配置文件</h2><p>使用Spring Boot进行应用程序开发时，相关信息的配置文件 ，如数据库类型，数据库版本，对外开放数据表等信息。</p>
+<p><strong>注意</strong>：</p>
+<blockquote>
+<p>本框架下默认舍弃数据库自增id，采用uuid为唯一主键，框架会自动填写该id，该id的命名规则应与对外开放名称保持一致<br>例如:t_tenant_info的主键tenand_id,所以对外暴露名称为Tenant,无法匹配时或传值将自动忽略。</p>
+</blockquote>
+<pre><code class="properties"># 指定数据库 备选：MYSQL，POSTGRESQL，SQLSERVER，ORACLE，DB2，DAMENG，KINGBASE
+adv.api.database=POSTGRESQL
+# 默认数据库名/模式，改成你自己的，默认情况是 MySQL: sys, PostgreSQL: sys, SQL Server: dbo
+adv.api.schema=public
+# 自动生成接口路径，默认为/adv/api
+adv.api.path=/adv/api
+# 对外开放数据表，tables后为对外开放名称的映射关系
+adv.api.tables.Account=t_user_account
+adv.api.tables.TenantApplication=t_tenant_application
+adv.api.tables.TenantIndex=t_tenant_index
+adv.api.tables.Tenant=t_tenant_info
+adv.api.tables.TenantConfiguration=t_tenant_configuration
+# 对外支持的方法，用于仅开放查询的环境。
+adv.api.methods=get,post,put,delete,head
+</code></pre>
+<h2 id="2-3-Springboot添加扫描路径"><a href="#2-3-Springboot添加扫描路径" class="headerlink" title="2.3 Springboot添加扫描路径"></a>2.3 Springboot添加扫描路径</h2><p>添加路径 <code>com.ylsoft.framework.adv.api</code></p>
+<pre><code class="java">@SpringBootApplication(scanBasePackages = &quot;com.ylsoft.framework.adv.api&quot;)
+public class Main &#123;
+    public static void main(String[] args) &#123;
+        SpringApplication.run(Main.class, args);
+    &#125;
+&#125;
+</code></pre>
+<h1 id="3-操作方法"><a href="#3-操作方法" class="headerlink" title="3. 操作方法"></a>3. 操作方法</h1><h2 id="3-1-接口简单形式"><a href="#3-1-接口简单形式" class="headerlink" title="3.1 接口简单形式"></a>3.1 接口简单形式</h2><p>根据上述配置文件生成的路径，对应以下的路径，来进行对应的数据操作 。在HTTP通信中，自动化接口(get,gets,head,heads,post,put,delete) 全用HTTP POST请求。所有JSONObject都视为容器(或者文件夹)，结构为 {…} ，里面可以放普通对象或子容器。</p>
+<p>method | info         | url<br>    —— | ———— | ——————————<br>     GET    | 普通获取数据 | base_url&#x2F;{adv.api.path}&#x2F;get<br>     HEAD   | 普通获取数量 | base_url&#x2F;{adv.api.path}&#x2F;head<br>     POST   | 新增数据     | base_url&#x2F;{adv.api.path}&#x2F;post<br>     PUT    | 修改数据     | base_url&#x2F;{adv.api.path}&#x2F;put<br>     DELETE | 删除数据     | base_url&#x2F;{adv.api.path}&#x2F;delete </p>
+<p>所有的数据传输都依据json进行传输，TableName指要查询的数据库表Table的名称字符串。此处的table名称为配置文件指定的配置信息，第一个字符为大写字母，剩下的字符要符合英语字母、数字、下划线中的任何一种。对应的值的类型为JSONObject，结构是 {…}，里面放的是Table的字段(列名)。</p>
+<h2 id="3-2-操作方法"><a href="#3-2-操作方法" class="headerlink" title="3.2 操作方法"></a>3.2 操作方法</h2><h3 id="3-2-1-GET：普通单体数据"><a href="#3-2-1-GET：普通单体数据" class="headerlink" title="3.2.1 GET：普通单体数据"></a>3.2.1 GET：普通单体数据</h3><p><strong>格式</strong></p>
+<pre><code class="json">&#123;
+   TableName:&#123;
+     ……
+   &#125;
+&#125;
+</code></pre>
+<p><strong>例子</strong></p>
+<pre><code class="json">&#123;
+     &quot;Account&quot;: &#123;
+          &quot;user_id&quot;: &quot;b2aa566a680f45479b28c82ed50dbc3f&quot;
+     &#125;
+&#125;
+</code></pre>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;Account&quot;: &#123;
+        &quot;id&quot;: 1002,
+        &quot;user_id&quot;: &quot;b2aa566a680f45479b28c82ed50dbc3f&quot;,
+        &quot;password&quot;: &quot;2e0bbe1f94013b92ff723d0a362804de&quot;,
+        &quot;state&quot;: 1,
+        &quot;account&quot;: &quot;jiangbin&quot;,
+        &quot;last_login&quot;: &quot;2024-01-05 00:00:00.0&quot;,
+        &quot;create_time&quot;: &quot;2023-07-06 06:50:07.120673&quot;,
+        &quot;last_update_password&quot;: &quot;2023-12-06 10:51:05.501&quot;
+    &#125;,
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;,
+    &quot;time&quot;: 1705645550814
+&#125;
+</code></pre>
+<h3 id="3-2-2-GET：获取列表数据"><a href="#3-2-2-GET：获取列表数据" class="headerlink" title="3.2.2 GET：获取列表数据"></a>3.2.2 GET：获取列表数据</h3><p><strong>格式</strong></p>
+<pre><code class="json">&#123;
+    &quot;[]&quot;:&#123;
+        &#123;
+          TableName:&#123;
+            ……
+          &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p><strong>例子</strong></p>
+<pre><code class="json">&#123;
+     &quot;[]&quot;: &#123;
+          &quot;Account&quot;: &#123;
+          &#125;
+     &#125;
+    
+&#125;
+</code></pre>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;[]&quot;: [
+        &#123;
+            &quot;Account&quot;: &#123;
+                &quot;id&quot;: 1002,
+                &quot;user_id&quot;: &quot;b2aa566a680f45479b28c82ed50dbc3f&quot;,
+                &quot;password&quot;: &quot;2e0bbe1f94013b92ff723d0a362804de&quot;,
+                &quot;state&quot;: 1,
+                &quot;account&quot;: &quot;jiangbin&quot;,
+                &quot;last_login&quot;: &quot;2024-01-05 00:00:00.0&quot;,
+                &quot;create_time&quot;: &quot;2023-07-06 06:50:07.120673&quot;,
+                &quot;last_update_password&quot;: &quot;2023-12-06 10:51:05.501&quot;
+            &#125;
+        &#125;
+    ],
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;,
+    &quot;time&quot;: 1705646091089
+&#125;
+</code></pre>
+<h3 id="3-2-3-GET：获取分页数据"><a href="#3-2-3-GET：获取分页数据" class="headerlink" title="3.2.3 GET：获取分页数据"></a>3.2.3 GET：获取分页数据</h3><ol>
+<li>“count”:Integer，查询数量，0 表示最大值，默认最大值为100</li>
+<li>“page”:Integer，查询页码，从0开始，默认最大值为100，一般和count一起用</li>
+<li>“query”:Integer，查询内容 0-对象，1-总数和分页详情，2-数据、总数和分页详情 总数关键词为 total，分页详情关键词为 info，</li>
+</ol>
+<p><strong>格式</strong></p>
+<pre><code class="json">&#123;
+    &quot;[]&quot;:&#123;
+        &#123;
+          &quot;page&quot;:,
+          &quot;count&quot;:,
+          &quot;query&quot;:,
+          TableName:&#123;
+            ……
+          &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p><strong>例子</strong></p>
+<pre><code class="json">&#123;
+     &quot;[]&quot;: &#123;
+          &quot;Account&quot;: &#123;
+          &#125;
+     &#125;
+    
+&#125;
+</code></pre>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;[]&quot;: [
+        &#123;
+            &quot;Account&quot;: &#123;
+                &quot;id&quot;: 1002,
+                &quot;user_id&quot;: &quot;b2aa566a680f45479b28c82ed50dbc3f&quot;,
+                &quot;password&quot;: &quot;2e0bbe1f94013b92ff723d0a362804de&quot;,
+                &quot;state&quot;: 1,
+                &quot;account&quot;: &quot;jiangbin&quot;,
+                &quot;last_login&quot;: &quot;2024-01-05 00:00:00.0&quot;,
+                &quot;create_time&quot;: &quot;2023-07-06 06:50:07.120673&quot;,
+                &quot;last_update_password&quot;: &quot;2023-12-06 10:51:05.501&quot;
+            &#125;
+        &#125;
+    ],
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;,
+    &quot;time&quot;: 1705646091089
+&#125;
+</code></pre>
+<h3 id="3-2-4-POST：添加数据"><a href="#3-2-4-POST：添加数据" class="headerlink" title="3.2.4 POST：添加数据"></a>3.2.4 POST：添加数据</h3><p>添加数据之后，会返回开放名称对应的id。<br><strong>格式</strong></p>
+<pre><code class="json">&#123;
+   TableName:&#123;
+     ……
+   &#125;
+&#125;
+</code></pre>
+<p><strong>例子</strong></p>
+<pre><code class="json">&#123;
+     &quot;Account&quot;:&#123;
+          &quot;account&quot;:&quot;account&quot;
+     &#125;
+&#125;
+</code></pre>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;Account&quot;: &#123;
+        &quot;ok&quot;: true,
+        &quot;code&quot;: 200,
+        &quot;msg&quot;: &quot;success&quot;,
+        &quot;count&quot;: 1,
+        &quot;tenant_id&quot;: &quot;58ae5369dc1b4efda650ab54906a7ff0&quot;
+    &#125;,
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;,
+    &quot;time&quot;: 1705635479066
+&#125;
+</code></pre>
+<h3 id="3-2-5-PUT：添加数据"><a href="#3-2-5-PUT：添加数据" class="headerlink" title="3.2.5 PUT：添加数据"></a>3.2.5 PUT：添加数据</h3><p>使用业务id或者数据库自增id皆可 。</p>
+<p><strong>格式</strong></p>
+<pre><code class="json">&#123;
+   TableName:&#123;
+     ……
+   &#125;
+&#125;
+</code></pre>
+<p><strong>例子</strong></p>
+<pre><code class="json">&#123;
+     &quot;Account&quot;:&#123;
+          &quot;account&quot;:&quot;account1&quot;,
+          &quot;acccount_id&quot;:&quot;58ae5369dc1b4efda650ab54906a7ff0&quot;
+     &#125;
+&#125;
+</code></pre>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;Account&quot;: &#123;
+        &quot;ok&quot;: true,
+        &quot;code&quot;: 200,
+        &quot;msg&quot;: &quot;success&quot;,
+        &quot;count&quot;: 1,
+        &quot;tenant_id&quot;: &quot;58ae5369dc1b4efda650ab54906a7ff0&quot;
+    &#125;,
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;,
+    &quot;time&quot;: 1705635479066
+&#125;
+</code></pre>
+<h3 id="3-2-6-DELETE：删除数据"><a href="#3-2-6-DELETE：删除数据" class="headerlink" title="3.2.6 DELETE：删除数据"></a>3.2.6 DELETE：删除数据</h3><p>使用业务id或者数据库自增id皆可 。</p>
+<p><strong>格式</strong></p>
+<pre><code class="json">&#123;
+   TableName:&#123;
+     ……
+   &#125;
+&#125;
+</code></pre>
+<p><strong>例子</strong></p>
+<pre><code class="json">&#123;
+     &quot;Account&quot;:&#123;
+          &quot;account&quot;:&quot;account1&quot;,
+          &quot;acccount_id&quot;:&quot;58ae5369dc1b4efda650ab54906a7ff0&quot;
+     &#125;
+&#125;
+</code></pre>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;Tenant&quot;: &#123;
+        &quot;ok&quot;: true,
+        &quot;code&quot;: 200,
+        &quot;msg&quot;: &quot;success&quot;,
+        &quot;count&quot;: 1,
+        &quot;tenant_id&quot;: &quot;58ae5369dc1b4efda650ab54906a7ff0&quot;
+    &#125;,
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;,
+    &quot;time&quot;: 1705635479066
+&#125;
+</code></pre>
+<h3 id="3-2-7-HEAD：普通数据统计"><a href="#3-2-7-HEAD：普通数据统计" class="headerlink" title="3.2.7 HEAD：普通数据统计"></a>3.2.7 HEAD：普通数据统计</h3><p><strong>格式</strong></p>
+<pre><code class="json">&#123;
+   TableName:&#123;
+     ……
+   &#125;
+&#125;
+</code></pre>
+<p><strong>例子</strong></p>
+<pre><code class="json">&#123;
+     &quot;Account&quot;: &#123;
+     &#125;
+&#125;
+</code></pre>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;Account&quot;: &#123;
+        &quot;ok&quot;: true,
+        &quot;code&quot;: 200,
+        &quot;msg&quot;: &quot;success&quot;,
+        &quot;count&quot;: 5
+    &#125;,
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;,
+    &quot;time&quot;: 1705646946162
+&#125;
+</code></pre>
+<h3 id="3-2-8-获取开放表数据信息"><a href="#3-2-8-获取开放表数据信息" class="headerlink" title="3.2.8 获取开放表数据信息"></a>3.2.8 获取开放表数据信息</h3><p><code>base_url/&#123;adv.api.path&#125;/dataset/tables</code> 请求获取所有对外开放的数据表，显示配置信息，不展示数据库真是数据表名。</p>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;data&quot;: &#123;
+        &quot;TenantApplication&quot;: &quot;租户订阅表&quot;,
+        &quot;TenantIndex&quot;: &quot;租户目录&quot;,
+        &quot;TenantConfiguration&quot;: &quot;租户配置信息&quot;,
+        &quot;Tenantx&quot;: &quot;租户信息表&quot;
+    &#125;,
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;
+&#125;
+</code></pre>
+<h3 id="3-2-9-获取开放表数据字段信息"><a href="#3-2-9-获取开放表数据字段信息" class="headerlink" title="3.2.9 获取开放表数据字段信息"></a>3.2.9 获取开放表数据字段信息</h3><p><code>base_url/&#123;adv.api.path&#125;/dataset/columns/&#123;table&#125;</code> 请求获取所有对外开放的数据表字段信息，{table}为配置表信息，非数据库真是表名</p>
+<p><strong>返回结果</strong></p>
+<pre><code class="json">&#123;
+    &quot;data&quot;: &#123;
+        &quot;delete_allowed&quot;: &quot;是否允许删除;1是0否&quot;,
+        &quot;password&quot;: &quot;密码（加密后）&quot;,
+        &quot;salt&quot;: &quot;盐（动态）&quot;,
+        &quot;create_time&quot;: &quot;创建时间&quot;,
+        &quot;user_id&quot;: &quot;用户id&quot;,
+        &quot;last_login&quot;: &quot;最后登录日期&quot;,
+        &quot;last_update_password&quot;: &quot;最后修改密码时间&quot;,
+        &quot;id&quot;: &quot;ID自增主键&quot;,
+        &quot;state&quot;: &quot;状态&quot;,
+        &quot;account&quot;: &quot;登录帐号&quot;
+    &#125;,
+    &quot;ok&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;success&quot;
+&#125;
+</code></pre>
+<h1 id="4-功能符"><a href="#4-功能符" class="headerlink" title="4. 功能符"></a>4. 功能符</h1><p>  特殊操作，各种单表数组查询：简单查询、统计、分组、排序、聚合、分页、比较、搜索、正则、条件组合等复杂操作，需要用到功能符号。 </p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>键值对格式</th>
+<th>使用示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>查询数组</td>
+<td>“key[]”:{}，后面是JSONObject，key可省略。当key和里面的Table名相同时，Table会被提取出来，即 {Table:{Content}} 会被转化为 {Content}</td>
+<td>{“User[]”:{“User”:{}}}，查询一个User数组。这里key和Table名都是User，User会被提取出来，即 {“User”:{“id”, …}} 会被转化为 {“id”, …}，如果要进一步提取User中的id，可以把User[]改为User-id[]</td>
+</tr>
+<tr>
+<td>匹配选项范围</td>
+<td>“key{}”:[]，后面是JSONArray，作为key可取的值的选项</td>
+<td>“id{}”:[38710,82001,70793]，对应SQL是<code>id IN(38710,82001,70793)</code>，查询id符合38710,82001,70793中任意一个的一个User数组</td>
+</tr>
+<tr>
+<td>匹配条件范围</td>
+<td>“key{}”:”条件0,条件1…”，条件为SQL表达式字符串，可进行数字比较运算等</td>
+<td>“id{}”:”&lt;&#x3D;80000,&gt;90000”，对应SQL是<code>id&lt;=80000 OR id&gt;90000</code>，查询id符合id&lt;&#x3D;80000 | id&gt;90000的一个User数组</td>
+</tr>
+<tr>
+<td>包含选项范围</td>
+<td>“key&lt;&gt;“:Object  &#x3D;&gt;  “key&lt;&gt;“:[Object]，key对应值的类型必须为JSONArray，Object类型不能为JSON</td>
+<td>“contactIdList&lt;&gt;”:[38710]，对应SQL是<code>json_contains(contactIdList,38710)</code>，查询contactIdList包含38710的一个User数组</td>
+</tr>
+<tr>
+<td>判断是否存在</td>
+<td>“key}{@”:{  “from”:”Table”,  “Table”:{ … }}其中：}{ 表示 EXISTS； key 用来标识是哪个判断； @ 后面是 子查询 对象，具体见下方 子查询 的说明。</td>
+<td>“id}{@”:{  “from”:”Comment”,  “Comment”:{    “momentId”:15   }}WHERE EXISTS(SELECT * FROM Comment WHERE momentId&#x3D;15)</td>
+</tr>
+<tr>
+<td>子查询</td>
+<td>“key@”:{  “range”:”ALL”,   “from”:”Table”,  “Table”:{ … }}其中：range 可为 ALL,ANY；from 为目标表 Table 的名称；@ 后面的对象类似数组对象，可使用 count 和 join 等功能。</td>
+<td>“id@”:{  “from”:”Comment”,  “Comment”:{    “@column”:”min(userId)”   }}WHERE id&#x3D;(SELECT min(userId) FROM Comment)</td>
+</tr>
+<tr>
+<td>模糊搜索</td>
+<td><code>&quot;key$&quot;:&quot;SQL搜索表达式&quot;</code>  &#x3D;&gt;  <code>&quot;key$&quot;:[&quot;SQL搜索表达式&quot;]</code>，任意SQL搜索表达式字符串，如 %key%(包含key), key%(以key开始), %k%e%y%(包含字母k,e,y) 等，%表示任意字符</td>
+<td>“name$”:”%m%”，对应SQL是<code>name LIKE &#39;%m%&#39;</code>，查询name包含”m”的一个User数组</td>
+</tr>
+<tr>
+<td>正则匹配</td>
+<td>“key<del>“:”正则表达式”  &#x3D;&gt;  “key</del>“:[“正则表达式”]，任意正则表达式字符串，如 ^[0-9]+$ ，*~ 忽略大小写，可用于高级搜索</td>
+<td>“name~”:”^[0-9]+$”</td>
+</tr>
+<tr>
+<td>连续范围</td>
+<td>“key%”:”start,end” &#x3D;&gt; “key%”:[“start,end”]，其中 start 和 end 都只能为 Boolean, Number, String 中的一种，如 “2017-01-01,2019-01-01” ，[“1,90000”, “82001,100000”] ，可用于连续范围内的筛选</td>
+<td>“date%”:”2017-10-01,2018-10-01”，对应SQL是<code>date BETWEEN &#39;2017-10-01&#39; AND &#39;2018-10-01&#39;</code>，查询在2017-10-01和2018-10-01期间注册的用户的一个User数组</td>
+</tr>
+<tr>
+<td>新建别名</td>
+<td>“name:alias”，name映射为alias，用alias替代name。可用于 column,Table,SQL函数 等。只用于GET类型、HEAD类型的请求</td>
+<td>“@column”:”toId:parentId”，对应SQL是<code>toId AS parentId</code>，将查询的字段toId变为parentId返回</td>
+</tr>
+<tr>
+<td>逻辑运算</td>
+<td>&amp;, |, ! 逻辑运算符，对应数据库 SQL 中的 AND, OR, NOT。  <br>横或纵与：同一键值对的值内条件默认 | 或连接，可以在 key 后加逻辑运算符来具体指定；不同键值对的条件默认 &amp; 与连接，可以用下面说明的对象关键词 @combine 来具体指定。  <br>  <br>① &amp; 可用于”key&amp;{}”:”条件”等  <br>  <br>② | 可用于”key|{}”:”条件”, “key|{}”:[]等，一般可省略  <br>  <br>③ ! 可单独使用，如”key!”:Object，也可像&amp;,|一样配合其他功能符使用  <br>“key!”:null 无效，null 值会导致整个键值对被忽略解析，可以用 “key{}”:”!&#x3D;null” 替代，  <br>“key”:null 同理，用 “key{}”:”&#x3D;null” 替代。</td>
+<td>① “id&amp;{}”:”&gt;80000,&lt;&#x3D;90000”，对应SQL是<code>id&gt;80000 AND id&lt;=90000</code>，即id满足id&gt;80000 &amp; id&lt;&#x3D;90000  <br>  <br>② “id|{}”:”&gt;90000,&lt;&#x3D;80000”，同”id{}”:”&gt;90000,&lt;&#x3D;80000”，对应SQL是<code>id&gt;90000 OR id&lt;=80000</code>，即id满足id&gt;90000 | id&lt;&#x3D;80000  <br>  <br>③ “id!{}”:[82001,38710]，对应SQL是<code>id NOT IN(82001,38710)</code>，即id满足 ! (id&#x3D;82001 | id&#x3D;38710)，可过滤黑名单的消息</td>
+</tr>
+<tr>
+<td>数组关键词</td>
+<td>“key”:Object，key为 “[]”:{} 中{}内的关键词，Object的类型由key指定  <br>  <br>① “count”:Integer，查询数量，0 表示最大值，默认最大值为100  <br>  <br>② “page”:Integer，查询页码，从0开始，默认最大值为100，一般和count一起用  <br>  <br>③ “query”:Integer，查询内容  <br>0-对象，1-总数和分页详情，2-数据、总数和分页详情  <br>总数关键词为 total，分页详情关键词为 info，  <br>它们都和 query 同级，通过引用赋值得到，例如  <br>“total@”:”&#x2F;[]&#x2F;total”, “info@”:”&#x2F;[]&#x2F;info”  <br>这里query及total仅为GET类型的请求提供方便，  <br>一般可直接用HEAD类型的请求获取总数  <br>  <br>④ “join”:”&amp;&#x2F;Table0,&lt;&#x2F;Table1&#x2F;key1@” 或  <br>“join”:{  <br>   “&amp;&#x2F;Table0”:{}, &#x2F;&#x2F; 支持 ON 多个字段关联,  <br>   “&lt;&#x2F;Table1&#x2F;key1@”:{ &#x2F;&#x2F; ON 只允许指定的 key1 关联  <br>     “key0”:value0, &#x2F;&#x2F; 其它ON条件  <br>     “key2”:value2,  <br>     …  <br>     “@combine”:”…”, &#x2F;&#x2F; 其它ON条件的组合方式  <br>     “@column”:”…”, &#x2F;&#x2F; 外层 SELECT  <br>     “@group”:”…”, &#x2F;&#x2F; 外层 GROUP BY  <br>     “@having”:”…” &#x2F;&#x2F; 外层 HAVING  <br>   }  <br>}</td>
+<td>① 查询User数组，最多5个：  <br>“count”:5<br>对应SQL是<code>LIMIT 5</code>  <br>  <br>② 查询第3页的User数组，每页5个：  <br>“count”:5,  “page”:3] <br>对应SQL是<code>LIMIT 5 OFFSET 15</code>  <br>  <br>③ 查询User数组和对应的User总数：  <br>“[]”:{  <br>   “query”:2,  <br>   “User”:{}  <br>},  <br>“total@”:”&#x2F;[]&#x2F;total”,  <br>“info@”:”&#x2F;[]&#x2F;info”  <br>返回的数据中，总数及分页详情结构为：  <br>“total”:139, &#x2F;&#x2F;总数  <br>“info”:{ &#x2F;&#x2F;分页详情  <br>   “total”:139, &#x2F;&#x2F;总数  <br>   “count”:5, &#x2F;&#x2F;每页数量  <br>   “page”:0, &#x2F;&#x2F;当前页码  <br>   “max”:27, &#x2F;&#x2F;最大页码  <br>   “more”:true, &#x2F;&#x2F;是否还有更多  <br>   “first”:true, &#x2F;&#x2F;是否为首页  <br>   “last”:false &#x2F;&#x2F;是否为尾页  <br>}  <br>  <br>④ Moment INNER JOIN User LEFT JOIN Comment：  <br>[“[]”:{  <br>   “join”:”&amp;&#x2F;User&#x2F;id@,&lt;&#x2F;Comment”,  <br>   “Moment”:{  <br>     “@group”:”id” &#x2F;&#x2F;主副表不是一对一，要去除重复数据  <br>   },  <br>   “User”:{  <br>     “name~”:”t”,  <br>     “id@”:”&#x2F;Moment&#x2F;userId”  <br>   },  <br>   “Comment”:{  <br>     “momentId@”:”&#x2F;Moment&#x2F;id”  <br>   }  <br>}</td>
+</tr>
+<tr>
+<td>对象关键词</td>
+<td>“@key”:Object，@key为 Table:{} 中{}内的关键词，Object的类型由@key指定  <br>  <br>① “@combine”:”key0 | (key1 &amp; (key2 | !key3))…”，条件组合方式，最终按  <br>(其它key条件 AND 连接) AND (key0条件 OR (key1条件 AND (key2条件 OR (NOT key3条件))))  <br>这种方式连接，其中 “其它key” 是指与 @combine 在同一对象，且未被它声明的条件 key，默认都是 &amp; 连接。注意不要缺少或多余任何一个空格。  <br>  <br>② “@column”:”column;function(arg)…”，返回字段  <br>  <br>③ “@order”:”column0+,column1-…”，排序方式  <br>  <br>④ “@group”:”column0,column1…”，分组方式。如果@column里声明了Table的id，则id也必须在@group中声明；其它情况下必须满足至少一个条件:  <br>1.分组的key在@column里声明  <br>2.Table主键在@group中声明  <br>  <br>⑤ “@having”:”function0(…)?value0;function1(…)?value1;function2(…)?value2…” &#x2F;&#x2F; OR 连接，或  <br>“@having&amp;”:”function0(…)?value0;function1(…)?value1;function2(…)?value2…” &#x2F;&#x2F; AND 连接，或  <br>“@having”:{  <br>   “h0”:”function0(…)?value0”,  <br>   “h1”:function1(…)?value1”,  <br>   “h2”:function2(…)?value2…”,  <br>   “@combine”:”h0 &amp; (h1 | !h2)” &#x2F;&#x2F; 任意组合，非必传  <br>}</td>
+<td>① 搜索name或tag任何一个字段包含字符a的User列表：  <br>“name<del>“:”a”,  <br>“tag</del>“:”a”,  <br>“@combine”:”name~ | tag~”<br>对应SQL是<code>name REGEXP &#39;a&#39; OR tag REGEXP &#39;a&#39;</code>  <br>  <br>② 只查询id,sex,name这几列并且请求结果也按照这个顺序：  <br>“@column”:”id,sex,name”<br>对应SQL是<code>SELECT id,sex,name</code>  <br>  <br>③ 查询按 name降序、id默认顺序 排序的User数组：  <br>“@order”:”name-,id”<br>对应SQL是<code>ORDER BY name DESC,id</code>  <br>  <br>④ 查询按userId分组的Moment数组：  <br>“@group”:”userId,id”<br>对应SQL是<code>GROUP BY userId,id</code>  <br>  <br>⑤ 查询 按userId分组、id最大值&gt;&#x3D;100 的Moment数组：  <br>“@column”:”userId;max(id)”,  <br>“@group”:”userId”,  <br>“@having”:”max(id)&gt;&#x3D;100”<br>对应SQL是<code>SELECT userId,max(id) ... GROUP BY userId HAVING max(id)&gt;=100</code>  <br>还可以指定函数返回名：  <br>“@column”:”userId;max(id):maxId”,  <br>“@group”:”userId”,  <br>“@having”:”(maxId)&gt;&#x3D;100”<br>对应SQL是<code>SELECT userId,max(id) AS maxId ... GROUP BY userId HAVING (maxId)&gt;=100</code></td>
+</tr>
+</tbody></table>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至songchen0825@gmail.com </span>
