@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>流程引擎业务场景说明 | 圣人迅雷风烈必变安得不畏</title>
+  <title>解决跨域问题的8种方法 | 圣人迅雷风烈必变安得不畏</title>
   <meta name="keywords" content="">
-  <meta name="description" content="流程引擎业务场景说明 | 圣人迅雷风烈必变安得不畏">
+  <meta name="description" content="解决跨域问题的8种方法 | 圣人迅雷风烈必变安得不畏">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1. 自动化接口的功能和目标通过apijson框架实现 JSON 网络传输协议 以及 基于这套协议实现的 ORM 库。为各种增删改查提供了完全自动化的万能通用接口，设计数据结构完成后，自动实现各种新增和变更需求。能大幅降低开发和沟通成本，简化开发流程，缩短开发周期。通过万能通用接口，前端可以定制任何数据、任何结构。，自动化接口生成功能使得开发者能够更容易地创建、维护和使用API，降低了开发的复杂性">
 <meta property="og:type" content="article">
@@ -866,19 +866,31 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-软件工程/流程引擎业务场景说明" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-软件工程/解决跨域问题的8种方法" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">流程引擎业务场景说明</h1>
+        <h1 class="article-title">解决跨域问题的8种方法</h1>
     
     <div class="article-meta">
         
         
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="软件工程">软件工程</a> > 
+            
+            <a  data-rel="软件工程&lt;---&gt;编码功能案例">编码功能案例</a> > 
+            
+            <a  data-rel="软件工程&lt;---&gt;编码功能案例&lt;---&gt;java">java</a>
+            
+        </span>
         
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-07 19:08:29'>2024-01-05 16:15</time>
+            发布时间 : <time class="date" title='最后更新: 2024-02-18 02:03:42'>2024-02-18 18:03</time>
         
     </div>
     <div class="article-meta">
@@ -911,7 +923,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 背景介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF"><span class="toc-text">1.1 业务背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF"><span class="toc-text">1.2 业务场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BA%A7%E5%93%81%E6%A6%82%E8%BF%B0"><span class="toc-text">2. 产品概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%BA%A7%E5%93%81%E5%AE%9A%E4%BD%8D"><span class="toc-text">2.1 产品定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9C%8D%E5%8A%A1%E5%AF%B9%E8%B1%A1"><span class="toc-text">2.2 服务对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-BPMN2-0-%E4%BB%8B%E7%BB%8D"><span class="toc-text">2.3 BPMN2.0 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%8A%9F%E8%83%BD%E5%BA%94%E7%94%A8%E9%9C%80%E6%B1%82"><span class="toc-text">2.4 功能应用需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%A8%A1%E5%9D%97%E5%8D%8F%E4%BD%9C%E5%85%B3%E7%B3%BB"><span class="toc-text">2.4 模块协作关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E8%A7%92%E8%89%B2%E6%9C%AF%E8%AF%AD"><span class="toc-text">2.5 角色术语</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8A%9F%E8%83%BD%E6%80%A7%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E"><span class="toc-text">3. 功能性需求说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B5%81%E7%A8%8B%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86"><span class="toc-text">3.1 流程应用管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E8%A1%A8%E5%8D%95%E8%AE%BE%E8%AE%A1%E5%99%A8%E5%92%8C%E8%A1%A8%E5%8D%95%E7%AE%A1%E7%90%86"><span class="toc-text">3.2 表单设计器和表单管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89-process-definition-%E7%AE%A1%E7%90%86"><span class="toc-text">3.3 流程定义**(process definition)**管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%B5%81%E7%A8%8B%E5%AE%9E%E4%BE%8B-process-instance-%E7%AE%A1%E7%90%86"><span class="toc-text">3.4 流程实例**(process instance)**管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E6%B5%81%E7%A8%8B%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-text">3.5 流程任务管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-%E6%B5%81%E7%A8%8B%E4%BB%BB%E5%8A%A1%E4%BA%BA%E5%91%98%E7%AE%A1%E7%90%86"><span class="toc-text">3.6 流程任务人员管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-%E6%B5%81%E7%A8%8B%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5-%EF%BC%88%E6%9C%AA%E5%BC%80%E5%A7%8B%EF%BC%89"><span class="toc-text">3.7 流程消息通知 （未开始）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-%E6%B5%81%E7%A8%8B%E4%BB%BB%E5%8A%A1%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">3.8 流程任务监听器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-9-%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%BB%98%E5%88%B6"><span class="toc-text">3.9 流程图绘制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-10-%E6%B5%81%E7%A8%8B%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1-%EF%BC%88%E6%9C%AA%E5%BC%80%E5%A7%8B%EF%BC%89"><span class="toc-text">3.10 流程数据统计 （未开始）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%9D%9E%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="toc-text">4. 非功能需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%A7%84%E5%88%92%E5%92%8C%E7%9B%AE%E6%A0%87"><span class="toc-text">5. 未来的规划和目标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-%E4%B8%AD%E5%8F%B0%E5%8C%96"><span class="toc-text">5.1 中台化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-%E4%BD%8E%E4%BB%A3%E7%A0%81"><span class="toc-text">5.2 低代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-%E6%99%BA%E8%83%BD%E5%8C%96"><span class="toc-text">5.3 智能化</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E6%96%B9%E6%A1%88"><span class="toc-text">解决跨域问题方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Spring-Boot-%E4%B8%AD%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F"><span class="toc-text">1.Spring Boot 中解决跨域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%80%9A%E8%BF%87%E6%B3%A8%E8%A7%A3%E8%B7%A8%E5%9F%9F"><span class="toc-text">1.1 通过注解跨域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%80%9A%E8%BF%87%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B7%A8%E5%9F%9F"><span class="toc-text">1.2 通过配置文件跨域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E9%80%9A%E8%BF%87-CorsFilter-%E8%B7%A8%E5%9F%9F"><span class="toc-text">1.3 通过 CorsFilter 跨域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E9%80%9A%E8%BF%87-Response-%E8%B7%A8%E5%9F%9F"><span class="toc-text">1.4 通过 Response 跨域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E9%80%9A%E8%BF%87-ResponseBodyAdvice-%E8%B7%A8%E5%9F%9F"><span class="toc-text">1.5 通过 ResponseBodyAdvice 跨域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Nginx-%E4%B8%AD%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F"><span class="toc-text">2.Nginx 中解决跨域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BD%91%E5%85%B3%E4%B8%AD%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F"><span class="toc-text">3.网关中解决跨域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AE%BE%E7%BD%AE%E8%B7%A8%E5%9F%9F"><span class="toc-text">3.1 配置文件中设置跨域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%B7%BB%E5%8A%A0-CorsWebFilter-%E6%9D%A5%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-text">3.2 添加 CorsWebFilter 来解决跨域问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -927,613 +939,259 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-背景介绍"><a href="#1-背景介绍" class="headerlink" title="1. 背景介绍"></a>1. 背景介绍</h2><h3 id="1-1-业务背景"><a href="#1-1-业务背景" class="headerlink" title="1.1 业务背景"></a>1.1 业务背景</h3><p>流程引擎作为一个底层支撑平台，它是为提供流程处理的开发而设计的。作为一个可供用户定义流程并且执行流程的业务框架。</p>
-<p>新版流程引擎为替换旧版的流程引擎而设计实现，目标为使其符合标准化的流程设计，满足通用流程进行流程的迁移，导入需求，避免单一流程应用需要重复开发的问题，流程流转过程中配合表单设计器，结合表单一起进行使用 。</p>
-<h3 id="1-2-业务场景"><a href="#1-2-业务场景" class="headerlink" title="1.2 业务场景"></a>1.2 业务场景</h3><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>场景&#x2F;商业模式</strong></td>
-<td><strong>商业价值</strong></td>
-<td></td>
-</tr>
-<tr>
-<td>标准服务</td>
-<td>流程表单，流程，应用等组件自动化生成生成流程应用。</td>
-<td></td>
-</tr>
-<tr>
-<td>定制化服务</td>
-<td>提供通用微服务接口，接入各个应用实现定制化流程应用。</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="2-产品概述"><a href="#2-产品概述" class="headerlink" title="2. 产品概述"></a>2. 产品概述</h2><h3 id="2-1-产品定位"><a href="#2-1-产品定位" class="headerlink" title="2.1 产品定位"></a>2.1 产品定位</h3><p>流程引擎对于第三方应用进行赋能，推动系统流转和数据流转，集中流程的管控，集成和服务能力，流程数据监控。提供统一入口，流程驱动企业级应用整合。</p>
-<p><strong>新版流程引擎基于BPMN 2.0流程定义</strong>（用于定义流程的行业XML标准）， 创建这些流程定义的流程实例，进行查询，访问运行中或历史的流程实例与相关数据。</p>
-<h3 id="2-2-服务对象"><a href="#2-2-服务对象" class="headerlink" title="2.2 服务对象"></a>2.2 服务对象</h3><p>微服务应用 ，办公平台，统一门户 。</p>
-<h3 id="2-3-BPMN2-0-介绍"><a href="#2-3-BPMN2-0-介绍" class="headerlink" title="2.3 BPMN2.0 介绍"></a>2.3 BPMN2.0 介绍</h3><p>业务流程模型和标记法（<strong>BPMN</strong>, Business Process Model and Notation）<strong>是一套图形化表示法</strong>，用于以图形的方式详细说明各种业务流程。</p>
-<p>它最初由业务流程管理倡议组织（BPMI, Business Process Management Initiative）开发，名称为”Business Process Modeling Notation”，即“业务流程建模标记法”。BPMI 于 2005 年与对象管理组织（OMG, Object Management Group）合并。2011 年 1 月 OMG 发布 2.0 版本（时至今日，没人会用 1.0 版本了），同时改为现在的名称。</p>
-<p>BPMN2.0 规范的实现，实质上是一个按照特定规范编写的 XML 文件，使用特定的 BPMN 设计器，即可以图形化的形式查看和编辑该文件。</p>
-<img src="/2024/01/06/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E8%AF%B4%E6%98%8E/image.png" class title="配置图">
+        <p>跨域问题是浏览器为了保护用户的信息安全，实施了同源策略（Same-Origin Policy），即只允许页面请求同源（相同协议、域名和端口）的资源，当 JavaScript 发起的请求跨越了同源策略，即请求的目标与当前页面的域名、端口、协议不一致时，浏览器会阻止请求的发送或接收。</p>
+<h2 id="解决跨域问题方案"><a href="#解决跨域问题方案" class="headerlink" title="解决跨域问题方案"></a>解决跨域问题方案</h2><p>跨域问题可以从以下方面解决：</p>
+<ol>
+<li><p><strong>应用层面解决</strong>：例如 Spring Boot 项目中解决跨域问题。</p>
+</li>
+<li><p><strong>反向代理解决</strong>：例如 Nginx 中解决跨域问题。</p>
+</li>
+<li><p><strong>网关中解决</strong>：例如 Spring Cloud Gateway 中解决跨域问题。</p>
+</li>
+</ol>
+<p>而这 3 类解决方案，总共包含了 8 种解决方案，一起来看。</p>
+<h2 id="1-Spring-Boot-中解决跨域"><a href="#1-Spring-Boot-中解决跨域" class="headerlink" title="1.Spring Boot 中解决跨域"></a>1.Spring Boot 中解决跨域</h2><p>在 Spring Boot 中跨域问题有以下 5 种解决方案：</p>
+<ol>
+<li><p>使用 @CrossOrigin 注解实现跨域【局域类跨域】</p>
+</li>
+<li><p>通过配置文件实现跨域【全局跨域】</p>
+</li>
+<li><p>通过 CorsFilter 对象实现跨域【全局跨域】</p>
+</li>
+<li><p>通过 Response 对象实现跨域【局域方法跨域】</p>
+</li>
+<li><p>通过实现 ResponseBodyAdvice 实现跨域【全局跨域】</p>
+</li>
+</ol>
+<p>接下来详细来看。</p>
+<h3 id="1-1-通过注解跨域"><a href="#1-1-通过注解跨域" class="headerlink" title="1.1 通过注解跨域"></a>1.1 通过注解跨域</h3><p>使用 @CrossOrigin 注解可以轻松的实现跨域，此注解既可以修饰类，也可以修饰方法。当修饰类时，表示此类中的所有接口都可以跨域；当修饰方法时，表示此方法可以跨域，它的实现如下：</p>
+<pre><code class="java">import  org.springframework.web.bind.annotation.CrossOrigin;
+import  org.springframework.web.bind.annotation.RequestMapping;
+import  org.springframework.web.bind.annotation.RestController;
+import  java.util.HashMap;
+@RestController
+@CrossOrigin(origins  =  &quot;*&quot;) 
+public  class  TestController  &#123;    
+    @RequestMapping(&quot;/test&quot;)     
+    public  HashMap &lt; String,  Object &gt;  test()  &#123;        
+        return  new  HashMap &lt; String,  Object &gt; ()  &#123;
+            &#123;            
+                put(&quot;state&quot;,  200);            
+                put(&quot;data&quot;,  &quot;success&quot;);            
+                put(&quot;msg&quot;,  &quot;&quot;);        
+            &#125;
+        &#125;;    
+    &#125;
+&#125;
+</code></pre>
+<p>以上代码的执行结果如下图所示：<img src="https://mmbiz.qpic.cn/mmbiz_png/HrWw6ZuXCsjXyXyYIqqXHAlx2jufHsbUDYUvEFnsBnn1micwvDOoBLE7ER6WgHQKfRBpg8fXhySbf7tnu9QL6Lw/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">从上图中可以看出，前端项目访问另一个后端项目成功了，也就说明它解决了跨域问题。</p>
+<p><strong>优缺点分析</strong></p>
+<p>此方式虽然虽然实现（跨域）比较简单，但细心的朋友也能发现，<strong>使用此方式只能实现局部跨域，当一个项目中存在多个类的话，使用此方式就会比较麻烦（需要给所有类上都添加此注解）。</strong></p>
+<h3 id="1-2-通过配置文件跨域"><a href="#1-2-通过配置文件跨域" class="headerlink" title="1.2 通过配置文件跨域"></a>1.2 通过配置文件跨域</h3><p>通过设置配置文件的方式就可以实现全局跨域了，它的实现步骤如下：</p>
+<ul>
+<li><p>创建一个新配置文件。</p>
+</li>
+<li><p>添加 @Configuration 注解，实现 WebMvcConfigurer 接口。</p>
+</li>
+<li><p>重写 addCorsMappings 方法，设置允许跨域的代码。</p>
+</li>
+</ul>
+<p>具体实现代码如下：</p>
+<pre><code class="java">import  org.springframework.context.annotation.Configuration;
+import  org.springframework.web.servlet.config.annotation.CorsRegistry;
+import  org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-<h3 id="2-4-功能应用需求"><a href="#2-4-功能应用需求" class="headerlink" title="2.4 功能应用需求"></a>2.4 功能应用需求</h3><p><strong>流程设计器</strong>：流程设计器用于定义任务流程，用户可在该功能下进行流程的创建、设计、发布、编辑、删除、复制、查看历史版本，导入、导出管理操作。</p>
-<p><strong>表单引擎：</strong>常用控件和高级控件以及多种布局按钮设计。</p>
-<p><strong>用户体系</strong>：满足国内企业级应用需求，需要单独涉及组织机构表，然后跟流程引擎进行集成。需求多组织流程架构支持，集团总部、子公司多级组织架构，组织架构涉及到有组织、部门、用户、岗位、职务多个要素，要素间有复杂逻辑关系。</p>
-<p><strong>兼容性功能需求</strong>：抄送、会签、加签、传阅、跳转、任意流、退回、取回、撤销、一人多岗位，一人多部门无办理人时跳过，相同办理人时跳过，环节办理人范围预设，等需求扩展开发实现 。</p>
-<p><strong>流程数据分析：</strong>流程引擎可以帮助用户从多维度、多时间、多角度分析流程数据。</p>
-<h3 id="2-4-模块协作关系"><a href="#2-4-模块协作关系" class="headerlink" title="2.4 模块协作关系"></a>2.4 模块协作关系</h3><img src="/2024/01/06/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E8%AF%B4%E6%98%8E/image-1.png" class title="配置图">
+@Configuration  // 一定不要忽略此注解   
+public  class  CorsConfig  implements  WebMvcConfigurer  &#123;    @
+    Override     public  void  addCorsMappings(CorsRegistry  registry)  &#123;        
+        registry.addMapping(&quot;/**&quot;)  // 所有接口          
+            .allowCredentials(true)  // 是否发送 Cookie           
+            .allowedOriginPatterns(&quot;*&quot;)  // 支持域        
+            .allowedMethods(new  String[] &#123;
+                &quot;GET&quot;,  &quot;POST&quot;,  &quot;PUT&quot;,  &quot;DELETE&quot;
+            &#125;)  // 支持方法          
+            .allowedHeaders(&quot;*&quot;)       
+            .exposedHeaders(&quot;*&quot;);    
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-3-通过-CorsFilter-跨域"><a href="#1-3-通过-CorsFilter-跨域" class="headerlink" title="1.3 通过 CorsFilter 跨域"></a>1.3 通过 CorsFilter 跨域</h3><p>此实现方式和上一种实现方式类似，<strong>它也可以实现全局跨域</strong>，它的具体实现代码如下：</p>
+<pre><code class="java">import  org.springframework.context.annotation.Bean;
+import  org.springframework.context.annotation.Configuration;
+import  org.springframework.web.cors.CorsConfiguration;
+import  org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import  org.springframework.web.filter.CorsFilter;
+@Configuration  // 一定不能忽略此注解  
+public  class  MyCorsFilter  &#123;    @
+    Bean     public  CorsFilter  corsFilter()  &#123;         // 1.创建 CORS 配置对象          
+        CorsConfiguration  config  =  new  CorsConfiguration();         // 支持域           
+        config.addAllowedOriginPattern(&quot;*&quot;);         // 是否发送 Cookie           
+        config.setAllowCredentials(true);         // 支持请求方式      
+        config.addAllowedMethod(&quot;*&quot;);         // 允许的原始请求头部信息      
+        config.addAllowedHeader(&quot;*&quot;);         // 暴露的头部信息    
+        config.addExposedHeader(&quot;*&quot;);         // 2.添加地址映射      
+        UrlBasedCorsConfigurationSource  corsConfigurationSource  =  new  UrlBasedCorsConfigurationSource();        
+        corsConfigurationSource.registerCorsConfiguration(&quot;/**&quot;,  config);         // 3.返回 CorsFilter 对象      
+        return  new  CorsFilter(corsConfigurationSource);    
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-4-通过-Response-跨域"><a href="#1-4-通过-Response-跨域" class="headerlink" title="1.4 通过 Response 跨域"></a>1.4 通过 Response 跨域</h3><p>此方式是解决跨域问题最原始的方式，但它可以支持任意的 Spring Boot 版本（早期的 Spring Boot 版本也是支持的）。但此方式也是局部跨域，它应用的范围最小，设置的是方法级别的跨域，它的具体实现代码如下：</p>
+<pre><code class="java">import  org.springframework.web.bind.annotation.RequestMapping;
+import  org.springframework.web.bind.annotation.RestController;
+import  javax.servlet.http.HttpServletResponse;
+import  java.util.HashMap;@
+RestController public  class  TestController  &#123;    @
+    RequestMapping(&quot;/test&quot;)     public  HashMap &lt; String,  Object &gt;  test(HttpServletResponse  response)  &#123;         // 设置跨域      
+        response.setHeader(&quot;Access-Control-Allow-Origin&quot;,  &quot;*&quot;);    
+        return  new  HashMap &lt; String,  Object &gt; ()  &#123;
+            &#123;            
+                put(&quot;state&quot;,  200);            
+                put(&quot;data&quot;,  &quot;success&quot;);            
+                put(&quot;msg&quot;,  &quot;&quot;);        
+            &#125;
+        &#125;;    
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-5-通过-ResponseBodyAdvice-跨域"><a href="#1-5-通过-ResponseBodyAdvice-跨域" class="headerlink" title="1.5 通过 ResponseBodyAdvice 跨域"></a>1.5 通过 ResponseBodyAdvice 跨域</h3><p>通过重写 ResponseBodyAdvice 接口中的 beforeBodyWrite（返回之前重写）方法，我们可以对所有的接口进行跨域设置，它的具体实现代码如下：</p>
+<pre><code class="java">import  org.springframework.core.MethodParameter;
+import  org.springframework.http.MediaType;
+import  org.springframework.http.server.ServerHttpRequest;
+import  org.springframework.http.server.ServerHttpResponse;
+import  org.springframework.web.bind.annotation.ControllerAdvice;
+import  org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
-<h3 id="2-5-角色术语"><a href="#2-5-角色术语" class="headerlink" title="2.5 角色术语"></a>2.5 角色术语</h3><table>
-<thead>
-<tr>
-<th><strong>角色</strong></th>
-<th><strong>定义</strong></th>
-<th><strong>场景一</strong></th>
-<th><strong>场景二</strong></th>
-<th><strong>场景三</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>流程管理员</td>
-<td>协助各个部门进行标准化流程定制</td>
-<td>流程设计发布</td>
-<td>表单设计发布</td>
-<td>流程数据监控</td>
-</tr>
-<tr>
-<td>普通用户</td>
-<td>日常的流程使用</td>
-<td>流程待办</td>
-<td>流程审批</td>
-<td>流程抄送</td>
-</tr>
-</tbody></table>
-<h2 id="3-功能性需求说明"><a href="#3-功能性需求说明" class="headerlink" title="3. 功能性需求说明"></a>3. 功能性需求说明</h2><h3 id="3-1-流程应用管理"><a href="#3-1-流程应用管理" class="headerlink" title="3.1 流程应用管理"></a>3.1 流程应用管理</h3><p>统一入口体验，流程驱动企业级应用整合，流程通过应用的形式进行发布。</p>
-<table>
-<thead>
-<tr>
-<th>应用视图列表</th>
-<th>已完成</th>
-<th>P0</th>
-<th>-</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>应用详情</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>应用创建</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>应用编辑</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>应用流程绑定</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>应用移除</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>应用流程解绑</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="3-2-表单设计器和表单管理"><a href="#3-2-表单设计器和表单管理" class="headerlink" title="3.2 表单设计器和表单管理"></a>3.2 表单设计器和表单管理</h3><p>用来为业务流程中的人工步骤添加表单。 有两种使用表单的方法：使用（由表单设计器创建的）表单定义的内置表单渲染，以及外部表单渲染。 使用外部表单渲染时，可以使用（自Explorer web应用V5版本支持的）表单参数；也可以使用表单key定义，引用外部的、使用自定义代码解析的表单。</p>
-<p>此图为flowable-ui表单设计器，缺少表单布局设计，需和前端重新设计表单设计器。</p>
-<img src="/2024/01/06/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E8%AF%B4%E6%98%8E/image-2.png" class title="配置图">
-
-<table>
-<thead>
-<tr>
-<th>表单详情查询</th>
-<th>已完成</th>
-<th>P0</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>表单设计器</td>
-<td>进行中</td>
-<td>P0</td>
-<td>前端配合</td>
-</tr>
-<tr>
-<td>表单发布</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>表单下架</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>表单编辑</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="3-3-流程定义-process-definition-管理"><a href="#3-3-流程定义-process-definition-管理" class="headerlink" title="3.3 流程定义**(process definition)**管理"></a>3.3 流程定义**(process definition)**管理</h3><p>构建的流程，首先需要定义一个流程一个**流程定义(process definition)<strong>。一个_流程定义_可以启动多个</strong>流程实例(process instance)**。_流程定义_可以看做是重复执行流程的蓝图。在未有流程设计器的情况下，可以使用第三方插件，或使用flowable-ui进行构建</p>
-<p>此图为bpmn.js示例图</p>
-<img src="/2024/01/06/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E8%AF%B4%E6%98%8E/image-3.png" class title="配置图">
-
-<table>
-<thead>
-<tr>
-<th>多实例任务 - 与签 - 顺序</th>
-<th>已完成</th>
-<th>P0</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>多实例任务 - 与签 - 并行</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程导入</td>
-<td>待开始</td>
-<td>P2</td>
-<td></td>
-</tr>
-<tr>
-<td>流程定义视图列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取流程定义详情</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>发布流程</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程定义挂起</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程定义恢复</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取用户任务列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td>根据流程定义，获取流程下所有用户可执行节点列表</td>
-</tr>
-<tr>
-<td>多实例任务 - 投票</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程历史版本查询</td>
-<td>待开始</td>
-<td>P2</td>
-<td></td>
-</tr>
-<tr>
-<td>流程版本恢复</td>
-<td>待开始</td>
-<td>P2</td>
-<td></td>
-</tr>
-<tr>
-<td>流程设计器</td>
-<td>进行中</td>
-<td>P0</td>
-<td>前端配合</td>
-</tr>
-<tr>
-<td>多实例任务 - 或签</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程导出</td>
-<td>待开始</td>
-<td>P2</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="3-4-流程实例-process-instance-管理"><a href="#3-4-流程实例-process-instance-管理" class="headerlink" title="3.4 流程实例**(process instance)**管理"></a>3.4 流程实例**(process instance)**管理</h3><p>流程实例 代表流程定义的执行实例，比如张三请了一天假，他就必须发出一个流程实例的申请，一个流程实例包括了所有的运行节点。 我们可以用这个对象来了解当前流程实例的进度信息等。流程实例就表示一个流程从开始到结束的最大流程分支，即一个流程中流程实例只有一个。</p>
-<table>
-<thead>
-<tr>
-<th>设置流程变量</th>
-<th>已完成</th>
-<th>P0</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>流程推演-预测审批路径</td>
-<td>已完成</td>
-<td>P0</td>
-<td>根据流程参数推演流程路径和流程执行人名单</td>
-</tr>
-<tr>
-<td>获取流程起始表单</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程实例详情</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程挂起</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>激活流程</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>销毁流程</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>发起流程</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取流程变量</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程历史流水记录</td>
-<td>已完成</td>
-<td>P0</td>
-<td>流程执行过程，不包含回退记录</td>
-</tr>
-<tr>
-<td>用户流程申请表</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程实例视图列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td>流程管理员操作</td>
-</tr>
-</tbody></table>
-<h3 id="3-5-流程任务管理"><a href="#3-5-流程任务管理" class="headerlink" title="3.5 流程任务管理"></a>3.5 流程任务管理</h3><p>此处的任务管理，只涵盖人工任务，即需要由人手动接入控制的任务，自动化任务主要由监听任务工作完成 。</p>
-<table>
-<thead>
-<tr>
-<th>设置任务变量</th>
-<th>已完成</th>
-<th>P0</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>动态设置任务办理人</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取任务表单</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取流程当前进行任务列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td>多实例任务会返回多个</td>
-</tr>
-<tr>
-<td>动态删除执行环节</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>任务详情</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取任务变量</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>取回任务</td>
-<td>已完成</td>
-<td>P0</td>
-<td>仅前置一步</td>
-</tr>
-<tr>
-<td>候选任务列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>审批任务&#x2F;完成任务</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>驳回任务</td>
-<td>已完成</td>
-<td>P0</td>
-<td>仅回退一步</td>
-</tr>
-<tr>
-<td>待办任务列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>任务抄送已读</td>
-<td>进行中</td>
-<td>P1</td>
-<td></td>
-</tr>
-<tr>
-<td>任务抄送删除</td>
-<td>进行中</td>
-<td>P1</td>
-<td></td>
-</tr>
-<tr>
-<td>设置本地任务变量</td>
-<td>已完成</td>
-<td>P0</td>
-<td>不会随着任务流转进行传递，仅保存在该任务中</td>
-</tr>
-<tr>
-<td>任务抄送</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>加签（向前）</td>
-<td>已完成</td>
-<td>P0</td>
-<td>加签任务不能用来完成，因为这个加签的任务并不属于正常流程中的一个节点任务，加签任务完后，任务还会回到加签前的人员手里</td>
-</tr>
-<tr>
-<td>转办 (向后)</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>添加任务评论</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>动态添加任务候选人</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>任务跳转</td>
-<td>已完成</td>
-<td>P0</td>
-<td>管理员使用，无视规则</td>
-</tr>
-<tr>
-<td>上传任务附件</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取当前以及下一任务节点</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>查询任务评论列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>任务抄送列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>下载任务附件</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>动态添加执行环节</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>任务认领</td>
-<td>已完成</td>
-<td>P0</td>
-<td>候选人方式</td>
-</tr>
-<tr>
-<td>取消任务认领</td>
-<td>已完成</td>
-<td>P0</td>
-<td>候选人方式</td>
-</tr>
-</tbody></table>
-<h3 id="3-6-流程任务人员管理"><a href="#3-6-流程任务人员管理" class="headerlink" title="3.6 流程任务人员管理"></a>3.6 流程任务人员管理</h3><p>根据现有的微服务框架下人员体系，依托统一用户中心和统一认证中心数据 。进行人员设置。</p>
-<table>
-<thead>
-<tr>
-<th>获取获选列表</th>
-<th>进行中</th>
-<th>P1</th>
-<th>复合候选，需求暂不明确。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>获取岗位下管辖用户</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取用户列表</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取部门下成员</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取单位下成员</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取岗位下成员</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>获取角色下成员</td>
-<td>待开始</td>
-<td>P1</td>
-<td></td>
-</tr>
-<tr>
-<td>获取当前登录用户</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="3-7-流程消息通知-（未开始）"><a href="#3-7-流程消息通知-（未开始）" class="headerlink" title="3.7 流程消息通知 （未开始）"></a>3.7 流程消息通知 （未开始）</h3><p>由于微服务消息中心尚未实现，等消息中心完成之后对其进行接入实现消息通知功能。近期内会对消息中心进行规划，消息配置和流程通知模板统一构建在消息中心内，流程只作系统对接服务。</p>
-<h3 id="3-8-流程任务监听器"><a href="#3-8-流程任务监听器" class="headerlink" title="3.8 流程任务监听器"></a>3.8 流程任务监听器</h3><p>用于在特定的任务相关事件发生时，执行自定义的代码逻辑 ，多数的兼容性功能都由该功能实现。</p>
-<p>|超时自动完成监听|待开始|P2|<br>|—|—|—|—|<br>|超时催办监听|待开始|P2||<br>|超时自动驳回监听|待开始|P2||<br>|任务无执行人自动跳过监听|已完成|P2||<br>|业务系统回调消息队列监听|待开始|P2||<br>|多实例任务用户设置监听|已完成|P0||<br>|单实例任务用户设置监听|已完成|P0||<br>|业务系统回调监听|已完成|P0||<br>|相同执行人自动跳过监听|已完成|P2||</p>
-<h3 id="3-9-流程图绘制"><a href="#3-9-流程图绘制" class="headerlink" title="3.9 流程图绘制"></a>3.9 流程图绘制</h3><table>
-<thead>
-<tr>
-<th>流程描红功能</th>
-<th>已完成</th>
-<th>P0</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>获取流程定义图</td>
-<td>已完成</td>
-<td>P1</td>
-<td></td>
-</tr>
-<tr>
-<td>根据任务获取流程图</td>
-<td>已完成</td>
-<td>P2</td>
-<td></td>
-</tr>
-<tr>
-<td>根据流程获取流程执行图</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-<tr>
-<td>流程回退清除历史记录</td>
-<td>已完成</td>
-<td>P0</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="3-10-流程数据统计-（未开始）"><a href="#3-10-流程数据统计-（未开始）" class="headerlink" title="3.10 流程数据统计 （未开始）"></a>3.10 流程数据统计 （未开始）</h3><p>预计通过数据采集模块统一汇总到数据中台进行数据分析，汇总和展示。</p>
-<h2 id="4-非功能需求"><a href="#4-非功能需求" class="headerlink" title="4. 非功能需求"></a>4. 非功能需求</h2><p>相关指标暂未界定，后续协商再行补充 。</p>
-<p>性能需求</p>
-<p>安全需求</p>
-<p>可靠性需求</p>
-<p>可维护性需求</p>
-<p>可用性需求</p>
-<p>兼容性需求</p>
-<p>运营需求</p>
-<h2 id="5-未来的规划和目标"><a href="#5-未来的规划和目标" class="headerlink" title="5. 未来的规划和目标"></a>5. 未来的规划和目标</h2><h4 id="5-1-中台化"><a href="#5-1-中台化" class="headerlink" title="5.1 中台化"></a>5.1 中台化</h4><p>对于信息化软件的演进，从流程线和开发部署方式两条线来看，分别从轻到重和从重到轻发展，交汇于数字中台。从部署 开发一线来看，传统的开发部署模式时间长、成本高、系统割裂，不能满足企业实现“成本效益”的需求，因而数字中台 转型成为必然的选择。</p>
-<h4 id="5-2-低代码"><a href="#5-2-低代码" class="headerlink" title="5.2 低代码"></a>5.2 低代码</h4><p>需求端的 复杂多变对软件开发提出了新的要求，市场要求软件的开发的速度越快越好、交付时间越来越短，“低代码”应运而生。 BPM 在未来也将充分与低代码相结合，BPM 的低代码化主要包含设计端的应用。开发人员寻找通用的开发活动，然后为 所有环节构建一个基本代码并将它们封装在某个可视化的模块里。基于这些模块，业务人员就可以通过拖拉拽的方式，在 可视化的设计器上像“搭积木”一样，对表单、流程和应用进行搭建。</p>
-<h4 id="5-3-智能化"><a href="#5-3-智能化" class="headerlink" title="5.3 智能化"></a>5.3 智能化</h4><p>业务流程管理（BPM）已成为企业内部优化的选择。流程的优化通过节省时间并降低成本为公司带来竞争优势，使员工更 有效地工作。随着市场的成熟度日益提高，各种新兴技术不断发展，BPM 自身也需要与时代结合，不断发展。未来 BPM 将进一步与AI（人工智能）等智能化技术相结合，为企业提供更敏捷、优质的服务。</p>
+@ControllerAdvice 
+public  class  ResponseAdvice  implements  ResponseBodyAdvice  &#123;    
+ 
+    @Override    
+    public  boolean  supports(MethodParameter  returnType,  Class  converterType)  &#123;        
+        return  true;    
+    &#125;      
+    @Override    
+    public  Object  beforeBodyWrite(Object  body,  MethodParameter  returnType,  MediaType  selectedContentType,                                   Class  selectedConverterType,  ServerHttpRequest  request,                                   ServerHttpResponse  response)  &#123;        
+        response.getHeaders().set(&quot;Access-Control-Allow-Origin&quot;,  &quot;*&quot;);        
+        return  body;    
+    &#125;
+&#125;
+</code></pre>
+<p>此实现方式也是全局跨域，它对整个项目中的所有接口有效。</p>
+<h2 id="2-Nginx-中解决跨域"><a href="#2-Nginx-中解决跨域" class="headerlink" title="2.Nginx 中解决跨域"></a>2.Nginx 中解决跨域</h2><p>在 Nginx 服务器的配置文件中添加以下代码：</p>
+<pre><code class="nginx">server &#123;  
+    listen       80;  
+    server_name  your_domain.com;  
+    location /api &#123;  
+        # 允许跨域请求的域名，* 表示允许所有域名访问  
+        add_header &#39;Access-Control-Allow-Origin&#39; &#39;*&#39;;  
+  
+        # 允许跨域请求的方法  
+        add_header &#39;Access-Control-Allow-Methods&#39; &#39;GET, POST, OPTIONS&#39;;  
+  
+        # 允许跨域请求的自定义 Header  
+        add_header &#39;Access-Control-Allow-Headers&#39; &#39;Origin, X-Requested-With, Content-Type, Accept&#39;;  
+  
+        # 允许跨域请求的 Credential  
+        add_header &#39;Access-Control-Allow-Credentials&#39; &#39;true&#39;;  
+  
+        # 预检请求的存活时间，即 Options 请求的响应缓存时间  
+        add_header &#39;Access-Control-Max-Age&#39; 3600;  
+  
+        # 处理预检请求  
+        if ($request_method = &#39;OPTIONS&#39;) &#123;  
+            return 204;  
+        &#125;  
+    &#125;  
+    # 其他配置...  
+&#125;
+</code></pre>
+<p>上述示例中，location &#x2F;api 代表配置针对 &#x2F;api 路径的请求进行跨域设置。可以根据具体需要修改 location 的值和其他相关参数。配置中的 add_header 指令用于设置响应头部，常用的响应头部包括以下这些：</p>
+<ul>
+<li><p><strong>Access-Control-Allow-Origin</strong>：用于指定允许跨域的域名，可以设置为 * 表示允许所有域名访问。</p>
+</li>
+<li><p><strong>Access-Control-Allow-Methods</strong>：用于指定允许的跨域请求的方法，例如 GET、POST、OPTIONS 等。</p>
+</li>
+<li><p><strong>Access-Control-Allow-Headers</strong>：用于指定允许的跨域请求的自定义 Header。</p>
+</li>
+<li><p><strong>Access-Control-Allow-Credentials</strong>：用于指定是否允许跨域请求发送和接收 Cookie。</p>
+</li>
+<li><p><strong>Access-Control-Max-Age</strong>：用于设置预检请求（OPTIONS 请求）的响应缓存时间。</p>
+</li>
+</ul>
+<h2 id="3-网关中解决跨域"><a href="#3-网关中解决跨域" class="headerlink" title="3.网关中解决跨域"></a>3.网关中解决跨域</h2><p>Spring Cloud Gateway 中解决跨域问题可以通过以下两种方式实现：</p>
+<ol>
+<li><p>通过在配置文件中配置跨域实现。</p>
+</li>
+<li><p>通过在框架中添加 CorsWebFilter 来解决跨域问题。</p>
+</li>
+</ol>
+<h3 id="3-1-配置文件中设置跨域"><a href="#3-1-配置文件中设置跨域" class="headerlink" title="3.1 配置文件中设置跨域"></a>3.1 配置文件中设置跨域</h3><p>在 application.yml 或 application.properties 中添加以下配置：</p>
+<pre><code class="yaml">spring:  
+  cloud:  
+    gateway:  
+      globalcors:  
+        corsConfigurations:  
+          &#39;[/**]&#39;: # 这里的&#39;/**&#39;表示对所有路由生效，可以根据需要调整为特定路径  
+            allowedOrigins: &quot;*&quot; # 允许所有的源地址，也可以指定具体的域名  
+            allowedMethods: # 允许的 HTTP 方法类型  
+              - GET  
+              - POST  
+              - PUT  
+              - DELETE  
+              - OPTIONS  
+            allowedHeaders: &quot;*&quot; # 允许所有的请求头，也可以指定具体的请求头  
+            allowCredentials: true # 是否允许携带凭证（cookies）  
+            maxAge: 3600 # CORS预检请求的有效期（秒）
+</code></pre>
+<p>其中：</p>
+<ul>
+<li><p><strong>allowedOrigins</strong>: 设置允许访问的来源域名列表，”*” 表示允许任何源。</p>
+</li>
+<li><p><strong>allowedMethods</strong>: 指定哪些HTTP方法可以被用于跨域请求。</p>
+</li>
+<li><p><strong>allowedHeaders</strong>: 客户端发送的请求头列表，”*” 表示允许任何请求头。</p>
+</li>
+<li><p><strong>allowCredentials</strong>: 当设为 true 时，允许浏览器在发起跨域请求时携带认证信息（例如 cookies）。</p>
+</li>
+<li><p><strong>maxAge</strong>: 预检请求的结果可以在客户端缓存的最大时间。</p>
+</li>
+</ul>
+<p>通过这样的配置，Spring Cloud Gateway 网关将自动处理所有经过它的跨域请求，并添加相应的响应头，从而允许前端应用执行跨域请求。</p>
+<h3 id="3-2-添加-CorsWebFilter-来解决跨域问题"><a href="#3-2-添加-CorsWebFilter-来解决跨域问题" class="headerlink" title="3.2 添加 CorsWebFilter 来解决跨域问题"></a>3.2 添加 CorsWebFilter 来解决跨域问题</h3><p>在 Spring-Framework 从 5.3 版本之前，使用以下代码可以让 Spring Cloud Gateway 网关允许跨域：</p>
+<pre><code class="java">@Configuration 
+public  class  GlobalCorsConfig  &#123;    
+  @Bean     
+  public  CorsWebFilter  corsWebFilter()  &#123;        
+        CorsConfiguration  config  =  new  CorsConfiguration();         // 这里仅为了说明问题，配置为放行所有域名，生产环境请对此进行修改      
+        config.addAllowedOrigin(&quot;*&quot;);         // 放行的请求头      
+        config.addAllowedHeader(&quot;*&quot;);         // 放行的请求类型，有 GET, POST, PUT, DELETE, OPTIONS          
+        config.addAllowedMethod(&quot;*&quot;);          // 暴露头部信息          
+        config.addExposedHeader(&quot;*&quot;);          // 是否允许发送 Cookie          
+        config.setAllowCredentials(true);         
+        UrlBasedCorsConfigurationSource  source  =  new  UrlBasedCorsConfigurationSource();        
+        source.registerCorsConfiguration(&quot;/**&quot;,  config);        
+        return  new  CorsWebFilter(source);    
+    &#125;
+&#125;
+</code></pre>
+<p>而 Spring-Framework 5.3 版本之后，关于 CORS 跨域配置类 CorsConfiguration 中将 addAllowedOrigin 方法名修改为 addAllowedOriginPattern，因此配置了变成了以下这样：</p>
+<pre><code class="java">@Configuration 
+public  class  GlobalCorsConfig  &#123;    
+  @Bean     
+  public  CorsWebFilter  corsWebFilter()  &#123;        
+        CorsConfiguration  config  =  new  CorsConfiguration();         // 这里仅为了说明问题，配置为放行所有域名，生产环境请对此进行修改        
+        config.addAllowedOriginPattern(&quot;*&quot;);         // 放行的请求头           
+        config.addAllowedHeader(&quot;*&quot;);         // 放行的请求类型，有 GET, POST, PUT, DELETE, OPTIONS           
+        config.addAllowedMethod(&quot;*&quot;);          // 暴露头部信息          
+        config.addExposedHeader(&quot;*&quot;);          // 是否允许发送 Cookie   
+        config.setAllowCredentials(true);         
+        UrlBasedCorsConfigurationSource  source  =  new  UrlBasedCorsConfigurationSource();        
+        source.registerCorsConfiguration(&quot;/**&quot;,  config);        
+        return  new  CorsWebFilter(source);    
+    &#125;
+&#125;
+</code></pre>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>跨域问题可以在网关层、反向代理层或应用层来解决，而它们的使用优先级是：网关层 &gt; 代理层 &gt;  应用层。因为越靠前覆盖范围就越大，解决跨域问题就越容易。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至songchen0825@gmail.com </span>
