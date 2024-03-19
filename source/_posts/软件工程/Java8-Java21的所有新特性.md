@@ -147,8 +147,6 @@ coverImg:
 - JEP 320：删除 Java EE 和 corba 模块
     
 
-# 2024最新架构课程，对标培训机构
-
 
 ## Java 12 新特性
 
